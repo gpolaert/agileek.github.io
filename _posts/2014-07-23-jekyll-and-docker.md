@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Jekyll quickstart with docker"
-published: true
 categories: jekyll docker
 ---
 
@@ -28,7 +27,7 @@ Gem files will remain installed in /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2 f
 Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out
 {% endhighlight %}
 
-It didn't work on my computer... and since i'm a lazy person, I get tired really fast when things dont work like expected.
+It didn't work on my computer... and since i'm a lazy person, I get tired really fast when things don't work like expected.
 
 On the other side I'm a huge [Docker][docker] fan, so I looked for a dockerized jekyll and I found this one: [Jekyll with docker][jekyll-docker].
 
