@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Jekyll quickstart with docker"
+date:   2014-07-23 15:22:45
 categories: jekyll docker
 ---
 
