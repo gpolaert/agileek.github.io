@@ -421,6 +421,19 @@ a:visited { color: #205caa; }
     padding: 5px 10px;
     margin: 0;
   }
+    
+  .posts .post-link {
+    font-size: 20px;
+  }
+    
+  .posts .post-date {
+    display: none;
+  }
+    
+  .category {
+    min-height: 10px;
+    max-height : 20px;
+  }
 
   .post-header h1 { font-size: 36px; }
   .post-content h2 { font-size: 28px; }
