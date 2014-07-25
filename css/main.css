@@ -47,6 +47,19 @@ a:visited { color: #205caa; }
   background-color: white;
 }
 
+.site-header img {
+  border-radius: 8px;
+  max-height: 56px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/*
+
+.site-header .wrap {
+  background-color: #000;
+}
+*/
+
 .site-title,
 .site-title:hover,
 .site-title:visited {
@@ -146,20 +159,29 @@ a:visited { color: #205caa; }
 
 .home h1 { margin-bottom: 25px; }
 
+.category {
+    overflow: hidden;
+    border-radius: 8px;
+    vertical-align: middle;
+    height: auto;
+    min-height: 50px;
+    max-height : 50px;
+    border-radius: 8px;
+}
+
 .posts { list-style-type: none; }
 
 .posts li { margin-bottom: 30px; }
 
 .posts .post-link {
   font-size: 24px;
-  letter-spacing: -1px;
   line-height: 1;
 }
 
 .posts .post-date {
-  display: block;
   font-size: 15px;
   color: #818181;
+  float: right;
 }
 
 
