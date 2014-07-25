@@ -247,6 +247,11 @@ a:visited { color: #205caa; }
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
+.post-content img { 
+  float: right;
+  max-height: 200px;
+}
+
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;
@@ -422,6 +427,9 @@ a:visited { color: #205caa; }
   .post-content blockquote { padding-left: 10px; }
   .post-content ul,
   .post-content ol { padding-left: 10px; }
+  .post-content img { 
+    max-height: 60px;
+  }
 
   .site-footer .column {
     float: none;

@@ -4,6 +4,7 @@ title:  "Jekyll quickstart with docker"
 date:   2014-07-23 15:22:45
 categories: jekyll docker
 ---
+![Jekyll][jekyllImage]
 
 This is my first blog post!
 
@@ -52,3 +53,4 @@ Thanks [Graham Christensen][grahamc]!
 [docker]:    https://www.docker.com/
 [jekyll-docker]: https://registry.hub.docker.com/u/grahamc/jekyll/
 [grahamc]: http://grahamc.com/
+[jekyllImage]: /images/posts/2014-07-23/jekyll.png
