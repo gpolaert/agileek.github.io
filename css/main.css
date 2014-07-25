@@ -161,7 +161,6 @@ a:visited { color: #205caa; }
 
 .category {
     overflow: hidden;
-    border-radius: 8px;
     vertical-align: middle;
     height: auto;
     min-height: 50px;
@@ -169,7 +168,10 @@ a:visited { color: #205caa; }
     border-radius: 8px;
 }
 
-.posts { list-style-type: none; }
+.posts { 
+  list-style-type: none; 
+  line-height: 40px;
+}
 
 .posts li { margin-bottom: 30px; }
 
