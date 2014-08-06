@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Bind some cpu to your docker instance"
+date:   2014-08-06 23:26:31
+categories: docker
+published: false
+---
+
+For my client I need to benchmark a multi-threaded/multi-server solution.
+
+Unfortunately, we only have a big server (128 GB, 32 cores,...) and we are putting all our instances on this single server.
+
+As each server is multi-threaded, we noticed that they often get in each others way, resulting in bad performances (context swapping, ...).
+
+We solved this problem with 2 solutions.
+
+We used thread affinity in the application in order to bind some thread to a given CPU, and we used [docker][docker] to authorize a given application to access only some cpus.
+
+In order to be sure that docker was correctly restricting the access to the cpus, I created a [docker image][docker-image]: 
+
+If you run it with 
+
+{% highlight bash %}
+$ docker run -ti --cpuset=6 agileek/cpuset-test
+{% endhighlight %}
+
+it will take one cpu (the 7th) at 100%.
+
+You can see it in action: 
+
+<iframe width="800" height="600" src="//www.youtube.com/embed/1BMKK812y5A" frameborder="0" allowfullscreen></iframe>
+
+
+If you run it with 
+{% highlight bash %}
+$ docker run -ti --cpuset=0,4,6 agileek/cpuset-test /all
+{% endhighlight %}
+
+it will take all available cpus (the 1st, 5th and 7th)
+
+You can see it in action: 
+
+<iframe width="800" height="600" src="//www.youtube.com/embed/ITcyeL8V35I" frameborder="0" allowfullscreen></iframe>
+
+[docker]:    https://www.docker.com/
+[docker-image]: https://registry.hub.docker.com/u/agileek/cpuset-test/
