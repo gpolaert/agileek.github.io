@@ -31,7 +31,7 @@ You can see it in action:
 
 If you run it with 
 {% highlight bash %}
-$ docker run -ti --cpuset=0,4,6 agileek/cpuset-test /all
+$ docker run -ti --cpuset=0,4,6 agileek/cpuset-test /cpus 3
 {% endhighlight %}
 
 it will take all available cpus (the 1st, 5th and 7th)
