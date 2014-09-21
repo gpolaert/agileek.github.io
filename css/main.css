@@ -254,6 +254,11 @@ a:visited { color: #205caa; }
   max-height: 200px;
 }
 
+.post-content img.banner {
+  float: none;
+  max-width: 800px;
+}
+
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;
@@ -460,6 +465,9 @@ a:visited { color: #205caa; }
   .post-content ol { padding-left: 10px; }
   .post-content img {
     max-height: 60px;
+  }
+  .post-content img.banner {
+    max-width: 400px;
   }
 
   .site-footer .column {
