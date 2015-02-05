@@ -18,3 +18,17 @@ private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger
 Applicable in: Java: declaration
 
 Edit variables: CLASS_NAME Expresion: className()
+
+
+make sure you have slf4j-api in your classpath.
+
+With maven: 
+
+{% highlight xml %}
+<dependency>
+ <groupId>org.slf4j</groupId>
+ <artifactId>slf4j-api</artifactId>
+ <version>1.7.7</version>
+</dependency>
+{% endhighlight %}
+
