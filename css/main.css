@@ -166,6 +166,7 @@ a:visited { color: #205caa; }
     min-height: 50px;
     max-height : 50px;
     border-radius: 8px;
+    float: right;
 }
 
 .posts {
@@ -178,12 +179,13 @@ a:visited { color: #205caa; }
 .posts .post-link {
   font-size: 24px;
   line-height: 1;
+  vertical-align: middle;
 }
 
 .posts .post-date {
   font-size: 15px;
   color: #818181;
-  float: right;
+  vertical-align: middle;
 }
 
 
@@ -449,11 +451,12 @@ a:visited { color: #205caa; }
 
   .posts .post-date {
     display: none;
+    visibility: hidden;
   }
 
   .category {
-    min-height: 10px;
-    max-height : 20px;
+    display: none;
+    visibility: hidden;
   }
 
   .post-header h1 { font-size: 36px; }

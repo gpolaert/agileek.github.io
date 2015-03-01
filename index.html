@@ -8,11 +8,11 @@ layout: default
     <ul class="posts">
         {% for post in site.posts %}
         <li>
+            <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             {% for category in post.categories %}
                 <img src="/images/categories/{{ category }}.png" class="category" alt="{{ category }}">
             {% endfor %}
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
         </li>
         {% endfor %}
     </ul>
