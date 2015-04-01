@@ -6,7 +6,7 @@ date:   2015-04-01
 
 ## Challenge du mois
 
-J'ai commencé ce blog en Juillet 2014 avec plein d'idées, de sujets, des bonnes résolutions.
+J'ai commencé ce blog en Juillet 2014 avec plein d'idées, de sujets, de bonnes résolutions.
 
 Résultat, 9 mois plus tard, 3 billets en ligne... c'est pas fameux comme bilan.
 
@@ -22,9 +22,9 @@ J'étais en train de me poser la question de garder mon blog ou pas, car un blog
 
 Je n'ai donc pas hésité longtemps quand Vincent m'a proposé un petit challenge : écrire un billet par jour pendant 1 mois.
 
-Nous avons discuté lors du dernier [Toulouse Jug][toulouse_jug], où il m'a parlé de ce défi qu'il s'était lancé avec un ami.
+Nous avons discuté lors du dernier [Toulouse Jug][toulouse_jug], et c'est là qu'il m'a parlé de ce défi qu'il s'était lancé avec un ami.
 
-J'ai trouvé l'idée vraiment super, le principe derrière l'idée encore plus :
+J'ai trouvé l'idée vraiment super...le principe derrière l'idée encore plus :
 
 ***Le but est de se lancer des défis sur 30 jours pour bousculer les habitudes***. Vincent l'explique mieux que moi dans son [post d'aujourd'hui][post_vincent]
 
@@ -45,7 +45,7 @@ Je vous conseille d'aller y faire un tour, ça fait rêver.
 
 
 ### Jean-Marie
-Je ne le connais personnellement, je fais confiance à Vincent quand il me dit qu'il va parler de JavaScript et de vim.
+Je ne le connais pas personnellement, je fais confiance à Vincent quand il me dit qu'il va parler de JavaScript et de vim.
 
 Son blog est [ici][randomblog]
 
