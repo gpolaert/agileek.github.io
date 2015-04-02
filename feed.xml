@@ -5,9 +5,130 @@
     <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
     <link>http://agileek.github.io/</link>
     <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 02 Apr 2015 12:00:19 +0000</pubDate>
-    <lastBuildDate>Thu, 02 Apr 2015 12:00:19 +0000</lastBuildDate>
+    <pubDate>Thu, 02 Apr 2015 18:08:35 +0000</pubDate>
+    <lastBuildDate>Thu, 02 Apr 2015 18:08:35 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Jekyll : ajouter des catégories à vos menus</title>
+        <description>&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Comme il y’a &lt;strong&gt;&lt;em&gt;énormément&lt;/em&gt;&lt;/strong&gt; de posts sur ce blog, j’ai eu envie de pouvoir lister les posts par catégories.&lt;/p&gt;
+
+&lt;p&gt;Je me suis dis que c’était relativement facile, et au final j’y ai passé un moment avant de réussir à le faire fonctionner complètement avec githup pages.&lt;/p&gt;
+
+&lt;p&gt;J’ai trouvé des resources un peu partout mais rien qui expliquait de bout en bout la manipulation, d’où le post.&lt;/p&gt;
+
+&lt;h3 id=&quot;le-gnrateur&quot;&gt;Le générateur&lt;/h3&gt;
+
+&lt;p&gt;Jekyll sert statiquement les pages, il n’y a donc pas la possibilité de récupérer les paramètres de l’url pour s’en servir.&lt;/p&gt;
+
+&lt;p&gt;Par exemple, j’aurais aimé que &lt;code&gt;http://agileek.github.io/?category=docker&lt;/code&gt; fonctionne.&lt;/p&gt;
+
+&lt;p&gt;Ce n’est pas possible de le faire autrement que par javascript (ce qui implique de charger tous les posts côté client), ce que je ne trouve pas optimal.&lt;/p&gt;
+
+&lt;p&gt;Si vous voulez le faire, jetez un oeil au &lt;a href=&quot;https://github.com/danielsiwiec/danielsiwiec.github.io/commit/cf04dd322f5ffe2251ca6e3733d2707c2eaec7d4&quot;&gt;commit&lt;/a&gt; de &lt;a href=&quot;https://github.com/danielsiwiec/&quot;&gt;@danielsiwiec&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ct-serveur&quot;&gt;Côté serveur&lt;/h4&gt;
+
+&lt;p&gt;Je me suis attaqué aux plugins de jekyll, plus précisément aux &lt;a href=&quot;http://jekyllrb.com/docs/plugins/#generators&quot;&gt;generators&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Je n’ai rien touché au code du générateur de catégories qui est dans la doc de jekyll:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Jekyll&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CategoryPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Page&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@site&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;index.html&amp;#39;&lt;/span&gt;
+
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_yaml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;_layouts&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;category_index.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;category&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;
+
+      &lt;span class=&quot;n&quot;&gt;category_title_prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;category_title_prefix&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Category: &amp;#39;&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category_title_prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CategoryPageGenerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Generator&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;safe&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layouts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key?&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;category_index&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;category_dir&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each_key&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CategoryPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Par contre ce qu’ils n’expliquent pas (ou pas bien), c’est qu’il faut un fichier de template pour pouvoir générer toutes les pages de catégories.&lt;/p&gt;
+
+&lt;p&gt;Voici le &lt;a href=&quot;https://github.com/agileek/agileek.github.io/commit/14d1c8ffb3863fd5746cb28daefa5aee3f1bf99f&quot;&gt;commit&lt;/a&gt;, qui contient également la partie template web (le &lt;code&gt;category_index.html&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Et voilà, ça fonctionne parfaitement sur &lt;strong&gt;&lt;em&gt;mon poste&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;et-docker-dans-tout-a&quot;&gt;Et docker dans tout ça&lt;/h3&gt;
+
+&lt;p&gt;Vous l’avez peut-être remarqué, mais il y’a le tag docker sur ce post, si vous vous demandez pourquoi, voilà la raison :&lt;/p&gt;
+
+&lt;p&gt;Github ne permet pas d’exécuter les plugins jekyll (il le lance avec &lt;code&gt;--safe&lt;/code&gt;) donc ce qui fonctionnait &lt;strong&gt;&lt;em&gt;sur mon poste&lt;/em&gt;&lt;/strong&gt; ne fonctionnait pas en ligne.&lt;/p&gt;
+
+&lt;p&gt;Il me faut donc générer statiquement le blog et le commiter sur master “à la mano”.&lt;/p&gt;
+
+&lt;p&gt;Comme je me sers déjà de docker pour &lt;a href=&quot;http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/&quot;&gt;tester mon site&lt;/a&gt;, autant m’en servir pour le builder.&lt;/p&gt;
+
+&lt;p&gt;Je me suis inspiré de &lt;a href=&quot;http://nicoespeon.com/en/2013/04/building-a-multinlingual-jekyll-blog/&quot;&gt;cet article&lt;/a&gt;, surtout de son &lt;a href=&quot;https://github.com/nicoespeon/nicoespeon.github.io/blob/develop/Makefile&quot;&gt;makefile&lt;/a&gt;, pour faire le &lt;a href=&quot;https://github.com/agileek/agileek.github.io/blob/develop/Makefile&quot;&gt;mien&lt;/a&gt; :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-make&quot; data-lang=&quot;make&quot;&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; docker run --rm -v &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(shell pwd):/src&amp;quot;&lt;/span&gt; -p 4000:4000 grahamc/jekyll
+&lt;span class=&quot;nv&quot;&gt;RUNNER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;whoami&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;COMMIT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;git rev-parse --short HEAD&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+  @&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; serve --watch -H 0.0.0.0 --drafts
+
+&lt;span class=&quot;nf&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+  @echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;Building site&amp;quot;&lt;/span&gt;
+  @&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; build
+  @git checkout master
+  @sudo chown -R &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;RUNNER&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;. _site &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo cp -r _site/* . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -rf _*/
+  @git add --all . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Jekyll deployment from commit ${COMMIT}&amp;quot;&lt;/span&gt;
+  @git checkout develop &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo git clean -f -d
+  @echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;You can now push master&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Maintenant, je n’ai même plus besoin de me souvenir de la commande jekyll à taper, un simple &lt;code&gt;make test&lt;/code&gt; suffit.&lt;/p&gt;
+
+&lt;p&gt;Quand je suis satisfait du résultat, un &lt;code&gt;make deploy&lt;/code&gt; suivi d’un &lt;code&gt;git push&lt;/code&gt; de &lt;code&gt;master&lt;/code&gt; et c’est en ligne.&lt;/p&gt;
+
+&lt;p&gt;Du coup je me suis amusé à rajouter un &lt;a href=&quot;http://agileek.github.io/archives/index.html&quot;&gt;generateur d’archives&lt;/a&gt; qui me classe les articles par années. Inutile, donc indispensable. Si ça vous intéresse, le commit est &lt;a href=&quot;https://github.com/agileek/agileek.github.io/commit/5f60f98cac273ee53dc4b458a06ba9e668f054b7&quot;&gt;là&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;rsultat&quot;&gt;Résultat&lt;/h2&gt;
+
+&lt;p&gt;Maintenant, les images à droites des posts sur la page principale sont cliquables!!!!&lt;/p&gt;
+
+&lt;p&gt;C’est pas magnifique ça? Non? Mince alors.&lt;/p&gt;
+
+&lt;h4 id=&quot;ps-&quot;&gt;PS :&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Petit précision, ça peut fonctionner avec les ‘tags’ bien sûr&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+        <link>http://agileek.github.io/docker/jekyll/2015/04/02/jekyll-generator-with-github/</link>
+        <guid isPermaLink="true">http://agileek.github.io/docker/jekyll/2015/04/02/jekyll-generator-with-github/</guid>
+        
+        
+        <category>docker</category>
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>One day, one post, one month</title>
