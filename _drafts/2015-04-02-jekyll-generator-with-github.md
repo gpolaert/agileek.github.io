@@ -82,19 +82,20 @@ Je me suis inspiré de [cet article][article_makefile], surtout de son [makefile
 
 {% highlight make %}
 JEKYLL = docker run --rm -v "$(shell pwd):/src" -p 4000:4000 grahamc/jekyll
-runner = `whoami`
+RUNNER = `whoami`
+COMMIT = `git rev-parse --short HEAD`
 
 test:
-	@${JEKYLL} serve --watch -H 0.0.0.0 --drafts
+  @${JEKYLL} serve --watch -H 0.0.0.0 --drafts
 
 deploy:
-	@echo "Building site"
-	@${JEKYLL} build
-	@git checkout master
-	@sudo chown -R ${runner}. _site && sudo cp -r _site/* . && sudo rm -rf _*/
-	@git add --all . && git commit -m "Jekyll deployment"
-	@git checkout develop && sudo git clean -f -d
-	@echo "You can now push master"
+  @echo "Building site"
+  @${JEKYLL} build
+  @git checkout master
+  @sudo chown -R ${RUNNER}. _site && sudo cp -r _site/* . && sudo rm -rf _*/
+  @git add --all . && git commit -m "Jekyll deployment from commit ${COMMIT}"
+  @git checkout develop && sudo git clean -f -d
+  @echo "You can now push master"
 {% endhighlight %}
 
 
