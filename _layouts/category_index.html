@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="home">
+  <div style="text-align: center;">
+    <img src="/images/categories/{{ page.category }}_banner.png" class="category_banner" alt="{{ page.category }}">
+  </div>
+  <ul class="posts">
+      {% for post in site.posts %}
+      <li>
+          {%if post.categories contains page.category%}
+            <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          {% endif %}
+      </li>
+      {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe
+      <a href="http://feeds.feedburner.com/github/AkZi">via RSS</a>
+  </p>
+</div>
