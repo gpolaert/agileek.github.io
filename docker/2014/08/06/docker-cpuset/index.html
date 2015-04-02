@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Agile & Java</title>
+    <title>Playing with docker and cpuset</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.">
     <link rel="icon" type="image/png" href="/images/home.png" />
-    <link rel="canonical" href="http://agileek.github.io/archives/">
+    <link rel="canonical" href="http://agileek.github.io/docker/2014/08/06/docker-cpuset/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href=" /css/main.css ">
@@ -74,26 +74,72 @@
 
     <div class="page-content">
       <div class="wrap">
-      
-  <h2>2014</h2>
-  <ul>
-  
-    <li><a href="/docker/jekyll/2014/07/23/jekyll-and-docker/">Jekyll quickstart with docker</a></li>
-  
-    <li><a href="/docker/2014/08/06/docker-cpuset/">Playing with docker and cpuset</a></li>
-  
-  </ul>
+      <div class="post">
 
-  <h2>2015</h2>
-  <ul>
-  
-    <li><a href="/intellij/java/2015/03/01/intellij-live-template-log/">Generate log line with Intellij and live templates</a></li>
-  
-    <li><a href="/2015/04/01/one-day-one-post/">One day, one post, one month</a></li>
-  
-  </ul>
+    <header class="post-header">
+        <h1>Playing with docker and cpuset</h1>
+        <p class="meta">Aug 6, 2014</p>
+    </header>
+
+    <article class="post-content">
+        <p>For my client I need to benchmark a multi-threaded/multi-server solution.</p>
+
+<p>Unfortunately, we only have a big server (128 GB, 32 cores,…) and we are putting all our instances on this single server.
+As each instance is multi-threaded, we noticed that they often get in each others way, resulting in bad performances (context swapping, …).</p>
+
+<p>We solved this problem with 2 solutions.</p>
+
+<p>We used thread affinity in the application in order to bind some thread to a given CPU, and we used <a href="https://www.docker.com/">docker</a> to authorize a given application to access only some CPUs (via cpuset).</p>
+
+<p>In order to be sure that docker was correctly restricting the access to the CPUs, I created a <a href="https://registry.hub.docker.com/u/agileek/cpuset-test/">docker image</a>:</p>
+
+<p>If you run it with</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -ti --cpuset<span class="o">=</span><span class="m">6</span> agileek/cpuset-test</code></pre></div>
+
+<p>it will take one cpu (the 7th) at 100%.</p>
+
+<p>You can see it in action:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/1BMKK812y5A" frameborder="0" width="800" height="600" allowfullscreen=""></iframe>
+</div>
+
+<p>If you run it with</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -ti --cpuset<span class="o">=</span>0,4,6 agileek/cpuset-test /cpus 3</code></pre></div>
+
+<p>it will take all available CPUs (the 1st, 5th and 7th)</p>
+
+<p>You can see it in action:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/ITcyeL8V35I" frameborder="0" width="800" height="600" allowfullscreen=""></iframe>
+</div>
 
 
+    </article>
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'agileek'; 
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by
+        <span class="logo-disqus">Disqus</span>
+    </a>
+
+</div>
       </div>
     </div>
 

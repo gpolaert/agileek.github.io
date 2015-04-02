@@ -1,30 +1,220 @@
----
-layout: none
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Agile &amp; Java</title>
+    <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
+    <link>http://agileek.github.io/</link>
+    <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 02 Apr 2015 11:08:10 +0000</pubDate>
+    <lastBuildDate>Thu, 02 Apr 2015 11:08:10 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>One day, one post, one month</title>
+        <description>&lt;h2 id=&quot;challenge-du-mois&quot;&gt;Challenge du mois&lt;/h2&gt;
+
+&lt;p&gt;J’ai commencé ce blog en Juillet 2014 avec plein d’idées, de sujets, de bonnes résolutions.&lt;/p&gt;
+
+&lt;p&gt;Résultat, 9 mois plus tard, 3 billets en ligne… c’est pas fameux comme bilan.&lt;/p&gt;
+
+&lt;p&gt;Je me suis rendu compte que c’était difficile de blogger pour plein de raisons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;On trouve toujours autre chose à faire, même si on a des sujets plein la tête.&lt;/li&gt;
+  &lt;li&gt;Ça prend du temps, même pour des sujets qu’on maitrise&lt;/li&gt;
+  &lt;li&gt;En tant que freelance qui télétravaille, c’est difficile de se détacher de son client pour prendre du temps “pour soi”&lt;/li&gt;
+  &lt;li&gt;Je suis un peu fainéant je pense&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;J’étais en train de me poser la question de garder mon blog ou pas, car un blog abandonné, c’est quand même triste.&lt;/p&gt;
+
+&lt;p&gt;Je n’ai donc pas hésité longtemps quand Vincent m’a proposé un petit challenge : écrire un billet par jour pendant 1 mois.&lt;/p&gt;
+
+&lt;p&gt;Nous avons discuté lors du dernier &lt;a href=&quot;http://www.toulousejug.org/2015/03/11/yeoman.html&quot;&gt;Toulouse Jug&lt;/a&gt;, et c’est là qu’il m’a parlé de ce défi qu’il s’était lancé avec un ami.&lt;/p&gt;
+
+&lt;p&gt;J’ai trouvé l’idée vraiment super…le principe derrière l’idée encore plus :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Le but est de se lancer des défis sur 30 jours pour bousculer les habitudes&lt;/em&gt;&lt;/strong&gt;. Vincent l’explique mieux que moi dans son &lt;a href=&quot;http://vferries.github.io/blog/ignite-talks/&quot;&gt;post du premier avril&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Donc voilà, c’est parti pour un mois de posts, je pense parler de docker, j’ai quelques sujets assez précis dont je voudrais parler, mais pas que.&lt;/p&gt;
+
+&lt;h2 id=&quot;les-challengers&quot;&gt;Les challengers&lt;/h2&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/TTdm5GtAW0o&quot; frameborder=&quot;0&quot; width=&quot;800&quot; height=&quot;600&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;vincent-ferries&quot;&gt;Vincent Ferries&lt;/h3&gt;
+&lt;p&gt;Je le croise à tous les événements auxquels je vais, c’est impressionnant il est partout, passionné par le dev, il lance son &lt;a href=&quot;http://vferries.github.io/blog/&quot;&gt;blog&lt;/a&gt; et il en a un deuxième exclusivement sur les &lt;a href=&quot;http://vferries.github.io/voyage/&quot;&gt;voyages&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Je vous conseille d’aller y faire un tour, ça fait rêver.&lt;/p&gt;
+
+&lt;h3 id=&quot;jean-marie&quot;&gt;Jean-Marie&lt;/h3&gt;
+&lt;p&gt;Je ne le connais pas personnellement, je fais confiance à Vincent quand il me dit qu’il va parler de JavaScript et de vim.&lt;/p&gt;
+
+&lt;p&gt;Son blog est &lt;a href=&quot;http://randomblog.fr/&quot;&gt;ici&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ps-&quot;&gt;PS :&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Et ce n’est pas un poisson d’avril&lt;/li&gt;
+  &lt;li&gt;J’avais adoré l’initiative similaire de &lt;a href=&quot;http://blog.javabien.net/2014/03/28/one-day-one-post-6-weeks-30-posts/&quot;&gt;David Gageot&lt;/a&gt;, dommage qu’il ait arrêté&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+        <link>http://agileek.github.io/2015/04/01/one-day-one-post/</link>
+        <guid isPermaLink="true">http://agileek.github.io/2015/04/01/one-day-one-post/</guid>
+        
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Generate log line with Intellij and live templates</title>
+        <description>&lt;p&gt;With IntelliJ, one missing feature is the automatic generation of the famous &lt;code&gt;private static Logger LOGGER = ...;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can do it easily with the Live Templates, you just have to go to &lt;strong&gt;&lt;em&gt;Editor -&amp;gt; Live Templates -&amp;gt; others -&amp;gt; create new&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;And in these fields :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Abbreviation: log&lt;/li&gt;
+  &lt;li&gt;Description: Add log line&lt;/li&gt;
+  &lt;li&gt;Template text:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;slf4j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Logger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOGGER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;slf4j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LoggerFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$CLASS_NAME$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Applicable in: Java: declaration&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Edit variables: CLASS_NAME Expresion: className()&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Make sure you have slf4j-api in your classpath, with maven:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.slf4j&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;slf4j-api&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.7.7&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s it, type &lt;code&gt;log&lt;/code&gt; and Ctrl+J and it will generate the logger line, with the slf4j imports.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
+        <link>http://agileek.github.io/intellij/java/2015/03/01/intellij-live-template-log/</link>
+        <guid isPermaLink="true">http://agileek.github.io/intellij/java/2015/03/01/intellij-live-template-log/</guid>
+        
+        
+        <category>intellij</category>
+        
+        <category>java</category>
+        
+      </item>
+    
+      <item>
+        <title>Playing with docker and cpuset</title>
+        <description>&lt;p&gt;For my client I need to benchmark a multi-threaded/multi-server solution.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, we only have a big server (128 GB, 32 cores,…) and we are putting all our instances on this single server.
+As each instance is multi-threaded, we noticed that they often get in each others way, resulting in bad performances (context swapping, …).&lt;/p&gt;
+
+&lt;p&gt;We solved this problem with 2 solutions.&lt;/p&gt;
+
+&lt;p&gt;We used thread affinity in the application in order to bind some thread to a given CPU, and we used &lt;a href=&quot;https://www.docker.com/&quot;&gt;docker&lt;/a&gt; to authorize a given application to access only some CPUs (via cpuset).&lt;/p&gt;
+
+&lt;p&gt;In order to be sure that docker was correctly restricting the access to the CPUs, I created a &lt;a href=&quot;https://registry.hub.docker.com/u/agileek/cpuset-test/&quot;&gt;docker image&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;If you run it with&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run -ti --cpuset&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt; agileek/cpuset-test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;it will take one cpu (the 7th) at 100%.&lt;/p&gt;
+
+&lt;p&gt;You can see it in action:&lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;http://www.youtube.com/embed/1BMKK812y5A&quot; frameborder=&quot;0&quot; width=&quot;800&quot; height=&quot;600&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you run it with&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run -ti --cpuset&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,4,6 agileek/cpuset-test /cpus 3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;it will take all available CPUs (the 1st, 5th and 7th)&lt;/p&gt;
+
+&lt;p&gt;You can see it in action:&lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;http://www.youtube.com/embed/ITcyeL8V35I&quot; frameborder=&quot;0&quot; width=&quot;800&quot; height=&quot;600&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 06 Aug 2014 23:26:31 +0000</pubDate>
+        <link>http://agileek.github.io/docker/2014/08/06/docker-cpuset/</link>
+        <guid isPermaLink="true">http://agileek.github.io/docker/2014/08/06/docker-cpuset/</guid>
+        
+        
+        <category>docker</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll quickstart with docker</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/posts/2014-07-23/jekyll.png&quot; alt=&quot;Jekyll&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is my first blog post!&lt;/p&gt;
+
+&lt;p&gt;It’s been quite some time that I wanted to start it but I never had the energy to do it.&lt;/p&gt;
+
+&lt;p&gt;After a quick search on blog engines, I decided to give a try to &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, since it is integrated with github pages and is very simple to use.
+I followed their tutorial and Bam!&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo gem install jekyll
+Building native extensions.  This could take a &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;...
+ERROR:  Error installing jekyll:
+	ERROR: Failed to build gem native extension.
+
+        /usr/bin/ruby1.9.1 extconf.rb
+/usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;require&lt;span class=&quot;s1&quot;&gt;&amp;#39;: cannot load such file -- mkmf (LoadError)&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require&amp;#39;&lt;/span&gt;
+	from extconf.rb:1:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&amp;lt;main&amp;gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;
+
+
+Gem files will remain installed in /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; inspection.
+Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It didn’t work on my computer… and since i’m a lazy person, I get tired really fast when things don’t work like expected.&lt;/p&gt;
+
+&lt;p&gt;On the other side I’m a huge &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; fan, so I looked for a dockerized jekyll and I found this one: &lt;a href=&quot;https://registry.hub.docker.com/u/grahamc/jekyll/&quot;&gt;Jekyll with docker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In 3 steps, this blog was on:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Added alias to use &amp;#39;jekyll&amp;#39; command easily&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;#39;&lt;/span&gt;sudo docker run --rm -v &lt;span class=&quot;se&quot;&gt;\&amp;quot;\$&lt;/span&gt;PWD:/src&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt; -p 4000:4000 grahamc/jekyll&lt;span class=&quot;se&quot;&gt;\&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_aliases
+&lt;span class=&quot;c&quot;&gt;# Create a blog in &amp;#39;blog&amp;#39; directory&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new blog
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blog
+&lt;span class=&quot;c&quot;&gt;# Serve the blog on http://localhost:4000 and automatically reload on file changes&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll serve --watch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This was painless for me, as someone else already had a jekyll correctly installed and working in a docker environment.&lt;/p&gt;
+
+&lt;p&gt;Thanks &lt;a href=&quot;http://grahamc.com/&quot;&gt;Graham Christensen&lt;/a&gt;!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 23 Jul 2014 15:22:45 +0000</pubDate>
+        <link>http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/</link>
+        <guid isPermaLink="true">http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/</guid>
+        
+        
+        <category>docker</category>
+        
+        <category>jekyll</category>
+        
+      </item>
+    
   </channel>
 </rss>

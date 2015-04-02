@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Agile & Java</title>
+    <title>Jekyll quickstart with docker</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.">
     <link rel="icon" type="image/png" href="/images/home.png" />
-    <link rel="canonical" href="http://agileek.github.io/archives/">
+    <link rel="canonical" href="http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href=" /css/main.css ">
@@ -74,26 +74,78 @@
 
     <div class="page-content">
       <div class="wrap">
-      
-  <h2>2014</h2>
-  <ul>
-  
-    <li><a href="/docker/jekyll/2014/07/23/jekyll-and-docker/">Jekyll quickstart with docker</a></li>
-  
-    <li><a href="/docker/2014/08/06/docker-cpuset/">Playing with docker and cpuset</a></li>
-  
-  </ul>
+      <div class="post">
 
-  <h2>2015</h2>
-  <ul>
-  
-    <li><a href="/intellij/java/2015/03/01/intellij-live-template-log/">Generate log line with Intellij and live templates</a></li>
-  
-    <li><a href="/2015/04/01/one-day-one-post/">One day, one post, one month</a></li>
-  
-  </ul>
+    <header class="post-header">
+        <h1>Jekyll quickstart with docker</h1>
+        <p class="meta">Jul 23, 2014</p>
+    </header>
+
+    <article class="post-content">
+        <p><img src="/images/posts/2014-07-23/jekyll.png" alt="Jekyll" /></p>
+
+<p>This is my first blog post!</p>
+
+<p>It’s been quite some time that I wanted to start it but I never had the energy to do it.</p>
+
+<p>After a quick search on blog engines, I decided to give a try to <a href="http://jekyllrb.com">Jekyll</a>, since it is integrated with github pages and is very simple to use.
+I followed their tutorial and Bam!</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo gem install jekyll
+Building native extensions.  This could take a <span class="k">while</span>...
+ERROR:  Error installing jekyll:
+	ERROR: Failed to build gem native extension.
+
+        /usr/bin/ruby1.9.1 extconf.rb
+/usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in <span class="sb">`</span>require<span class="s1">&#39;: cannot load such file -- mkmf (LoadError)</span>
+<span class="s1">	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require&#39;</span>
+	from extconf.rb:1:in <span class="sb">`</span>&lt;main&gt;<span class="err">&#39;</span>
 
 
+Gem files will remain installed in /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2 <span class="k">for</span> inspection.
+Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out</code></pre></div>
+
+<p>It didn’t work on my computer… and since i’m a lazy person, I get tired really fast when things don’t work like expected.</p>
+
+<p>On the other side I’m a huge <a href="https://www.docker.com/">Docker</a> fan, so I looked for a dockerized jekyll and I found this one: <a href="https://registry.hub.docker.com/u/grahamc/jekyll/">Jekyll with docker</a>.</p>
+
+<p>In 3 steps, this blog was on:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Added alias to use &#39;jekyll&#39; command easily</span>
+<span class="nv">$ </span><span class="nb">echo alias </span><span class="nv">jekyll</span><span class="o">=</span><span class="se">\&#39;</span>sudo docker run --rm -v <span class="se">\&quot;\$</span>PWD:/src<span class="se">\&quot;</span> -p 4000:4000 grahamc/jekyll<span class="se">\&#39;</span> &gt;&gt; ~/.bash_aliases
+<span class="c"># Create a blog in &#39;blog&#39; directory</span>
+<span class="nv">$ </span>jekyll new blog
+<span class="nv">$ </span><span class="nb">cd </span>blog
+<span class="c"># Serve the blog on http://localhost:4000 and automatically reload on file changes</span>
+<span class="nv">$ </span>jekyll serve --watch</code></pre></div>
+
+<p>This was painless for me, as someone else already had a jekyll correctly installed and working in a docker environment.</p>
+
+<p>Thanks <a href="http://grahamc.com/">Graham Christensen</a>!</p>
+
+
+    </article>
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'agileek'; 
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by
+        <span class="logo-disqus">Disqus</span>
+    </a>
+
+</div>
       </div>
     </div>
 
