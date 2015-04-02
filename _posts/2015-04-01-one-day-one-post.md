@@ -26,7 +26,7 @@ Nous avons discuté lors du dernier [Toulouse Jug][toulouse_jug], et c'est là q
 
 J'ai trouvé l'idée vraiment super...le principe derrière l'idée encore plus :
 
-***Le but est de se lancer des défis sur 30 jours pour bousculer les habitudes***. Vincent l'explique mieux que moi dans son [post d'aujourd'hui][post_vincent]
+***Le but est de se lancer des défis sur 30 jours pour bousculer les habitudes***. Vincent l'explique mieux que moi dans son [post du premier avril][post_vincent]
 
 
 Donc voilà, c'est parti pour un mois de posts, je pense parler de docker, j'ai quelques sujets assez précis dont je voudrais parler, mais pas que.
@@ -55,7 +55,7 @@ Son blog est [ici][randomblog]
 
 
 [toulouse_jug]: http://www.toulousejug.org/2015/03/11/yeoman.html
-[post_vincent]: http://vferries.github.io/blog/code-ignite-talks/
+[post_vincent]: http://vferries.github.io/blog/ignite-talks/
 [blog_vincent]: http://vferries.github.io/blog/
 [blog_vincent_voyages]: http://vferries.github.io/voyage/
 [randomblog]: http://randomblog.fr/
