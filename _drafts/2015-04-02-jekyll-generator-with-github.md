@@ -9,25 +9,25 @@ categories: docker jekyll
 
 Comme il y'a ***énormément*** de posts sur ce blog, j'ai eu envie de pouvoir lister les posts par catégories.
 
-Je me suis dis que c'était relativement facile, et au final j'y ai passé un moment avant de réussir à le faire fonctionner complètement sous githup pages.
+Je me suis dis que c'était relativement facile, et au final j'y ai passé un moment avant de réussir à le faire fonctionner complètement avec githup pages.
 
 J'ai trouvé des resources un peu partout mais rien qui expliquait de bout en bout la manipulation, d'où le post.
 
 ### Le générateur
 
-Jekyll sert statiquement les pages, il n'y a donc pas la possibilité de récupérer les valeurs de l'url pour servir ce que l'on veut.
+Jekyll sert statiquement les pages, il n'y a donc pas la possibilité de récupérer les paramètres de l'url pour s'en servir.
 
 Par exemple, j'aurais aimé que `http://agileek.github.io/?category=docker` fonctionne.
 
-Ce n'est pas possible de le faire autrement que par javascript (ce qui implique de charger tous les posts côté client, donc pas optimal).
+Ce n'est pas possible de le faire autrement que par javascript (ce qui implique de charger tous les posts côté client), ce que je ne trouve pas optimal.
 
 Si vous voulez le faire, jetez un oeil au [commit][danielsiwiec_commit] de [@danielsiwiec][danielsiwiec]
 
 #### Côté serveur
 
-Je me suis attaqué aux plugins de jekyll, plus précisemment aux [generators][jekyll_plugins_generator].
+Je me suis attaqué aux plugins de jekyll, plus précisément aux [generators][jekyll_plugins_generator].
 
-Je n'ai rien touché au code du générateur de catégorie qui est dans la doc de jekyll:
+Je n'ai rien touché au code du générateur de catégories qui est dans la doc de jekyll:
 {% highlight ruby %}
 module Jekyll
 
