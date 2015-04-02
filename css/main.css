@@ -169,6 +169,12 @@ a:visited { color: #205caa; }
     float: right;
 }
 
+
+.category_banner {
+    max-height: 250px;
+    border-radius: 8px;
+}
+
 .posts {
   list-style-type: none;
   line-height: 45px;
@@ -455,6 +461,11 @@ a:visited { color: #205caa; }
   }
 
   .category {
+    display: none;
+    visibility: hidden;
+  }
+
+  .category_banner {
     display: none;
     visibility: hidden;
   }

@@ -11,7 +11,7 @@ layout: default
             <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             {% for category in post.categories %}
-                <img src="/images/categories/{{ category }}.png" class="category" alt="{{ category }}">
+                <a href="{{site.baseurl}}/categories/{{ category }}"><img src="/images/categories/{{ category }}.png" class="category" alt="{{ category }}"></a>
             {% endfor %}
         </li>
         {% endfor %}
