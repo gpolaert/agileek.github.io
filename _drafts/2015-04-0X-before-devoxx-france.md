@@ -45,7 +45,8 @@ Voici ma première sélection :
 * 09:30-12:30
   * [Google Cloud Platform][hands_on_GCP]
   * [Devops rencontre BigData][hands_on_bigdata]
-* 13:30-16:30 [Go tutorial][go_tutorial]
+* 13:30-16:30
+  * [Go tutorial][go_tutorial]
 
 Pour les survivants, il y'a ensuite les "tools in action" jusqu'à 19h10
 
@@ -61,7 +62,16 @@ Pour les survivants, il y'a ensuite les "tools in action" jusqu'à 19h10
   * [Une présentation qui ne manque pas d'R!][tools_r]
 
 ## Jour 2
-
+* 09:30-10:50
+  * Keynote
+* 11:15-12:05
+  * [Datomic, la base de données qui n'oublie rien][conference_datomic]
+  * [Coding, fast & slow][conference_coding_fast_and_slow]
+* 12:10-12:30
+  * [Avro: la souplesse du JSON, les performances du binaire][quickie_avro]
+  * [Ignite 1][quickie_ignite1]
+* 12:35-12:55
+  * [Du 100% pur Guice !][quickie_guice]
 ## Jour 3
 
 
@@ -82,3 +92,8 @@ Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assi
 [tools_wiremock]: http://cfp.devoxx.fr/2015/talk/ZMG-1345/WireMock,_le_serveur_HTTP_couteau_suisse
 [tools_maven]: http://cfp.devoxx.fr/2015/talk/FEM-9840/Quand_Java_prend_de_la_vitesse,_Apache_Maven_vous_garde_sur_les_rails
 [tools_r]: http://cfp.devoxx.fr/2015/talk/FPD-2699/Une_presentation_qui_ne_manque_pas_d'R!
+[conference_datomic]: http://cfp.devoxx.fr/2015/talk/PRN-0316/Datomic,_la_base_de_donnees_qui_n'oublie_rien
+[conference_coding_fast_and_slow]: http://cfp.devoxx.fr/2015/talk/ZLE-4944/Coding,_fast_&_slow
+[quickie_avro]: http://cfp.devoxx.fr/2015/talk/MPO-1830/Avro:_la_souplesse_du_JSON,_les_performances_du_binaire
+[quickie_ignite1]: http://cfp.devoxx.fr/2015/talk/AIC-9053/Ignite_1
+[quickie_guice]: http://cfp.devoxx.fr/2015/talk/YSP-5366/Du_100%25_pur_Guice_!
