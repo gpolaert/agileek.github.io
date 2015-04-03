@@ -8,7 +8,7 @@ categories: java
 
 ## Maven
 
-Haaaa, maven, le seul, l'unique. on l'a tous détesté pour plein de raisons, que ce soit :
+Haaaa, maven, le seul, l'unique. On l'a tous détesté pour plein de raisons, que ce soit :
 
 * son fonctionnement 'convention over configuration'
 * sa lenteur
@@ -34,7 +34,7 @@ Petit rappel qui pique les yeux : voici comment déclarer ***UNE*** dépendance 
 
 
 ### Polyglot
-Annoncé il y'a très longtemps (j'en ai entendu parler en 2012, il y'avait quelques articles prometteurs), maven-polyglot avait pour but de rajouter le support de plusieurs langages dans les pom. Ça a été complètement abandonné, et toutes les resources ont [disparues du net][maven_polyglot_old].
+Annoncé il y'a très longtemps (j'en ai entendu parler en 2012, il y avait quelques articles prometteurs), maven-polyglot avait pour but de rajouter le support de plusieurs langages dans les pom. Ça a été complètement abandonné et toutes les resources ont [disparues du net][maven_polyglot_old].
 
 C'est récemment revenu au goût du jour avec Maven 3.3.1 (17 mars 2015) et l'arrivée du "Core Extension Mechanism" amélioré. Maintenant, pour modifier le coeur de maven (ok, je simplifie), il "suffit" de rajouter à la base de son projet maven ```.mvn/extensions.xml```
 
@@ -64,7 +64,7 @@ Ensuite, Vous pouvez convertir votre ```pom.xml``` grâce à un plugin via cette
  mvn io.takari.polyglot:polyglot-translate-plugin:translate -Dinput=pom.xml -Doutput=pom.yml
 {% endhighlight %}
 
-Et voilà, vous pouvez vous débarrasser du pom.xml et lancer ```mvn clean install``` et vérifier que tout fonctionne comme avant.
+Et voilà, vous pouvez vous débarrasser du pom.xml et lancer ```mvn clean install```. Vérifier que tout fonctionne comme avant quand même, on ne sait jamais.
 
 Pour le plaisir des yeux, voici la même dépendance en yaml
 {% highlight yaml %}
