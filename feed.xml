@@ -5,8 +5,8 @@
     <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
     <link>http://agileek.github.io/</link>
     <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 02 Apr 2015 18:08:35 +0000</pubDate>
-    <lastBuildDate>Thu, 02 Apr 2015 18:08:35 +0000</lastBuildDate>
+    <pubDate>Fri, 03 Apr 2015 11:59:35 +0000</pubDate>
+    <lastBuildDate>Fri, 03 Apr 2015 11:59:35 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -106,6 +106,15 @@
 &lt;p&gt;Quand je suis satisfait du résultat, un &lt;code&gt;make deploy&lt;/code&gt; suivi d’un &lt;code&gt;git push&lt;/code&gt; de &lt;code&gt;master&lt;/code&gt; et c’est en ligne.&lt;/p&gt;
 
 &lt;p&gt;Du coup je me suis amusé à rajouter un &lt;a href=&quot;http://agileek.github.io/archives/index.html&quot;&gt;generateur d’archives&lt;/a&gt; qui me classe les articles par années. Inutile, donc indispensable. Si ça vous intéresse, le commit est &lt;a href=&quot;https://github.com/agileek/agileek.github.io/commit/5f60f98cac273ee53dc4b458a06ba9e668f054b7&quot;&gt;là&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;edit-2015-04-03&quot;&gt;Edit 2015-04-03&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Jean-Philippe m’a expliqué qu’il n’y avait pas besoin de générateur pour les archives, ce qui est beaucoup plus simple et plus propre.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Voici la &lt;a href=&quot;https://github.com/barreverte/barreverte.github.io/blob/master/archive.html&quot;&gt;page en question&lt;/a&gt;. Je vous conseille de faire un tour sur leur &lt;a href=&quot;http://www.barreverte.fr/&quot;&gt;blog&lt;/a&gt;, c’est fait par des anciens collègues que j’apprécie énormément.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;rsultat&quot;&gt;Résultat&lt;/h2&gt;
 
