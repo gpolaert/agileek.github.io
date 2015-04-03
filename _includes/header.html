@@ -17,7 +17,7 @@
         </svg>
       </a>
       <div class="trigger">
-        {% for page in site.pages %}
+        {% for page in site.pages reversed %}
           {% if page.title %}
             {% if page.title contains 'Category' %}
             <!-- Do Nothing -->

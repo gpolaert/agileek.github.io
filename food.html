@@ -1,23 +1,24 @@
 ---
-layout: default
+layout: page
+title: Food
+permalink: /food/
+sitemap:
+    priority: 1.0
+    changefreq: 'monthly'
+    lastmod: 2015-04-03T23:05:14
 ---
+
+<h2>Parce qu'un informaticien doit se nourrir</h2>
+
 <div class="home">
     <ul class="posts">
         {% for post in site.posts %}
             {% if post.categories contains "food" %}
-            {% else %}
                 <li>
                     <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    {% for category in post.categories %}
-                        <a href="{{site.baseurl}}/categories/{{ category }}"><img src="/images/categories/{{ category }}.png" class="category" alt="{{ category }}"></a>
-                    {% endfor %}
                 </li>
             {% endif %}
         {% endfor %}
     </ul>
-
-    <p class="rss-subscribe">subscribe
-        <a href="http://feeds.feedburner.com/github/AkZi">via RSS</a>
-    </p>
 </div>
