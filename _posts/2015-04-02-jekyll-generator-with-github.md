@@ -105,6 +105,11 @@ Quand je suis satisfait du résultat, un `make deploy` suivi d'un `git push` de 
 
 Du coup je me suis amusé à rajouter un [generateur d'archives][archives] qui me classe les articles par années. Inutile, donc indispensable. Si ça vous intéresse, le commit est [là][commit_archives_generator]
 
+### Edit 2015-04-03
+> Jean-Philippe m'a expliqué qu'il n'y avait pas besoin de générateur pour les archives, ce qui est beaucoup plus simple et plus propre.
+
+> Voici la [page en question][archive_barre_verte]. Je vous conseille de faire un tour sur leur [blog][barre_verte], c'est fait par des anciens collègues que j'apprécie énormément.
+
 ## Résultat
 
 Maintenant, les images à droites des posts sur la page principale sont cliquables!!!!
@@ -124,3 +129,5 @@ C'est pas magnifique ça? Non? Mince alors.
 [danielsiwiec_commit]: https://github.com/danielsiwiec/danielsiwiec.github.io/commit/cf04dd322f5ffe2251ca6e3733d2707c2eaec7d4
 [commit_categories]: https://github.com/agileek/agileek.github.io/commit/14d1c8ffb3863fd5746cb28daefa5aee3f1bf99f
 [jekyll_plugins_generator]: http://jekyllrb.com/docs/plugins/#generators
+[archive_barre_verte]: https://github.com/barreverte/barreverte.github.io/blob/master/archive.html
+[barre_verte]: http://www.barreverte.fr/
