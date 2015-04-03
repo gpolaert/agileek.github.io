@@ -207,8 +207,9 @@
   @git checkout master
   @sudo chown -R <span class="k">${</span><span class="nv">RUNNER</span><span class="k">}</span>. _site <span class="o">&amp;&amp;</span> sudo cp -r _site/* . <span class="o">&amp;&amp;</span> sudo rm -rf _*/
   @git add --all . <span class="o">&amp;&amp;</span> git commit -m <span class="s2">&quot;Jekyll deployment from commit ${COMMIT}&quot;</span>
-  @git checkout develop <span class="o">&amp;&amp;</span> sudo git clean -f -d
-  @echo <span class="s2">&quot;You can now push master&quot;</span></code></pre></div>
+  @echo <span class="s2">&quot;You can now push master&quot;</span>
+  @echo <span class="s2">&quot;Once everything is valid, git checkout develop &amp;&amp; sudo git clean -f -d&quot;</span>
+  @python -m SimpleHTTPServer 4000</code></pre></div>
 
 <p>Maintenant, je n’ai même plus besoin de me souvenir de la commande jekyll à taper, un simple <code>make test</code> suffit.</p>
 

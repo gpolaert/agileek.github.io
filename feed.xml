@@ -5,8 +5,8 @@
     <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
     <link>http://agileek.github.io/</link>
     <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Apr 2015 21:30:04 +0000</pubDate>
-    <lastBuildDate>Fri, 03 Apr 2015 21:30:04 +0000</lastBuildDate>
+    <pubDate>Fri, 03 Apr 2015 21:35:08 +0000</pubDate>
+    <lastBuildDate>Fri, 03 Apr 2015 21:35:08 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -209,8 +209,9 @@
   @git checkout master
   @sudo chown -R &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;RUNNER&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;. _site &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo cp -r _site/* . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -rf _*/
   @git add --all . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Jekyll deployment from commit ${COMMIT}&amp;quot;&lt;/span&gt;
-  @git checkout develop &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo git clean -f -d
-  @echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;You can now push master&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  @echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;You can now push master&amp;quot;&lt;/span&gt;
+  @echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;Once everything is valid, git checkout develop &amp;amp;&amp;amp; sudo git clean -f -d&amp;quot;&lt;/span&gt;
+  @python -m SimpleHTTPServer 4000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Maintenant, je n’ai même plus besoin de me souvenir de la commande jekyll à taper, un simple &lt;code&gt;make test&lt;/code&gt; suffit.&lt;/p&gt;
 
