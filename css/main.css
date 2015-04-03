@@ -102,6 +102,10 @@ a:visited { color: #205caa; }
 
 .site-footer .column { float: left; margin-bottom: 15px; }
 
+.footnotes {
+  font-size: 85%;
+}
+
 .footer-col-1 {
   width: 270px; /*fallback*/
   width: -webkit-calc(35% - 10px);
