@@ -5,9 +5,120 @@
     <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
     <link>http://agileek.github.io/</link>
     <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Apr 2015 18:42:34 +0000</pubDate>
-    <lastBuildDate>Fri, 03 Apr 2015 18:42:34 +0000</lastBuildDate>
+    <pubDate>Fri, 03 Apr 2015 18:44:03 +0000</pubDate>
+    <lastBuildDate>Fri, 03 Apr 2015 18:44:03 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Maven 3.3.1: La mort du pom.xml</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/posts/maven/maven_logo.png&quot; alt=&quot;Maven&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;maven&quot;&gt;Maven&lt;/h2&gt;
+
+&lt;p&gt;Haaaa, maven, le seul, l’unique. On l’a tous détesté pour plein de raisons, que ce soit :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;son fonctionnement ‘convention over configuration’&lt;/li&gt;
+  &lt;li&gt;sa lenteur&lt;/li&gt;
+  &lt;li&gt;sa capacité à télécharger la terre entière&lt;/li&gt;
+  &lt;li&gt;son cycle de vie limité.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sans oublier sa syntaxe ultra verbeuse en &lt;strong&gt;&lt;em&gt;XML&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;le-constat&quot;&gt;Le constat&lt;/h3&gt;
+
+&lt;p&gt;Petit rappel qui pique les yeux : voici comment déclarer &lt;strong&gt;&lt;em&gt;UNE&lt;/em&gt;&lt;/strong&gt; dépendance dans son pom :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;net.code-story&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;http&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.83&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;test&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ça fait quand même &lt;strong&gt;&lt;em&gt;6&lt;/em&gt;&lt;/strong&gt; lignes pour &lt;strong&gt;&lt;em&gt;1&lt;/em&gt;&lt;/strong&gt; dépendance, soyons réalistes, c’est juste ignoble…&lt;/p&gt;
+
+&lt;h3 id=&quot;polyglot&quot;&gt;Polyglot&lt;/h3&gt;
+&lt;p&gt;Annoncé il y’a très longtemps (j’en ai entendu parler en 2012, il y avait quelques articles prometteurs), maven-polyglot avait pour but de rajouter le support de plusieurs langages dans les pom. Ça a été complètement abandonné et toutes les resources ont &lt;a href=&quot;http://stackoverflow.com/questions/11170057/what-happened-to-maven-polyglot&quot;&gt;disparues du net&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;C’est récemment revenu au goût du jour avec Maven 3.3.1 (17 mars 2015) et l’arrivée du “Core Extension Mechanism” amélioré. Maintenant, pour modifier le coeur de maven (ok, je simplifie), il “suffit” de rajouter à la base de son projet maven &lt;code&gt;.mvn/extensions.xml&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;concrtement-a-ressemble--quoi&quot;&gt;Concrètement, ça ressemble à quoi?&lt;/h3&gt;
+
+&lt;p&gt;À ça :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;extensions&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;extension&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.takari.polyglot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;polyglot-yaml&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;0.1.7&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/extension&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/extensions&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Vous remarquerez que pour le moment on s’est pas trop débarrassé du XML, on en a même rajouté…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;il-sest-pass-quoi&quot;&gt;Il s’est passé quoi?&lt;/h3&gt;
+&lt;p&gt;Concrètement, vous venez de rajouter le support de lecture des pom.yml et pom.yaml. &lt;strong&gt;&lt;em&gt;C’est pas énorme ça?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ensuite, Vous pouvez convertir votre &lt;code&gt;pom.xml&lt;/code&gt; grâce à un plugin via cette commande :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;mvn&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;takari&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;polyglot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polyglot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;plugin:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;translate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dinput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Doutput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;yml&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Et voilà, vous pouvez vous débarrasser du pom.xml et lancer &lt;code&gt;mvn clean install&lt;/code&gt;. Vérifier que tout fonctionne comme avant quand même, on ne sait jamais.&lt;/p&gt;
+
+&lt;p&gt;Pour le plaisir des yeux, voici la même dépendance en yaml&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;net.code-story&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;2.9.1&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Je trouve ça infiniment plus lisible. (Ok, c’est one-line, mais franchement, c’est lisible, essayez de mettre le xml sur une ligne, pour la blague)&lt;/p&gt;
+
+&lt;h3 id=&quot;cest-tout-cest-bon-on-peut-supprimer-nos-pomxml&quot;&gt;C’est tout? C’est bon on peut supprimer nos pom.xml?&lt;/h3&gt;
+
+&lt;p&gt;Malheureusement non, car si maven s’en sort très bien, ce n’est pas le cas (encore) des IDE.&lt;/p&gt;
+
+&lt;p&gt;Donc pour le moment si vous tenez absolument à vous débarrasser des pom.xml, vous pouvez faire en sorte de transformer votre pom.yml en pom.xml avec le même plugin. Ça duplique les fichiers, c’est moche, mais ça fonctionne.&lt;/p&gt;
+
+&lt;p&gt;Si vous êtes un peu patient, vous pouvez attendre que votre IDE favori implémente le support du polyglot en natif.&lt;/p&gt;
+
+&lt;h4 id=&quot;intellij&quot;&gt;Intellij&lt;/h4&gt;
+&lt;p&gt;Pour avoir le support sous IntelliJ, n’hésitez pas à allez voter là : &lt;a href=&quot;https://youtrack.jetbrains.com/issue/IDEA-138776&quot;&gt;IDEA-138776&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ps&quot;&gt;PS&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Je vous ai parlé que de yaml, mais il existe déjà plein d’autres langages
+    &lt;ul&gt;
+      &lt;li&gt;atom&lt;/li&gt;
+      &lt;li&gt;groovy&lt;/li&gt;
+      &lt;li&gt;ruby&lt;/li&gt;
+      &lt;li&gt;scala&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;En ruby par exemple il y’a la possibilité d’appeler du code ruby directement dans le pom.rb. Je trouve ça vraiment pas propre, à voir à l’usage.&lt;/li&gt;
+  &lt;li&gt;N’hésitez pas à aller voir les &lt;a href=&quot;https://github.com/takari/polyglot-maven-examples&quot;&gt;différents exemples&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Un de nos pom faisait 205 lignes, il en fait maintenant 74, en étant plus lisible&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;C’est mon opinion personnelle à moi, vous avez le droit de préférer le xml &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 03 Apr 2015 00:00:00 +0000</pubDate>
+        <link>http://agileek.github.io/java/2015/04/03/maven-polyglot/</link>
+        <guid isPermaLink="true">http://agileek.github.io/java/2015/04/03/maven-polyglot/</guid>
+        
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>Jekyll : ajouter des catégories à vos menus</title>
