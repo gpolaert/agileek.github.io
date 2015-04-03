@@ -19,7 +19,11 @@ layout: null
     {% if page.sitemap != null and page.sitemap != empty %}
       <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
-        <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+        {% if page.title contains "Category:" %}
+          <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% else %}
+          <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+        {% endif %}
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>
         <priority>{{ page.sitemap.priority }}</priority>
        </url>
