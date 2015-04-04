@@ -153,7 +153,7 @@
 
 <p>C’est récemment revenu au goût du jour avec Maven 3.3.1 (17 mars 2015) et l’arrivée du “Core Extension Mechanism” amélioré. Maintenant, pour modifier le coeur de maven (ok, je simplifie), il “suffit” de rajouter à la base de son projet maven <code>.mvn/extensions.xml</code></p>
 
-<h3 id="concrtement-a-ressemble--quoi">Concrètement, ça ressemble à quoi?</h3>
+<h3 id="concrtement-a-ressemble--quoi-">Concrètement, ça ressemble à quoi ?</h3>
 
 <p>À ça :</p>
 
@@ -170,8 +170,8 @@
   <p>Vous remarquerez que pour le moment on s’est pas trop débarrassé du XML, on en a même rajouté…</p>
 </blockquote>
 
-<h3 id="il-sest-pass-quoi">Il s’est passé quoi?</h3>
-<p>Concrètement, vous venez de rajouter le support de lecture des pom.yml et pom.yaml. <strong><em>C’est pas énorme ça?</em></strong></p>
+<h3 id="il-sest-pass-quoi-">Il s’est passé quoi ?</h3>
+<p>Concrètement, vous venez de rajouter le support de lecture des pom.yml et pom.yaml. <strong><em>C’est pas énorme ça ?</em></strong></p>
 
 <p>Ensuite, Vous pouvez convertir votre <code>pom.xml</code> grâce à un plugin via cette commande :</p>
 
@@ -183,9 +183,9 @@
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="p-Indicator">-</span> <span class="p-Indicator">{</span><span class="nv">groupId</span><span class="p-Indicator">:</span> <span class="nv">net.code-story</span><span class="p-Indicator">,</span> <span class="nv">artifactId</span><span class="p-Indicator">:</span> <span class="nv">http</span><span class="p-Indicator">,</span> <span class="nv">version</span><span class="p-Indicator">:</span> <span class="nv">2.9.1</span><span class="p-Indicator">}</span></code></pre></div>
 
-<p>Je trouve ça infiniment plus lisible. (Ok, c’est one-line, mais franchement, c’est lisible, essayez de mettre le xml sur une ligne, pour la blague)</p>
+<p>Je trouve ça infiniment plus lisible. (Ok, c’est one-line, mais franchement, c’est lisible, essayez de mettre le xml sur une ligne, pour la blague).</p>
 
-<h3 id="cest-tout-cest-bon-on-peut-supprimer-nos-pomxml">C’est tout? C’est bon on peut supprimer nos pom.xml?</h3>
+<h3 id="cest-tout--cest-bon-on-peut-supprimer-nos-pomxml-">C’est tout ? C’est bon on peut supprimer nos pom.xml ?</h3>
 
 <p>Malheureusement non, car si maven s’en sort très bien, ce n’est pas le cas (encore) des IDE.</p>
 

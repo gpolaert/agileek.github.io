@@ -5,8 +5,8 @@
     <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
     <link>http://agileek.github.io/</link>
     <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Apr 2015 21:35:08 +0000</pubDate>
-    <lastBuildDate>Fri, 03 Apr 2015 21:35:08 +0000</lastBuildDate>
+    <pubDate>Sat, 04 Apr 2015 11:19:08 +0000</pubDate>
+    <lastBuildDate>Sat, 04 Apr 2015 11:19:08 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -44,7 +44,7 @@
 
 &lt;p&gt;C’est récemment revenu au goût du jour avec Maven 3.3.1 (17 mars 2015) et l’arrivée du “Core Extension Mechanism” amélioré. Maintenant, pour modifier le coeur de maven (ok, je simplifie), il “suffit” de rajouter à la base de son projet maven &lt;code&gt;.mvn/extensions.xml&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;concrtement-a-ressemble--quoi&quot;&gt;Concrètement, ça ressemble à quoi?&lt;/h3&gt;
+&lt;h3 id=&quot;concrtement-a-ressemble--quoi-&quot;&gt;Concrètement, ça ressemble à quoi ?&lt;/h3&gt;
 
 &lt;p&gt;À ça :&lt;/p&gt;
 
@@ -61,8 +61,8 @@
   &lt;p&gt;Vous remarquerez que pour le moment on s’est pas trop débarrassé du XML, on en a même rajouté…&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;il-sest-pass-quoi&quot;&gt;Il s’est passé quoi?&lt;/h3&gt;
-&lt;p&gt;Concrètement, vous venez de rajouter le support de lecture des pom.yml et pom.yaml. &lt;strong&gt;&lt;em&gt;C’est pas énorme ça?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;il-sest-pass-quoi-&quot;&gt;Il s’est passé quoi ?&lt;/h3&gt;
+&lt;p&gt;Concrètement, vous venez de rajouter le support de lecture des pom.yml et pom.yaml. &lt;strong&gt;&lt;em&gt;C’est pas énorme ça ?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Ensuite, Vous pouvez convertir votre &lt;code&gt;pom.xml&lt;/code&gt; grâce à un plugin via cette commande :&lt;/p&gt;
 
@@ -74,9 +74,9 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;net.code-story&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;2.9.1&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Je trouve ça infiniment plus lisible. (Ok, c’est one-line, mais franchement, c’est lisible, essayez de mettre le xml sur une ligne, pour la blague)&lt;/p&gt;
+&lt;p&gt;Je trouve ça infiniment plus lisible. (Ok, c’est one-line, mais franchement, c’est lisible, essayez de mettre le xml sur une ligne, pour la blague).&lt;/p&gt;
 
-&lt;h3 id=&quot;cest-tout-cest-bon-on-peut-supprimer-nos-pomxml&quot;&gt;C’est tout? C’est bon on peut supprimer nos pom.xml?&lt;/h3&gt;
+&lt;h3 id=&quot;cest-tout--cest-bon-on-peut-supprimer-nos-pomxml-&quot;&gt;C’est tout ? C’est bon on peut supprimer nos pom.xml ?&lt;/h3&gt;
 
 &lt;p&gt;Malheureusement non, car si maven s’en sort très bien, ce n’est pas le cas (encore) des IDE.&lt;/p&gt;
 
