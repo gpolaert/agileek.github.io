@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Category: intellij</title>
+    <title>Docker Tips #1: Beware the 'rm'</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.">
     <link rel="icon" type="image/png" href="/images/home.png" />
-    <link rel="canonical" href="http://agileek.github.io/categories/intellij/">
+    <link rel="canonical" href="http://agileek.github.io/docker/2015/04/04/docker-rm/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href=" /css/main.css ">
@@ -112,50 +112,110 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="home">
-  <div style="text-align: center;">
-    <img src="/images/categories/intellij_banner.png" class="category_banner" alt="intellij">
-  </div>
-  <ul class="posts">
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/03/01</span>
-            <a class="post-link" href="/intellij/java/2015/03/01/intellij-live-template-log/">Generate log line with Intellij and live templates</a>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-  </ul>
+      <div class="post">
 
-  <p class="rss-subscribe">subscribe
-      <a href="http://feeds.feedburner.com/github/AkZi">via RSS</a>
-  </p>
+    <header class="post-header">
+        <h1>Docker Tips #1: Beware the 'rm'</h1>
+        <p class="meta">Apr 4, 2015</p>
+    </header>
+
+    <article class="post-content">
+        <p>This begins a serie of docker tips.</p>
+
+<h2 id="scenario">Scenario</h2>
+
+<p>I want to remove a container from my host</p>
+
+<h3 id="given">Given</h3>
+<p>My very simple Dockerfile</p>
+
+<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">FROM</span> phusion/baseimage:0.9.16
+<span class="k">RUN</span> <span class="nb">echo </span>useless <span class="nb">command</span>
+<span class="k">VOLUME</span> <span class="o">[</span><span class="s2">&quot;/data&quot;</span><span class="o">]</span></code></pre></div>
+
+<p>built with <code>docker build -t test .</code></p>
+
+<h3 id="given-1">Given</h3>
+<p>A container based on this image started with</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">docker run --name test_container -ti <span class="nb">test</span> /bin/dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/data/agileek_test.file <span class="nv">count</span><span class="o">=</span><span class="m">102400</span> <span class="nv">bs</span><span class="o">=</span>1024</code></pre></div>
+
+<h3 id="when">When</h3>
+<p>I remove it: <code>docker rm test_container</code></p>
+
+<h3 id="then">Then</h3>
+<p>I expect to have everything <strong><em>deleted</em></strong>, right? <strong><em>Wrong</em></strong></p>
+
+<h2 id="explanations">Explanations</h2>
+
+<p>If you look at <code>/var/lib/docker/vfs/dir/</code> you will have something like that</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">/var/lib/docker/vfs/dir
+├── 1fe7caeb0d0d70e199e529fc006713d79078dceff821bf4f9d0a9c52b7c16b63
+├── 6dd51767e69d10859f605795d93fe1d0b2a3b8113ed05fffc2e7941f2d5546d3
+│   └── agileek_test.file
+├── 72ba5f35eb914871fab207d174c90668cf15979fa42a9e1a175febf257efba26</code></pre></div>
+
+<p>As you can see, the agileek_test.file is still here, without attached container, like a ghost folder on your system.</p>
+
+<h3 id="the-volume-command">The Volume command</h3>
+<p>The fact that I specified <code>VOLUME ["/data"]</code> in my Dockerfile tells docker to treat this folder differently.</p>
+
+<p>Almost every time when you use the VOLUME command, later when you run it, you mount this volume (on the host, or linked to another container) with <code>-v</code></p>
+
+<p>But when you forgot to do this, docker automatically creates a folder in a Virtual File System (on ubuntu, /var/lib/docker/vfs) and doesn’t delete it, even when you remove your container.</p>
+
+<p>You can see with <code>docker inspect test_container</code> which folder has been created</p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">&quot;Volumes&quot;</span><span class="err">:</span> <span class="p">{</span>
+	<span class="nt">&quot;/data&quot;</span><span class="p">:</span> <span class="s2">&quot;/var/lib/docker/vfs/dir/6dd51767e69d10859f605795d93fe1d0b2a3b8113ed05fffc2e7941f2d5546d3&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>but once you delete it, you’ve lost the information and this folder is “lost”</p>
+
+<h3 id="what-can-i-do-">What can I do ?</h3>
+
+<p>The best practice is of course to always mount the folder that you declared with VOLUME in your Dockerfile.</p>
+
+<p>The other good practice is to <strong><em>Read The Manual</em></strong> (Of course, I didn’t do it) because:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker rm --help
+
+Usage: docker rm <span class="o">[</span>OPTIONS<span class="o">]</span> CONTAINER <span class="o">[</span>CONTAINER...<span class="o">]</span>
+
+Remove one or more containers
+
+  -f, --force<span class="o">=</span><span class="nb">false      </span>Force the removal of a running container <span class="o">(</span>uses SIGKILL<span class="o">)</span>
+  --help<span class="o">=</span><span class="nb">false           </span>Print usage
+  -l, --link<span class="o">=</span><span class="nb">false       </span>Remove the specified link and not the underlying container
+  -v, --volumes<span class="o">=</span><span class="nb">false    </span>Remove the volumes associated with the container</code></pre></div>
+
+<p>there is a <strong><em>-v</em></strong> option that Remove the volumes associated with the container</p>
+
+<p>I really wished I found this before our server went full.</p>
+
+    </article>
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'agileek'; 
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by
+        <span class="logo-disqus">Disqus</span>
+    </a>
+
 </div>
-
       </div>
     </div>
 
