@@ -7,13 +7,12 @@ categories: docker
 
 ## Scenario
 
-I want to transfer ***efficiently*** my images to the production machines
+I want to transfer ***efficiently*** my images to the production machines.
 
 ### Given
 My Dockerfile with android sdk
 
 {% highlight docker %}
-FROM phusion/baseimage:0.9.16
 ADD http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz /opt/android-sdk.tgz
 RUN tar xzf /opt/android-sdk.tgz -C /opt/
 RUN rm -f /opt/android-sdk.tgz
@@ -29,12 +28,12 @@ I want to push it to the registry
 It will push 3 layers: 
 
 * the first is the android tgz pushed into /opt
-* the second is the ```extract``` of the sdk into the /opt directory
+* the second is the ***extracted*** sdk into the /opt directory
 * the last one is the deletion of the tgz
 
-This is really not optimal, the first and third layer are useless. Worst, they use space on your filesystems, on your network when you pull/push,...
+This is really not optimal, the first and third layer are useless. Worst, they use space on your filesystems, on your network when you pull/push, ...
 
-## Correction
+## Solution
 
 It is a good practice to merge common operations into one single docker command.
 
@@ -48,7 +47,14 @@ RUN cd /opt && \
 
 In that way you only have one layer commited, and it contains only the needed android sdk extracted.
 
-###Caveats
+### Caveats
+
+There is on drawback with this particular approach: You lose the capacities of the ```ADD``` syntax.
+
+If you build the first Dockerfile, you will notice that each time the tgz is downloaded. Docker then verifies that the file hasn't changed and if not, uses the cached image.
+
+That means that if the tgz changes, there will be a new build, whereas with the one-line approach, it will not, because docker will just verify that the command hasn't changed, not the content downloaded by the wget
+
 
 ## Templates
 
@@ -59,10 +65,11 @@ The general approach is :
 * Clean everything that is not necessary
 
 
-The example above is valid for all archives that must be extracted
+The example with the android sdk works for all archives that must be extracted
 
-### APT
-For apt: 
+Below are templates from our experience that we think doesn't alter readability while reducing the layers and the size of the docker image
+
+### APT 
 {% highlight docker %}
 RUN apt-get update &&  \
     apt-get install -y whatever && \
@@ -70,3 +77,24 @@ RUN apt-get update &&  \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 {% endhighlight %}
+
+
+### Yum
+{% highlight docker %}
+RUN yum -y update && \
+    yum -y install whatever && \
+    yum clean all
+{% endhighlight %}
+
+### An other ***very*** important thing is to keep your Dockerfile ***readable***
+
+This example is, in my opinion, just too much.
+
+{% gist MichaelBitard/7bd7bc71385326ab3238 Dockerfile %}
+
+> Yes, it's only one docker RUN command	
+
+
+#### PS
+
+* If you know other tips to reduce the number of layers without loosing readability, feel free to post a comment, I'll gladly add them here.
