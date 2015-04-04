@@ -38,7 +38,7 @@ Annoncé il y'a très longtemps (j'en ai entendu parler en 2012, il y avait quel
 
 C'est récemment revenu au goût du jour avec Maven 3.3.1 (17 mars 2015) et l'arrivée du "Core Extension Mechanism" amélioré. Maintenant, pour modifier le coeur de maven (ok, je simplifie), il "suffit" de rajouter à la base de son projet maven ```.mvn/extensions.xml```
 
-### Concrètement, ça ressemble à quoi?
+### Concrètement, ça ressemble à quoi ?
 
 À ça : 
 
@@ -55,8 +55,8 @@ C'est récemment revenu au goût du jour avec Maven 3.3.1 (17 mars 2015) et l'ar
 
 > Vous remarquerez que pour le moment on s'est pas trop débarrassé du XML, on en a même rajouté...
 
-### Il s'est passé quoi?
-Concrètement, vous venez de rajouter le support de lecture des pom.yml et pom.yaml. ***C'est pas énorme ça?***
+### Il s'est passé quoi ?
+Concrètement, vous venez de rajouter le support de lecture des pom.yml et pom.yaml. ***C'est pas énorme ça ?***
 
 Ensuite, Vous pouvez convertir votre ```pom.xml``` grâce à un plugin via cette commande : 
 
@@ -71,9 +71,9 @@ Pour le plaisir des yeux, voici la même dépendance en yaml
 - {groupId: net.code-story, artifactId: http, version: 2.9.1}
 {% endhighlight %}
 
-Je trouve ça infiniment plus lisible. (Ok, c'est one-line, mais franchement, c'est lisible, essayez de mettre le xml sur une ligne, pour la blague)
+Je trouve ça infiniment plus lisible. (Ok, c'est one-line, mais franchement, c'est lisible, essayez de mettre le xml sur une ligne, pour la blague).
 
-### C'est tout? C'est bon on peut supprimer nos pom.xml?
+### C'est tout ? C'est bon on peut supprimer nos pom.xml ?
 
 Malheureusement non, car si maven s'en sort très bien, ce n'est pas le cas (encore) des IDE.
 
