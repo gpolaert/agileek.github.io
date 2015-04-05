@@ -72,11 +72,32 @@ Pour les survivants, il y'a ensuite les "tools in action" jusqu'à 19h10
   * [Ignite 1][quickie_ignite1]
 * 12:35-12:55
   * [Du 100% pur Guice !][quickie_guice]
+* 13:00-13:50
+  * [UX : le Poids des Mots...][conference_ux]
+* 14:05-14:55
+  * [Refactoring to Functional][conference_refactoring_functional]
+  * [Changing the wheel of a moving car - faire évoluer l'infra sans interruption][conference_cloudbees]
+* 15:10-16:00
+  * [Java Mission Control for Earthlings][conference_JMC]
+  * [Applications Concurrentes Polyglottes avec Vert.x][conference_vertx]
+* 16:35-17:25
+  * [Modular Java Platform][conference_jigsaw]
+  * [Caching reboot: javax.cache & Ehcache 3][conference_cache]
+* 17:40-18:30
+  * [Making Java more dynamic][conference_java_dynamic]
+* 18:45-19:15
+  * [App Engine Managed VMs et Fluent-http, un mariage heureux][tools_fluent_http]
+
+Les BOF en vrac : 
+
+* [BOF docker][bof_docker]
+* [Comment vivre d'un projet open source][bof_open_source]
+
 ## Jour 3
 
 
 ### PS
-Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assister en même temps, ça part mal déjà
+Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assister en même temps, ça part mal déjà.
 
 
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
@@ -97,3 +118,14 @@ Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assi
 [quickie_avro]: http://cfp.devoxx.fr/2015/talk/MPO-1830/Avro:_la_souplesse_du_JSON,_les_performances_du_binaire
 [quickie_ignite1]: http://cfp.devoxx.fr/2015/talk/AIC-9053/Ignite_1
 [quickie_guice]: http://cfp.devoxx.fr/2015/talk/YSP-5366/Du_100%25_pur_Guice_!
+[conference_ux]: http://cfp.devoxx.fr/2015/talk/KFB-1486/UX_:_le_Poids_des_Mots...
+[conference_refactoring_functional]: http://cfp.devoxx.fr/2015/talk/UVY-4302/Refactoring_to_Functional
+[conference_cloudbees]: http://cfp.devoxx.fr/2015/talk/QDM-2722/Changing_the_wheel_of_a_moving_car_-_faire_evoluer_l'infra_sans_interruption
+[conference_JMC]: http://cfp.devoxx.fr/2015/talk/FJN-6482/Java_Mission_Control_for_Earthlings
+[conference_vertx]: http://cfp.devoxx.fr/2015/talk/SDO-9958/Applications_Concurrentes_Polyglottes_avec_Vert.x
+[conference_jigsaw]: http://cfp.devoxx.fr/2015/talk/MXY-8408/Modular_Java_Platform
+[conference_cache]: http://cfp.devoxx.fr/2015/talk/AIM-2044/Caching_reboot:_javax.cache_&_Ehcache_3
+[conference_java_dynamic]: http://cfp.devoxx.fr/2015/talk/ZTF-9055/Making_Java_more_dynamic
+[tools_fluent_http]: http://cfp.devoxx.fr/2015/talk/WSU-8098/App_Engine_Managed_VMs_et_Fluent-http,_un_mariage_heureux
+[bof_docker]: http://cfp.devoxx.fr/2015/talk/SRB-3347/BOF_Docker_Paris
+[bof_open_source]: http://cfp.devoxx.fr/2015/talk/HZH-3776/Comment_vivre_d'un_projet_open_source
