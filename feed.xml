@@ -5,9 +5,66 @@
     <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
     <link>http://agileek.github.io/</link>
     <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 04 Apr 2015 13:30:11 +0000</pubDate>
-    <lastBuildDate>Sat, 04 Apr 2015 13:30:11 +0000</lastBuildDate>
+    <pubDate>Sun, 05 Apr 2015 11:14:21 +0000</pubDate>
+    <lastBuildDate>Sun, 05 Apr 2015 11:14:21 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Moelleux au chocolat</title>
+        <description>&lt;p&gt;Comme aujourd’hui c’est la journée mondiale du chocolat (Ha non, en fait c’est &lt;strong&gt;&lt;em&gt;Pâques&lt;/em&gt;&lt;/strong&gt;), c’est l’occasion pour moi de commencer une section recettes.&lt;/p&gt;
+
+&lt;p&gt;Quoi de mieux pour commencer que des moelleux au chocolat. En plus, vous pouvez les cacher dans le jardin, c’est vachement mieux que des oeufs, non?&lt;/p&gt;
+
+&lt;h2 id=&quot;moelleux-au-chocolat&quot;&gt;Moelleux au chocolat&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Préparation : 15 minutes&lt;/li&gt;
+  &lt;li&gt;Repos : 30 minutes&lt;/li&gt;
+  &lt;li&gt;Cuisson : 10 minutes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ingrdients&quot;&gt;Ingrédients&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;200&lt;/em&gt;&lt;/strong&gt; g de chocolat noir extra&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;200&lt;/em&gt;&lt;/strong&gt; g de beurre&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;5&lt;/em&gt;&lt;/strong&gt; oeufs&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;300&lt;/em&gt;&lt;/strong&gt; g de sucre&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;65&lt;/em&gt;&lt;/strong&gt; g de farine&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;prparation&quot;&gt;Préparation&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Faire fondre le chocolat au bain marie avec le beurre coupé en morceaux. Fouetter pour lisser la préparation et laisser refroidir.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Battre les oeufs dans un récipient avec le sucre. Ajouter la farine, fouetter, puis mélanger la préparation avec le mélange choco-beurre. Laisser reposer 30 min.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Préchauffer le four à 180°C. Répartir la préparation dans les moules.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enfourner les moelleux pendant 10-12 min. Laisser reposer 5 min puis démouler délicatement. Servir tiède.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;astuce&quot;&gt;Astuce&lt;/h3&gt;
+
+&lt;p&gt;Tout se joue sur le temps de cuisson, il faut bien les surveiller pour qu’ils restent fondants à l’intérieur.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
+        <link>http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</link>
+        <guid isPermaLink="true">http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</guid>
+        
+        <category>dessert</category>
+        
+        
+        <category>food</category>
+        
+      </item>
     
       <item>
         <title>Docker Tips #1: Beware the &#39;rm&#39;</title>
