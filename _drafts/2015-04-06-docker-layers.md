@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Docker Tips #2: Limit the layers"
-date:   2015-04-05
+date:   2015-04-06
 categories: docker
 ---
 

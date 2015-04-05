@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Devoxx France : la préparation"
-date:   2015-04-03
-categories: docker jekyll
+date:   2015-04-07
+categories: java
 ---
 
 ## Devoxx France
