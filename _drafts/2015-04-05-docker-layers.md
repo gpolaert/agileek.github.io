@@ -53,7 +53,7 @@ There is on drawback with this particular approach: You lose the capacities of t
 
 If you build the first Dockerfile, you will notice that each time the tgz is downloaded. Docker then verifies that the file hasn't changed and if not, uses the cached image.
 
-That means that if the tgz changes, there will be a new build, whereas with the one-line approach, it will not, because docker will just verify that the command hasn't changed, not the content downloaded by the wget
+That means that if the tgz changes, there will be a new build, whereas with the one-line approach, it will not, because docker will just verify that the command hasn't changed, not the content downloaded by the wget.
 
 
 ## Templates
@@ -65,9 +65,9 @@ The general approach is :
 * Clean everything that is not necessary
 
 
-The example with the android sdk works for all archives that must be extracted
+The example with the android sdk works for all archives that must be extracted.
 
-Below are templates from our experience that we think doesn't alter readability while reducing the layers and the size of the docker image
+Below are templates from our experience that we think doesn't alter readability while reducing the layers and the size of the docker image.
 
 ### APT 
 {% highlight docker %}
@@ -97,4 +97,4 @@ This example is, in my opinion, just too much.
 
 #### PS
 
-* If you know other tips to reduce the number of layers without loosing readability, feel free to post a comment, I'll gladly add them here.
+* If you know other tips to reduce the number of layers without losing readability, feel free to post a comment, I'll gladly add them here.
