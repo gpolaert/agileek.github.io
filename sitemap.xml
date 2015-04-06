@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>http://agileek.github.io/java/2015/04/06/assertJ-3.0.0/</loc>
+      
+        <lastmod>2015-04-06T00:00:00+00:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</loc>
       
         <lastmod>2015-04-05T00:00:00+00:00</lastmod>
@@ -110,7 +119,7 @@
       <url>
         <loc>http://agileek.github.io/categories/docker/</loc>
         
-          <lastmod>2015-04-05T11:16:28+00:00</lastmod>
+          <lastmod>2015-04-06T10:01:58+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -121,7 +130,7 @@
       <url>
         <loc>http://agileek.github.io/categories/jekyll/</loc>
         
-          <lastmod>2015-04-05T11:16:28+00:00</lastmod>
+          <lastmod>2015-04-06T10:01:58+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -132,7 +141,7 @@
       <url>
         <loc>http://agileek.github.io/categories/intellij/</loc>
         
-          <lastmod>2015-04-05T11:16:28+00:00</lastmod>
+          <lastmod>2015-04-06T10:01:58+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -143,7 +152,7 @@
       <url>
         <loc>http://agileek.github.io/categories/java/</loc>
         
-          <lastmod>2015-04-05T11:16:28+00:00</lastmod>
+          <lastmod>2015-04-06T10:01:58+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -154,7 +163,7 @@
       <url>
         <loc>http://agileek.github.io/categories/food/</loc>
         
-          <lastmod>2015-04-05T11:16:28+00:00</lastmod>
+          <lastmod>2015-04-06T10:01:58+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>

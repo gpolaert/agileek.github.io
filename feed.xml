@@ -1,17 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Agile &amp; Java</title>
-    <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
-    <link>http://agileek.github.io/</link>
-    <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 05 Apr 2015 11:16:28 +0000</pubDate>
-    <lastBuildDate>Sun, 05 Apr 2015 11:16:28 +0000</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>Moelleux au chocolat</title>
-        <description>&lt;p&gt;Comme aujourd’hui c’est la journée mondiale du chocolat (Ha non, en fait c’est &lt;strong&gt;&lt;em&gt;Pâques&lt;/em&gt;&lt;/strong&gt;), c’est l’occasion pour moi de commencer une section recettes.&lt;/p&gt;
+    <channel>
+        <title>Agile &amp; Java</title>
+        <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
+        <link>http://agileek.github.io/</link>
+        <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
+        <pubDate>Mon, 06 Apr 2015 10:01:58 +0000</pubDate>
+        <lastBuildDate>Mon, 06 Apr 2015 10:01:58 +0000</lastBuildDate>
+        <generator>Jekyll v2.5.3</generator>
+        
+        <item>
+            <title>AssertJ 3.0.0 for Java 8</title>
+            <description>&lt;p&gt;AssertJ est enfin sorti avec le support de Java8.&lt;/p&gt;
+
+&lt;p&gt;Je le considère comme le meilleur outil de tests unitaires pour Java. Son approche est la suivante : une assertion doit être lisible par un humain.&lt;/p&gt;
+
+&lt;p&gt;Pour vous en faire la démonstration, je vais vous montrer plusieurs exemples avec assertJ, en les comparant avec les assertions Junit.&lt;/p&gt;
+
+&lt;h2 id=&quot;exemples&quot;&gt;Exemples&lt;/h2&gt;
+
+&lt;h3 id=&quot;boolean-check&quot;&gt;Boolean check&lt;/h3&gt;
+
+&lt;h4 id=&quot;junit&quot;&gt;Junit&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertTrue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myBooleanValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;assertj&quot;&gt;AssertJ&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myBooleanValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isTrue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;list-checks&quot;&gt;List checks&lt;/h3&gt;
+&lt;p&gt;Supposons cette liste :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;ImmutableList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ImmutableList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+						&lt;span class=&quot;s&quot;&gt;&amp;quot;element1&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; 
+						&lt;span class=&quot;s&quot;&gt;&amp;quot;element2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; 
+						&lt;span class=&quot;s&quot;&gt;&amp;quot;element3&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si je veux vérifier que les éléments sont bien présents&lt;/p&gt;
+
+&lt;h4 id=&quot;junit-1&quot;&gt;Junit&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;element1&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;element2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;element3&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;assertj-1&quot;&gt;AssertJ&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;containsExactly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;element1&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;element2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;element3&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Et je ne vous montre que le &lt;code&gt;containsExactly&lt;/code&gt;, il en existe plein d’autres (containsOnly, containsSubsequence, …).&lt;/p&gt;
+
+&lt;h2 id=&quot;dry--kiss&quot;&gt;DRY &amp;amp; KISS&lt;/h2&gt;
+
+&lt;p&gt;C’est vraiment ce que j’apprécie dans cette librairie : tout a été pensé pour que l’on ne perde pas de temps dans nos asserts.&lt;/p&gt;
+
+&lt;p&gt;Et quand on se retrouve avec des cas tordus&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, il y’a la possibilité de définir vos propres assertions (il y’a même un &lt;a href=&quot;http://joel-costigliola.github.io/assertj/assertj-assertions-generator.html&quot;&gt;générateur&lt;/a&gt; pour ça).&lt;/p&gt;
+
+&lt;h2 id=&quot;et-java-8-dans-tout-a-&quot;&gt;Et Java 8 dans tout ça ?&lt;/h2&gt;
+
+&lt;p&gt;La version 3.0.0 d’AssertJ fonctionne avec Java 8 et apporte son lot de sucre syntaxique.&lt;/p&gt;
+
+&lt;p&gt;Vous pouvez jeter un oeil sur la &lt;a href=&quot;http://joel-costigliola.github.io/assertj/assertj-core-news.html#assertj-core-3.0.0&quot;&gt;release note&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;datetime-assertions&quot;&gt;Date/Time assertions&lt;/h3&gt;
+&lt;p&gt;Regardez les exemples de la release note, il n’y a rien à rajouter, c’est parfait, tout est là.&lt;/p&gt;
+
+&lt;h3 id=&quot;exceptions&quot;&gt;Exceptions&lt;/h3&gt;
+
+&lt;h4 id=&quot;junit-2&quot;&gt;Junit&lt;/h4&gt;
+
+&lt;p&gt;Avec Junit, plusieurs choix, soit :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;on catch et on assert (Berk)&lt;/li&gt;
+  &lt;li&gt;on marque dans l’annotation @Test que l’on attend une exception (Re-Berk, on ne sait pas si l’exception a été lancée par ce qu’on voulait, ou par du code au dessus)&lt;/li&gt;
+  &lt;li&gt;on utilise la Rule ExpectedException&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Rule&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExpectedException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expectedException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExpectedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;shouldThrowExceptionWhenNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;expectedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NullPointerException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;expectedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;expectMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Enum is null&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;MyEnum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fromName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;assertj-3&quot;&gt;AssertJ 3&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;shouldThrowExceptionWhenNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Throwable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;throwable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;catchThrowable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyEnum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fromName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;throwable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isInstanceOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NullPointerException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                         &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Enum is null&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Maintenant, on est capable de séparer le “When” du “Then”, chose qui n’était avant possible qu’en faisant un try-catch.&lt;/p&gt;
+
+&lt;h3 id=&quot;optionals&quot;&gt;Optionals&lt;/h3&gt;
+
+&lt;h4 id=&quot;junit-3&quot;&gt;Junit&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;shouldAssertOptional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;optionalTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;assertTrue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isPresent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;optionalTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;assertj-3-1&quot;&gt;AssertJ 3&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;shouldAssertOptional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;optionalTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isPresent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+                        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;optionalTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;approximation-des-primitives&quot;&gt;Approximation des primitives&lt;/h3&gt;
+
+&lt;p&gt;Je ne suis pas sûr de l’utilité de celle là, d’un côté je pense que si on n’est pas capable de déterminer la sortie exacte d’un test, c’est qu’on a un problème.
+De l’autre, je me dis que ça peut être super, par exemple quand on fait des tests avec des nombres pseudo-aléatoires.&lt;/p&gt;
+
+&lt;p&gt;Bref, ça donne ça :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isCloseTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;within&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;matches&quot;&gt;matches&lt;/h3&gt;
+
+&lt;p&gt;Celui là peut être super, ou super dangereux.&lt;/p&gt;
+
+&lt;p&gt;Voici l’exemple de la release note:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;TolkienCharacter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frodo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TolkienCharacter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Frodo&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HOBBIT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// actual refers to frodo &lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HOBBIT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si on change l’âge de frodo à ‘25’ l’erreur remontée est la suivante :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertionError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 
+&lt;span class=&quot;nl&quot;&gt;Expecting:&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bitard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertJ3Test$TolkienCharacter&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;721&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e0f4f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;given&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;You&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Predicate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;have&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;better&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;For&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;example:&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isRookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;is rookie&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;give&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;an&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;looking&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;like:&lt;/span&gt;
+
+&lt;span class=&quot;nl&quot;&gt;Expecting:&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rookie&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bitard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertJ3Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shouldAssertMatches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AssertJ3Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;.....&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Je sais pas vous, mais moi je préfère ça :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;ava&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertionError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 
+&lt;span class=&quot;nl&quot;&gt;Expecting:&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greater&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;than:&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bitard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertJ3Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shouldAssertMatches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AssertJ3Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ce qui est donné par les asserts suivant :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isGreaterThan&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;race&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Race&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;HOBBIT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bilan&quot;&gt;Bilan&lt;/h3&gt;
+
+&lt;p&gt;C’est une super bonne nouvelle, surtout pour les dates, les exceptions et les optionals. Pour les autres, je suis plus mitigé, à voir à l’usage.&lt;/p&gt;
+
+&lt;p&gt;Et vous, vous en pensez quoi ?&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;C’est peut-être un problème de conception ? &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+            <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/java/2015/04/06/assertJ-3.0.0/</link>
+            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/06/assertJ-3.0.0/</guid>
+            
+            
+            <category>java</category>
+            
+        </item>
+        
+        <item>
+            <title>Moelleux au chocolat</title>
+            <description>&lt;p&gt;Comme aujourd’hui c’est la journée mondiale du chocolat (Ha non, en fait c’est &lt;strong&gt;&lt;em&gt;Pâques&lt;/em&gt;&lt;/strong&gt;), c’est l’occasion pour moi de commencer une section recettes.&lt;/p&gt;
 
 &lt;p&gt;Quoi de mieux pour commencer que des moelleux au chocolat. En plus, vous pouvez les cacher dans le jardin, c’est vachement mieux que des oeufs, non?&lt;/p&gt;
 
@@ -55,20 +243,20 @@
 &lt;p&gt;Tout se joue sur le temps de cuisson, il faut bien les surveiller pour qu’ils restent fondants à l’intérieur.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
-        <link>http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</link>
-        <guid isPermaLink="true">http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</guid>
+            <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</link>
+            <guid isPermaLink="true">http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</guid>
+            
+            <category>dessert</category>
+            
+            
+            <category>food</category>
+            
+        </item>
         
-        <category>dessert</category>
-        
-        
-        <category>food</category>
-        
-      </item>
-    
-      <item>
-        <title>Docker Tips #1: Beware the &#39;rm&#39;</title>
-        <description>&lt;p&gt;This begins a serie of docker tips.&lt;/p&gt;
+        <item>
+            <title>Docker Tips #1: Beware the &#39;rm&#39;</title>
+            <description>&lt;p&gt;This begins a serie of docker tips.&lt;/p&gt;
 
 &lt;h2 id=&quot;scenario&quot;&gt;Scenario&lt;/h2&gt;
 
@@ -142,18 +330,18 @@ Remove one or more containers
 
 &lt;p&gt;I really wished I found this before our server went full.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 04 Apr 2015 00:00:00 +0000</pubDate>
-        <link>http://agileek.github.io/docker/2015/04/04/docker-rm/</link>
-        <guid isPermaLink="true">http://agileek.github.io/docker/2015/04/04/docker-rm/</guid>
+            <pubDate>Sat, 04 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/docker/2015/04/04/docker-rm/</link>
+            <guid isPermaLink="true">http://agileek.github.io/docker/2015/04/04/docker-rm/</guid>
+            
+            
+            <category>docker</category>
+            
+        </item>
         
-        
-        <category>docker</category>
-        
-      </item>
-    
-      <item>
-        <title>Maven 3.3.1: La mort du pom.xml</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/posts/maven/maven_logo.png&quot; alt=&quot;Maven&quot; /&gt;&lt;/p&gt;
+        <item>
+            <title>Maven 3.3.1: La mort du pom.xml</title>
+            <description>&lt;p&gt;&lt;img src=&quot;/images/posts/maven/maven_logo.png&quot; alt=&quot;Maven&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;maven&quot;&gt;Maven&lt;/h2&gt;
 
@@ -253,18 +441,18 @@ Remove one or more containers
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Fri, 03 Apr 2015 00:00:00 +0000</pubDate>
-        <link>http://agileek.github.io/java/2015/04/03/maven-polyglot/</link>
-        <guid isPermaLink="true">http://agileek.github.io/java/2015/04/03/maven-polyglot/</guid>
+            <pubDate>Fri, 03 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/java/2015/04/03/maven-polyglot/</link>
+            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/03/maven-polyglot/</guid>
+            
+            
+            <category>java</category>
+            
+        </item>
         
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>Jekyll : ajouter des catégories à vos menus</title>
-        <description>&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+        <item>
+            <title>Jekyll : ajouter des catégories à vos menus</title>
+            <description>&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
 
 &lt;p&gt;Comme il y’a &lt;strong&gt;&lt;em&gt;énormément&lt;/em&gt;&lt;/strong&gt; de posts sur ce blog, j’ai eu envie de pouvoir lister les posts par catégories.&lt;/p&gt;
 
@@ -382,20 +570,20 @@ Remove one or more containers
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
-        <link>http://agileek.github.io/docker/jekyll/2015/04/02/jekyll-generator-with-github/</link>
-        <guid isPermaLink="true">http://agileek.github.io/docker/jekyll/2015/04/02/jekyll-generator-with-github/</guid>
+            <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/docker/jekyll/2015/04/02/jekyll-generator-with-github/</link>
+            <guid isPermaLink="true">http://agileek.github.io/docker/jekyll/2015/04/02/jekyll-generator-with-github/</guid>
+            
+            
+            <category>docker</category>
+            
+            <category>jekyll</category>
+            
+        </item>
         
-        
-        <category>docker</category>
-        
-        <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>One day, one post, one month</title>
-        <description>&lt;h2 id=&quot;challenge-du-mois&quot;&gt;Challenge du mois&lt;/h2&gt;
+        <item>
+            <title>One day, one post, one month</title>
+            <description>&lt;h2 id=&quot;challenge-du-mois&quot;&gt;Challenge du mois&lt;/h2&gt;
 
 &lt;p&gt;J’ai commencé ce blog en Juillet 2014 avec plein d’idées, de sujets, de bonnes résolutions.&lt;/p&gt;
 
@@ -445,16 +633,16 @@ Remove one or more containers
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
-        <link>http://agileek.github.io/2015/04/01/one-day-one-post/</link>
-        <guid isPermaLink="true">http://agileek.github.io/2015/04/01/one-day-one-post/</guid>
+            <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/2015/04/01/one-day-one-post/</link>
+            <guid isPermaLink="true">http://agileek.github.io/2015/04/01/one-day-one-post/</guid>
+            
+            
+        </item>
         
-        
-      </item>
-    
-      <item>
-        <title>Generate log line with Intellij and live templates</title>
-        <description>&lt;p&gt;With IntelliJ, one missing feature is the automatic generation of the famous &lt;code&gt;private static Logger LOGGER = ...;&lt;/code&gt;&lt;/p&gt;
+        <item>
+            <title>Generate log line with Intellij and live templates</title>
+            <description>&lt;p&gt;With IntelliJ, one missing feature is the automatic generation of the famous &lt;code&gt;private static Logger LOGGER = ...;&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;You can do it easily with the Live Templates, you just have to go to &lt;strong&gt;&lt;em&gt;Editor -&amp;gt; Live Templates -&amp;gt; others -&amp;gt; create new&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -487,20 +675,20 @@ Remove one or more containers
 
 &lt;p&gt;That’s it, type &lt;code&gt;log&lt;/code&gt; and Ctrl+J and it will generate the logger line, with the slf4j imports.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
-        <link>http://agileek.github.io/intellij/java/2015/03/01/intellij-live-template-log/</link>
-        <guid isPermaLink="true">http://agileek.github.io/intellij/java/2015/03/01/intellij-live-template-log/</guid>
+            <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/intellij/java/2015/03/01/intellij-live-template-log/</link>
+            <guid isPermaLink="true">http://agileek.github.io/intellij/java/2015/03/01/intellij-live-template-log/</guid>
+            
+            
+            <category>intellij</category>
+            
+            <category>java</category>
+            
+        </item>
         
-        
-        <category>intellij</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>Playing with docker and cpuset</title>
-        <description>&lt;p&gt;For my client I need to benchmark a multi-threaded/multi-server solution.&lt;/p&gt;
+        <item>
+            <title>Playing with docker and cpuset</title>
+            <description>&lt;p&gt;For my client I need to benchmark a multi-threaded/multi-server solution.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately, we only have a big server (128 GB, 32 cores,…) and we are putting all our instances on this single server.
 As each instance is multi-threaded, we noticed that they often get in each others way, resulting in bad performances (context swapping, …).&lt;/p&gt;
@@ -536,18 +724,18 @@ As each instance is multi-threaded, we noticed that they often get in each other
 &lt;/div&gt;
 
 </description>
-        <pubDate>Wed, 06 Aug 2014 23:26:31 +0000</pubDate>
-        <link>http://agileek.github.io/docker/2014/08/06/docker-cpuset/</link>
-        <guid isPermaLink="true">http://agileek.github.io/docker/2014/08/06/docker-cpuset/</guid>
+            <pubDate>Wed, 06 Aug 2014 23:26:31 +0000</pubDate>
+            <link>http://agileek.github.io/docker/2014/08/06/docker-cpuset/</link>
+            <guid isPermaLink="true">http://agileek.github.io/docker/2014/08/06/docker-cpuset/</guid>
+            
+            
+            <category>docker</category>
+            
+        </item>
         
-        
-        <category>docker</category>
-        
-      </item>
-    
-      <item>
-        <title>Jekyll quickstart with docker</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/posts/2014-07-23/jekyll.png&quot; alt=&quot;Jekyll&quot; /&gt;&lt;/p&gt;
+        <item>
+            <title>Jekyll quickstart with docker</title>
+            <description>&lt;p&gt;&lt;img src=&quot;/images/posts/2014-07-23/jekyll.png&quot; alt=&quot;Jekyll&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is my first blog post!&lt;/p&gt;
 
@@ -589,16 +777,16 @@ Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out&l
 &lt;p&gt;Thanks &lt;a href=&quot;http://grahamc.com/&quot;&gt;Graham Christensen&lt;/a&gt;!&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 23 Jul 2014 15:22:45 +0000</pubDate>
-        <link>http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/</link>
-        <guid isPermaLink="true">http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/</guid>
+            <pubDate>Wed, 23 Jul 2014 15:22:45 +0000</pubDate>
+            <link>http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/</link>
+            <guid isPermaLink="true">http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/</guid>
+            
+            
+            <category>docker</category>
+            
+            <category>jekyll</category>
+            
+        </item>
         
-        
-        <category>docker</category>
-        
-        <category>jekyll</category>
-        
-      </item>
-    
-  </channel>
+    </channel>
 </rss>
