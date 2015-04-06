@@ -88,7 +88,7 @@ RUN yum -y update && \
 
 ### An other ***very*** important thing is to keep your Dockerfile ***readable***
 
-This example is, in my opinion, just too much.
+This example is, in my opinion, a bad one.
 
 {% gist MichaelBitard/7bd7bc71385326ab3238 Dockerfile %}
 
