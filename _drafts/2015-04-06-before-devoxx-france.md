@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Devoxx France : la préparation"
-date:   2015-04-07
+date:   2015-04-06
 categories: java
 ---
 
