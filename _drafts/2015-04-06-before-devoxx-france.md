@@ -21,9 +21,9 @@ J'ai eu pas mal d'échos différents sur cette conférence, certains (dont je fa
 
 Je pense qu'au final cela dépend beaucoup de ce qu'on y recherche, et évidemment des speakers que l'on va (re)-découvrir.
 
-Pour être sûr de ne pas être pris au dépourvu, j'essaie de me faire un planning quelques jours avant, planning que je serais libre de ne pas suivre une fois sur place.
+Pour être sûr de ne pas être pris au dépourvu, j'essaie de me faire un planning quelques jours avant, planning que je serai libre de ne pas suivre une fois sur place.
 
-Cette année j'ai décidé d'écrire noir sur blanc mon programme à l'avance, pour pouvoir voir le décalage lorsque je serais sur place.
+Cette année j'ai décidé d'écrire noir sur blanc mon programme à l'avance, pour pouvoir voir le décalage lorsque je serai sur place.
 
 
 ### Before
