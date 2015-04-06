@@ -49,7 +49,7 @@ In that way you only have one layer commited, and it contains only the needed an
 
 ### Caveats
 
-There is on drawback with this particular approach: You lose the capacities of the ```ADD``` syntax.
+There is one drawback with this particular approach: You lose the capacities of the ```ADD``` syntax.
 
 If you build the first Dockerfile, you will notice that each time the tgz is downloaded. Docker then verifies that the file hasn't changed and if not, uses the cached image.
 
