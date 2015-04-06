@@ -112,7 +112,7 @@ Les BOF en vrac :
   * [La révolution hors-ligne du Web arrive avec les Service Workers][conference_service_workers]
 
 #### PS
-* Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assister en même temps, ça part mal déjà.
+* Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assister en même temps, ça part mal.
 
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
 [devoxx_2014]: https://www.parleys.com/channel/devoxx-france-2014
