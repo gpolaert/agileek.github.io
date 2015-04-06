@@ -11,13 +11,13 @@ categories: java
 
 Cela fait maintenant 4 ans que devoxx se fait en France.
 
-Ca va faire la 3ème fois que j'y vais, et, pour en rater le moins possible, il faut être préparé.
+Ça va faire la 3ème fois que j'y vais, et, pour en rater le moins possible, il faut être préparé.
 
-Cette année est particulière car elle se situe pour la première fois au palais des congrès, et on peut voir que c'est pas la même dimension que les années précédentes qui prenaient place à l'hôtel Marriott Rive Gauche.
+C'est une année particulière car ,pour la première fois, devoxx se situera au palais des congrès. On peut voir que c'est pas la même dimension que les années précédentes qui prenaient place à l'hôtel Marriott Rive Gauche.
 
 
 ### Ce que j'attends
-J'ai eu pas mal d'écho différents sur cette conférence, certains (dont je fais partie) ont adoré, d'autres moins.
+J'ai eu pas mal d'échos différents sur cette conférence, certains (dont je fais partie) ont adoré, d'autres moins.
 
 Je pense qu'au final cela dépend beaucoup de ce qu'on y recherche, et évidemment des speakers que l'on va (re)-découvrir.
 
@@ -94,11 +94,24 @@ Les BOF en vrac :
 * [Comment vivre d'un projet open source][bof_open_source]
 
 ## Jour 3
+* 09:30-10:50
+  * Keynote
+* 11:15-12:05
+  * [Des tablettes d'écriture aux tablettes pour écrire][conference_ecriture]
+* 12:10-12:30
+  * [Vos managers ne veulent pas entendre parler de la dette technique, tant mieux !][quickie_dette_technique]
+* 12:35-12:55
+  * [Culture Craft][quickie_culture_craft]
+* 13:00-13:50
+  * [Building fault tolerant microservices][conference_micro_services]
+  * [Les monoïdes démystifiés, en Java et avec des verres de bière][conference_monoides]
+* 14:05-14:55
+  * [Ask the Architect Questions and Answers][conference_future_java]
+* 15:10-16:00
+  * [La révolution hors-ligne du Web arrive avec les Service Workers][conference_service_workers]
 
-
-### PS
-Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assister en même temps, ça part mal déjà.
-
+#### PS
+* Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assister en même temps, ça part mal déjà.
 
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
 [devoxx_2014]: https://www.parleys.com/channel/devoxx-france-2014
@@ -129,3 +142,10 @@ Comme vous pouvez le voir, il y'a plusieurs sessions auxquelles je voudrais assi
 [tools_fluent_http]: http://cfp.devoxx.fr/2015/talk/WSU-8098/App_Engine_Managed_VMs_et_Fluent-http,_un_mariage_heureux
 [bof_docker]: http://cfp.devoxx.fr/2015/talk/SRB-3347/BOF_Docker_Paris
 [bof_open_source]: http://cfp.devoxx.fr/2015/talk/HZH-3776/Comment_vivre_d'un_projet_open_source
+[conference_ecriture]: http://cfp.devoxx.fr/2015/talk/NLG-1280/Des_tablettes_d'ecriture_aux_tablettes_pour_ecrire
+[quickie_dette_technique]: http://cfp.devoxx.fr/2015/talk/LAB-4049/Vos_managers_ne_veulent_pas_entendre_parler_de_la_dette_technique,_tant_mieux_!
+[quickie_culture_craft]: http://cfp.devoxx.fr/2015/talk/QCT-3215/Culture_Craft
+[conference_micro_services]: http://cfp.devoxx.fr/2015/talk/JCB-0202/Building__fault_tolerant_microservices
+[conference_monoides]: http://cfp.devoxx.fr/2015/talk/OGO-9138/Les_monoides_demystifies,_en_Java_et_avec_des_verres_de_biere
+[conference_future_java]: http://cfp.devoxx.fr/2015/talk/JXF-2137/Ask_the_Architect_Questions_and_Answers
+[conference_service_workers]: http://cfp.devoxx.fr/2015/talk/HYK-7903/La_revolution_hors-ligne_du_Web_arrive_avec_les_Service_Workers
