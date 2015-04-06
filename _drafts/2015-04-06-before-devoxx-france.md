@@ -30,9 +30,10 @@ Cette année j'ai décidé d'écrire noir sur blanc mon programme à l'avance, p
 
 Cette année, c'est tout simplement monstrueux : 14 salles, jusqu'à 8 conférences en même temps, c'est encore plus impossible de tout suivre.
 
-Les années précédentes les vidéos se retrouvaient gratuitement sur parleys quelques temps après et c'est super, j'espère qu'ils vont continuer sur cette lancée.
+Les années précédentes les vidéos se retrouvaient gratuitement sur parleys quelques temps après et c'était super.
+J'espère qu'ils vont continuer sur cette lancée.
 
-Si vous avez quelques heures devant vous vous pouvez y jeter un oeil [ici][devoxx_2014].
+Si vous avez quelques heures devant vous, vous pouvez y jeter un oeil [ici][devoxx_2014].
 
 Ma session préférée de 2014 est celle de Sandro Mancuso sur le [Software Craftmanship][craftmanship_parleys], elle dure 50 minutes, c'est vraiment le genre de session dont on ressort avec des étoiles pleins les yeux et une envie de changer les choses.
 
