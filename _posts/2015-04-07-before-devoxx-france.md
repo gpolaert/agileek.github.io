@@ -13,7 +13,7 @@ Cela fait maintenant 4 ans que devoxx se fait en France.
 
 Ça va faire la 3ème fois que j'y vais, et, pour en rater le moins possible, il faut être préparé.
 
-C'est une année particulière car ,pour la première fois, devoxx se situera au palais des congrès. On peut voir que c'est pas la même dimension que les années précédentes qui prenaient place à l'hôtel Marriott Rive Gauche.
+C'est une année particulière car, pour la première fois, devoxx se situera au palais des congrès. On peut voir que c'est pas la même dimension que les années précédentes qui prenaient place à l'hôtel Marriott Rive Gauche.
 
 
 ### Ce que j'attends
