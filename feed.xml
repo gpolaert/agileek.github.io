@@ -5,9 +5,205 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Mon, 06 Apr 2015 10:01:58 +0000</pubDate>
-        <lastBuildDate>Mon, 06 Apr 2015 10:01:58 +0000</lastBuildDate>
+        <pubDate>Tue, 07 Apr 2015 07:06:39 +0000</pubDate>
+        <lastBuildDate>Tue, 07 Apr 2015 07:06:39 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
+        
+        <item>
+            <title>Devoxx France : la préparation</title>
+            <description>&lt;h2 id=&quot;devoxx-france&quot;&gt;Devoxx France&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/devoxx/devoxx_france.png&quot; alt=&quot;Devoxx&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cela fait maintenant 4 ans que devoxx se fait en France.&lt;/p&gt;
+
+&lt;p&gt;Ça va faire la 3ème fois que j’y vais, et, pour en rater le moins possible, il faut être préparé.&lt;/p&gt;
+
+&lt;p&gt;C’est une année particulière car ,pour la première fois, devoxx se situera au palais des congrès. On peut voir que c’est pas la même dimension que les années précédentes qui prenaient place à l’hôtel Marriott Rive Gauche.&lt;/p&gt;
+
+&lt;h3 id=&quot;ce-que-jattends&quot;&gt;Ce que j’attends&lt;/h3&gt;
+&lt;p&gt;J’ai eu pas mal d’échos différents sur cette conférence, certains (dont je fais partie) ont adoré, d’autres moins.&lt;/p&gt;
+
+&lt;p&gt;Je pense qu’au final cela dépend beaucoup de ce qu’on y recherche, et évidemment des speakers que l’on va (re)-découvrir.&lt;/p&gt;
+
+&lt;p&gt;Pour être sûr de ne pas être pris au dépourvu, j’essaie de me faire un planning quelques jours avant, planning que je serai libre de ne pas suivre une fois sur place.&lt;/p&gt;
+
+&lt;p&gt;Cette année j’ai décidé d’écrire noir sur blanc mon programme à l’avance, pour pouvoir voir le décalage lorsque je serai sur place.&lt;/p&gt;
+
+&lt;h3 id=&quot;before&quot;&gt;Before&lt;/h3&gt;
+
+&lt;p&gt;Cette année, c’est tout simplement monstrueux : 14 salles, jusqu’à 8 conférences en même temps, c’est encore plus impossible de tout suivre.&lt;/p&gt;
+
+&lt;p&gt;Les années précédentes les vidéos se retrouvaient gratuitement sur parleys quelques temps après et c’était super.
+J’espère qu’ils vont continuer sur cette lancée.&lt;/p&gt;
+
+&lt;p&gt;Si vous avez quelques heures devant vous, vous pouvez y jeter un oeil &lt;a href=&quot;https://www.parleys.com/channel/devoxx-france-2014&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ma session préférée de 2014 est celle de Sandro Mancuso sur le &lt;a href=&quot;https://www.parleys.com/tutorial/software-craftsmanship&quot;&gt;Software Craftmanship&lt;/a&gt;, elle dure 50 minutes, c’est vraiment le genre de session dont on ressort avec des étoiles pleins les yeux et une envie de changer les choses.&lt;/p&gt;
+
+&lt;h2 id=&quot;jour-1&quot;&gt;Jour 1&lt;/h2&gt;
+&lt;p&gt;Le premier jour est le jour des universités et des “hand’s on labs”, sur des sessions de 3 heures.&lt;/p&gt;
+
+&lt;p&gt;Voici ma première sélection :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;09:30-12:30
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/GOB-3561/La_Google_Cloud_Plaform_-_Au_dela_des_simples_demos&quot;&gt;Google Cloud Platform&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/QTQ-9573/Quand_DevOps_rencontre_BigData!&quot;&gt;Devops rencontre BigData&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;13:30-16:30
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/SDF-5956/Go_tutorial&quot;&gt;Go tutorial&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pour les survivants, il y’a ensuite les “tools in action” jusqu’à 19h10&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;17:10-17:40
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/CLG-8656/Le_tare_du_terminal:_outil_pour_le_developpeur_de_l&#39;extreme&quot;&gt;Le taré du terminal&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/UNS-9214/OpenBCI_ou_comment_lire_dans_les_pensees_en_Java&quot;&gt;OpenBCI ou comment lire dans les pensées en Java&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;17:55-18:25
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/UWP-3010/Un_Jenkins_ameliore_avec_Docker,_Mesos_et_Marathon&quot;&gt;Un Jenkins amélioré avec Docker, Mesos et Marathon&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/MSU-2600/Developpement_Java_avec_un_IDE_dans_le_Cloud:_YES_WE_CAN&quot;&gt;Développement Java avec un IDE dans le Cloud&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/ZMG-1345/WireMock,_le_serveur_HTTP_couteau_suisse&quot;&gt;WireMock, le serveur HTTP couteau suisse&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;18:40-19:10
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/FEM-9840/Quand_Java_prend_de_la_vitesse,_Apache_Maven_vous_garde_sur_les_rails&quot;&gt;Quand Java prend de la vitesse, Apache Maven vous garde sur les rails&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/FPD-2699/Une_presentation_qui_ne_manque_pas_d&#39;R!&quot;&gt;Une présentation qui ne manque pas d’R!&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jour-2&quot;&gt;Jour 2&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;09:30-10:50
+    &lt;ul&gt;
+      &lt;li&gt;Keynote&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;11:15-12:05
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/PRN-0316/Datomic,_la_base_de_donnees_qui_n&#39;oublie_rien&quot;&gt;Datomic, la base de données qui n’oublie rien&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/ZLE-4944/Coding,_fast_&amp;amp;_slow&quot;&gt;Coding, fast &amp;amp; slow&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;12:10-12:30
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/MPO-1830/Avro:_la_souplesse_du_JSON,_les_performances_du_binaire&quot;&gt;Avro: la souplesse du JSON, les performances du binaire&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/AIC-9053/Ignite_1&quot;&gt;Ignite 1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;12:35-12:55
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/YSP-5366/Du_100%25_pur_Guice_!&quot;&gt;Du 100% pur Guice !&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;13:00-13:50
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/KFB-1486/UX_:_le_Poids_des_Mots...&quot;&gt;UX : le Poids des Mots…&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;14:05-14:55
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/UVY-4302/Refactoring_to_Functional&quot;&gt;Refactoring to Functional&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/QDM-2722/Changing_the_wheel_of_a_moving_car_-_faire_evoluer_l&#39;infra_sans_interruption&quot;&gt;Changing the wheel of a moving car - faire évoluer l’infra sans interruption&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;15:10-16:00
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/FJN-6482/Java_Mission_Control_for_Earthlings&quot;&gt;Java Mission Control for Earthlings&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/SDO-9958/Applications_Concurrentes_Polyglottes_avec_Vert.x&quot;&gt;Applications Concurrentes Polyglottes avec Vert.x&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;16:35-17:25
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/MXY-8408/Modular_Java_Platform&quot;&gt;Modular Java Platform&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/AIM-2044/Caching_reboot:_javax.cache_&amp;amp;_Ehcache_3&quot;&gt;Caching reboot: javax.cache &amp;amp; Ehcache 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;17:40-18:30
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/ZTF-9055/Making_Java_more_dynamic&quot;&gt;Making Java more dynamic&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;18:45-19:15
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/WSU-8098/App_Engine_Managed_VMs_et_Fluent-http,_un_mariage_heureux&quot;&gt;App Engine Managed VMs et Fluent-http, un mariage heureux&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Les BOF en vrac :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/SRB-3347/BOF_Docker_Paris&quot;&gt;BOF docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/HZH-3776/Comment_vivre_d&#39;un_projet_open_source&quot;&gt;Comment vivre d’un projet open source&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jour-3&quot;&gt;Jour 3&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;09:30-10:50
+    &lt;ul&gt;
+      &lt;li&gt;Keynote&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;11:15-12:05
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/NLG-1280/Des_tablettes_d&#39;ecriture_aux_tablettes_pour_ecrire&quot;&gt;Des tablettes d’écriture aux tablettes pour écrire&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;12:10-12:30
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/LAB-4049/Vos_managers_ne_veulent_pas_entendre_parler_de_la_dette_technique,_tant_mieux_!&quot;&gt;Vos managers ne veulent pas entendre parler de la dette technique, tant mieux !&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;12:35-12:55
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/QCT-3215/Culture_Craft&quot;&gt;Culture Craft&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;13:00-13:50
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/JCB-0202/Building__fault_tolerant_microservices&quot;&gt;Building fault tolerant microservices&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/OGO-9138/Les_monoides_demystifies,_en_Java_et_avec_des_verres_de_biere&quot;&gt;Les monoïdes démystifiés, en Java et avec des verres de bière&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;14:05-14:55
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/JXF-2137/Ask_the_Architect_Questions_and_Answers&quot;&gt;Ask the Architect Questions and Answers&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;15:10-16:00
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/HYK-7903/La_revolution_hors-ligne_du_Web_arrive_avec_les_Service_Workers&quot;&gt;La révolution hors-ligne du Web arrive avec les Service Workers&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;ps&quot;&gt;PS&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Comme vous pouvez le voir, il y’a plusieurs sessions auxquelles je voudrais assister en même temps, ça part mal.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+            <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/java/2015/04/07/before-devoxx-france/</link>
+            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/07/before-devoxx-france/</guid>
+            
+            
+            <category>java</category>
+            
+        </item>
         
         <item>
             <title>AssertJ 3.0.0 for Java 8</title>
