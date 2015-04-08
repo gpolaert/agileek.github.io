@@ -191,6 +191,40 @@ Conseil : les mettre sur git
   * send-pull-request : script qui crée automatiquement une pull request sous github
 * Commandes : faire un script qui lance la commande et qui envoie une notif d'OS à la fin (remote)
 
+## 18:40-19:10 Maven
+
+### Jongler entre les différentes versions
+
+Avec la prise en charge de Java par Oracle, les versions sont ```deprecated``` beaucoup plus rapidement (en fait, elles ne sont pas dépréciées, elles deviennent juste ... payantes).
+
+Java 6 devient très très payante et Java 7 devient deprecated ce mois-ci. Il faut donc pouvoir switcher de plus en plus rapidement et avec le moins de surprises (Ou prendre le support oracle et payer pour conserver les anciennes versions).
+
+Les différents conseils : 
+
+* Utiliser les properties ```maven.compiler.target``` et ```maven.compiler.source``` pour spécifier la version Java
+* Utiliser le maven-enforcer-plugin ```enforceBytecodeVersion``` pour s'assurer que toutes les dépendances sont utilisables par une JRE donnée
+* animal-sniffer-maven-plugin permet de contrôler que les bonnes versions d'API sont utilisées (ça peut être une rule CheckSignature dans le maven enforcer plugin pour éviter la multiplication des plugins)
+
+### Toolchains et JDK
+
+Permet d'utiliser un JDK pour compiler indépendant du JRE avec lequel Maven et ses plugins s'exécutent.
+
+L'idée c'est d'utiliser un JRE récent pour exécuter maven et ses plugins, tout en utilisant un autre JDK pour les phases de compilation.
+
+> Des toolchains customs existent pour protobuf, netbeans, ...
+
+### maven-jdeps-plugin
+
+* Analyse statique des dépendances (préparation à JigSaw)
+
+## Les autres confs marquantes
+
+J'ai fait un petit tour auprès des gens que je connais et qui font devoxx pour savoir quelle avait été leur session préférée, ça me permettra de voir quoi regarder une fois les vidéos sur Parleys.
+
+Dans le désordre nous avons : 
+
+* Hackergarten (Celle là ne seront pas sur Parleys)
+* Spring boot
 
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
 [hands_on_GCP]: http://cfp.devoxx.fr/2015/talk/GOB-3561/La_Google_Cloud_Plaform_-_Au_dela_des_simples_demos
