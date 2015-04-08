@@ -162,6 +162,35 @@ Je repars avec du travail, j'ai trouvé de la duplication entre [Fluent][fluent_
 
 ***Quand est-ce qu'on organise ça sur Toulouse?***
 
+## 17:10-17:40 Le taré du terminal
+
+Les sources sont [là][sources_command_line_nuts].
+
+Principe : Automatiser un maximum de choses pour ne pas casser son workflow quand on développe.
+
+Premier outil : Tmux, l'incontournable émulateur de terminal.
+
+### Deuxième outil : Vim
+
+Pas besoin de le présenter. Il découpe les commandes avec [action][repetition multiplier]
+
+* Remettre plusieurs lignes sur une seule : passer en mode visuel, sélectionner les lignes et taper 'J'.
+* f[character] : Aller au premier charactère trouvé
+* ci : se mettre sur une parenthèse, remplace tout ce qu'il y'a à l'intérieur des paranthèses.
+
+Il existe des plugins pour avoir les raccourcis vim dans les IDE : IdeaVim (IntelliJ) et Vrapper (Eclipse)
+
+### Dotfiles
+
+Conseil : les mettre sur git
+
+### Misc
+
+* git
+  * Tig : un outil git en ligne de commande
+  * send-pull-request : script qui crée automatiquement une pull request sous github
+* Commandes : faire un script qui lance la commande et qui envoie une notif d'OS à la fin (remote)
+
 
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
 [hands_on_GCP]: http://cfp.devoxx.fr/2015/talk/GOB-3561/La_Google_Cloud_Plaform_-_Au_dela_des_simples_demos
@@ -173,6 +202,7 @@ Je repars avec du travail, j'ai trouvé de la duplication entre [Fluent][fluent_
 [merge_request]: https://github.com/FluentLenium/FluentLenium/pull/159
 [fluent_duplicate]: https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/Fluent.java#L170
 [fluent_adapter_duplicate]: https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/FluentAdapter.java#L102
+[sources_command_line_nuts]: https://github.com/emannuelbernard/command-line-nuts
 
 [^1]: Si vous suivez le compte de David Gageot, vous comprenez mieux pourquoi il demandait qu'on lui envoie des photos de tapis.
 [^2]: J'imagine qu'il y a des porteurs de projet sur Toulouse, 
