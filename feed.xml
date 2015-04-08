@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Wed, 08 Apr 2015 14:34:22 +0000</pubDate>
-        <lastBuildDate>Wed, 08 Apr 2015 14:34:22 +0000</lastBuildDate>
+        <pubDate>Wed, 08 Apr 2015 15:50:08 +0000</pubDate>
+        <lastBuildDate>Wed, 08 Apr 2015 15:50:08 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
         
         <item>
@@ -189,6 +189,42 @@ En plus ce n’était pas du temps perdu, car ma &lt;a href=&quot;https://github
 &lt;p&gt;Je repars avec du travail, j’ai trouvé de la duplication entre &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/Fluent.java#L170&quot;&gt;Fluent&lt;/a&gt; et &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/FluentAdapter.java#L102&quot;&gt;FluentAdapter&lt;/a&gt; (la méthode initPage).&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Quand est-ce qu’on organise ça sur Toulouse?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;le-tar-du-terminal&quot;&gt;17:10-17:40 Le taré du terminal&lt;/h2&gt;
+
+&lt;p&gt;Les sources sont &lt;a href=&quot;https://github.com/emannuelbernard/command-line-nuts&quot;&gt;là&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Principe : Automatiser un maximum de choses pour ne pas casser son workflow quand on développe.&lt;/p&gt;
+
+&lt;p&gt;Premier outil : Tmux, l’incontournable émulateur de terminal.&lt;/p&gt;
+
+&lt;h3 id=&quot;deuxime-outil--vim&quot;&gt;Deuxième outil : Vim&lt;/h3&gt;
+
+&lt;p&gt;Pas besoin de le présenter. Il découpe les commandes avec [action][repetition multiplier]&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remettre plusieurs lignes sur une seule : passer en mode visuel, sélectionner les lignes et taper ‘J’.&lt;/li&gt;
+  &lt;li&gt;f[character] : Aller au premier charactère trouvé&lt;/li&gt;
+  &lt;li&gt;ci : se mettre sur une parenthèse, remplace tout ce qu’il y’a à l’intérieur des paranthèses.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Il existe des plugins pour avoir les raccourcis vim dans les IDE : IdeaVim (IntelliJ) et Vrapper (Eclipse)&lt;/p&gt;
+
+&lt;h3 id=&quot;dotfiles&quot;&gt;Dotfiles&lt;/h3&gt;
+
+&lt;p&gt;Conseil : les mettre sur git&lt;/p&gt;
+
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;git
+    &lt;ul&gt;
+      &lt;li&gt;Tig : un outil git en ligne de commande&lt;/li&gt;
+      &lt;li&gt;send-pull-request : script qui crée automatiquement une pull request sous github&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Commandes : faire un script qui lance la commande et qui envoie une notif d’OS à la fin (remote)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
