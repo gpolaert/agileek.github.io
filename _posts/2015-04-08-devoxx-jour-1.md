@@ -20,6 +20,7 @@ Le but de cette session est de nous présenter une bonne partie de l'infrastruct
 Pas de slides pour cette session, tout est live.
 
 Énormément de produits sur https://could.google.com :
+
 * Compute
   * Compute Engine
   * App Engine
