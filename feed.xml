@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Wed, 08 Apr 2015 15:50:08 +0000</pubDate>
-        <lastBuildDate>Wed, 08 Apr 2015 15:50:08 +0000</lastBuildDate>
+        <pubDate>Wed, 08 Apr 2015 17:13:27 +0000</pubDate>
+        <lastBuildDate>Wed, 08 Apr 2015 17:13:27 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
         
         <item>
@@ -224,6 +224,49 @@ En plus ce n’était pas du temps perdu, car ma &lt;a href=&quot;https://github
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Commandes : faire un script qui lance la commande et qui envoie une notif d’OS à la fin (remote)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;maven&quot;&gt;18:40-19:10 Maven&lt;/h2&gt;
+
+&lt;h3 id=&quot;jongler-entre-les-diffrentes-versions&quot;&gt;Jongler entre les différentes versions&lt;/h3&gt;
+
+&lt;p&gt;Avec la prise en charge de Java par Oracle, les versions sont &lt;code&gt;deprecated&lt;/code&gt; beaucoup plus rapidement (en fait, elles ne sont pas dépréciées, elles deviennent juste … payantes).&lt;/p&gt;
+
+&lt;p&gt;Java 6 devient très très payante et Java 7 devient deprecated ce mois-ci. Il faut donc pouvoir switcher de plus en plus rapidement et avec le moins de surprises (Ou prendre le support oracle et payer pour conserver les anciennes versions).&lt;/p&gt;
+
+&lt;p&gt;Les différents conseils :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Utiliser les properties &lt;code&gt;maven.compiler.target&lt;/code&gt; et &lt;code&gt;maven.compiler.source&lt;/code&gt; pour spécifier la version Java&lt;/li&gt;
+  &lt;li&gt;Utiliser le maven-enforcer-plugin &lt;code&gt;enforceBytecodeVersion&lt;/code&gt; pour s’assurer que toutes les dépendances sont utilisables par une JRE donnée&lt;/li&gt;
+  &lt;li&gt;animal-sniffer-maven-plugin permet de contrôler que les bonnes versions d’API sont utilisées (ça peut être une rule CheckSignature dans le maven enforcer plugin pour éviter la multiplication des plugins)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;toolchains-et-jdk&quot;&gt;Toolchains et JDK&lt;/h3&gt;
+
+&lt;p&gt;Permet d’utiliser un JDK pour compiler indépendant du JRE avec lequel Maven et ses plugins s’exécutent.&lt;/p&gt;
+
+&lt;p&gt;L’idée c’est d’utiliser un JRE récent pour exécuter maven et ses plugins, tout en utilisant un autre JDK pour les phases de compilation.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Des toolchains customs existent pour protobuf, netbeans, …&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;maven-jdeps-plugin&quot;&gt;maven-jdeps-plugin&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Analyse statique des dépendances (préparation à JigSaw)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;les-autres-confs-marquantes&quot;&gt;Les autres confs marquantes&lt;/h2&gt;
+
+&lt;p&gt;J’ai fait un petit tour auprès des gens que je connais et qui font devoxx pour savoir quelle avait été leur session préférée, ça me permettra de voir quoi regarder une fois les vidéos sur Parleys.&lt;/p&gt;
+
+&lt;p&gt;Dans le désordre nous avons :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hackergarten (Celle là ne seront pas sur Parleys)&lt;/li&gt;
+  &lt;li&gt;Spring boot&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;

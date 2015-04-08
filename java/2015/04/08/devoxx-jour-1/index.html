@@ -341,6 +341,49 @@ En plus ce n’était pas du temps perdu, car ma <a href="https://github.com/Flu
   <li>Commandes : faire un script qui lance la commande et qui envoie une notif d’OS à la fin (remote)</li>
 </ul>
 
+<h2 id="maven">18:40-19:10 Maven</h2>
+
+<h3 id="jongler-entre-les-diffrentes-versions">Jongler entre les différentes versions</h3>
+
+<p>Avec la prise en charge de Java par Oracle, les versions sont <code>deprecated</code> beaucoup plus rapidement (en fait, elles ne sont pas dépréciées, elles deviennent juste … payantes).</p>
+
+<p>Java 6 devient très très payante et Java 7 devient deprecated ce mois-ci. Il faut donc pouvoir switcher de plus en plus rapidement et avec le moins de surprises (Ou prendre le support oracle et payer pour conserver les anciennes versions).</p>
+
+<p>Les différents conseils :</p>
+
+<ul>
+  <li>Utiliser les properties <code>maven.compiler.target</code> et <code>maven.compiler.source</code> pour spécifier la version Java</li>
+  <li>Utiliser le maven-enforcer-plugin <code>enforceBytecodeVersion</code> pour s’assurer que toutes les dépendances sont utilisables par une JRE donnée</li>
+  <li>animal-sniffer-maven-plugin permet de contrôler que les bonnes versions d’API sont utilisées (ça peut être une rule CheckSignature dans le maven enforcer plugin pour éviter la multiplication des plugins)</li>
+</ul>
+
+<h3 id="toolchains-et-jdk">Toolchains et JDK</h3>
+
+<p>Permet d’utiliser un JDK pour compiler indépendant du JRE avec lequel Maven et ses plugins s’exécutent.</p>
+
+<p>L’idée c’est d’utiliser un JRE récent pour exécuter maven et ses plugins, tout en utilisant un autre JDK pour les phases de compilation.</p>
+
+<blockquote>
+  <p>Des toolchains customs existent pour protobuf, netbeans, …</p>
+</blockquote>
+
+<h3 id="maven-jdeps-plugin">maven-jdeps-plugin</h3>
+
+<ul>
+  <li>Analyse statique des dépendances (préparation à JigSaw)</li>
+</ul>
+
+<h2 id="les-autres-confs-marquantes">Les autres confs marquantes</h2>
+
+<p>J’ai fait un petit tour auprès des gens que je connais et qui font devoxx pour savoir quelle avait été leur session préférée, ça me permettra de voir quoi regarder une fois les vidéos sur Parleys.</p>
+
+<p>Dans le désordre nous avons :</p>
+
+<ul>
+  <li>Hackergarten (Celle là ne seront pas sur Parleys)</li>
+  <li>Spring boot</li>
+</ul>
+
 <div class="footnotes">
   <ol>
     <li id="fn:1">
