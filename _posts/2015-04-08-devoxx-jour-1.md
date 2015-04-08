@@ -45,7 +45,7 @@ Pas de slides pour cette session, tout est live.
   * Deployment Manager
   * Monitoring
 
-Petit fait intéressant, SnapChat tourne sur App Engine et c'est les équipes de google qui s'occupent de la scalabitité de SnapChat.
+Petit fait intéressant, SnapChat tourne sur App Engine et ce sont les équipes de google qui s'occupent de la scalabitité de SnapChat.
 
 L'idée derrière le google cloud, c'est de pouvoir changer de stratégie (Je gère ma VM, ça monte en charge, je passe sur AppEngine) sans que ça soit coûteux.
 
@@ -125,10 +125,50 @@ Regardez le nobackend.coffee dans la démo. C'est juste bluffant. Firebase peut 
 
 La démo est bien évidemment sur [github][fluenthttp_demo], elle contient de quoi lancer l'application en java, mais aussi en node js. D'ailleurs, n'hésitez pas à comparer les code produit en nodeJs avec celui en Java, vous serez surpris. Un article sur FluentHttp est prévu, c'est, je pense, le meilleur serveur web java8.
 
+## 13:30-16:30 Hackergarten
+
+Hop, dès la deuxième session on s'écarte du [planning][planning_devoxx].
+
+Je suis allé faire un tour du côté des [Hackergarten][hackergarten]
+
+> A Computer Programming Contributor Group
+
+afin de contribuer sur un projet de la communauté open source.
+
+À Devoxx le principe est le même que partout : des porteurs de projets présentent leur projet et des groupes se forment pour corriger des issues, ou ajouter des fonctionnalités au projet.
+
+Voici les sujets de cette année : 
+
+* AsciiDoctor
+* Golo
+* FluentLenium
+* Mockito
+* JHipster
+* RestX
+* VoxxRin
+* Ceylon
+* XWiki
+
+
+J'ai choisi [FluentLenium][fluentlenium] que j'ai pas mal utilisé dans des missions précédentes. C'est un wrapper de Sélénium en java, vachement plus simple à utiliser que Sélénium, avec tous les outils à portée de main pour faire ses tests sans galérer.
+
+
+### Bilan
+
+C'est très intéressant de rentrer rapidement sur un projet par une issue, c'est un très bon exercice.
+En plus ce n'était pas du temps perdu, car ma [merge request][merge_request] a été acceptée !
+
+***Quand est-ce qu'on organise ça sur Toulouse?***
 
 
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
 [hands_on_GCP]: http://cfp.devoxx.fr/2015/talk/GOB-3561/La_Google_Cloud_Plaform_-_Au_dela_des_simples_demos
 [fluenthttp_demo]: https://github.com/CodeStory/devoxxcarpet
 [grpc_io]: http://www.grpc.io
+[planning_devoxx]: http://agileek.github.io/java/2015/04/07/before-devoxx-france/
+[hackergarten]: http://hackergarten.net/
+[fluentlenium]: https://github.com/FluentLenium/FluentLenium
+[merge_request]: https://github.com/FluentLenium/FluentLenium/pull/159
+
 [^1]: Si vous suivez le compte de David Gageot, vous comprenez mieux pourquoi il demandait qu'on lui envoie des photos de tapis.
+[^2]: J'imagine qu'il y a des porteurs de projet sur Toulouse, 
