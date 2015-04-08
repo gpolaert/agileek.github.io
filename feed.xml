@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Wed, 08 Apr 2015 10:29:48 +0000</pubDate>
-        <lastBuildDate>Wed, 08 Apr 2015 10:29:48 +0000</lastBuildDate>
+        <pubDate>Wed, 08 Apr 2015 14:34:22 +0000</pubDate>
+        <lastBuildDate>Wed, 08 Apr 2015 14:34:22 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
         
         <item>
@@ -71,7 +71,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Petit fait intéressant, SnapChat tourne sur App Engine et c’est les équipes de google qui s’occupent de la scalabitité de SnapChat.&lt;/p&gt;
+&lt;p&gt;Petit fait intéressant, SnapChat tourne sur App Engine et ce sont les équipes de google qui s’occupent de la scalabitité de SnapChat.&lt;/p&gt;
 
 &lt;p&gt;L’idée derrière le google cloud, c’est de pouvoir changer de stratégie (Je gère ma VM, ça monte en charge, je passe sur AppEngine) sans que ça soit coûteux.&lt;/p&gt;
 
@@ -150,6 +150,45 @@ Pour la démo, les logs (un log par vote) de l’application sont insérés dans
 Regardez le nobackend.coffee dans la démo. C’est juste bluffant. Firebase peut notifier les différentes applis d’une mise à jour de son état, en websocket.&lt;/p&gt;
 
 &lt;p&gt;La démo est bien évidemment sur &lt;a href=&quot;https://github.com/CodeStory/devoxxcarpet&quot;&gt;github&lt;/a&gt;, elle contient de quoi lancer l’application en java, mais aussi en node js. D’ailleurs, n’hésitez pas à comparer les code produit en nodeJs avec celui en Java, vous serez surpris. Un article sur FluentHttp est prévu, c’est, je pense, le meilleur serveur web java8.&lt;/p&gt;
+
+&lt;h2 id=&quot;hackergarten&quot;&gt;13:30-16:30 Hackergarten&lt;/h2&gt;
+
+&lt;p&gt;Hop, dès la deuxième session on s’écarte du &lt;a href=&quot;http://agileek.github.io/java/2015/04/07/before-devoxx-france/&quot;&gt;planning&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Je suis allé faire un tour du côté des &lt;a href=&quot;http://hackergarten.net/&quot;&gt;Hackergarten&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A Computer Programming Contributor Group&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;afin de contribuer sur un projet de la communauté open source.&lt;/p&gt;
+
+&lt;p&gt;À Devoxx le principe est le même que partout : des porteurs de projets présentent leur projet et des groupes se forment pour corriger des issues, ou ajouter des fonctionnalités au projet.&lt;/p&gt;
+
+&lt;p&gt;Voici les sujets de cette année :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AsciiDoctor&lt;/li&gt;
+  &lt;li&gt;Golo&lt;/li&gt;
+  &lt;li&gt;FluentLenium&lt;/li&gt;
+  &lt;li&gt;Mockito&lt;/li&gt;
+  &lt;li&gt;JHipster&lt;/li&gt;
+  &lt;li&gt;RestX&lt;/li&gt;
+  &lt;li&gt;VoxxRin&lt;/li&gt;
+  &lt;li&gt;Ceylon&lt;/li&gt;
+  &lt;li&gt;XWiki&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;J’ai choisi &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium&quot;&gt;FluentLenium&lt;/a&gt; que j’ai pas mal utilisé dans des missions précédentes. C’est un wrapper de Sélénium en java, vachement plus simple à utiliser que Sélénium, avec tous les outils à portée de main pour faire ses tests sans galérer.&lt;/p&gt;
+
+&lt;h3 id=&quot;bilan&quot;&gt;Bilan&lt;/h3&gt;
+
+&lt;p&gt;C’est très intéressant de rentrer rapidement sur un projet par une issue, c’est un très bon exercice.
+En plus ce n’était pas du temps perdu, car ma &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium/pull/159&quot;&gt;merge request&lt;/a&gt; a été acceptée !&lt;/p&gt;
+
+&lt;p&gt;Je repars avec du travail, j’ai trouvé de la duplication entre &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/Fluent.java#L170&quot;&gt;Fluent&lt;/a&gt; et &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/FluentAdapter.java#L102&quot;&gt;FluentAdapter&lt;/a&gt; (la méthode initPage).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Quand est-ce qu’on organise ça sur Toulouse?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
