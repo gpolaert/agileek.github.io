@@ -158,6 +158,8 @@ J'ai choisi [FluentLenium][fluentlenium] que j'ai pas mal utilisé dans des miss
 C'est très intéressant de rentrer rapidement sur un projet par une issue, c'est un très bon exercice.
 En plus ce n'était pas du temps perdu, car ma [merge request][merge_request] a été acceptée !
 
+Je repars avec du travail, j'ai trouvé de la duplication entre [Fluent][fluent_duplicate] et [FluentAdapter][fluent_adapter_duplicate] (la méthode initPage).
+
 ***Quand est-ce qu'on organise ça sur Toulouse?***
 
 
@@ -169,6 +171,8 @@ En plus ce n'était pas du temps perdu, car ma [merge request][merge_request] a 
 [hackergarten]: http://hackergarten.net/
 [fluentlenium]: https://github.com/FluentLenium/FluentLenium
 [merge_request]: https://github.com/FluentLenium/FluentLenium/pull/159
+[fluent_duplicate]: https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/Fluent.java#L170
+[fluent_adapter_duplicate]: https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/FluentAdapter.java#L102
 
 [^1]: Si vous suivez le compte de David Gageot, vous comprenez mieux pourquoi il demandait qu'on lui envoie des photos de tapis.
 [^2]: J'imagine qu'il y a des porteurs de projet sur Toulouse, 
