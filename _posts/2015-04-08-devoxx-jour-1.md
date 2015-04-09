@@ -236,7 +236,7 @@ Dans le désordre nous avons :
 [merge_request]: https://github.com/FluentLenium/FluentLenium/pull/159
 [fluent_duplicate]: https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/Fluent.java#L170
 [fluent_adapter_duplicate]: https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/FluentAdapter.java#L102
-[sources_command_line_nuts]: https://github.com/emannuelbernard/command-line-nuts
+[sources_command_line_nuts]: https://github.com/emmanuelbernard/command-line-nuts
 
 [^1]: Si vous suivez le compte de David Gageot, vous comprenez mieux pourquoi il demandait qu'on lui envoie des photos de tapis.
 [^2]: J'imagine qu'il y a des porteurs de projet sur Toulouse, 
