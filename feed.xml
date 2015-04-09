@@ -5,9 +5,108 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Thu, 09 Apr 2015 07:42:37 +0000</pubDate>
-        <lastBuildDate>Thu, 09 Apr 2015 07:42:37 +0000</lastBuildDate>
+        <pubDate>Thu, 09 Apr 2015 08:49:58 +0000</pubDate>
+        <lastBuildDate>Thu, 09 Apr 2015 08:49:58 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
+        
+        <item>
+            <title>Devoxx France : jour 2</title>
+            <description>&lt;p&gt;![Devoxx][devoxxFrance]&lt;/p&gt;
+
+&lt;h2 id=&quot;keynotes&quot;&gt;Keynotes&lt;/h2&gt;
+
+&lt;p&gt;Cette première session de keynotes va nous parler du futur de l’informatique.&lt;/p&gt;
+
+&lt;h3 id=&quot;aldebaran&quot;&gt;Aldebaran&lt;/h3&gt;
+
+&lt;p&gt;Le premier speaker nous parle de ce que sera la robotique dans le futur, au travers de sa société.&lt;/p&gt;
+
+&lt;p&gt;Les premières applications seront probablement l’assistance aux personnes agées, ce qui ne sera pas disponible avant 5 ans, à cause des problématiques de reconnaissance vocale à distance.&lt;/p&gt;
+
+&lt;p&gt;Pour lui, dans 20 ans les robots seront devenus des compagnons présents dans nos logements, nous assistant dans nos taches quotidiennes. Il seront en quelque sorte au coeur de la domotique.&lt;/p&gt;
+
+&lt;p&gt;Petit point bluffant avec ces petits robots : ils sont capables de détecter les émotions (colère, tristesse) au travers des dialogues.&lt;/p&gt;
+
+&lt;h4 id=&quot;quelle-responsabilit-pour-le-dveloppeur&quot;&gt;Quelle responsabilité pour le développeur&lt;/h4&gt;
+
+&lt;p&gt;Le robot est un outil, il peut être bien ou mal utilisé.&lt;/p&gt;
+
+&lt;p&gt;Le robot est une plateforme programmable par n’importe qui, intégrer les  lois de la robotique d’Asimov s’avère compliqué, et au final pas très efficace (Si on lit ses livres, on se rend compte qu’elles ne fonctionnent pas).&lt;/p&gt;
+
+&lt;p&gt;Il existe un problème lié à la responsabilité du robot. Qui est responsable en cas d’accident? Le robot ? La société qui a crée le robot ? Le développeur ?&lt;/p&gt;
+
+&lt;h3 id=&quot;la-problmatique-du-contrle-des-technologies-de-linformation&quot;&gt;La problématique du contrôle des technologies de l’information&lt;/h3&gt;
+
+&lt;p&gt;Excellente proposition : après Devoxx4Kids, faire un Devoxx4HommesPolitiques.&lt;/p&gt;
+
+&lt;p&gt;La problématique actuelle est la démocratisation des outils informatiques. Les premiers acteurs de l’informatique étaient des techos qui avaient un idéal, maintenant ce sont des gens qui ne maitrisent pas la technique et sont intéressés par le pouvoir.&lt;/p&gt;
+
+&lt;p&gt;Cinq phases de contrôle :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Préhistoire&lt;/li&gt;
+  &lt;li&gt;Phase de mutation&lt;/li&gt;
+  &lt;li&gt;Phase de globalisation&lt;/li&gt;
+  &lt;li&gt;Phase légale&lt;/li&gt;
+  &lt;li&gt;Phase d’assimilation culturelle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Qu’on me donne six lignes écrites de la main du plus honnête homme, j’y trouverai de quoi le faire pendre (Richelieu)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Le problème qui se pose derrière la surveillance globalisée qui se met en place, c’est que le citoyen n’est plus “présumé innocent”, mais “présumé coupable”, ce qui change les fondements de notre société.&lt;/p&gt;
+
+&lt;p&gt;Le scénario de l’espoir :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Le respect de la vie privée redevient une priorité
+    &lt;ul&gt;
+      &lt;li&gt;Inscription dans la constitution&lt;/li&gt;
+      &lt;li&gt;Renforcement du rôle du juge d’instruction&lt;/li&gt;
+      &lt;li&gt;Création d’un comité d’éthique&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Nous redevenos des citoyens&lt;/li&gt;
+  &lt;li&gt;Développement du marché de la confiance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En conclusion :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;L’espionnage des citoyens par leur propre état trahit la faiblesse et la peur de ces états&lt;/li&gt;
+  &lt;li&gt;Le rôle fondamental des concepteurs et des developpeurs
+    &lt;ul&gt;
+      &lt;li&gt;Ce sont les gardiens de la technologie&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;La liberté sans libre arbitre n’existe pas et le libre arbitre sans le respect de notre vie privée n’existe pas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reading-and-writing-in-20-years&quot;&gt;Reading and writing in 20 years&lt;/h2&gt;
+
+&lt;p&gt;Aujourd’hui, tout ce que nous écrivons a une durée de vie qui nous dépasse (on peut retrouver ses premiers email facilement), c’était quelque chose qui n’était pas possible avant, pas à cette échelle. Que se passera-t-il dans 20 ans ?&lt;/p&gt;
+
+&lt;p&gt;Il nous parle beaucoup de la capacité qu’on a maintenant à écrire, à partager&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; de plus en plus facilement. Mais il nous parle également des freins que l’on peut rencontrer.&lt;/p&gt;
+
+&lt;p&gt;Quelles sont les contraintes actuelles qui nous empêchent de publier ? Il prend pour exemple le PDF, en tant que technologie du passé qui s’accroche encore au support papier et qui nous impose des contraintes (Je possède un kindle, c’est tout simplement impossible de lire un PDF, ce n’est pas du tout adapté)&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Ce blog en est la preuve &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+            <pubDate>Thu, 09 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</link>
+            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</guid>
+            
+            
+            <category>java</category>
+            
+        </item>
         
         <item>
             <title>Devoxx France : Jour 1</title>
@@ -1156,53 +1255,6 @@ Remove one or more containers
             <category>intellij</category>
             
             <category>java</category>
-            
-        </item>
-        
-        <item>
-            <title>Playing with docker and cpuset</title>
-            <description>&lt;p&gt;For my client I need to benchmark a multi-threaded/multi-server solution.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, we only have a big server (128 GB, 32 cores,…) and we are putting all our instances on this single server.
-As each instance is multi-threaded, we noticed that they often get in each others way, resulting in bad performances (context swapping, …).&lt;/p&gt;
-
-&lt;p&gt;We solved this problem with 2 solutions.&lt;/p&gt;
-
-&lt;p&gt;We used thread affinity in the application in order to bind some thread to a given CPU, and we used &lt;a href=&quot;https://www.docker.com/&quot;&gt;docker&lt;/a&gt; to authorize a given application to access only some CPUs (via cpuset).&lt;/p&gt;
-
-&lt;p&gt;In order to be sure that docker was correctly restricting the access to the CPUs, I created a &lt;a href=&quot;https://registry.hub.docker.com/u/agileek/cpuset-test/&quot;&gt;docker image&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;If you run it with&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run -ti --cpuset&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt; agileek/cpuset-test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;it will take one cpu (the 7th) at 100%.&lt;/p&gt;
-
-&lt;p&gt;You can see it in action:&lt;/p&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;
-  &lt;iframe src=&quot;http://www.youtube.com/embed/1BMKK812y5A&quot; frameborder=&quot;0&quot; width=&quot;800&quot; height=&quot;600&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If you run it with&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run -ti --cpuset&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,4,6 agileek/cpuset-test /cpus 3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;it will take all available CPUs (the 1st, 5th and 7th)&lt;/p&gt;
-
-&lt;p&gt;You can see it in action:&lt;/p&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;
-  &lt;iframe src=&quot;http://www.youtube.com/embed/ITcyeL8V35I&quot; frameborder=&quot;0&quot; width=&quot;800&quot; height=&quot;600&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-            <pubDate>Wed, 06 Aug 2014 23:26:31 +0000</pubDate>
-            <link>http://agileek.github.io/docker/2014/08/06/docker-cpuset/</link>
-            <guid isPermaLink="true">http://agileek.github.io/docker/2014/08/06/docker-cpuset/</guid>
-            
-            
-            <category>docker</category>
             
         </item>
         
