@@ -94,7 +94,7 @@ Les [sources][sources_avro].
 
 Présenté par Nicolas De Loof. Cet homme est fou :)
 
-Je préfère ne pas vous spoiler cette session, il faut la voir[^2]. Il nous parle de son retour d'expérience sur cloudbees, notamment ses déboires/surpr avec le cloud amazon.
+Je préfère ne pas vous spoiler cette session, il faut la voir[^2]. Il nous parle de son retour d'expérience sur cloudbees, notamment ses déboires/surprises avec le cloud amazon.
 
 
 
