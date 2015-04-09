@@ -97,6 +97,52 @@ Présenté par Nicolas De Loof. Cet homme est fou :)
 Je préfère ne pas vous spoiler cette session, il faut la voir[^2]. Il nous parle de son retour d'expérience sur cloudbees, notamment ses déboires/surprises avec le cloud amazon.
 
 
+## Modular Java Platform
+
+### Constat
+
+Java connait un certain nombre de problèmes, notamment : 
+
+* Taille
+  * Java a continuellement grossi avec le temps (55 MB). Ce n'était pas forcément un problème vu le prix du stockage, c'est en train de le devenir avec l'émergence de l'IoT.
+* Démarrage
+  * Java est lent à démarrer (la compilation dynamique, JIT, ...) sans parler du classloader.
+* Sécurité
+  * Le security manager est trop limité, de plus personne ne s'en sert (2 mains levées dans l'assistance)
+* Utilisation d'api internes
+  * Rien n'empêche d'utiliser ces api.
+* Jar hell
+  * On connait tous les problème de versions multiples dans le classpath
+
+
+### Jigsaw
+
+En rendant Java modulaire, les problèmes cités ci-dessus devraient disparaitre (ou être plus simples à addresser).
+
+Pour le moment, ils ont identifié une cinquantaine de modules dans le JDK. Il y'a 4 JEP (200, 201, 220...)
+
+JShell : java va enfin avoir son REPL !
+
+#### JEP 201: Modular Source Code
+
+Toutes les sources ont du être déplacées pour les pre-fixer par leur module.
+
+#### JEP 220: Modular Run-Time images
+
+Pour récupérer une SystemResource (ClassLoader.getSystemResource()), java ne retournera plus un path du filesystem mais plutôt un pointeur vers la resource. Ça risque de faire mal à migrer.
+
+
+#### Ce qui change pour nous
+
+Un nouveau format de fichier apparait : jmod.
+Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne peut y être ajouté (c'est faux, Osgi par exemple se sert du MANIFEST.mf, mais ça reste une convention). Le .jmod permet de déclarer les dépendances aux différents modules java, afin d'avoir un arbre de dépendance très fin.
+
+
+```sun.*``` et ```*.internal.*``` ne seront plus accessibles (un support temporaire est prévu pour aider aux migrations).
+
+jdeps : permet de savoir quels sont les apis de base dont notre code dépent (accessible depuis java 8).
+
+rt.jar et tools.jar ont disparu.
 
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
 [sources_avro]: https://github.com/alexvictoor/AvroDevoxxFr
