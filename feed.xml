@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Thu, 09 Apr 2015 08:52:03 +0000</pubDate>
-        <lastBuildDate>Thu, 09 Apr 2015 08:52:03 +0000</lastBuildDate>
+        <pubDate>Thu, 09 Apr 2015 14:24:43 +0000</pubDate>
+        <lastBuildDate>Thu, 09 Apr 2015 14:24:43 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
         
         <item>
@@ -91,10 +91,34 @@
 
 &lt;p&gt;Quelles sont les contraintes actuelles qui nous empêchent de publier ? Il prend pour exemple le PDF, en tant que technologie du passé qui s’accroche encore au support papier et qui nous impose des contraintes (Je possède un kindle, c’est tout simplement impossible de lire un PDF, ce n’est pas du tout adapté)&lt;/p&gt;
 
+&lt;h2 id=&quot;quickies&quot;&gt;Quickies&lt;/h2&gt;
+&lt;p&gt;Haa, les quickies, ou le gros dilemme du : je mange ou j’assiste à une conf ?&lt;/p&gt;
+
+&lt;h3 id=&quot;avro--la-souplesse-du-json-les-performances-du-binaire&quot;&gt;Avro : la souplesse du Json, les performances du binaire&lt;/h3&gt;
+
+&lt;p&gt;Outil de sérialisation, c’est à la base un sous projet d’hadoop.&lt;/p&gt;
+
+&lt;p&gt;Il est utilisé dans hadoop pour stoquer des gros volumes de données dans des fichiers.&lt;/p&gt;
+
+&lt;p&gt;L’idée derrière ce lightning talk c’est de montrer qu’il est possible d’utiliser Avro pour autre chose que du bigData. Tout transfert de données un peu important (Rest, …) peut être amélioré avec Avro. Il permet d’encoder nos données dans un format spécifique. IL permet en plus d’ajouter simplement des compresseurs afin d’optimiser les transferts.&lt;/p&gt;
+
+&lt;p&gt;La killer feature : il est possible de spécifier un schéma d’écriture et un schéma de lecture, ce qui permet de pouvoir extraire que les données que l’on souhaite utiliser et ainsi gagner du temps et de la place. (Il y a une méthode qui permet de vérifier la compatibilité entre le writer et le reader)&lt;/p&gt;
+
+&lt;p&gt;Les &lt;a href=&quot;https://github.com/alexvictoor/AvroDevoxxFr&quot;&gt;sources&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;changing-wheels-of-a-moving-car&quot;&gt;Changing wheels of a moving car&lt;/h2&gt;
+
+&lt;p&gt;Présenté par Nicolas De Loof. Cet homme est fou :)&lt;/p&gt;
+
+&lt;p&gt;Je préfère ne pas vous spoiler cette session, il faut la voir&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Il nous parle de son retour d’expérience sur cloudbees, notamment ses déboires/surpr avec le cloud amazon.&lt;/p&gt;
+
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
       &lt;p&gt;Ce blog en est la preuve &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Dès que le lien est sur Parleys, je linkerai la vidéo ici &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;

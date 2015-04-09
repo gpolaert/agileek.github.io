@@ -206,10 +206,34 @@
 
 <p>Quelles sont les contraintes actuelles qui nous empêchent de publier ? Il prend pour exemple le PDF, en tant que technologie du passé qui s’accroche encore au support papier et qui nous impose des contraintes (Je possède un kindle, c’est tout simplement impossible de lire un PDF, ce n’est pas du tout adapté)</p>
 
+<h2 id="quickies">Quickies</h2>
+<p>Haa, les quickies, ou le gros dilemme du : je mange ou j’assiste à une conf ?</p>
+
+<h3 id="avro--la-souplesse-du-json-les-performances-du-binaire">Avro : la souplesse du Json, les performances du binaire</h3>
+
+<p>Outil de sérialisation, c’est à la base un sous projet d’hadoop.</p>
+
+<p>Il est utilisé dans hadoop pour stoquer des gros volumes de données dans des fichiers.</p>
+
+<p>L’idée derrière ce lightning talk c’est de montrer qu’il est possible d’utiliser Avro pour autre chose que du bigData. Tout transfert de données un peu important (Rest, …) peut être amélioré avec Avro. Il permet d’encoder nos données dans un format spécifique. IL permet en plus d’ajouter simplement des compresseurs afin d’optimiser les transferts.</p>
+
+<p>La killer feature : il est possible de spécifier un schéma d’écriture et un schéma de lecture, ce qui permet de pouvoir extraire que les données que l’on souhaite utiliser et ainsi gagner du temps et de la place. (Il y a une méthode qui permet de vérifier la compatibilité entre le writer et le reader)</p>
+
+<p>Les <a href="https://github.com/alexvictoor/AvroDevoxxFr">sources</a>.</p>
+
+<h2 id="changing-wheels-of-a-moving-car">Changing wheels of a moving car</h2>
+
+<p>Présenté par Nicolas De Loof. Cet homme est fou :)</p>
+
+<p>Je préfère ne pas vous spoiler cette session, il faut la voir<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Il nous parle de son retour d’expérience sur cloudbees, notamment ses déboires/surpr avec le cloud amazon.</p>
+
 <div class="footnotes">
   <ol>
     <li id="fn:1">
       <p>Ce blog en est la preuve <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Dès que le lien est sur Parleys, je linkerai la vidéo ici <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
