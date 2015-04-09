@@ -74,5 +74,23 @@ Il nous parle beaucoup de la capacité qu'on a maintenant à écrire, à partage
 
 Quelles sont les contraintes actuelles qui nous empêchent de publier ? Il prend pour exemple le PDF, en tant que technologie du passé qui s'accroche encore au support papier et qui nous impose des contraintes (Je possède un kindle, c'est tout simplement impossible de lire un PDF, ce n'est pas du tout adapté)
 
+## Quickies
+Haa, les quickies, ou le gros dilemme du : je mange ou j'assiste à une conf ?
+
+
+### Avro : la souplesse du Json, les performances du binaire
+
+Outil de sérialisation, c'est à la base un sous projet d'hadoop.
+
+Il est utilisé dans hadoop pour stoquer des gros volumes de données dans des fichiers.
+
+L'idée derrière ce lightning talk c'est de montrer qu'il est possible d'utiliser Avro pour autre chose que du bigData. Tout transfert de données un peu important (Rest, ...) peut être amélioré avec Avro. Il permet d'encoder nos données dans un format spécifique. IL permet en plus d'ajouter simplement des compresseurs afin d'optimiser les transferts.
+
+La killer feature : il est possible de spécifier un schéma d'écriture et un schéma de lecture, ce qui permet de pouvoir extraire que les données que l'on souhaite utiliser et ainsi gagner du temps et de la place. (Il y a une méthode qui permet de vérifier la compatibilité entre le writer et le reader)
+
+Les [sources][sources_avro].
+
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
+[sources_avro]: https://github.com/alexvictoor/AvroDevoxxFr
+
 [^1]: Ce blog en est la preuve
