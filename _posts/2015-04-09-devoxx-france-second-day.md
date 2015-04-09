@@ -74,4 +74,5 @@ Il nous parle beaucoup de la capacité qu'on a maintenant à écrire, à partage
 
 Quelles sont les contraintes actuelles qui nous empêchent de publier ? Il prend pour exemple le PDF, en tant que technologie du passé qui s'accroche encore au support papier et qui nous impose des contraintes (Je possède un kindle, c'est tout simplement impossible de lire un PDF, ce n'est pas du tout adapté)
 
+[devoxxFrance]: /images/posts/devoxx/devoxx_france.png
 [^1]: Ce blog en est la preuve
