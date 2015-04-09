@@ -90,7 +90,16 @@ La killer feature : il est possible de spécifier un schéma d'écriture et un s
 
 Les [sources][sources_avro].
 
+## Changing wheels of a moving car
+
+Présenté par Nicolas De Loof. Cet homme est fou :)
+
+Je préfère ne pas vous spoiler cette session, il faut la voir[^2]. Il nous parle de son retour d'expérience sur cloudbees, notamment ses déboires/surpr avec le cloud amazon.
+
+
+
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
 [sources_avro]: https://github.com/alexvictoor/AvroDevoxxFr
 
 [^1]: Ce blog en est la preuve
+[^2]: Dès que le lien est sur Parleys, je linkerai la vidéo ici
