@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Thu, 09 Apr 2015 14:24:43 +0000</pubDate>
-        <lastBuildDate>Thu, 09 Apr 2015 14:24:43 +0000</lastBuildDate>
+        <pubDate>Thu, 09 Apr 2015 14:26:23 +0000</pubDate>
+        <lastBuildDate>Thu, 09 Apr 2015 14:26:23 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
         
         <item>
@@ -110,7 +110,7 @@
 
 &lt;p&gt;Présenté par Nicolas De Loof. Cet homme est fou :)&lt;/p&gt;
 
-&lt;p&gt;Je préfère ne pas vous spoiler cette session, il faut la voir&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Il nous parle de son retour d’expérience sur cloudbees, notamment ses déboires/surpr avec le cloud amazon.&lt;/p&gt;
+&lt;p&gt;Je préfère ne pas vous spoiler cette session, il faut la voir&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Il nous parle de son retour d’expérience sur cloudbees, notamment ses déboires/surprises avec le cloud amazon.&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
