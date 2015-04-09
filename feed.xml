@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Thu, 09 Apr 2015 14:26:23 +0000</pubDate>
-        <lastBuildDate>Thu, 09 Apr 2015 14:26:23 +0000</lastBuildDate>
+        <pubDate>Thu, 09 Apr 2015 15:26:13 +0000</pubDate>
+        <lastBuildDate>Thu, 09 Apr 2015 15:26:13 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
         
         <item>
@@ -111,6 +111,67 @@
 &lt;p&gt;Présenté par Nicolas De Loof. Cet homme est fou :)&lt;/p&gt;
 
 &lt;p&gt;Je préfère ne pas vous spoiler cette session, il faut la voir&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Il nous parle de son retour d’expérience sur cloudbees, notamment ses déboires/surprises avec le cloud amazon.&lt;/p&gt;
+
+&lt;h2 id=&quot;modular-java-platform&quot;&gt;Modular Java Platform&lt;/h2&gt;
+
+&lt;h3 id=&quot;constat&quot;&gt;Constat&lt;/h3&gt;
+
+&lt;p&gt;Java connait un certain nombre de problèmes, notamment :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Taille
+    &lt;ul&gt;
+      &lt;li&gt;Java a continuellement grossi avec le temps (55 MB). Ce n’était pas forcément un problème vu le prix du stockage, c’est en train de le devenir avec l’émergence de l’IoT.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Démarrage
+    &lt;ul&gt;
+      &lt;li&gt;Java est lent à démarrer (la compilation dynamique, JIT, …) sans parler du classloader.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sécurité
+    &lt;ul&gt;
+      &lt;li&gt;Le security manager est trop limité, de plus personne ne s’en sert (2 mains levées dans l’assistance)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Utilisation d’api internes
+    &lt;ul&gt;
+      &lt;li&gt;Rien n’empêche d’utiliser ces api.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Jar hell
+    &lt;ul&gt;
+      &lt;li&gt;On connait tous les problème de versions multiples dans le classpath&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;jigsaw&quot;&gt;Jigsaw&lt;/h3&gt;
+
+&lt;p&gt;En rendant Java modulaire, les problèmes cités ci-dessus devraient disparaitre (ou être plus simples à addresser).&lt;/p&gt;
+
+&lt;p&gt;Pour le moment, ils ont identifié une cinquantaine de modules dans le JDK. Il y’a 4 JEP (200, 201, 220…)&lt;/p&gt;
+
+&lt;p&gt;JShell : java va enfin avoir son REPL !&lt;/p&gt;
+
+&lt;h4 id=&quot;jep-201-modular-source-code&quot;&gt;JEP 201: Modular Source Code&lt;/h4&gt;
+
+&lt;p&gt;Toutes les sources ont du être déplacées pour les pre-fixer par leur module.&lt;/p&gt;
+
+&lt;h4 id=&quot;jep-220-modular-run-time-images&quot;&gt;JEP 220: Modular Run-Time images&lt;/h4&gt;
+
+&lt;p&gt;Pour récupérer une SystemResource (ClassLoader.getSystemResource()), java ne retournera plus un path du filesystem mais plutôt un pointeur vers la resource. Ça risque de faire mal à migrer.&lt;/p&gt;
+
+&lt;h4 id=&quot;ce-qui-change-pour-nous&quot;&gt;Ce qui change pour nous&lt;/h4&gt;
+
+&lt;p&gt;Un nouveau format de fichier apparait : jmod.
+Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne peut y être ajouté (c’est faux, Osgi par exemple se sert du MANIFEST.mf, mais ça reste une convention). Le .jmod permet de déclarer les dépendances aux différents modules java, afin d’avoir un arbre de dépendance très fin.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sun.*&lt;/code&gt; et &lt;code&gt;*.internal.*&lt;/code&gt; ne seront plus accessibles (un support temporaire est prévu pour aider aux migrations).&lt;/p&gt;
+
+&lt;p&gt;jdeps : permet de savoir quels sont les apis de base dont notre code dépent (accessible depuis java 8).&lt;/p&gt;
+
+&lt;p&gt;rt.jar et tools.jar ont disparu.&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;

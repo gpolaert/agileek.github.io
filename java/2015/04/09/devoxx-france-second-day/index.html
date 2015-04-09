@@ -227,6 +227,67 @@
 
 <p>Je préfère ne pas vous spoiler cette session, il faut la voir<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Il nous parle de son retour d’expérience sur cloudbees, notamment ses déboires/surprises avec le cloud amazon.</p>
 
+<h2 id="modular-java-platform">Modular Java Platform</h2>
+
+<h3 id="constat">Constat</h3>
+
+<p>Java connait un certain nombre de problèmes, notamment :</p>
+
+<ul>
+  <li>Taille
+    <ul>
+      <li>Java a continuellement grossi avec le temps (55 MB). Ce n’était pas forcément un problème vu le prix du stockage, c’est en train de le devenir avec l’émergence de l’IoT.</li>
+    </ul>
+  </li>
+  <li>Démarrage
+    <ul>
+      <li>Java est lent à démarrer (la compilation dynamique, JIT, …) sans parler du classloader.</li>
+    </ul>
+  </li>
+  <li>Sécurité
+    <ul>
+      <li>Le security manager est trop limité, de plus personne ne s’en sert (2 mains levées dans l’assistance)</li>
+    </ul>
+  </li>
+  <li>Utilisation d’api internes
+    <ul>
+      <li>Rien n’empêche d’utiliser ces api.</li>
+    </ul>
+  </li>
+  <li>Jar hell
+    <ul>
+      <li>On connait tous les problème de versions multiples dans le classpath</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="jigsaw">Jigsaw</h3>
+
+<p>En rendant Java modulaire, les problèmes cités ci-dessus devraient disparaitre (ou être plus simples à addresser).</p>
+
+<p>Pour le moment, ils ont identifié une cinquantaine de modules dans le JDK. Il y’a 4 JEP (200, 201, 220…)</p>
+
+<p>JShell : java va enfin avoir son REPL !</p>
+
+<h4 id="jep-201-modular-source-code">JEP 201: Modular Source Code</h4>
+
+<p>Toutes les sources ont du être déplacées pour les pre-fixer par leur module.</p>
+
+<h4 id="jep-220-modular-run-time-images">JEP 220: Modular Run-Time images</h4>
+
+<p>Pour récupérer une SystemResource (ClassLoader.getSystemResource()), java ne retournera plus un path du filesystem mais plutôt un pointeur vers la resource. Ça risque de faire mal à migrer.</p>
+
+<h4 id="ce-qui-change-pour-nous">Ce qui change pour nous</h4>
+
+<p>Un nouveau format de fichier apparait : jmod.
+Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne peut y être ajouté (c’est faux, Osgi par exemple se sert du MANIFEST.mf, mais ça reste une convention). Le .jmod permet de déclarer les dépendances aux différents modules java, afin d’avoir un arbre de dépendance très fin.</p>
+
+<p><code>sun.*</code> et <code>*.internal.*</code> ne seront plus accessibles (un support temporaire est prévu pour aider aux migrations).</p>
+
+<p>jdeps : permet de savoir quels sont les apis de base dont notre code dépent (accessible depuis java 8).</p>
+
+<p>rt.jar et tools.jar ont disparu.</p>
+
 <div class="footnotes">
   <ol>
     <li id="fn:1">
