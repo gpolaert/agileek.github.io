@@ -5,9 +5,63 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Thu, 09 Apr 2015 15:26:13 +0000</pubDate>
-        <lastBuildDate>Thu, 09 Apr 2015 15:26:13 +0000</lastBuildDate>
+        <pubDate>Fri, 10 Apr 2015 09:07:41 +0000</pubDate>
+        <lastBuildDate>Fri, 10 Apr 2015 09:07:41 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
+        
+        <item>
+            <title>Devoxx France : jour 3</title>
+            <description>&lt;p&gt;&lt;img src=&quot;/images/posts/devoxx/devoxx_france.png&quot; alt=&quot;Devoxx&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;keynote&quot;&gt;Keynote&lt;/h2&gt;
+
+&lt;h3 id=&quot;un-robot-peut-il-apprendre-comme-un-enfant-&quot;&gt;Un robot peut-il apprendre comme un enfant ?&lt;/h3&gt;
+
+&lt;p&gt;On recommence avec les robots pour cette première keynote de Pierre-Yves Oudeyer.&lt;/p&gt;
+
+&lt;p&gt;Nous avons tous une vision des robots en tant qu’extension de nos mains (robots aspirateurs, ceux sur Mars, pour tondre la pelouse,…) mais Pierre-Yves essaie de créer des robots qui étendent notre esprit. Pour cela il se base sur l’observation de l’apprentissage des enfants. C’est bluffant de voir à quel point en analysant mathématiquement nos interactions avec le monde extérieur on peut modéliser le comportement d’un nouveau né.&lt;/p&gt;
+
+&lt;h4 id=&quot;comment-les-langues-naissent-elles-&quot;&gt;Comment les langues naissent-elles ?&lt;/h4&gt;
+
+&lt;p&gt;En mettant un groupe de robots “curieux” dans un espace restreint, on peut observer l’apparition d’un langage. Les robots désignent un objet et tentent de le nommer par paire. Au bout d’un moment un consensus apparait et ce mot se diffuse auprès des autres robots.&lt;/p&gt;
+
+&lt;p&gt;Il nous a également présenté &lt;a href=&quot;http://www.poppy-project.com&quot;&gt;Poppy&lt;/a&gt;, un robot imprimé en 3D open source.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-decentralization-singularity&quot;&gt;The decentralization singularity&lt;/h3&gt;
+
+&lt;p&gt;Stéphan Tual nous parle d’Ethereum. Il commence avec le constat de la centralisation d’internet (Facebook, Amazon), qui n’était pas intentionnel, mais a émergé par simplicité.&lt;/p&gt;
+
+&lt;p&gt;Pour ceux qui ne connaissent pas, Ethereum se base sur Bitcoin. L’idée est de mettre du code dans la blockchain pour que tous les éléments du réseau puissent l’exécuter et s’assurer qu’il n y a pas de fraude.&lt;/p&gt;
+
+&lt;h3 id=&quot;clever-cloud&quot;&gt;Clever cloud&lt;/h3&gt;
+
+&lt;p&gt;Le présentateur prend à contre pied le mouvement DevOps en nous exposant un parallèle très intéressant avec l’électricité. En effet au début de l’électricité les entreprises avaient leur propre façon de générer l’électricité, avec tous les écarts que ça implique (alternatif/continue, voltage). Aujourd’hui on ne se pose plus de question sur l’électricité, ça fonctionne, point.&lt;/p&gt;
+
+&lt;p&gt;L’infrastructure doit être pour les développeurs comme l’électricité : accessible sans même avoir à y penser, et fiable. J’avoue être plus proche du mouvement DevOps mais sa vision donne à réfléchir.&lt;/p&gt;
+
+&lt;h3 id=&quot;futurejava&quot;&gt;Future&lt;java&gt;&lt;/java&gt;&lt;/h3&gt;
+
+&lt;p&gt;Brian Goetz nous parle pour cette dernière keynote du futur de Java, en nous parlant de son passé. Ayant suivi sa conférence hier, je n’ai pas appris grand chose à celle-ci.&lt;/p&gt;
+
+&lt;p&gt;Une chose très intéressante par contre, c’est l’arrivée (Java 10 ?) des value class, qui sont à la limite entre objets et type primitifs, permettant une abstraction équivalent à l’objet tout en ayant un comportement mémoire primitif.&lt;/p&gt;
+
+&lt;p&gt;Ça permettra ce genre de concepts, j’ai déjà hâte.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;integerSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parallelStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Avouez que ça fait rêver non ?&lt;/p&gt;
+
+</description>
+            <pubDate>Fri, 10 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</link>
+            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</guid>
+            
+            
+            <category>java</category>
+            
+        </item>
         
         <item>
             <title>Devoxx France : jour 2</title>
@@ -1294,52 +1348,6 @@ Remove one or more containers
             <link>http://agileek.github.io/2015/04/01/one-day-one-post/</link>
             <guid isPermaLink="true">http://agileek.github.io/2015/04/01/one-day-one-post/</guid>
             
-            
-        </item>
-        
-        <item>
-            <title>Generate log line with Intellij and live templates</title>
-            <description>&lt;p&gt;With IntelliJ, one missing feature is the automatic generation of the famous &lt;code&gt;private static Logger LOGGER = ...;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;You can do it easily with the Live Templates, you just have to go to &lt;strong&gt;&lt;em&gt;Editor -&amp;gt; Live Templates -&amp;gt; others -&amp;gt; create new&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;And in these fields :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Abbreviation: log&lt;/li&gt;
-  &lt;li&gt;Description: Add log line&lt;/li&gt;
-  &lt;li&gt;Template text:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;slf4j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Logger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOGGER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;slf4j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LoggerFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$CLASS_NAME$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Applicable in: Java: declaration&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Edit variables: CLASS_NAME Expresion: className()&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Make sure you have slf4j-api in your classpath, with maven:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.slf4j&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;slf4j-api&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.7.7&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s it, type &lt;code&gt;log&lt;/code&gt; and Ctrl+J and it will generate the logger line, with the slf4j imports.&lt;/p&gt;
-</description>
-            <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/intellij/java/2015/03/01/intellij-live-template-log/</link>
-            <guid isPermaLink="true">http://agileek.github.io/intellij/java/2015/03/01/intellij-live-template-log/</guid>
-            
-            
-            <category>intellij</category>
-            
-            <category>java</category>
             
         </item>
         

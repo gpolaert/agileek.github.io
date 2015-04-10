@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Category: intellij</title>
+    <title>Devoxx France : jour 3</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.">
     <link rel="icon" type="image/png" href="/images/home.png" />
-    <link rel="canonical" href="http://agileek.github.io/categories/intellij/">
+    <link rel="canonical" href="http://agileek.github.io/java/2015/04/10/devoxx-france-third-day/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href=" /css/main.css ">
@@ -118,74 +118,79 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="home">
-  <div style="text-align: center;">
-    <img src="/images/categories/intellij_banner.png" class="category_banner" alt="intellij">
-  </div>
-  <ul class="posts">
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/03/01</span>
-            <a class="post-link" href="/intellij/java/2015/03/01/intellij-live-template-log/">Generate log line with Intellij and live templates</a>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-  </ul>
+      <div class="post">
 
-  <p class="rss-subscribe">subscribe
-      <a href="http://feeds.feedburner.com/github/AkZi">via RSS</a>
-  </p>
+    <header class="post-header">
+        <h1>Devoxx France : jour 3</h1>
+        <p class="meta">Apr 10, 2015</p>
+    </header>
+
+    <article class="post-content">
+        <p><img src="/images/posts/devoxx/devoxx_france.png" alt="Devoxx" /></p>
+
+<h2 id="keynote">Keynote</h2>
+
+<h3 id="un-robot-peut-il-apprendre-comme-un-enfant-">Un robot peut-il apprendre comme un enfant ?</h3>
+
+<p>On recommence avec les robots pour cette première keynote de Pierre-Yves Oudeyer.</p>
+
+<p>Nous avons tous une vision des robots en tant qu’extension de nos mains (robots aspirateurs, ceux sur Mars, pour tondre la pelouse,…) mais Pierre-Yves essaie de créer des robots qui étendent notre esprit. Pour cela il se base sur l’observation de l’apprentissage des enfants. C’est bluffant de voir à quel point en analysant mathématiquement nos interactions avec le monde extérieur on peut modéliser le comportement d’un nouveau né.</p>
+
+<h4 id="comment-les-langues-naissent-elles-">Comment les langues naissent-elles ?</h4>
+
+<p>En mettant un groupe de robots “curieux” dans un espace restreint, on peut observer l’apparition d’un langage. Les robots désignent un objet et tentent de le nommer par paire. Au bout d’un moment un consensus apparait et ce mot se diffuse auprès des autres robots.</p>
+
+<p>Il nous a également présenté <a href="http://www.poppy-project.com">Poppy</a>, un robot imprimé en 3D open source.</p>
+
+<h3 id="the-decentralization-singularity">The decentralization singularity</h3>
+
+<p>Stéphan Tual nous parle d’Ethereum. Il commence avec le constat de la centralisation d’internet (Facebook, Amazon), qui n’était pas intentionnel, mais a émergé par simplicité.</p>
+
+<p>Pour ceux qui ne connaissent pas, Ethereum se base sur Bitcoin. L’idée est de mettre du code dans la blockchain pour que tous les éléments du réseau puissent l’exécuter et s’assurer qu’il n y a pas de fraude.</p>
+
+<h3 id="clever-cloud">Clever cloud</h3>
+
+<p>Le présentateur prend à contre pied le mouvement DevOps en nous exposant un parallèle très intéressant avec l’électricité. En effet au début de l’électricité les entreprises avaient leur propre façon de générer l’électricité, avec tous les écarts que ça implique (alternatif/continue, voltage). Aujourd’hui on ne se pose plus de question sur l’électricité, ça fonctionne, point.</p>
+
+<p>L’infrastructure doit être pour les développeurs comme l’électricité : accessible sans même avoir à y penser, et fiable. J’avoue être plus proche du mouvement DevOps mais sa vision donne à réfléchir.</p>
+
+<h3 id="futurejava">Future<java></java></h3>
+
+<p>Brian Goetz nous parle pour cette dernière keynote du futur de Java, en nous parlant de son passé. Ayant suivi sa conférence hier, je n’ai pas appris grand chose à celle-ci.</p>
+
+<p>Une chose très intéressante par contre, c’est l’arrivée (Java 10 ?) des value class, qui sont à la limite entre objets et type primitifs, permettant une abstraction équivalent à l’objet tout en ayant un comportement mémoire primitif.</p>
+
+<p>Ça permettra ce genre de concepts, j’ai déjà hâte.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">integerSum</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">integers</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="n">integers</span><span class="o">.</span><span class="na">parallelStream</span><span class="o">().</span><span class="na">sum</span><span class="o">();</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Avouez que ça fait rêver non ?</p>
+
+
+    </article>
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'agileek'; 
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by
+        <span class="logo-disqus">Disqus</span>
+    </a>
+
 </div>
-
       </div>
     </div>
 
