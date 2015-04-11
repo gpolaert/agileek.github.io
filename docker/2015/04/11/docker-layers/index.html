@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Category: java</title>
+    <title>Docker Tips #2: Limit the layers</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.">
     <link rel="icon" type="image/png" href="/images/home.png" />
-    <link rel="canonical" href="http://agileek.github.io/categories/java/">
+    <link rel="canonical" href="http://agileek.github.io/docker/2015/04/11/docker-layers/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href=" /css/main.css ">
@@ -118,96 +118,129 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="home">
-  <div style="text-align: center;">
-    <img src="/images/categories/java_banner.png" class="category_banner" alt="java">
-  </div>
-  <ul class="posts">
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/04/10</span>
-            <a class="post-link" href="/java/2015/04/10/devoxx-france-third-day/">Devoxx France : jour 3</a>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/04/09</span>
-            <a class="post-link" href="/java/2015/04/09/devoxx-france-second-day/">Devoxx France : jour 2</a>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/04/08</span>
-            <a class="post-link" href="/java/2015/04/08/devoxx-jour-1/">Devoxx France : Jour 1</a>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/04/07</span>
-            <a class="post-link" href="/java/2015/04/07/before-devoxx-france/">Devoxx France : la préparation</a>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/04/06</span>
-            <a class="post-link" href="/java/2015/04/06/assertJ-3.0.0/">AssertJ 3.0.0 for Java 8</a>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/04/03</span>
-            <a class="post-link" href="/java/2015/04/03/maven-polyglot/">Maven 3.3.1: La mort du pom.xml</a>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-            <span class="post-date">2015/03/01</span>
-            <a class="post-link" href="/intellij/java/2015/03/01/intellij-live-template-log/">Generate log line with Intellij and live templates</a>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-      <li>
-          
-      </li>
-      
-  </ul>
+      <div class="post">
 
-  <p class="rss-subscribe">subscribe
-      <a href="http://feeds.feedburner.com/github/AkZi">via RSS</a>
-  </p>
+    <header class="post-header">
+        <h1>Docker Tips #2: Limit the layers</h1>
+        <p class="meta">Apr 11, 2015</p>
+    </header>
+
+    <article class="post-content">
+        <h2 id="scenario">Scenario</h2>
+
+<p>I want to transfer <strong><em>efficiently</em></strong> my images to the production machines.</p>
+
+<h3 id="given">Given</h3>
+<p>My Dockerfile with android sdk</p>
+
+<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">ADD</span> http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz /opt/android-sdk.tgz
+<span class="k">RUN</span> tar xzf /opt/android-sdk.tgz -C /opt/
+<span class="k">RUN</span> rm -f /opt/android-sdk.tgz</code></pre></div>
+
+<p>built with <code>docker build -t docker_layers .</code></p>
+
+<h3 id="when">When</h3>
+<p>I want to push it to the registry</p>
+
+<h3 id="then">Then</h3>
+
+<p>It will push 3 layers:</p>
+
+<ul>
+  <li>the first is the android tgz pushed into /opt</li>
+  <li>the second is the <strong><em>extracted</em></strong> sdk into the /opt directory</li>
+  <li>the last one is the deletion of the tgz</li>
+</ul>
+
+<p>This is really not optimal, the first and third layer are useless. Worst, they use space on your filesystems, on your network when you pull/push, …</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>It is a good practice to merge common operations into one single docker command.</p>
+
+<p>For this example it would be:</p>
+
+<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN</span> <span class="nb">cd</span> /opt <span class="o">&amp;&amp;</span> <span class="err">\</span>
+    wget --output-document<span class="o">=</span>android-sdk.tgz --quiet http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz <span class="o">&amp;&amp;</span> <span class="err">\</span>
+    tar xzf android-sdk.tgz <span class="o">&amp;&amp;</span> <span class="err">\</span>
+    rm -f android-sdk.tgz</code></pre></div>
+
+<p>In that way you only have one layer commited, and it contains only the needed android sdk extracted.</p>
+
+<h3 id="caveats">Caveats</h3>
+
+<p>There is one drawback with this particular approach: You lose the capacities of the <code>ADD</code> syntax.</p>
+
+<p>If you build the first Dockerfile, you will notice that each time the tgz is downloaded. Docker then verifies that the file hasn’t changed and if not, uses the cached image.</p>
+
+<p>That means that if the tgz changes, there will be a new build, whereas with the one-line approach, it will not, because docker will just verify that the command hasn’t changed, not the content downloaded by the wget.</p>
+
+<h2 id="templates">Templates</h2>
+
+<p>The general approach is :</p>
+
+<ul>
+  <li>Prepare what you want to do</li>
+  <li>Do it</li>
+  <li>Clean everything that is not necessary</li>
+</ul>
+
+<p>The example with the android sdk works for all archives that must be extracted.</p>
+
+<p>Below are templates from our experience that we think doesn’t alter readability while reducing the layers and the size of the docker image.</p>
+
+<h3 id="apt">APT</h3>
+
+<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span>  <span class="err">\</span>
+    apt-get install -y whatever <span class="o">&amp;&amp;</span> <span class="err">\</span>
+    apt-get clean <span class="o">&amp;&amp;</span> <span class="err">\</span>
+    apt-get autoclean <span class="o">&amp;&amp;</span> <span class="err">\</span>
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*</code></pre></div>
+
+<h3 id="yum">Yum</h3>
+
+<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN</span> yum -y update <span class="o">&amp;&amp;</span> <span class="err">\</span>
+    yum -y install whatever <span class="o">&amp;&amp;</span> <span class="err">\</span>
+    yum clean all</code></pre></div>
+
+<h3 id="an-other-very-important-thing-is-to-keep-your-dockerfile-readable">An other <strong><em>very</em></strong> important thing is to keep your Dockerfile <strong><em>readable</em></strong></h3>
+
+<p>This example is, in my opinion, a bad one.</p>
+
+<script src="https://gist.github.com/MichaelBitard/7bd7bc71385326ab3238.js?file=Dockerfile"> </script>
+
+<blockquote>
+  <p>Yes, it’s only one docker RUN command</p>
+</blockquote>
+
+<h4 id="ps">PS</h4>
+
+<ul>
+  <li>If you know other tips to reduce the number of layers without losing readability, feel free to post a comment, I’ll gladly add them here.</li>
+</ul>
+
+    </article>
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'agileek'; 
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by
+        <span class="logo-disqus">Disqus</span>
+    </a>
+
 </div>
-
       </div>
     </div>
 
