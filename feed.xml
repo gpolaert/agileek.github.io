@@ -5,9 +5,137 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Sat, 11 Apr 2015 16:27:40 +0000</pubDate>
-        <lastBuildDate>Sat, 11 Apr 2015 16:27:40 +0000</lastBuildDate>
+        <pubDate>Sun, 12 Apr 2015 17:49:15 +0000</pubDate>
+        <lastBuildDate>Sun, 12 Apr 2015 17:49:15 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
+        
+        <item>
+            <title>Docker Tips #3: How to lose data with a bad CMD</title>
+            <description>&lt;h2 id=&quot;scenario&quot;&gt;Scenario&lt;/h2&gt;
+
+&lt;p&gt;I want to be sure I don’t lose data when I stop my container.&lt;/p&gt;
+
+&lt;h3 id=&quot;given&quot;&gt;Given&lt;/h3&gt;
+&lt;p&gt;A simple program which add to a list the current time every second (Very critical program) and write the list to a file when it exits.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parentDirectory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dataFolder&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parentDirectory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InterruptedException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createDirectories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parentDirectory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readAllLines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;Runtime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRuntime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addShutdownHook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Charset&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Charset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newBufferedWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Couldn&amp;#39;t save lines&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I assume it’s understandable even if you are not familiar with java. If not, let me know and I’ll explain it.&lt;/p&gt;
+
+&lt;h3 id=&quot;when&quot;&gt;When&lt;/h3&gt;
+
+&lt;p&gt;I launch it without docker, (&lt;code&gt;java -jar docker/docker-stop-test-0.1-SNAPSHOT.jar&lt;/code&gt;) wait for a few seconds, then kill it (&lt;code&gt;kill $(ps aux | grep java | grep docker-stop-test-0.1-SNAPSHOT.jar | awk &#39;{print $2}&#39;)&lt;/code&gt;)&lt;/p&gt;
+
+&lt;h3 id=&quot;then&quot;&gt;Then&lt;/h3&gt;
+&lt;p&gt;I check in &lt;code&gt;dataFolder/data&lt;/code&gt; file and I see&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat dataFolder/data 
+2015-04-12T08:47:16.873Z
+2015-04-12T08:47:17.927Z
+2015-04-12T08:47:18.928Z
+2015-04-12T09:12:16.469Z
+2015-04-12T09:12:17.521Z&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;but&quot;&gt;But&lt;/h3&gt;
+
+&lt;p&gt;If I kill -9 instead, the data file is empty.&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-move-to-docker-now&quot;&gt;Let’s move to docker now&lt;/h2&gt;
+
+&lt;h3 id=&quot;given-1&quot;&gt;Given&lt;/h3&gt;
+
+&lt;p&gt;A docker image with the jre and my jar installed&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt; docker-stop-test-0.1-SNAPSHOT.jar /
+
+&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt; java -jar docker-stop-test-0.1-SNAPSHOT.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;when-1&quot;&gt;When&lt;/h3&gt;
+
+&lt;p&gt;I launch a container, wait for a few seconds, then STOP (not KILL) it&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run --name docker-stop-test-bad-container -v &lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;/dataFolder-bad-cmd:/dataFolder -d docker-stop-test-bad
+c08dc515319601d467db02339d3b3a84a03ab99fb4b46811cc5860abf5eea7ec
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sleep 5
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker stop docker-stop-test-bad-container
+docker-stop-test-bad-container&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;then-1&quot;&gt;Then&lt;/h3&gt;
+
+&lt;p&gt;I expect to see data in &lt;code&gt;dataFolder-bad-cmd/data&lt;/code&gt; &lt;strong&gt;&lt;em&gt;right&lt;/em&gt;&lt;/strong&gt;? &lt;strong&gt;&lt;em&gt;Wrong&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is nothing written in the data file, that means I just lost everything!&lt;/p&gt;
+
+&lt;h2 id=&quot;explanations&quot;&gt;Explanations&lt;/h2&gt;
+
+&lt;p&gt;If you look at the CMD command: &lt;code&gt;CMD java -jar docker-stop-test-0.1-SNAPSHOT.jar&lt;/code&gt; everything looks ok.
+But when you run this image and inspect the created container, you will see this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Cmd&amp;quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;/bin/sh&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;-c&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;java -jar docker-stop-test-0.1-SNAPSHOT.jar&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Docker wrapped my command within a shell script. So what, that’s not that big a deal right?&lt;/p&gt;
+
+&lt;p&gt;In fact, if you look at the docker &lt;a href=&quot;https://docs.docker.com/reference/builder/#cmd&quot;&gt;documentation&lt;/a&gt;, you don’t see anything useful. You have to look at the &lt;a href=&quot;https://docs.docker.com/reference/builder/#entrypoint&quot;&gt;ENTRYPOINT&lt;/a&gt; documentation and dig into it a little to see that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The shell form prevents any CMD or run command line arguments from being used, but has the disadvantage that your ENTRYPOINT will be started as a subcommand of /bin/sh -c, which does not pass signals. This means that the executable will not be the container’s PID 1 - and will not receive Unix signals - so your executable will not receive a SIGTERM from docker stop &lt;container&gt;.&lt;/container&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Don’t use the most intuitive syntax in the CMD or ENTRYPOINT command, use the exec form. If you replace the CMD command in the dockerfile by this one:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;java&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;-jar&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;docker-stop-test-0.1-SNAPSHOT.jar&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then everything works like a charm, the SIGTERM is received and the java application save its list into the data file before exiting.&lt;/p&gt;
+
+&lt;h2 id=&quot;diy&quot;&gt;DIY&lt;/h2&gt;
+
+&lt;p&gt;If you want to try it by yourself, everything is on my &lt;a href=&quot;https://github.com/agileek/docker-tips/tree/master/cmd&quot;&gt;github repository&lt;/a&gt;. You have two shell scripts: &lt;code&gt;docker-build-all.sh&lt;/code&gt; and &lt;code&gt;docker-run-all.sh&lt;/code&gt;. The first will build the images with the bad syntax and the good one. The second script will run containers from these images, wait 5 seconds, stop them.&lt;/p&gt;
+
+&lt;p&gt;You can then check in &lt;code&gt;dataFolder-bad-cmd/data&lt;/code&gt; and &lt;code&gt;dataFolder-good-cmd/data&lt;/code&gt; to see the differences.&lt;/p&gt;
+
+</description>
+            <pubDate>Sun, 12 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/docker/2015/04/12/docker-cmd/</link>
+            <guid isPermaLink="true">http://agileek.github.io/docker/2015/04/12/docker-cmd/</guid>
+            
+            
+            <category>docker</category>
+            
+        </item>
         
         <item>
             <title>Docker Tips #2: Limit the layers</title>
@@ -1357,137 +1485,6 @@ Remove one or more containers
             
             
             <category>java</category>
-            
-        </item>
-        
-        <item>
-            <title>Jekyll : ajouter des catégories à vos menus</title>
-            <description>&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
-
-&lt;p&gt;Comme il y’a &lt;strong&gt;&lt;em&gt;énormément&lt;/em&gt;&lt;/strong&gt; de posts sur ce blog, j’ai eu envie de pouvoir lister les posts par catégories.&lt;/p&gt;
-
-&lt;p&gt;Je me suis dis que c’était relativement facile, et au final j’y ai passé un moment avant de réussir à le faire fonctionner complètement avec githup pages.&lt;/p&gt;
-
-&lt;p&gt;J’ai trouvé des resources un peu partout mais rien qui expliquait de bout en bout la manipulation, d’où le post.&lt;/p&gt;
-
-&lt;h3 id=&quot;le-gnrateur&quot;&gt;Le générateur&lt;/h3&gt;
-
-&lt;p&gt;Jekyll sert statiquement les pages, il n’y a donc pas la possibilité de récupérer les paramètres de l’url pour s’en servir.&lt;/p&gt;
-
-&lt;p&gt;Par exemple, j’aurais aimé que &lt;code&gt;http://agileek.github.io/?category=docker&lt;/code&gt; fonctionne.&lt;/p&gt;
-
-&lt;p&gt;Ce n’est pas possible de le faire autrement que par javascript (ce qui implique de charger tous les posts côté client), ce que je ne trouve pas optimal.&lt;/p&gt;
-
-&lt;p&gt;Si vous voulez le faire, jetez un oeil au &lt;a href=&quot;https://github.com/danielsiwiec/danielsiwiec.github.io/commit/cf04dd322f5ffe2251ca6e3733d2707c2eaec7d4&quot;&gt;commit&lt;/a&gt; de &lt;a href=&quot;https://github.com/danielsiwiec/&quot;&gt;@danielsiwiec&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;ct-serveur&quot;&gt;Côté serveur&lt;/h4&gt;
-
-&lt;p&gt;Je me suis attaqué aux plugins de jekyll, plus précisément aux &lt;a href=&quot;http://jekyllrb.com/docs/plugins/#generators&quot;&gt;generators&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Je n’ai rien touché au code du générateur de catégories qui est dans la doc de jekyll:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Jekyll&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CategoryPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Page&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@site&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;index.html&amp;#39;&lt;/span&gt;
-
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_yaml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;_layouts&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;category_index.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;category&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;
-
-      &lt;span class=&quot;n&quot;&gt;category_title_prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;category_title_prefix&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Category: &amp;#39;&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category_title_prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CategoryPageGenerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Generator&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;safe&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layouts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key?&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;category_index&amp;#39;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;category_dir&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each_key&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CategoryPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Par contre ce qu’ils n’expliquent pas (ou pas bien), c’est qu’il faut un fichier de template pour pouvoir générer toutes les pages de catégories.&lt;/p&gt;
-
-&lt;p&gt;Voici le &lt;a href=&quot;https://github.com/agileek/agileek.github.io/commit/14d1c8ffb3863fd5746cb28daefa5aee3f1bf99f&quot;&gt;commit&lt;/a&gt;, qui contient également la partie template web (le &lt;code&gt;category_index.html&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;Et voilà, ça fonctionne parfaitement sur &lt;strong&gt;&lt;em&gt;mon poste&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;et-docker-dans-tout-a&quot;&gt;Et docker dans tout ça&lt;/h3&gt;
-
-&lt;p&gt;Vous l’avez peut-être remarqué, mais il y’a le tag docker sur ce post, si vous vous demandez pourquoi, voilà la raison :&lt;/p&gt;
-
-&lt;p&gt;Github ne permet pas d’exécuter les plugins jekyll (il le lance avec &lt;code&gt;--safe&lt;/code&gt;) donc ce qui fonctionnait &lt;strong&gt;&lt;em&gt;sur mon poste&lt;/em&gt;&lt;/strong&gt; ne fonctionnait pas en ligne.&lt;/p&gt;
-
-&lt;p&gt;Il me faut donc générer statiquement le blog et le commiter sur master “à la mano”.&lt;/p&gt;
-
-&lt;p&gt;Comme je me sers déjà de docker pour &lt;a href=&quot;http://agileek.github.io/docker/jekyll/2014/07/23/jekyll-and-docker/&quot;&gt;tester mon site&lt;/a&gt;, autant m’en servir pour le builder.&lt;/p&gt;
-
-&lt;p&gt;Je me suis inspiré de &lt;a href=&quot;http://nicoespeon.com/en/2013/04/building-a-multinlingual-jekyll-blog/&quot;&gt;cet article&lt;/a&gt;, surtout de son &lt;a href=&quot;https://github.com/nicoespeon/nicoespeon.github.io/blob/develop/Makefile&quot;&gt;makefile&lt;/a&gt;, pour faire le &lt;a href=&quot;https://github.com/agileek/agileek.github.io/blob/develop/Makefile&quot;&gt;mien&lt;/a&gt; :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-make&quot; data-lang=&quot;make&quot;&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; docker run --rm -v &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(shell pwd):/src&amp;quot;&lt;/span&gt; -p 4000:4000 grahamc/jekyll
-&lt;span class=&quot;nv&quot;&gt;RUNNER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;whoami&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;COMMIT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;git rev-parse --short HEAD&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-
-&lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-  @&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; serve --watch -H 0.0.0.0 --drafts
-
-&lt;span class=&quot;nf&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-  @echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;Building site&amp;quot;&lt;/span&gt;
-  @&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; build
-  @git checkout master
-  @sudo chown -R &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;RUNNER&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;. _site &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo cp -r _site/* . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -rf _*/
-  @git add --all . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Jekyll deployment from commit ${COMMIT}&amp;quot;&lt;/span&gt;
-  @echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;You can now push master&amp;quot;&lt;/span&gt;
-  @echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;Once everything is valid, git checkout develop &amp;amp;&amp;amp; sudo git clean -f -d&amp;quot;&lt;/span&gt;
-  @python -m SimpleHTTPServer 4000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Maintenant, je n’ai même plus besoin de me souvenir de la commande jekyll à taper, un simple &lt;code&gt;make test&lt;/code&gt; suffit.&lt;/p&gt;
-
-&lt;p&gt;Quand je suis satisfait du résultat, un &lt;code&gt;make deploy&lt;/code&gt; suivi d’un &lt;code&gt;git push&lt;/code&gt; de &lt;code&gt;master&lt;/code&gt; et c’est en ligne.&lt;/p&gt;
-
-&lt;p&gt;Du coup je me suis amusé à rajouter un &lt;a href=&quot;http://agileek.github.io/archives/index.html&quot;&gt;generateur d’archives&lt;/a&gt; qui me classe les articles par années. Inutile, donc indispensable. Si ça vous intéresse, le commit est &lt;a href=&quot;https://github.com/agileek/agileek.github.io/commit/5f60f98cac273ee53dc4b458a06ba9e668f054b7&quot;&gt;là&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;edit-2015-04-03&quot;&gt;Edit 2015-04-03&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Jean-Philippe m’a expliqué qu’il n’y avait pas besoin de générateur pour les archives, ce qui est beaucoup plus simple et plus propre.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Voici la &lt;a href=&quot;https://github.com/barreverte/barreverte.github.io/blob/master/archive.html&quot;&gt;page en question&lt;/a&gt;. Je vous conseille de faire un tour sur leur &lt;a href=&quot;http://www.barreverte.fr/&quot;&gt;blog&lt;/a&gt;, c’est fait par des anciens collègues que j’apprécie énormément.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;rsultat&quot;&gt;Résultat&lt;/h2&gt;
-
-&lt;p&gt;Maintenant, les images à droites des posts sur la page principale sont cliquables!!!!&lt;/p&gt;
-
-&lt;p&gt;C’est pas magnifique ça? Non? Mince alors.&lt;/p&gt;
-
-&lt;h4 id=&quot;ps-&quot;&gt;PS :&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Petit précision, ça peut fonctionner avec les ‘tags’ bien sûr&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-            <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/docker/jekyll/2015/04/02/jekyll-generator-with-github/</link>
-            <guid isPermaLink="true">http://agileek.github.io/docker/jekyll/2015/04/02/jekyll-generator-with-github/</guid>
-            
-            
-            <category>docker</category>
-            
-            <category>jekyll</category>
             
         </item>
         
