@@ -7,7 +7,7 @@ categories: docker
 
 ## Scenario
 
-I want to be sure I dont lose data when I stop my container.
+I want to be sure I don't lose data when I stop my container.
 
 ### Given
 A simple program which add to a list the current time every second (Very critical program) and write the list to a file when it exits.
@@ -44,7 +44,7 @@ public static void main(String[] args) throws IOException, InterruptedException 
 }
 {% endhighlight %}
 
-I assume it's understandable even if you are not familiar with java. If not, let me know and I'll eplain it.
+I assume it's understandable even if you are not familiar with java. If not, let me know and I'll explain it.
 
 ### When
 
@@ -64,7 +64,7 @@ $ cat dataFolder/data
 
 ### But
 
-If i kill -9 instead, the data file is empty.
+If I kill -9 instead, the data file is empty.
 
 ## Let's move to docker now
 
@@ -111,23 +111,23 @@ But when you run this image and inspect the created container, you will see this
 
 Docker wrapped my command within a shell script. So what, that's not that big a deal right?
 
-In fact, if you look at the docker [documentation][docker_cmd_doc], you dont see anything useful. You have to look at the [ENTRYPOINT][docker_entrypoint_doc] documentation and dig into it a little to see that: 
+In fact, if you look at the docker [documentation][docker_cmd_doc], you don't see anything useful. You have to look at the [ENTRYPOINT][docker_entrypoint_doc] documentation and dig into it a little to see that: 
 
 > The shell form prevents any CMD or run command line arguments from being used, but has the disadvantage that your ENTRYPOINT will be started as a subcommand of /bin/sh -c, which does not pass signals. This means that the executable will not be the container's PID 1 - and will not receive Unix signals - so your executable will not receive a SIGTERM from docker stop <container>.
 
 ## Conclusion
 
-Dont use the most intuitive syntax in the CMD or ENTRYPOINT command, use the exec form. If you replace the CMD command in the dockerfile by this one: 
+Don't use the most intuitive syntax in the CMD or ENTRYPOINT command, use the exec form. If you replace the CMD command in the dockerfile by this one: 
 {% highlight docker %}
 CMD ["java", "-jar", "docker-stop-test-0.1-SNAPSHOT.jar"]
 {% endhighlight %}
 
-Then everything works like a charm, the SIGTERM is received and the java application save it's list into the data file before exiting.
+Then everything works like a charm, the SIGTERM is received and the java application save its list into the data file before exiting.
 
 
 ## DIY
 
-If you want to try it by yourself, everything is on my [github repository][sources]. You have two shell script: ```docker-build-all.sh``` and ```docker-run-all.sh```. The first will build the images with the bad syntax and the good one. The second script will run containers from these images, wait 5 seconds, stop them.
+If you want to try it by yourself, everything is on my [github repository][sources]. You have two shell scripts: ```docker-build-all.sh``` and ```docker-run-all.sh```. The first will build the images with the bad syntax and the good one. The second script will run containers from these images, wait 5 seconds, stop them.
 
 You can then check in ```dataFolder-bad-cmd/data``` and ```dataFolder-good-cmd/data``` to see the differences.
 
