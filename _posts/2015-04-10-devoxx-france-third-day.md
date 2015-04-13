@@ -5,7 +5,7 @@ date:   2015-04-10
 categories: java
 ---
 
-![Devoxx][devoxxFrance]
+![Devoxx][devoxxFrance]{: .float_image }
 
 ## Keynote
 

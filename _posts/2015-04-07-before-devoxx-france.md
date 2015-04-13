@@ -7,7 +7,7 @@ categories: java
 
 ## Devoxx France
 
-![Devoxx][devoxxFrance]
+![Devoxx][devoxxFrance]{: .float_image }
 
 Cela fait maintenant 4 ans que devoxx se fait en France.
 

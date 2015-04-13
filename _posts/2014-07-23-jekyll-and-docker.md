@@ -4,7 +4,7 @@ title:  "Jekyll quickstart with docker"
 date:   2014-07-23 15:22:45
 categories: docker jekyll
 ---
-![Jekyll][jekyllImage]
+![Jekyll][jekyllImage]{: .float_image }
 
 This is my first blog post!
 

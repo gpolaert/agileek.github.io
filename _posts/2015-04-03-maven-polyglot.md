@@ -4,7 +4,7 @@ title:  "Maven 3.3.1: La mort du pom.xml"
 date:   2015-04-03
 categories: java
 ---
-![Maven][mavenLogo]
+![Maven][mavenLogo]{: .float_image }
 
 ## Maven
 

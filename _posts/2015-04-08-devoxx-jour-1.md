@@ -7,7 +7,7 @@ categories: java
 
 ## Devoxx France
 
-![Devoxx][devoxxFrance]
+![Devoxx][devoxxFrance]{: .float_image }
 
 ## 09:30-12:30 [Google Cloud Platform][hands_on_GCP]
 
