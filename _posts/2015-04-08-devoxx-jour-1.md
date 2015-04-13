@@ -19,7 +19,7 @@ Le but de cette session est de nous présenter une bonne partie de l'infrastruct
 
 Pas de slides pour cette session, tout est live.
 
-Énormément de produits sur https://could.google.com :
+Énormément de produits sur [https://cloud.google.com][https://cloud.google.com] :
 
 * Compute
   * Compute Engine
@@ -49,7 +49,7 @@ Petit fait intéressant, SnapChat tourne sur App Engine et ce sont les équipes 
 
 L'idée derrière le google cloud, c'est de pouvoir changer de stratégie (Je gère ma VM, ça monte en charge, je passe sur AppEngine) sans que ça soit coûteux.
 
-### Coût d'un VM
+### Coût d'une VM
 
 Chaque VM est facturée à la minute de CPU (les 10 premières minutes sont indivisibles).
 
@@ -223,7 +223,7 @@ J'ai fait un petit tour auprès des gens que je connais et qui font devoxx pour 
 
 Dans le désordre nous avons : 
 
-* Hackergarten (Celle là ne seront pas sur Parleys)
+* Hackergarten (Celle là ne sera pas sur Parleys)
 * Spring boot
 
 [devoxxFrance]: /images/posts/devoxx/devoxx_france.png
@@ -237,6 +237,7 @@ Dans le désordre nous avons :
 [fluent_duplicate]: https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/Fluent.java#L170
 [fluent_adapter_duplicate]: https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/FluentAdapter.java#L102
 [sources_command_line_nuts]: https://github.com/emmanuelbernard/command-line-nuts
+[https://cloud.google.com]: https://cloud.google.com
 
 [^1]: Si vous suivez le compte de David Gageot, vous comprenez mieux pourquoi il demandait qu'on lui envoie des photos de tapis.
 [^2]: J'imagine qu'il y a des porteurs de projet sur Toulouse, 
