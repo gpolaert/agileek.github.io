@@ -49,7 +49,7 @@ Pas grand chose à dire dessus, j'en suis très content, tout est à disposition
 
 Les plus :
 
-* le côté matriciel est vraiment top.
+* le côté matriciel est vraiment top
 * les touches delete, backspace et enter au milieu
 * le couper/copier/coller en accés rapide en bas à gauche
 * le switch de fenêtre avec la touche shuffle
@@ -62,7 +62,7 @@ Les moins :
 
 ## Conclusion
 
-Après avoir galéré pendant 4-5 mois pour revenir à un niveau de frappe correct, je suis vraiment très satisfait d'avoir changé de mapping. Le fait de l'avoir combiné avec le changement de clavier me permet de conserver une certaine aisance avec les claviers azerty qui fait que je ne suis pas perdu quand je me retrouve sur mon laptop ou sur le poste d'un collègue. En effet, ça peut paraitre un peu bizarre, mais les doigts switchent assez naturellement d'azerty à dvorak car les touches ne sont pas disposées pareil.
+Après avoir galéré pendant 4-5 mois pour revenir à un niveau de frappe correct, je suis vraiment très satisfait d'avoir changé. Le fait d'avoir changé le clavier et le mapping me permet de conserver une certaine aisance avec les claviers azerty qui fait que je ne suis pas perdu quand je me retrouve sur mon laptop ou sur le poste d'un collègue. En effet, ça peut paraitre un peu bizarre, mais les doigts switchent assez naturellement d'azerty à dvorak car les touches ne sont pas disposées pareil.
 
 Mon seul regret est d'avoir pris un typematrix dvorak et pas un blank, parce que, étant fainéant, j'ai tendance à regarder mon clavier quand je frappe.
 
