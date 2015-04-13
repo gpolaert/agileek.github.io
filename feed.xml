@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Sun, 12 Apr 2015 17:49:15 +0000</pubDate>
-        <lastBuildDate>Sun, 12 Apr 2015 17:49:15 +0000</lastBuildDate>
+        <pubDate>Mon, 13 Apr 2015 12:40:52 +0000</pubDate>
+        <lastBuildDate>Mon, 13 Apr 2015 12:40:52 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
         
         <item>
@@ -590,7 +590,7 @@ Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne
 
 &lt;p&gt;Pas de slides pour cette session, tout est live.&lt;/p&gt;
 
-&lt;p&gt;Énormément de produits sur https://could.google.com :&lt;/p&gt;
+&lt;p&gt;Énormément de produits sur &lt;a href=&quot;https://cloud.google.com&quot;&gt;https://cloud.google.com&lt;/a&gt; :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Compute
@@ -640,7 +640,7 @@ Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne
 
 &lt;p&gt;L’idée derrière le google cloud, c’est de pouvoir changer de stratégie (Je gère ma VM, ça monte en charge, je passe sur AppEngine) sans que ça soit coûteux.&lt;/p&gt;
 
-&lt;h3 id=&quot;cot-dun-vm&quot;&gt;Coût d’un VM&lt;/h3&gt;
+&lt;h3 id=&quot;cot-dune-vm&quot;&gt;Coût d’une VM&lt;/h3&gt;
 
 &lt;p&gt;Chaque VM est facturée à la minute de CPU (les 10 premières minutes sont indivisibles).&lt;/p&gt;
 
@@ -830,7 +830,7 @@ En plus ce n’était pas du temps perdu, car ma &lt;a href=&quot;https://github
 &lt;p&gt;Dans le désordre nous avons :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Hackergarten (Celle là ne seront pas sur Parleys)&lt;/li&gt;
+  &lt;li&gt;Hackergarten (Celle là ne sera pas sur Parleys)&lt;/li&gt;
   &lt;li&gt;Spring boot&lt;/li&gt;
 &lt;/ul&gt;
 
