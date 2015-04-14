@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTTPie and json: REST in your terminal</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.">
+    <link rel="icon" type="image/png" href="/images/home.png" />
+    <link rel="canonical" href="http://agileek.github.io/terminal/2015/04/14/httpie_and_json/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href=" /css/main.css ">
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-45194812-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/"><img src="/images/home.png" />Agile & Java</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+          
+        
+          
+            
+            <!-- Do Nothing -->
+            
+          
+        
+          
+            
+            <!-- Do Nothing -->
+            
+          
+        
+          
+            
+            <!-- Do Nothing -->
+            
+          
+        
+          
+            
+            <!-- Do Nothing -->
+            
+          
+        
+          
+            
+            <!-- Do Nothing -->
+            
+          
+        
+          
+            
+            <!-- Do Nothing -->
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            <a class="page-link" href="/food/">Food</a>
+            
+          
+        
+          
+        
+          
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+    <header class="post-header">
+        <h1>HTTPie and json: REST in your terminal</h1>
+        <p class="meta">Apr 14, 2015</p>
+    </header>
+
+    <article class="post-content">
+        <p>Je suis, comme <a href="http://agileek.github.io/java/2015/04/08/devoxx-jour-1/#le-tar-du-terminal">Emmanuel Bernard</a>, un taré du terminal. Ce que je trouve génial avec cet outil, c’est qu’on n’arrête jamais de découvrir de nouvelles choses.</p>
+
+<p>Je vais vous parler de la combinaison de 2 outils pour jouer avec du Rest depuis votre terminal :</p>
+
+<ul>
+  <li><a href="http://httpie.org/">HTTPie</a>, qui est un “cURL-like tool for humans”</li>
+  <li><a href="http://trentm.com/json/">json</a> (très mauvais nom), qui est un utilitaire pour travailler sur du json</li>
+</ul>
+
+<p>Pour notre exemple on va jouer avec l’API de github, en essayant d’afficher tous les repos docker de l’organisation <code>agileek</code>.</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Sous ubuntu/debian : <code>sudo apt-get install httpie &amp;&amp; npm install -g json</code></p>
+
+<p>Commençons par récupérer la liste des repos associée à mon organisation.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>http https://api.github.com/orgs/agileek/repos</code></pre></div>
+
+<p>Nous avons un joli résultat bien formaté …</p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">HTTP/</span><span class="mf">1.1</span> <span class="mi">200</span> <span class="err">OK</span>
+<span class="err">Access-Control-Allow-Credentials:</span> <span class="kc">true</span>
+<span class="err">Access-Control-Allow-Origin:</span> <span class="err">*</span>
+<span class="err">...plein</span> <span class="err">de</span> <span class="err">headers...</span>
+<span class="err">X-XSS-Protection:</span> <span class="mi">1</span><span class="err">;</span> <span class="err">mode=block</span>
+
+<span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;archive_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/{archive_format}{/ref}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;assignees_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/assignees{/user}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;blobs_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/git/blobs{/sha}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;branches_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/branches{/branch}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;clone_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/agileek/agileek.github.io.git&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;collaborators_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/collaborators{/collaborator}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;comments_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/comments{/number}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;commits_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/commits{/sha}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;compare_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/compare/{base}...{head}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;contents_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/contents/{+path}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;contributors_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/contributors&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-07-23T09:51:52Z&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;default_branch&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;downloads_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/downloads&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;events_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io/events&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;fork&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.github.com/repos/agileek/agileek.github.io&quot;</span><span class="p">,</span>
+        <span class="err">....</span> <span class="err">trop</span> <span class="err">de</span> <span class="err">données</span> <span class="err">...</span>
+    <span class="p">}</span>
+<span class="p">]</span></code></pre></div>
+
+<p>… mais il y a tout simplement trop d’informations. Si je veux trouver tous les repos qui ont un lien avec docker, comment je fais ?</p>
+
+<blockquote>
+  <p>Mes solutions précédentes consistaient en une série de awk, sed…<br /> 
+Vous savez ces choses dont on est fier quand on a un résultat mais quand on revient dessus quelques temps plus tard, on ne comprend plus rien.</p>
+</blockquote>
+
+<p>C’est là qu’intervient json. Pour y voir plus clair, n’affichons que les urls.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>http https://api.github.com/orgs/agileek/repos <span class="p">|</span> json -a url
+https://api.github.com/repos/agileek/agileek.github.io
+https://api.github.com/repos/agileek/docker
+https://api.github.com/repos/agileek/docker-ansible
+https://api.github.com/repos/agileek/docker-jenkins
+https://api.github.com/repos/agileek/docker-tips</code></pre></div>
+
+<blockquote>
+  <p>le ‘-a’ indique qu’on descend dans un array</p>
+</blockquote>
+
+<p>Voilà, ça pique moins les yeux quand même. Maintenant ne gardons que les urls qui contiennent docker</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>http https://api.github.com/orgs/agileek/repos <span class="p">|</span> json -c <span class="s1">&#39;this.url.indexOf(&quot;docker&quot;) &gt;= 0&#39;</span> -a url
+https://api.github.com/repos/agileek/docker
+https://api.github.com/repos/agileek/docker-ansible
+https://api.github.com/repos/agileek/docker-jenkins
+https://api.github.com/repos/agileek/docker-tips</code></pre></div>
+
+<p>Voilà, c’est terminé ! le <code>-c</code> indique que vous allez écrire du javascript pour retourner un boolean, je me sers du indexOf pour filtrer tout ce qui contient “docker”.</p>
+
+<h3 id="pour-aller-plus-loin">Pour aller plus loin</h3>
+
+<p>Je ne vous ai montré que l’interaction basique entre httpie et json, n’hésitez pas à jouer avec httpie pour faire des <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, c’est vraiment très intuitif, je ne peux déjà plus m’en passer.</p>
+
+<h3 id="ps">PS</h3>
+
+<p>Merci à <a href="http://www.bloggure.info/">Cédric Gatay</a>, des <a href="http://code-troopers.com/">Code Troopers</a> pour m’avoir fait découvrir HTTPie.</p>
+
+
+    </article>
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'agileek'; 
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by
+        <span class="logo-disqus">Disqus</span>
+    </a>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <h2 class="footer-heading">Agile & Java</h2>
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>Geek & other stuff</li>
+        <li><a href="mailto:bitard.michael@gmail.com">bitard.michael@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        <li>
+          <a href="https://github.com/MichaelBitard">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <span class="username">MichaelBitard</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/BitardMichael">
+            <span class="icon twitter">
+              <svg version="1.1" class="twitter-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27
+                c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767
+                c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206
+                C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271
+                c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469
+                c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+              </svg>
+            </span>
+            <span class="username">BitardMichael</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p class="text">Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>
