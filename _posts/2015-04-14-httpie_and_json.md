@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "HTTPie and json: REST in your terminal"
-date:   2015-04-16
+date:   2015-04-14
 categories: terminal
 ---
 
