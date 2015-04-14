@@ -9,7 +9,7 @@ Cela fait bientôt 3 ans que j'ai changé de mapping et de clavier, il est temps
 
 ## Le choix du clavier
 
-Il existe des tas de clavier, j'ai des collègues complètement à fond sur le sujet (Oui sylvain, c'est de toi que je parle, avec ton ergodox et Ctrl+Alt+Shift au pied) et les énumérer là n'est pas le sujet. Si je devais en citer 3, je pense qu'il y'aurait l'[ergodox][ergodox], [keyboard.io][keyboard_io] et le [typematrix][typematrix].
+Il existe des tas de claviers, j'ai des collègues complètement à fond sur le sujet (Oui sylvain, c'est de toi que je parle, avec ton ergodox et Ctrl+Alt+Shift au pied) et les énumérer là n'est pas le sujet. Si je devais en citer 3, je pense qu'il y'aurait l'[ergodox][ergodox], [keyboard.io][keyboard_io] et le [typematrix][typematrix].
 
 J'ai finalement choisi le typematrix.
 
@@ -23,7 +23,7 @@ Pour Colemak vs Dvorak, beaucoup d'articles très techniques se battent pour dir
 
 ## L'apprentissage
 
-Ça a été l'occasion pour moi de complètement ré-apprendre le clavier. Ce n'est vraiment pas facile et très frustrant (Vous ressemblez un peu à certains membres de votre famille (parfois même, plus choquant, des collègues) qui ne sont pas à l'aise avec leur pc, vous en avez forcément). Quitte à ré-apprendre, autant le faire bien, car j'ai appris l'azerty au fur et à mesure, en plaçant mes doigts n'importe comment sans jamais faire l'effort d'apprendre proprement. En fait si, avant d'acheter un typematrix, j'ai essayé de ré-apprendre l'azerty en faisant des exercices, mais au final les mauvaises habitudes étaient trop ancrées dans mes doigts.
+Ça a été l'occasion pour moi de complètement ré-apprendre le clavier. Ce n'est vraiment pas facile et très frustrant (Vous ressemblez un peu à certains membres de votre famille, parfois même, plus choquant, des collègues qui ne sont pas à l'aise avec leur pc). Quitte à ré-apprendre, autant le faire bien, car j'ai appris l'azerty au fur et à mesure, en plaçant mes doigts n'importe comment sans jamais faire l'effort d'apprendre proprement. En fait si, avant d'acheter un typematrix, j'ai essayé de ré-apprendre l'azerty en faisant des exercices, mais au final les mauvaises habitudes étaient trop ancrées dans mes doigts.
 
 ### Les resources
 
@@ -62,7 +62,7 @@ Les moins :
 
 ## Conclusion
 
-Après avoir galéré pendant 4-5 mois pour revenir à un niveau de frappe correct, je suis vraiment très satisfait d'avoir changé. Le fait d'avoir changé le clavier et le mapping me permet de conserver une certaine aisance avec les claviers azerty qui fait que je ne suis pas perdu quand je me retrouve sur mon laptop ou sur le poste d'un collègue. En effet, ça peut paraitre un peu bizarre, mais les doigts switchent assez naturellement d'azerty à dvorak car les touches ne sont pas disposées pareil.
+Après avoir galéré pendant 4-5 mois pour revenir à un niveau de frappe correct, je suis vraiment très satisfait d'avoir changé. Le fait d'avoir changé le clavier et le mapping me permet de conserver une certaine aisance avec les claviers azerty qui fait que je ne suis pas perdu quand je me retrouve sur mon laptop ou sur le poste d'un collègue. En effet, ça peut paraitre un peu bizarre, mais les doigts switchent assez naturellement d'azerty à dvorak car les touches ne sont pas disposées de la même façon.
 
 Mon seul regret est d'avoir pris un typematrix dvorak et pas un blank, parce que, étant fainéant, j'ai tendance à regarder mon clavier quand je frappe.
 
