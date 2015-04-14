@@ -5,7 +5,7 @@ date:   2015-04-16
 categories: terminal
 ---
 
-Aujourd'hui, je vais vous parler d'outils pour votre terminal. Je suis, comme [Emmanuel Bernard][tare_du_terminal], un taré du terminal. Ce que je trouve génial avec cet outil, c'est qu'on arrête jamais de découvrir de nouvelles choses.
+Je suis, comme [Emmanuel Bernard][tare_du_terminal], un taré du terminal. Ce que je trouve génial avec cet outil, c'est qu'on n'arrête jamais de découvrir de nouvelles choses.
 
 Je vais vous parler de la combinaison de 2 outils pour jouer avec du Rest depuis votre terminal :
 
@@ -24,7 +24,7 @@ Commençons par récupérer la liste des repos associée à mon organisation.
 $ http https://api.github.com/orgs/agileek/repos
 {% endhighlight %}
 
-Nous avons un joli résultat bien formaté
+Nous avons un joli résultat bien formaté ...
 
 {% highlight json %}
 HTTP/1.1 200 OK
@@ -59,10 +59,10 @@ X-XSS-Protection: 1; mode=block
 
 {% endhighlight %}
 
-mais il y a tout simplement trop d'information. Si je veux trouver tous les repos quoi ont un lien avec docker, comment je fais ? 
+... mais il y a tout simplement trop d'informations. Si je veux trouver tous les repos qui ont un lien avec docker, comment je fais ? 
 
 > Mes solutions précédentes consistaient en une série de awk, sed...<br /> 
-Vous savez ces choses dont on est fier quand on a un résultat mais quand on revient dessus quelques temps on comprend plus rien.
+Vous savez ces choses dont on est fier quand on a un résultat mais quand on revient dessus quelques temps plus tard, on ne comprend plus rien.
 
 C'est là qu'intervient json. Pour y voir plus clair, n'affichons que les urls.
 
