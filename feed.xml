@@ -5,9 +5,96 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Tue, 14 Apr 2015 18:24:58 +0000</pubDate>
-        <lastBuildDate>Tue, 14 Apr 2015 18:24:58 +0000</lastBuildDate>
+        <pubDate>Wed, 15 Apr 2015 06:44:07 +0000</pubDate>
+        <lastBuildDate>Wed, 15 Apr 2015 06:44:07 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
+        
+        <item>
+            <title>Changer de mapping, changer de clavier</title>
+            <description>&lt;p&gt;Cela fait bientôt 3 ans que j’ai changé de mapping et de clavier, il est temps de faire un petit bilan.&lt;/p&gt;
+
+&lt;h2 id=&quot;le-choix-du-clavier&quot;&gt;Le choix du clavier&lt;/h2&gt;
+
+&lt;p&gt;Il existe des tas de claviers, j’ai des collègues complètement à fond sur le sujet (Oui sylvain, c’est de toi que je parle, avec ton ergodox et Ctrl+Alt+Shift au pied) et les énumérer là n’est pas le sujet. Si je devais en citer 3, je pense qu’il y’aurait l’&lt;a href=&quot;http://ergodox.org/1&quot;&gt;ergodox&lt;/a&gt;, &lt;a href=&quot;http://www.keyboard.io/&quot;&gt;keyboard.io&lt;/a&gt; et le &lt;a href=&quot;http://www.typematrix.com/&quot;&gt;typematrix&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;J’ai finalement choisi le typematrix.&lt;/p&gt;
+
+&lt;h2 id=&quot;le-choix-du-mapping&quot;&gt;Le choix du mapping&lt;/h2&gt;
+
+&lt;p&gt;Sujet interminable également, que choisir ? Dvorak, Bépo, Colemak ? Au final j’ai choisi Dvorak, plutôt par élimination.&lt;/p&gt;
+
+&lt;p&gt;Premier éliminé : le Bépo car je code en anglais &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; et je compte coder encore un peu.&lt;/p&gt;
+
+&lt;p&gt;Pour Colemak vs Dvorak, beaucoup d’articles très techniques se battent pour dire que leur mapping est n% plus rapide et demande moins de mouvements que l’autre, au final j’ai pris le plus utilisé : Dvorak (et puis, avoir toutes les voyelles du même côté, ça claque&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;lapprentissage&quot;&gt;L’apprentissage&lt;/h2&gt;
+
+&lt;p&gt;Ça a été l’occasion pour moi de complètement ré-apprendre le clavier. Ce n’est vraiment pas facile et très frustrant (Vous ressemblez un peu à certains membres de votre famille, parfois même, plus choquant, des collègues qui ne sont pas à l’aise avec leur pc). Quitte à ré-apprendre, autant le faire bien, car j’ai appris l’azerty au fur et à mesure, en plaçant mes doigts n’importe comment sans jamais faire l’effort d’apprendre proprement. En fait si, avant d’acheter un typematrix, j’ai essayé de ré-apprendre l’azerty en faisant des exercices, mais au final les mauvaises habitudes étaient trop ancrées dans mes doigts.&lt;/p&gt;
+
+&lt;h3 id=&quot;les-resources&quot;&gt;Les resources&lt;/h3&gt;
+
+&lt;p&gt;Les resources pour apprendre sont nombreuses, certaines sont précises et vous montrent &lt;a href=&quot;http://thetypingcat.com/course/dvorak&quot;&gt;quel doigt utiliser&lt;/a&gt;, d’autres &lt;a href=&quot;http://learn.dvorak.nl/&quot;&gt;plus simples&lt;/a&gt;, je vous laisse chercher, certains sont IE 5 compliants, d’autres un peu plus récents.&lt;/p&gt;
+
+&lt;p&gt;Au final après avoir passé plusieurs heures dessus, ça devient vite lassant. Étant joueur de tempérament, j’ai beaucoup apprécié &lt;a href=&quot;http://phoboslab.org/ztype/&quot;&gt;z-type&lt;/a&gt;, mais mon préféré reste &lt;a href=&quot;http://play.typeracer.com/&quot;&gt;typeracer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;N’hésitez pas à venir me défier sur ce site !&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://data.typeracer.com/pit/profile?user=bitardo&amp;amp;ref=badge&quot; target=&quot;_top&quot;&gt;&lt;img src=&quot;http://data.typeracer.com/misc/badge?user=bitardo&quot; class=&quot;float_image&quot; border=&quot;0&quot; alt=&quot;TypeRacer.com scorecard for user bitardo&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ce qui est intéressant surtout c’est de pouvoir suivre notre progression : voici la mienne&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/mapping/typeracer.png&quot; alt=&quot;typeracer&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;le-typematrix&quot;&gt;Le typematrix&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/mapping/typematrix_dvorak.png&quot; alt=&quot;typematrix&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pas grand chose à dire dessus, j’en suis très content, tout est à disposition.&lt;/p&gt;
+
+&lt;p&gt;Les plus :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;le côté matriciel est vraiment top&lt;/li&gt;
+  &lt;li&gt;les touches delete, backspace et enter au milieu&lt;/li&gt;
+  &lt;li&gt;le couper/copier/coller en accés rapide en bas à gauche&lt;/li&gt;
+  &lt;li&gt;le switch de fenêtre avec la touche shuffle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Les moins :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;le manque de pavé numérique (officiellement pour réduire l’encombrement)&lt;/li&gt;
+  &lt;li&gt;les touches de fonction tout à droite vraiment inutiles (mais re-mappables)&lt;/li&gt;
+  &lt;li&gt;la touche insert en accès Fn + Insert qui ne fonctionne pas sous certaines applis (j’ai mappé Insert à la place de la touche Mail…)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Après avoir galéré pendant 4-5 mois pour revenir à un niveau de frappe correct, je suis vraiment très satisfait d’avoir changé. Le fait d’avoir changé le clavier et le mapping me permet de conserver une certaine aisance avec les claviers azerty qui fait que je ne suis pas perdu quand je me retrouve sur mon laptop ou sur le poste d’un collègue. En effet, ça peut paraitre un peu bizarre, mais les doigts switchent assez naturellement d’azerty à dvorak car les touches ne sont pas disposées de la même façon.&lt;/p&gt;
+
+&lt;p&gt;Mon seul regret est d’avoir pris un typematrix dvorak et pas un blank, parce que, étant fainéant, j’ai tendance à regarder mon clavier quand je frappe.&lt;/p&gt;
+
+&lt;h4 id=&quot;ps&quot;&gt;PS&lt;/h4&gt;
+
+&lt;p&gt;Dans un prochain article, j’expliquerai comment binomer quand on a des claviers et des mappings différents.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;certains codent en français, avec les accents dans les noms de méthode et tout, mais voir &lt;strong&gt;&lt;em&gt;public void&lt;/em&gt;&lt;/strong&gt; maméthode() ça me pique les yeux. [troll] Les mots clefs sont en anglais, codons en anglais [/troll]. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;argument objectif &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+            <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/2015/04/15/typematrix-dvorak/</link>
+            <guid isPermaLink="true">http://agileek.github.io/2015/04/15/typematrix-dvorak/</guid>
+            
+            
+        </item>
         
         <item>
             <title>HTTPie and json: REST in your terminal</title>
@@ -1435,63 +1522,6 @@ De l’autre, je me dis que ça peut être super, par exemple quand on fait des 
             
             
             <category>java</category>
-            
-        </item>
-        
-        <item>
-            <title>Moelleux au chocolat</title>
-            <description>&lt;p&gt;Comme aujourd’hui c’est la journée mondiale du chocolat (Ha non, en fait c’est &lt;strong&gt;&lt;em&gt;Pâques&lt;/em&gt;&lt;/strong&gt;), c’est l’occasion pour moi de commencer une section recettes.&lt;/p&gt;
-
-&lt;p&gt;Quoi de mieux pour commencer que des moelleux au chocolat. En plus, vous pouvez les cacher dans le jardin, c’est vachement mieux que des oeufs, non?&lt;/p&gt;
-
-&lt;h2 id=&quot;moelleux-au-chocolat&quot;&gt;Moelleux au chocolat&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Préparation : 15 minutes&lt;/li&gt;
-  &lt;li&gt;Repos : 30 minutes&lt;/li&gt;
-  &lt;li&gt;Cuisson : 10 minutes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ingrdients&quot;&gt;Ingrédients&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;200&lt;/em&gt;&lt;/strong&gt; g de chocolat noir extra&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;200&lt;/em&gt;&lt;/strong&gt; g de beurre&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;5&lt;/em&gt;&lt;/strong&gt; oeufs&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;300&lt;/em&gt;&lt;/strong&gt; g de sucre&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;65&lt;/em&gt;&lt;/strong&gt; g de farine&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;prparation&quot;&gt;Préparation&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Faire fondre le chocolat au bain marie avec le beurre coupé en morceaux. Fouetter pour lisser la préparation et laisser refroidir.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Battre les oeufs dans un récipient avec le sucre. Ajouter la farine, fouetter, puis mélanger la préparation avec le mélange choco-beurre. Laisser reposer 30 min.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Préchauffer le four à 180°C. Répartir la préparation dans les moules.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enfourner les moelleux pendant 10-12 min. Laisser reposer 5 min puis démouler délicatement. Servir tiède.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;astuce&quot;&gt;Astuce&lt;/h3&gt;
-
-&lt;p&gt;Tout se joue sur le temps de cuisson, il faut bien les surveiller pour qu’ils restent fondants à l’intérieur.&lt;/p&gt;
-
-</description>
-            <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</link>
-            <guid isPermaLink="true">http://agileek.github.io/food/2015/04/05/food-moelleux-au-chocolat/</guid>
-            
-            <category>dessert</category>
-            
-            
-            <category>food</category>
             
         </item>
         
