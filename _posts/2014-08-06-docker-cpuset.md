@@ -27,7 +27,7 @@ it will take one cpu (the 7th) at 100%.
 You can see it in action:
 
 <div class="video-container">
-  <iframe src="http://www.youtube.com/embed/1BMKK812y5A" frameborder="0" width="800" height="600" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/1BMKK812y5A" frameborder="0" width="800" height="600" allowfullscreen></iframe>
 </div>
 
 If you run it with
@@ -40,7 +40,7 @@ it will take all available CPUs (the 1st, 5th and 7th)
 You can see it in action:
 
 <div class="video-container">
-  <iframe src="http://www.youtube.com/embed/ITcyeL8V35I" frameborder="0" width="800" height="600" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/ITcyeL8V35I" frameborder="0" width="800" height="600" allowfullscreen></iframe>
 </div>
 
 [docker]:    https://www.docker.com/
