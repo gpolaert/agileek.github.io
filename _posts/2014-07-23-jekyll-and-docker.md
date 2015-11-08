@@ -11,7 +11,7 @@ This is my first blog post!
 It's been quite some time that I wanted to start it but I never had the energy to do it.
 
 After a quick search on blog engines, I decided to give a try to [Jekyll][jekyll], since it is integrated with github pages and is very simple to use.
-I followed their tutorial and Bam! 
+I followed their tutorial and Bam!
 
 {% highlight bash %}
 $ sudo gem install jekyll
@@ -48,6 +48,18 @@ $ jekyll serve --watch
 This was painless for me, as someone else already had a jekyll correctly installed and working in a docker environment.
 
 Thanks [Graham Christensen][grahamc]!
+
+
+## Update 2015-09-08
+I now use the official docker image, and I made a Makefile that you can reuse :
+
+{% gist MichaelBitard/88d922d0615bcf78b720 jekyll.Makefile %}
+
+There are 2 commands:
+
+- `test` will serve on port 4000 with drafts enabled
+- `deploy` will build everything, commit it on master for gh-pages, waiting for you to push
+
 
 [jekyll]:    http://jekyllrb.com
 [docker]:    https://www.docker.com/
