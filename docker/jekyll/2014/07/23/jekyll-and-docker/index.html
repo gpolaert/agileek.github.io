@@ -29,6 +29,11 @@
         ga('send', 'pageview');
     </script>
 
+    <script>
+      var host = "agileek.github.io";
+      if ((host == window.location.host) && (window.location.protocol != "https:"))
+          window.location.protocol = "https";
+    </script>
 </head>
 
 
@@ -176,23 +181,22 @@ Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out</
 <h2 id="update-2015-09-08">Update 2015-09-08</h2>
 <p>I now use the official docker image, and I made a Makefile that you can reuse :</p>
 
-<noscript><pre>JEKYLL = docker run --rm -v &quot;$(shell pwd):/srv/jekyll&quot; -p 4000:4000 jekyll/jekyll:pages
+<noscript><pre>JEKYLL = docker run -ti --rm -v &quot;$(shell pwd):/srv/jekyll&quot; -p 4000:4000 jekyll/jekyll:pages
 RUNNER = `whoami`
 COMMIT = `git rev-parse --short HEAD`
 
 test:
-	@${JEKYLL} jekyll serve --watch -H 0.0.0.0 --drafts
+        @${JEKYLL} jekyll serve --watch -H 0.0.0.0 --drafts
 
 deploy:
-	@echo &quot;Building site&quot;
-	@${JEKYLL} jekyll build
-	@git checkout master
-	@sudo chown -R ${RUNNER}. _site &amp;&amp; sudo cp -r _site/* . &amp;&amp; sudo rm -rf _*/
-	@git add --all . &amp;&amp; git commit -m &quot;Jekyll deployment from commit ${COMMIT}&quot;
-	@echo &quot;You can now push master&quot;
-	@echo &quot;Once everything is valid, git checkout develop &amp;&amp; sudo git clean -f -d&quot;
-	@python -m SimpleHTTPServer 4000
-</pre></noscript>
+        @echo &quot;Building site&quot;
+        @${JEKYLL} jekyll build
+        @git checkout master
+        @sudo chown -R ${RUNNER}. _site &amp;&amp; sudo cp -r _site/* . &amp;&amp; sudo rm -rf _*/
+        @git add --all . &amp;&amp; git commit -m &quot;Jekyll deployment from commit ${COMMIT}&quot;
+        @echo &quot;You can now push master&quot;
+        @echo &quot;Once everything is valid, git checkout develop &amp;&amp; sudo git clean -f -d&quot;
+        @python -m SimpleHTTPServer 4000</pre></noscript>
 <script src="https://gist.github.com/MichaelBitard/88d922d0615bcf78b720.js?file=jekyll.Makefile"> </script>
 
 <p>There are 2 commands:</p>
