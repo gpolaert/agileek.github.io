@@ -16,3 +16,6 @@ deploy: build
 	@echo "You can now push master"
 	@echo "Once everything is valid, git checkout develop && sudo git clean -f -d"
 	@python -m SimpleHTTPServer 4000
+
+clean:
+	@rm -rf _site
