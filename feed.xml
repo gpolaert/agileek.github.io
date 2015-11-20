@@ -5,9 +5,79 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Fri, 20 Nov 2015 12:10:25 +0000</pubDate>
-        <lastBuildDate>Fri, 20 Nov 2015 12:10:25 +0000</lastBuildDate>
+        <pubDate>Fri, 20 Nov 2015 12:18:28 +0000</pubDate>
+        <lastBuildDate>Fri, 20 Nov 2015 12:18:28 +0000</lastBuildDate>
         <generator>Jekyll v2.4.0</generator>
+        
+        <item>
+            <title>Forcing https for GitHub Pages and Disqus</title>
+            <description>&lt;h3 id=&quot;observation&quot;&gt; Observation&lt;/h3&gt;
+
+&lt;p&gt;This blog uses &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;, which are by default available using both &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; protocols.&lt;/p&gt;
+
+&lt;p&gt;The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why switching to &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; only ?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/&quot;&gt;Firefox starts to deprecate non secure &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://googlewebmastercentral.blogspot.fr/2014/08/https-as-ranking-signal.html&quot;&gt;Https as a ranking signal on google&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://letsencrypt.org/2015/10/19/lets-encrypt-is-trusted.html&quot;&gt;Let’s Encrypt is trusted!&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;force-https-on-github-pages&quot;&gt; Force &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; on Github Pages&lt;/h3&gt;
+
+&lt;p&gt;I found this gist to force the &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; redirection, simple, efficient.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;&amp;lt;script&amp;gt;
+var host = &amp;quot;YOURDOMAIN.github.io&amp;quot;;
+if ((host == window.location.host) &amp;amp;&amp;amp; (window.location.protocol != &amp;quot;https:&amp;quot;))
+    window.location.protocol = &amp;quot;https&amp;quot;;
+&amp;lt;/script&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/konklone/9968713.js?file=ssl-redirect.html&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Then I noticed that some of the comments were gone. As you can see on the animation below, they appeared only when using &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/jekyll/disqus_http_https.gif&quot; alt=&quot;Disqus http vs https&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;migrate-disqus-comments&quot;&gt; Migrate Disqus comments&lt;/h3&gt;
+
+&lt;p&gt;In fact, Disqus treat &lt;a href=&quot;http://agileek.github.io&quot;&gt;http://agileek.github.io&lt;/a&gt; and &lt;a href=&quot;https://agileek.github.io&quot;&gt;https://agileek.github.io&lt;/a&gt; as 2 differents sites&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, so if someone post a comment on the &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt; “version” it’s not displayed on the &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; side.&lt;/p&gt;
+
+&lt;p&gt;Luckily, Disqus has some migration tools, and in this case an &lt;strong&gt;“URL mapper”&lt;/strong&gt; which can be found in the admin section “https://YOURDISQUSNAME.disqus.com/admin/discussions/migrate/”.&lt;/p&gt;
+
+&lt;p&gt;It’s a three steps procedure:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Download via Disqus admin tool the list of &lt;a href=&quot;/images/posts/jekyll/initial_disqus_import.csv&quot;&gt;blog posts.&lt;/a&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Add a second column where “http” is &lt;a href=&quot;/images/posts/jekyll/disqus_mapper.csv&quot;&gt;replaced by “https”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Launch the migration&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;24 hours later, all the comments are available via the &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; URL, and nobody can comment on the &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt; part thanks to the script above.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Ok, this is not relevant here since I’m using GitHub’s certificates, but Let’s Encrypt is just too huge to not talk about. I will soon write an article about it. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;The “issue” has been reported several times but never corrected, is this a hidden feature? &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;There is a lot of unnecessary links, even my drafts appear here &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+            <pubDate>Fri, 20 Nov 2015 14:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</link>
+            <guid isPermaLink="true">http://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</guid>
+            
+            
+            <category>jekyll</category>
+            
+        </item>
         
         <item>
             <title>Changer de mapping, changer de clavier</title>
@@ -1375,194 +1445,6 @@ J’espère qu’ils vont continuer sur cette lancée.&lt;/p&gt;
             <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
             <link>http://agileek.github.io/java/2015/04/07/before-devoxx-france/</link>
             <guid isPermaLink="true">http://agileek.github.io/java/2015/04/07/before-devoxx-france/</guid>
-            
-            
-            <category>java</category>
-            
-        </item>
-        
-        <item>
-            <title>AssertJ 3.0.0 for Java 8</title>
-            <description>&lt;p&gt;AssertJ est enfin sorti avec le support de Java8.&lt;/p&gt;
-
-&lt;p&gt;Je le considère comme le meilleur outil de tests unitaires pour Java. Son approche est la suivante : une assertion doit être lisible par un humain.&lt;/p&gt;
-
-&lt;p&gt;Pour vous en faire la démonstration, je vais vous montrer plusieurs exemples avec assertJ, en les comparant avec les assertions Junit.&lt;/p&gt;
-
-&lt;h2 id=&quot;exemples&quot;&gt;Exemples&lt;/h2&gt;
-
-&lt;h3 id=&quot;boolean-check&quot;&gt;Boolean check&lt;/h3&gt;
-
-&lt;h4 id=&quot;junit&quot;&gt;Junit&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertTrue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myBooleanValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;assertj&quot;&gt;AssertJ&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myBooleanValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isTrue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;list-checks&quot;&gt;List checks&lt;/h3&gt;
-&lt;p&gt;Supposons cette liste :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;ImmutableList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ImmutableList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-						&lt;span class=&quot;s&quot;&gt;&amp;quot;element1&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; 
-						&lt;span class=&quot;s&quot;&gt;&amp;quot;element2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; 
-						&lt;span class=&quot;s&quot;&gt;&amp;quot;element3&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Si je veux vérifier que les éléments sont bien présents&lt;/p&gt;
-
-&lt;h4 id=&quot;junit-1&quot;&gt;Junit&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;element1&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;element2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;element3&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;assertj-1&quot;&gt;AssertJ&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elementList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;containsExactly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;element1&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;element2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;element3&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Et je ne vous montre que le &lt;code&gt;containsExactly&lt;/code&gt;, il en existe plein d’autres (containsOnly, containsSubsequence, …).&lt;/p&gt;
-
-&lt;h2 id=&quot;dry--kiss&quot;&gt;DRY &amp;amp; KISS&lt;/h2&gt;
-
-&lt;p&gt;C’est vraiment ce que j’apprécie dans cette librairie : tout a été pensé pour que l’on ne perde pas de temps dans nos asserts.&lt;/p&gt;
-
-&lt;p&gt;Et quand on se retrouve avec des cas tordus&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, il y’a la possibilité de définir vos propres assertions (il y’a même un &lt;a href=&quot;http://joel-costigliola.github.io/assertj/assertj-assertions-generator.html&quot;&gt;générateur&lt;/a&gt; pour ça).&lt;/p&gt;
-
-&lt;h2 id=&quot;et-java-8-dans-tout-a-&quot;&gt;Et Java 8 dans tout ça ?&lt;/h2&gt;
-
-&lt;p&gt;La version 3.0.0 d’AssertJ fonctionne avec Java 8 et apporte son lot de sucre syntaxique.&lt;/p&gt;
-
-&lt;p&gt;Vous pouvez jeter un oeil sur la &lt;a href=&quot;http://joel-costigliola.github.io/assertj/assertj-core-news.html#assertj-core-3.0.0&quot;&gt;release note&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;datetime-assertions&quot;&gt;Date/Time assertions&lt;/h3&gt;
-&lt;p&gt;Regardez les exemples de la release note, il n’y a rien à rajouter, c’est parfait, tout est là.&lt;/p&gt;
-
-&lt;h3 id=&quot;exceptions&quot;&gt;Exceptions&lt;/h3&gt;
-
-&lt;h4 id=&quot;junit-2&quot;&gt;Junit&lt;/h4&gt;
-
-&lt;p&gt;Avec Junit, plusieurs choix, soit :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;on catch et on assert (Berk)&lt;/li&gt;
-  &lt;li&gt;on marque dans l’annotation @Test que l’on attend une exception (Re-Berk, on ne sait pas si l’exception a été lancée par ce qu’on voulait, ou par du code au dessus)&lt;/li&gt;
-  &lt;li&gt;on utilise la Rule ExpectedException&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Rule&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExpectedException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expectedException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExpectedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;shouldThrowExceptionWhenNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;expectedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NullPointerException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;expectedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;expectMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Enum is null&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;MyEnum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fromName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;assertj-3&quot;&gt;AssertJ 3&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;shouldThrowExceptionWhenNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Throwable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;throwable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;catchThrowable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyEnum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fromName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;throwable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isInstanceOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NullPointerException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-                         &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Enum is null&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Maintenant, on est capable de séparer le “When” du “Then”, chose qui n’était avant possible qu’en faisant un try-catch.&lt;/p&gt;
-
-&lt;h3 id=&quot;optionals&quot;&gt;Optionals&lt;/h3&gt;
-
-&lt;h4 id=&quot;junit-3&quot;&gt;Junit&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;shouldAssertOptional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;optionalTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;assertTrue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isPresent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;optionalTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;assertj-3-1&quot;&gt;AssertJ 3&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;shouldAssertOptional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;optionalTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isPresent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-                        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;optionalTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;approximation-des-primitives&quot;&gt;Approximation des primitives&lt;/h3&gt;
-
-&lt;p&gt;Je ne suis pas sûr de l’utilité de celle là, d’un côté je pense que si on n’est pas capable de déterminer la sortie exacte d’un test, c’est qu’on a un problème.
-De l’autre, je me dis que ça peut être super, par exemple quand on fait des tests avec des nombres pseudo-aléatoires.&lt;/p&gt;
-
-&lt;p&gt;Bref, ça donne ça :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isCloseTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;within&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;matches&quot;&gt;matches&lt;/h3&gt;
-
-&lt;p&gt;Celui là peut être super, ou super dangereux.&lt;/p&gt;
-
-&lt;p&gt;Voici l’exemple de la release note:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;TolkienCharacter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frodo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TolkienCharacter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Frodo&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HOBBIT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// actual refers to frodo &lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HOBBIT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Si on change l’âge de frodo à ‘25’ l’erreur remontée est la suivante :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertionError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 
-&lt;span class=&quot;nl&quot;&gt;Expecting:&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bitard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertJ3Test$TolkienCharacter&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;721&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e0f4f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;given&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;You&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Predicate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;have&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;better&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;For&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;example:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isRookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;is rookie&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;give&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;an&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;looking&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;like:&lt;/span&gt;
-
-&lt;span class=&quot;nl&quot;&gt;Expecting:&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rookie&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bitard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertJ3Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shouldAssertMatches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AssertJ3Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;.....&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Je sais pas vous, mais moi je préfère ça :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;ava&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertionError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 
-&lt;span class=&quot;nl&quot;&gt;Expecting:&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greater&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;than:&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 
-	&lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bitard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;AssertJ3Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shouldAssertMatches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AssertJ3Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ce qui est donné par les asserts suivant :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isGreaterThan&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;race&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Race&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;HOBBIT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;bilan&quot;&gt;Bilan&lt;/h3&gt;
-
-&lt;p&gt;C’est une super bonne nouvelle, surtout pour les dates, les exceptions et les optionals. Pour les autres, je suis plus mitigé, à voir à l’usage.&lt;/p&gt;
-
-&lt;p&gt;Et vous, vous en pensez quoi ?&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;C’est peut-être un problème de conception ? &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-            <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/java/2015/04/06/assertJ-3.0.0/</link>
-            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/06/assertJ-3.0.0/</guid>
             
             
             <category>java</category>
