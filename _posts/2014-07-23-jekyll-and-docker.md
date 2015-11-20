@@ -2,6 +2,7 @@
 layout: post
 title:  "Jekyll quickstart with docker"
 date:   2014-07-23 15:22:45
+lastmod: 2015-11-08 11:31:45
 categories: docker jekyll
 ---
 ![Jekyll][jekyllImage]{: .float_image }
@@ -50,7 +51,7 @@ This was painless for me, as someone else already had a jekyll correctly install
 Thanks [Graham Christensen][grahamc]!
 
 
-## Update 2015-09-08
+## Update 2015-11-08
 I now use the official docker image, and I made a Makefile that you can reuse :
 
 {% gist MichaelBitard/88d922d0615bcf78b720 jekyll.Makefile %}
