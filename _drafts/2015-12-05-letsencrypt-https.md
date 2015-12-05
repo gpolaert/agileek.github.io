@@ -7,7 +7,7 @@ categories: docker
 
 In a [previous article][previous_article] I talked about switching to **_https_**.
 
-Since the 3rd December, _Let's Encrypt_ is now in open beta[^1], that means that everybody can have free trusted ssl certificates.
+Since the 3rd December, [_Let's Encrypt_][letsencrypt] is in public beta[^1], that means that everybody can have free trusted ssl certificates.
 
 That's right, you heard it.
 
@@ -65,6 +65,7 @@ Aaaaaaand it's done.
 You can look at [https://hello.lilymic.gotgeeks.com/][hello_https] and see that everything is ![so green][soGreen]
 
 [previous_article]: /jekyll/2015/11/20/disqus-https-and-http/
+[letsencrypt]: https://letsencrypt.org/
 [OprahHttps]: /images/posts/letsencrypt/meme.jpg
 [hello_https]: https://hello.lilymic.gotgeeks.com/
 [soGreen]: /images/posts/letsencrypt/super_green.gif
