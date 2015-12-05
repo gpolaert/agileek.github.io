@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>http://agileek.github.io/home_automation/2015/12/05/home_automation_domoticz/</loc>
+      
+        <lastmod>2015-12-05T00:00:00+00:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>http://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</loc>
       
         <lastmod>2015-11-20T14:00:00+00:00</lastmod>
@@ -209,7 +218,7 @@
       <url>
         <loc>http://agileek.github.io/categories/docker/</loc>
         
-          <lastmod>2015-11-20T12:18:28+00:00</lastmod>
+          <lastmod>2015-12-05T12:23:13+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -220,7 +229,7 @@
       <url>
         <loc>http://agileek.github.io/categories/jekyll/</loc>
         
-          <lastmod>2015-11-20T12:18:28+00:00</lastmod>
+          <lastmod>2015-12-05T12:23:13+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -231,7 +240,7 @@
       <url>
         <loc>http://agileek.github.io/categories/intellij/</loc>
         
-          <lastmod>2015-11-20T12:18:28+00:00</lastmod>
+          <lastmod>2015-12-05T12:23:13+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -242,7 +251,7 @@
       <url>
         <loc>http://agileek.github.io/categories/java/</loc>
         
-          <lastmod>2015-11-20T12:18:28+00:00</lastmod>
+          <lastmod>2015-12-05T12:23:13+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -253,7 +262,7 @@
       <url>
         <loc>http://agileek.github.io/categories/food/</loc>
         
-          <lastmod>2015-11-20T12:18:28+00:00</lastmod>
+          <lastmod>2015-12-05T12:23:13+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -264,7 +273,18 @@
       <url>
         <loc>http://agileek.github.io/categories/terminal/</loc>
         
-          <lastmod>2015-11-20T12:18:28+00:00</lastmod>
+          <lastmod>2015-12-05T12:23:13+00:00</lastmod>
+        
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+    
+  
+    
+      <url>
+        <loc>http://agileek.github.io/categories/home_automation/</loc>
+        
+          <lastmod>2015-12-05T12:23:13+00:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
