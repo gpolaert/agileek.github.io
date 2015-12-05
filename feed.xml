@@ -5,9 +5,84 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>http://agileek.github.io/</link>
         <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Sat, 05 Dec 2015 12:23:13 +0000</pubDate>
-        <lastBuildDate>Sat, 05 Dec 2015 12:23:13 +0000</lastBuildDate>
+        <pubDate>Sat, 05 Dec 2015 18:00:29 +0000</pubDate>
+        <lastBuildDate>Sat, 05 Dec 2015 18:00:29 +0000</lastBuildDate>
         <generator>Jekyll v2.4.0</generator>
+        
+        <item>
+            <title>Http is dead</title>
+            <description>&lt;p&gt;In a &lt;a href=&quot;/jekyll/2015/11/20/disqus-https-and-http/&quot;&gt;previous article&lt;/a&gt; I talked about switching to &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since the 3rd December, &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;&lt;em&gt;Let’s Encrypt&lt;/em&gt;&lt;/a&gt; is in public beta&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, that means that everybody can have free trusted ssl certificates.&lt;/p&gt;
+
+&lt;p&gt;That’s right, you heard it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/letsencrypt/meme.jpg&quot; alt=&quot;OprahHttps&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What would be an agileek article without a little bit of &lt;strong&gt;Docker&lt;/strong&gt; in it?&lt;/p&gt;
+
+&lt;h1 id=&quot;goal&quot;&gt; Goal&lt;/h1&gt;
+
+&lt;p&gt;I will show you how to generate and use an ssl certificate with nginx.&lt;/p&gt;
+
+&lt;p&gt;First, you generate the certificate with:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;docker run -it --rm -p 443:443 --name letsencrypt -v /etc/letsencrypt:/etc/letsencrypt -v /var/lib/letsencrypt:/var/lib/letsencrypt quay.io/letsencrypt/letsencrypt:latest --server https://acme-v01.api.letsencrypt.org/directory certonly -a standalone -d hello.lilymic.gotgeeks.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then you configure your nginx in order to use this certificates :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssl_certificate      /etc/letsencrypt/live/lilymic.gotgeeks.com-0001/fullchain.pem&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ssl_certificate_key  /etc/letsencrypt/live/lilymic.gotgeeks.com-0001/privkey.pem&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ssl_session_timeout 1d&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ssl_session_cache shared:SSL:50m&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ssl_session_tickets off&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# modern configuration. tweak to your needs.&lt;/span&gt;
+ssl_protocols TLSv1.1 TLSv1.2&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ssl_ciphers &lt;span class=&quot;s1&quot;&gt;&amp;#39;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#    ssl_prefer_server_ciphers on;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# HSTS (ngx_http_headers_module is required) (15768000 seconds = 6 months)&lt;/span&gt;
+add_header Strict-Transport-Security max-age&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;15768000&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# OCSP Stapling ---&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# fetch OCSP records from URL in ssl_certificate and cache them&lt;/span&gt;
+ssl_stapling on&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ssl_stapling_verify on&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;## verify chain of trust of OCSP response using Root CA and Intermediate certs&lt;/span&gt;
+
+server &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        listen       &lt;span class=&quot;m&quot;&gt;443&lt;/span&gt; ssl&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        server_name  hello.lilymic.gotgeeks.com&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        location / &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;            
+            add_header Content-Type text/plain&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Take a look at this awesome certificate!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aaaaaaand it’s done.&lt;/p&gt;
+
+&lt;p&gt;You can look at &lt;a href=&quot;https://hello.lilymic.gotgeeks.com/&quot;&gt;https://hello.lilymic.gotgeeks.com/&lt;/a&gt; and see that everything is &lt;img src=&quot;/images/posts/letsencrypt/super_green.gif&quot; alt=&quot;so green&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;You can donate to them:  &lt;a href=&quot;https://letsencrypt.org/donate&quot;&gt;https://letsencrypt.org/donate&lt;/a&gt; or to EFF: &lt;a href=&quot;https://eff.org/donate-le&quot;&gt;https://eff.org/donate-le&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+            <pubDate>Sat, 05 Dec 2015 00:00:00 +0000</pubDate>
+            <link>http://agileek.github.io/docker/2015/12/05/letsencrypt-https/</link>
+            <guid isPermaLink="true">http://agileek.github.io/docker/2015/12/05/letsencrypt-https/</guid>
+            
+            
+            <category>docker</category>
+            
+        </item>
         
         <item>
             <title>Raspberry Pi, RFXCom and Domoticz</title>
@@ -1065,283 +1140,6 @@ Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne
             <pubDate>Thu, 09 Apr 2015 00:00:00 +0000</pubDate>
             <link>http://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</link>
             <guid isPermaLink="true">http://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</guid>
-            
-            
-            <category>java</category>
-            
-        </item>
-        
-        <item>
-            <title>Devoxx France : Jour 1</title>
-            <description>&lt;h2 id=&quot;devoxx-france&quot;&gt;Devoxx France&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/posts/devoxx/devoxx_france.png&quot; alt=&quot;Devoxx&quot; class=&quot;float_image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;google-cloud-platformhandsongcp&quot;&gt;09:30-12:30 &lt;a href=&quot;http://cfp.devoxx.fr/2015/talk/GOB-3561/La_Google_Cloud_Plaform_-_Au_dela_des_simples_demos&quot;&gt;Google Cloud Platform&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;prsentation-de-google-cloud-platform-par-david-gageot-et-ludovic-champenois&quot;&gt;Présentation de Google Cloud Platform par David Gageot et Ludovic Champenois.&lt;/h3&gt;
-
-&lt;p&gt;J’ai hésité avec “Quand Devops rencontre BigData”, mais il est trop tôt pour attaquer violemment avec du spark.&lt;/p&gt;
-
-&lt;p&gt;Le but de cette session est de nous présenter une bonne partie de l’infrastructure google cloud au travers du déploiement d’une application de vote de tapis&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pas de slides pour cette session, tout est live.&lt;/p&gt;
-
-&lt;p&gt;Énormément de produits sur &lt;a href=&quot;https://cloud.google.com&quot;&gt;https://cloud.google.com&lt;/a&gt; :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Compute
-    &lt;ul&gt;
-      &lt;li&gt;Compute Engine&lt;/li&gt;
-      &lt;li&gt;App Engine&lt;/li&gt;
-      &lt;li&gt;Container Engine&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Storage
-    &lt;ul&gt;
-      &lt;li&gt;SQL&lt;/li&gt;
-      &lt;li&gt;Storage&lt;/li&gt;
-      &lt;li&gt;Datastore&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Networking
-    &lt;ul&gt;
-      &lt;li&gt;Load Balancing&lt;/li&gt;
-      &lt;li&gt;Interconnect&lt;/li&gt;
-      &lt;li&gt;DNS&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Big Data
-    &lt;ul&gt;
-      &lt;li&gt;BigQuery&lt;/li&gt;
-      &lt;li&gt;Dataflow&lt;/li&gt;
-      &lt;li&gt;Pub/Sub&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Services
-    &lt;ul&gt;
-      &lt;li&gt;Translate API&lt;/li&gt;
-      &lt;li&gt;Prediction API&lt;/li&gt;
-      &lt;li&gt;Endpoints&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Management
-    &lt;ul&gt;
-      &lt;li&gt;Deployment Manager&lt;/li&gt;
-      &lt;li&gt;Monitoring&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Petit fait intéressant, SnapChat tourne sur App Engine et ce sont les équipes de google qui s’occupent de la scalabitité de SnapChat.&lt;/p&gt;
-
-&lt;p&gt;L’idée derrière le google cloud, c’est de pouvoir changer de stratégie (Je gère ma VM, ça monte en charge, je passe sur AppEngine) sans que ça soit coûteux.&lt;/p&gt;
-
-&lt;h3 id=&quot;cot-dune-vm&quot;&gt;Coût d’une VM&lt;/h3&gt;
-
-&lt;p&gt;Chaque VM est facturée à la minute de CPU (les 10 premières minutes sont indivisibles).&lt;/p&gt;
-
-&lt;p&gt;À titre d’exemple, ils ont joué une semaine avec l’application de démo, ils ont fait des benchs (pour pousser le CPU) et ça leur a coûté 28$.&lt;/p&gt;
-
-&lt;h3 id=&quot;dockerizer-la-dmo&quot;&gt;Dockerizer la démo&lt;/h3&gt;
-
-&lt;p&gt;L’idée c’est que plutôt que de lancer une VM, de la configurer et d’installer son application, on crée une image docker qu’on va déployer sur le cloud.&lt;/p&gt;
-
-&lt;p&gt;L’intérêt principal est de pouvoir tester son conteneur sur son infrastructure, puis de le déployer chez google.&lt;/p&gt;
-
-&lt;p&gt;Avec Docker machine, il est possible de créer des VMs et de tout configurer directement dans le cloud google, c’est franchement impressionnant.&lt;/p&gt;
-
-&lt;p&gt;Il est également possible de faire les mêmes commandes que sur sa machine, mais sur le cloud avec :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;docker &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;docker-machine config mavmgoogle&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; ps&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;le “docker-machine config mavmgoogle” permet de récupérer toutes les options docker pour se connecter au docker de la vm.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Quelques petits soucis avec Docker et Google Cloud, il travaillent dessus.&lt;/p&gt;
-
-&lt;h3 id=&quot;grpc&quot;&gt;GRPC&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.grpc.io&quot;&gt;Google RPC&lt;/a&gt;, nouveau service de google pour les messages entre machines.&lt;/p&gt;
-
-&lt;p&gt;C’est un langage, le Protocol Buffer, qui génère des clients et des serveurs dans plein de technos différentes.&lt;/p&gt;
-
-&lt;p&gt;Annoncé comme plus puissant que XML, plus léger que Json. Utilisé en interne chez google depuis 15 ans, il est open-sourcé depuis peu (0.0.4).&lt;/p&gt;
-
-&lt;h3 id=&quot;app-engine&quot;&gt;App engine&lt;/h3&gt;
-
-&lt;p&gt;Après avoir joué avec les VMs, puis docker, maintenant le déploiement se fait bien app-engine.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;AppEngine permet de faire tourner une collection de modules, avec plusieurs versions. Ça permet nativement le traffic splitting pour tester différentes versions en live.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Il a suffit d’un app.yaml à la racine pour décrire ce qui va se lancer. Il est possible de déclarer des règles (à la manière d’une conf nginx) pour déclarer les resources statiques et dynamiques, pour éviter de solliciter l’applicatif pour servir du contenu statique.&lt;/p&gt;
-
-&lt;p&gt;Le déploiement docker sous app-engine crée automatiquement un registry privé, donc les images docker ne sont pas accessibles par les autres comptes.&lt;/p&gt;
-
-&lt;h3 id=&quot;console&quot;&gt;Console&lt;/h3&gt;
-
-&lt;p&gt;La console est complète, fonctionne en application mobile également.&lt;/p&gt;
-
-&lt;p&gt;Un full accès aux logs en live est possible&lt;/p&gt;
-
-&lt;h4 id=&quot;bigquery&quot;&gt;BigQuery&lt;/h4&gt;
-
-&lt;p&gt;Il est possible de streamer les logs en live vers BigQuery, ce qui permet une approche plus intéressante de nos logs “plats”.
-Pour la démo, les logs (un log par vote) de l’application sont insérés dans BigQuery et permettent de sortir toutes les informations des votes, donc de pouvoir double checker que les résultats calculés par l’applicatif sont cohérent.&lt;/p&gt;
-
-&lt;h3 id=&quot;runtime-supports&quot;&gt;Runtime supportés&lt;/h3&gt;
-
-&lt;p&gt;Avec la contenairization, AppEngine s’ouvre au monde. Google supporte Java, NodeJs, Go, Python, Ruby. Ils sont en train de définir les contraintes pour pouvoir rajouter un runtime custom, la communauté C# travaille déjà à supporter C# dans AppEngine.&lt;/p&gt;
-
-&lt;h3 id=&quot;debug&quot;&gt;Debug&lt;/h3&gt;
-
-&lt;p&gt;Il est possible de connecter différents SCM (github, bitbucket,…) à son projet afin de pouvoir naviguer dans le code source sans quitter la console google.&lt;/p&gt;
-
-&lt;p&gt;C’est par cette interface qu’il y a la possibilité de debugger. Ce n’est pas vraiment du debugger au sens où on ne peut pas attacher de breakpoint et arrêter l’application. Il s’agit plutôt d’un watchpoint, qui permet de prendre des snapshots mémoire aux endroits indiqués. Super puissant comme outil, il permet vraiment de capturer l’état de l’application, sans bloquer l’expérience utilisateur. La démo a été faite sur NodeJs et Java, c’est impressionnant.&lt;/p&gt;
-
-&lt;h3 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h3&gt;
-
-&lt;p&gt;Un groupe de machine (un pod) déployé en cluster. On décrit l’état souhaité de l’environnement (3 JVM, 1 Nginx) et le cluster se débrouille pour faire tourner tout ça “au mieux”. Il est capable de relancer les services sur d’autres machines si la machine venait à planter par exemple. Ce qu’il faut retenir au final c’est qu’avec 2 fichiers de conf on est capable de déclarer une architecture complexe à déployer, ça fait rêver.&lt;/p&gt;
-
-&lt;h3 id=&quot;firebase&quot;&gt;Firebase&lt;/h3&gt;
-
-&lt;p&gt;Solution de Backend As A Service, rachetée par google il y’a 6 mois, pour faire face au rachat de parse par facebook (la guerre continue).
-Regardez le nobackend.coffee dans la démo. C’est juste bluffant. Firebase peut notifier les différentes applis d’une mise à jour de son état, en websocket.&lt;/p&gt;
-
-&lt;p&gt;La démo est bien évidemment sur &lt;a href=&quot;https://github.com/CodeStory/devoxxcarpet&quot;&gt;github&lt;/a&gt;, elle contient de quoi lancer l’application en java, mais aussi en node js. D’ailleurs, n’hésitez pas à comparer les code produit en nodeJs avec celui en Java, vous serez surpris. Un article sur FluentHttp est prévu, c’est, je pense, le meilleur serveur web java8.&lt;/p&gt;
-
-&lt;h2 id=&quot;hackergarten&quot;&gt;13:30-16:30 Hackergarten&lt;/h2&gt;
-
-&lt;p&gt;Hop, dès la deuxième session on s’écarte du &lt;a href=&quot;http://agileek.github.io/java/2015/04/07/before-devoxx-france/&quot;&gt;planning&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Je suis allé faire un tour du côté des &lt;a href=&quot;http://hackergarten.net/&quot;&gt;Hackergarten&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A Computer Programming Contributor Group&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;afin de contribuer sur un projet de la communauté open source.&lt;/p&gt;
-
-&lt;p&gt;À Devoxx le principe est le même que partout : des porteurs de projets présentent leur projet et des groupes se forment pour corriger des issues, ou ajouter des fonctionnalités au projet.&lt;/p&gt;
-
-&lt;p&gt;Voici les sujets de cette année :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;AsciiDoctor&lt;/li&gt;
-  &lt;li&gt;Golo&lt;/li&gt;
-  &lt;li&gt;FluentLenium&lt;/li&gt;
-  &lt;li&gt;Mockito&lt;/li&gt;
-  &lt;li&gt;JHipster&lt;/li&gt;
-  &lt;li&gt;RestX&lt;/li&gt;
-  &lt;li&gt;VoxxRin&lt;/li&gt;
-  &lt;li&gt;Ceylon&lt;/li&gt;
-  &lt;li&gt;XWiki&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;J’ai choisi &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium&quot;&gt;FluentLenium&lt;/a&gt; que j’ai pas mal utilisé dans des missions précédentes. C’est un wrapper de Sélénium en java, vachement plus simple à utiliser que Sélénium, avec tous les outils à portée de main pour faire ses tests sans galérer.&lt;/p&gt;
-
-&lt;h3 id=&quot;bilan&quot;&gt;Bilan&lt;/h3&gt;
-
-&lt;p&gt;C’est très intéressant de rentrer rapidement sur un projet par une issue, c’est un très bon exercice.
-En plus ce n’était pas du temps perdu, car ma &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium/pull/159&quot;&gt;merge request&lt;/a&gt; a été acceptée !&lt;/p&gt;
-
-&lt;p&gt;Je repars avec du travail, j’ai trouvé de la duplication entre &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/Fluent.java#L170&quot;&gt;Fluent&lt;/a&gt; et &lt;a href=&quot;https://github.com/FluentLenium/FluentLenium/blob/master/fluentlenium-core/src/main/java/org/fluentlenium/core/FluentAdapter.java#L102&quot;&gt;FluentAdapter&lt;/a&gt; (la méthode initPage).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Quand est-ce qu’on organise ça sur Toulouse?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;le-tar-du-terminal&quot;&gt;17:10-17:40 Le taré du terminal&lt;/h2&gt;
-
-&lt;p&gt;Les sources sont &lt;a href=&quot;https://github.com/emmanuelbernard/command-line-nuts&quot;&gt;là&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Principe : Automatiser un maximum de choses pour ne pas casser son workflow quand on développe.&lt;/p&gt;
-
-&lt;p&gt;Premier outil : Tmux, l’incontournable émulateur de terminal.&lt;/p&gt;
-
-&lt;h3 id=&quot;deuxime-outil--vim&quot;&gt;Deuxième outil : Vim&lt;/h3&gt;
-
-&lt;p&gt;Pas besoin de le présenter. Il découpe les commandes avec [action][repetition multiplier]&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Remettre plusieurs lignes sur une seule : passer en mode visuel, sélectionner les lignes et taper ‘J’.&lt;/li&gt;
-  &lt;li&gt;f[character] : Aller au premier charactère trouvé&lt;/li&gt;
-  &lt;li&gt;ci : se mettre sur une parenthèse, remplace tout ce qu’il y’a à l’intérieur des paranthèses.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Il existe des plugins pour avoir les raccourcis vim dans les IDE : IdeaVim (IntelliJ) et Vrapper (Eclipse)&lt;/p&gt;
-
-&lt;h3 id=&quot;dotfiles&quot;&gt;Dotfiles&lt;/h3&gt;
-
-&lt;p&gt;Conseil : les mettre sur git&lt;/p&gt;
-
-&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;git
-    &lt;ul&gt;
-      &lt;li&gt;Tig : un outil git en ligne de commande&lt;/li&gt;
-      &lt;li&gt;send-pull-request : script qui crée automatiquement une pull request sous github&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Commandes : faire un script qui lance la commande et qui envoie une notif d’OS à la fin (remote)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;maven&quot;&gt;18:40-19:10 Maven&lt;/h2&gt;
-
-&lt;h3 id=&quot;jongler-entre-les-diffrentes-versions&quot;&gt;Jongler entre les différentes versions&lt;/h3&gt;
-
-&lt;p&gt;Avec la prise en charge de Java par Oracle, les versions sont &lt;code&gt;deprecated&lt;/code&gt; beaucoup plus rapidement (en fait, elles ne sont pas dépréciées, elles deviennent juste … payantes).&lt;/p&gt;
-
-&lt;p&gt;Java 6 devient très très payante et Java 7 devient deprecated ce mois-ci. Il faut donc pouvoir switcher de plus en plus rapidement et avec le moins de surprises (Ou prendre le support oracle et payer pour conserver les anciennes versions).&lt;/p&gt;
-
-&lt;p&gt;Les différents conseils :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Utiliser les properties &lt;code&gt;maven.compiler.target&lt;/code&gt; et &lt;code&gt;maven.compiler.source&lt;/code&gt; pour spécifier la version Java&lt;/li&gt;
-  &lt;li&gt;Utiliser le maven-enforcer-plugin &lt;code&gt;enforceBytecodeVersion&lt;/code&gt; pour s’assurer que toutes les dépendances sont utilisables par une JRE donnée&lt;/li&gt;
-  &lt;li&gt;animal-sniffer-maven-plugin permet de contrôler que les bonnes versions d’API sont utilisées (ça peut être une rule CheckSignature dans le maven enforcer plugin pour éviter la multiplication des plugins)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;toolchains-et-jdk&quot;&gt;Toolchains et JDK&lt;/h3&gt;
-
-&lt;p&gt;Permet d’utiliser un JDK pour compiler indépendant du JRE avec lequel Maven et ses plugins s’exécutent.&lt;/p&gt;
-
-&lt;p&gt;L’idée c’est d’utiliser un JRE récent pour exécuter maven et ses plugins, tout en utilisant un autre JDK pour les phases de compilation.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Des toolchains customs existent pour protobuf, netbeans, …&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;maven-jdeps-plugin&quot;&gt;maven-jdeps-plugin&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Analyse statique des dépendances (préparation à JigSaw)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;les-autres-confs-marquantes&quot;&gt;Les autres confs marquantes&lt;/h2&gt;
-
-&lt;p&gt;J’ai fait un petit tour auprès des gens que je connais et qui font devoxx pour savoir quelle avait été leur session préférée, ça me permettra de voir quoi regarder une fois les vidéos sur Parleys.&lt;/p&gt;
-
-&lt;p&gt;Dans le désordre nous avons :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Hackergarten (Celle là ne sera pas sur Parleys)&lt;/li&gt;
-  &lt;li&gt;Spring boot&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Si vous suivez le compte de David Gageot, vous comprenez mieux pourquoi il demandait qu’on lui envoie des photos de tapis. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-            <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/java/2015/04/08/devoxx-jour-1/</link>
-            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/08/devoxx-jour-1/</guid>
             
             
             <category>java</category>
