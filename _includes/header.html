@@ -20,7 +20,6 @@
         {% for page in site.pages reversed %}
           {% if page.title %}
             {% if page.title contains 'Category' %}
-            <!-- Do Nothing -->
             {% else %}
             <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
             {% endif %}

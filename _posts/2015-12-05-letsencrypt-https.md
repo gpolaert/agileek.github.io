@@ -3,6 +3,8 @@ layout: post
 title:  "Http is dead"
 date:   2015-12-05
 categories: docker
+socialmessage: "Http is dead, long live https!"
+tags: letsencrypt,docker
 ---
 
 In a [previous article][previous_article] I talked about switching to **_https_**.

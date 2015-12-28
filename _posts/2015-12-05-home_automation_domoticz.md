@@ -3,7 +3,7 @@ layout: post
 title:  "Raspberry Pi, RFXCom and Domoticz"
 date:   2015-12-05
 categories: home_automation
-tags: [domoticz,docker,raspberryPi]
+tags: domoticz,docker,raspberryPi
 ---
 
 This begins a serie of home automation articles.
