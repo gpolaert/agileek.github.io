@@ -3,10 +3,10 @@
     <channel>
         <title>Agile &amp; Java</title>
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
-        <link>http://agileek.github.io/</link>
-        <atom:link href="http://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Sat, 05 Dec 2015 18:00:29 +0000</pubDate>
-        <lastBuildDate>Sat, 05 Dec 2015 18:00:29 +0000</lastBuildDate>
+        <link>https://agileek.github.io/</link>
+        <atom:link href="https://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
+        <pubDate>Mon, 28 Dec 2015 16:53:51 +0000</pubDate>
+        <lastBuildDate>Mon, 28 Dec 2015 16:53:51 +0000</lastBuildDate>
         <generator>Jekyll v2.4.0</generator>
         
         <item>
@@ -76,8 +76,10 @@ server &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 &lt;/div&gt;
 </description>
             <pubDate>Sat, 05 Dec 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/docker/2015/12/05/letsencrypt-https/</link>
-            <guid isPermaLink="true">http://agileek.github.io/docker/2015/12/05/letsencrypt-https/</guid>
+            <link>https://agileek.github.io/docker/2015/12/05/letsencrypt-https/</link>
+            <guid isPermaLink="true">https://agileek.github.io/docker/2015/12/05/letsencrypt-https/</guid>
+            
+            <category>letsencrypt,docker</category>
             
             
             <category>docker</category>
@@ -163,14 +165,10 @@ I recommend to start with something easy.&lt;/p&gt;
 
 </description>
             <pubDate>Sat, 05 Dec 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/home_automation/2015/12/05/home_automation_domoticz/</link>
-            <guid isPermaLink="true">http://agileek.github.io/home_automation/2015/12/05/home_automation_domoticz/</guid>
+            <link>https://agileek.github.io/home_automation/2015/12/05/home_automation_domoticz/</link>
+            <guid isPermaLink="true">https://agileek.github.io/home_automation/2015/12/05/home_automation_domoticz/</guid>
             
-            <category>domoticz</category>
-            
-            <category>docker</category>
-            
-            <category>raspberryPi</category>
+            <category>domoticz,docker,raspberryPi</category>
             
             
             <category>home_automation</category>
@@ -239,8 +237,8 @@ if ((host == window.location.host) &amp;amp;&amp;amp; (window.location.protocol 
 &lt;/div&gt;
 </description>
             <pubDate>Fri, 20 Nov 2015 14:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</link>
-            <guid isPermaLink="true">http://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</guid>
+            <link>https://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</link>
+            <guid isPermaLink="true">https://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</guid>
             
             
             <category>jekyll</category>
@@ -328,8 +326,8 @@ if ((host == window.location.host) &amp;amp;&amp;amp; (window.location.protocol 
 &lt;/div&gt;
 </description>
             <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/2015/04/15/typematrix-dvorak/</link>
-            <guid isPermaLink="true">http://agileek.github.io/2015/04/15/typematrix-dvorak/</guid>
+            <link>https://agileek.github.io/2015/04/15/typematrix-dvorak/</link>
+            <guid isPermaLink="true">https://agileek.github.io/2015/04/15/typematrix-dvorak/</guid>
             
             
         </item>
@@ -427,8 +425,8 @@ https://api.github.com/repos/agileek/docker-tips&lt;/code&gt;&lt;/pre&gt;&lt;/di
 
 </description>
             <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/terminal/2015/04/14/httpie_and_json/</link>
-            <guid isPermaLink="true">http://agileek.github.io/terminal/2015/04/14/httpie_and_json/</guid>
+            <link>https://agileek.github.io/terminal/2015/04/14/httpie_and_json/</link>
+            <guid isPermaLink="true">https://agileek.github.io/terminal/2015/04/14/httpie_and_json/</guid>
             
             
             <category>terminal</category>
@@ -529,8 +527,8 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
 &lt;/div&gt;
 </description>
             <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/docker/2015/04/13/docker-ansible/</link>
-            <guid isPermaLink="true">http://agileek.github.io/docker/2015/04/13/docker-ansible/</guid>
+            <link>https://agileek.github.io/docker/2015/04/13/docker-ansible/</link>
+            <guid isPermaLink="true">https://agileek.github.io/docker/2015/04/13/docker-ansible/</guid>
             
             
             <category>docker</category>
@@ -657,8 +655,8 @@ But when you run this image and inspect the created container, you will see this
 
 </description>
             <pubDate>Sun, 12 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/docker/2015/04/12/docker-cmd/</link>
-            <guid isPermaLink="true">http://agileek.github.io/docker/2015/04/12/docker-cmd/</guid>
+            <link>https://agileek.github.io/docker/2015/04/12/docker-cmd/</link>
+            <guid isPermaLink="true">https://agileek.github.io/docker/2015/04/12/docker-cmd/</guid>
             
             
             <category>docker</category>
@@ -805,8 +803,8 @@ RUN \
 &lt;/ul&gt;
 </description>
             <pubDate>Sat, 11 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/docker/2015/04/11/docker-layers/</link>
-            <guid isPermaLink="true">http://agileek.github.io/docker/2015/04/11/docker-layers/</guid>
+            <link>https://agileek.github.io/docker/2015/04/11/docker-layers/</link>
+            <guid isPermaLink="true">https://agileek.github.io/docker/2015/04/11/docker-layers/</guid>
             
             
             <category>docker</category>
@@ -954,8 +952,8 @@ Ils voulaient embarquer le raspberry pi directement sur le parrot, mais le poids
 &lt;/div&gt;
 </description>
             <pubDate>Fri, 10 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</link>
-            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</guid>
+            <link>https://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</link>
+            <guid isPermaLink="true">https://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</guid>
             
             
             <category>java</category>
@@ -1138,8 +1136,8 @@ Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne
 &lt;/div&gt;
 </description>
             <pubDate>Thu, 09 Apr 2015 00:00:00 +0000</pubDate>
-            <link>http://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</link>
-            <guid isPermaLink="true">http://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</guid>
+            <link>https://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</link>
+            <guid isPermaLink="true">https://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</guid>
             
             
             <category>java</category>

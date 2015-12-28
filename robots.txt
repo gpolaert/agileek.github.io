@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://agileek.github.io/sitemap.xml
+Sitemap: https://agileek.github.io/sitemap.xml
