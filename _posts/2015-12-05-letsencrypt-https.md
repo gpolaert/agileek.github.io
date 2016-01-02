@@ -5,6 +5,7 @@ date:   2015-12-05
 categories: docker
 socialmessage: "Http is dead, long live https!"
 tags: letsencrypt,docker
+image: /images/posts/letsencrypt/meme.jpg
 ---
 
 In a [previous article][previous_article] I talked about switching to **_https_**.

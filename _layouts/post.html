@@ -4,6 +4,13 @@ comments: true
 ---
 
 <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@BitardMichael" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ content | strip_html | truncatewords: 40 }}" />
+    <meta name="twitter:image" content="{{ page.image }}" />
+
     <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
     <meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
 
