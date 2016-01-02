@@ -3,16 +3,18 @@ layout: default
 comments: true
 ---
 
-<div class="post">
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
+    <meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
 
     <header class="post-header">
-        <h1>{{ page.title }}</h1>
-        <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        <h1 itemprop="name">{{ page.title }}</h1>
+        <time class="meta" itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
     </header>
 
-    <article class="post-content">
+    <div class="post-content" itemprop="articleBody">
         {{ content }}
-    </article>
+    </div>
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="{{ page.socialmessage }}" data-hashtags="{{ page.tags }}">Tweet</a>
@@ -36,4 +38,4 @@ comments: true
         <span class="logo-disqus">Disqus</span>
     </a>
 
-</div>
+</article>
