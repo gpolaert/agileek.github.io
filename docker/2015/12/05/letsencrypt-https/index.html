@@ -128,14 +128,23 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="post">
+      <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@BitardMichael" />
+    <meta name="twitter:title" content="Http is dead" />
+    <meta name="twitter:description" content="In a previous article I talked about switching to https. Since the 3rd December, Let’s Encrypt is in public beta1, that means that everybody can have free trusted ssl certificates. That’s right, you heard it. What would be an agileek..." />
+    <meta name="twitter:image" content="/images/posts/letsencrypt/meme.jpg" />
+
+    <meta itemprop="keywords" content="letsencrypt,docker" />
+    <meta itemprop="description" content="In a previous article I talked about switching to https. Since the 3rd December, Let’s Encrypt is in public beta1, that means that everybody can have free trusted ssl certificates. That’s right, you heard it. What would be an agileek..." />
 
     <header class="post-header">
-        <h1>Http is dead</h1>
-        <p class="meta">Dec 5, 2015</p>
+        <h1 itemprop="name">Http is dead</h1>
+        <time class="meta" itemprop="datePublished" datetime="2015-12-05">Dec 5, 2015</time>
     </header>
 
-    <article class="post-content">
+    <div class="post-content" itemprop="articleBody">
         <p>In a <a href="/jekyll/2015/11/20/disqus-https-and-http/">previous article</a> I talked about switching to <strong><em>https</em></strong>.</p>
 
 <p>Since the 3rd December, <a href="https://letsencrypt.org/"><em>Let’s Encrypt</em></a> is in public beta<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, that means that everybody can have free trusted ssl certificates.</p>
@@ -200,7 +209,7 @@ server <span class="o">{</span>
   </ol>
 </div>
 
-    </article>
+    </div>
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Http is dead, long live https!" data-hashtags="letsencrypt,docker">Tweet</a>
@@ -224,7 +233,7 @@ server <span class="o">{</span>
         <span class="logo-disqus">Disqus</span>
     </a>
 
-</div>
+</article>
 
       </div>
     </div>

@@ -128,14 +128,23 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="post">
+      <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@BitardMichael" />
+    <meta name="twitter:title" content="Generate log line with Intellij and live templates" />
+    <meta name="twitter:description" content="With IntelliJ, one missing feature is the automatic generation of the famous private static Logger LOGGER = ...; You can do it easily with the Live Templates, you just have to go to Editor -&gt; Live Templates -&gt; others -&gt;..." />
+    <meta name="twitter:image" content="" />
+
+    <meta itemprop="keywords" content="" />
+    <meta itemprop="description" content="With IntelliJ, one missing feature is the automatic generation of the famous private static Logger LOGGER = ...; You can do it easily with the Live Templates, you just have to go to Editor -&gt; Live Templates -&gt; others -&gt;..." />
 
     <header class="post-header">
-        <h1>Generate log line with Intellij and live templates</h1>
-        <p class="meta">Mar 1, 2015</p>
+        <h1 itemprop="name">Generate log line with Intellij and live templates</h1>
+        <time class="meta" itemprop="datePublished" datetime="2015-03-01">Mar 1, 2015</time>
     </header>
 
-    <article class="post-content">
+    <div class="post-content" itemprop="articleBody">
         <p>With IntelliJ, one missing feature is the automatic generation of the famous <code>private static Logger LOGGER = ...;</code></p>
 
 <p>You can do it easily with the Live Templates, you just have to go to <strong><em>Editor -&gt; Live Templates -&gt; others -&gt; create new</em></strong></p>
@@ -169,7 +178,7 @@
 
 <p>That’s it, type <code>log</code> and Ctrl+J and it will generate the logger line, with the slf4j imports.</p>
 
-    </article>
+    </div>
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="" data-hashtags="">Tweet</a>
@@ -193,7 +202,7 @@
         <span class="logo-disqus">Disqus</span>
     </a>
 
-</div>
+</article>
 
       </div>
     </div>
