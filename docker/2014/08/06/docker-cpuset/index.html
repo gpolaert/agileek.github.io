@@ -136,12 +136,15 @@
     <meta property="twitter:description" content="For my client I need to benchmark a multi-threaded/multi-server solution. Unfortunately, we only have a big server (128 GB, 32 cores,…) and we are putting all our instances on this single server. As each instance is multi-threaded, we noticed that..." />
     <meta property="twitter:image" content="" />
 
-    <meta itemprop="keywords" content="" />
+    <meta itemprop="keywords" content="docker" />
     <meta itemprop="description" content="For my client I need to benchmark a multi-threaded/multi-server solution. Unfortunately, we only have a big server (128 GB, 32 cores,…) and we are putting all our instances on this single server. As each instance is multi-threaded, we noticed that..." />
 
     <header class="post-header">
         <h1 itemprop="name">Playing with docker and cpuset</h1>
         <time class="meta" itemprop="datePublished" datetime="2014-08-06">Aug 6, 2014</time>
+        
+          <span class="meta">, edited on </span><time class="meta" itemprop="dateModified" datetime="2016-01-06">Jan 6, 2016</time>
+        
     </header>
 
     <div class="post-content" itemprop="articleBody">
@@ -150,15 +153,15 @@
 <p>Unfortunately, we only have a big server (128 GB, 32 cores,…) and we are putting all our instances on this single server.
 As each instance is multi-threaded, we noticed that they often get in each others way, resulting in bad performances (context swapping, …).</p>
 
-<p>We solved this problem with 2 solutions.</p>
+<p>We solved this problem in 2 ways.</p>
 
-<p>We used thread affinity in the application in order to bind some thread to a given CPU, and we used <a href="https://www.docker.com/">docker</a> to authorize a given application to access only some CPUs (via cpuset).</p>
+<p>On one hand we used thread affinity in the application in order to bind some thread to a given CPU, and on the other hand we used <a href="https://www.docker.com/">docker</a> to authorize a given application to access only some CPUs (via cpuset).</p>
 
-<p>In order to be sure that docker was correctly restricting the access to the CPUs, I created a <a href="https://registry.hub.docker.com/u/agileek/cpuset-test/">docker image</a>:</p>
+<p>To be sure that docker was correctly restricting the access to the CPUs, I created a <a href="https://registry.hub.docker.com/u/agileek/cpuset-test/">docker image</a>:</p>
 
 <p>If you run it with</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -ti --cpuset<span class="o">=</span><span class="m">6</span> agileek/cpuset-test</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -ti --cpuset-cpus<span class="o">=</span><span class="m">6</span> agileek/cpuset-test</code></pre></div>
 
 <p>it will take one cpu (the 7th) at 100%.</p>
 
@@ -170,7 +173,7 @@ As each instance is multi-threaded, we noticed that they often get in each other
 
 <p>If you run it with</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -ti --cpuset<span class="o">=</span>0,4,6 agileek/cpuset-test /cpus 3</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -ti --cpuset-cpus<span class="o">=</span>0,4,6 agileek/cpuset-test</code></pre></div>
 
 <p>it will take all available CPUs (the 1st, 5th and 7th)</p>
 
@@ -180,11 +183,18 @@ As each instance is multi-threaded, we noticed that they often get in each other
   <iframe src="https://www.youtube.com/embed/ITcyeL8V35I" frameborder="0" width="800" height="600" allowfullscreen=""></iframe>
 </div>
 
+<h3 id="edit-2016-01-06">Edit 2016-01-06</h3>
+<ul>
+  <li>Replace <code>cpuset</code> with <code>cpuset-cpus</code></li>
+  <li><a href="https://github.com/agileek/docker/tree/master/cpuset-test">Smallest docker image</a> possible (1.5MB with 2 layers). The old one was ~10 layers and 180MB</li>
+  <li>Use <a href="https://patrickmn.com/projects/cpuburn/">cpuburn</a></li>
+</ul>
+
 
     </div>
 
     <div id="social_sharing">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="docker">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>
     <div id="disqus_thread"></div>
