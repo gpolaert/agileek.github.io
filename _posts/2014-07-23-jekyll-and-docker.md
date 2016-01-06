@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Jekyll quickstart with docker"
-date:   2014-07-23 15:22:45
-lastmod: 2015-11-08 11:31:45
+date:   2014-07-23
+lastmod: 2015-11-08
 categories: docker jekyll
 ---
 ![Jekyll][jekyllImage]{: .float_image }

@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Playing with docker and cpuset"
-date:   2014-08-06 23:26:31
+date: 2014-08-06
+lastmod: 2016-01-06
+tags: docker
 categories: docker
 ---
 
@@ -10,16 +12,16 @@ For my client I need to benchmark a multi-threaded/multi-server solution.
 Unfortunately, we only have a big server (128 GB, 32 cores,...) and we are putting all our instances on this single server.
 As each instance is multi-threaded, we noticed that they often get in each others way, resulting in bad performances (context swapping, ...).
 
-We solved this problem with 2 solutions.
+We solved this problem in 2 ways.
 
-We used thread affinity in the application in order to bind some thread to a given CPU, and we used [docker][docker] to authorize a given application to access only some CPUs (via cpuset).
+On one hand we used thread affinity in the application in order to bind some thread to a given CPU, and on the other hand we used [docker][docker] to authorize a given application to access only some CPUs (via cpuset).
 
-In order to be sure that docker was correctly restricting the access to the CPUs, I created a [docker image][docker-image]:
+To be sure that docker was correctly restricting the access to the CPUs, I created a [docker image][docker-image]:
 
 If you run it with
 
 {% highlight bash %}
-$ docker run -ti --cpuset=6 agileek/cpuset-test
+$ docker run -ti --cpuset-cpus=6 agileek/cpuset-test
 {% endhighlight %}
 
 it will take one cpu (the 7th) at 100%.
@@ -32,7 +34,7 @@ You can see it in action:
 
 If you run it with
 {% highlight bash %}
-$ docker run -ti --cpuset=0,4,6 agileek/cpuset-test /cpus 3
+$ docker run -ti --cpuset-cpus=0,4,6 agileek/cpuset-test
 {% endhighlight %}
 
 it will take all available CPUs (the 1st, 5th and 7th)
@@ -43,5 +45,12 @@ You can see it in action:
   <iframe src="https://www.youtube.com/embed/ITcyeL8V35I" frameborder="0" width="800" height="600" allowfullscreen></iframe>
 </div>
 
+### Edit 2016-01-06
+* Replace `cpuset` with `cpuset-cpus`
+* [Smallest docker image][docker-cpuset] possible (1.5MB with 2 layers). The old one was ~10 layers and 180MB
+* Use [cpuburn][cpuburn]
+
 [docker]:    https://www.docker.com/
 [docker-image]: https://registry.hub.docker.com/u/agileek/cpuset-test/
+[cpuburn]: https://patrickmn.com/projects/cpuburn/
+[docker-cpuset]: https://github.com/agileek/docker/tree/master/cpuset-test
