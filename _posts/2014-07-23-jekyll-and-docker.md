@@ -4,6 +4,7 @@ title:  "Jekyll quickstart with docker"
 date:   2014-07-23
 lastmod: 2015-11-08
 categories: docker jekyll
+redirect_from: "/jekyll/docker/2014/07/23/jekyll-and-docker/"
 ---
 ![Jekyll][jekyllImage]{: .float_image }
 
