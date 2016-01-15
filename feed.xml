@@ -5,9 +5,9 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>https://agileek.github.io/</link>
         <atom:link href="https://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Thu, 07 Jan 2016 08:42:15 +0000</pubDate>
-        <lastBuildDate>Thu, 07 Jan 2016 08:42:15 +0000</lastBuildDate>
-        <generator>Jekyll v2.4.0</generator>
+        <pubDate>Fri, 15 Jan 2016 10:40:45 +0000</pubDate>
+        <lastBuildDate>Fri, 15 Jan 2016 10:40:45 +0000</lastBuildDate>
+        <generator>Jekyll v2.5.3</generator>
         
         <item>
             <title>Http is dead</title>
