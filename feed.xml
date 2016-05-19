@@ -5,9 +5,149 @@
         <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
         <link>https://agileek.github.io/</link>
         <atom:link href="https://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Thu, 19 May 2016 18:00:48 +0000</pubDate>
-        <lastBuildDate>Thu, 19 May 2016 18:00:48 +0000</lastBuildDate>
+        <pubDate>Thu, 19 May 2016 18:01:29 +0000</pubDate>
+        <lastBuildDate>Thu, 19 May 2016 18:01:29 +0000</lastBuildDate>
         <generator>Jekyll v2.5.3</generator>
+        
+        <item>
+            <title>Devoxx 2016: Huntly or nothing!</title>
+            <description>&lt;blockquote&gt;
+  &lt;p&gt;La version originale de ce post en Français peut être trouvée ici : &lt;a href=&quot;https://code-troopers.com/2016/05/2016-05-devoxx-2016-huntly.html&quot;&gt;https://code-troopers.com/2016/05/2016-05-devoxx-2016-huntly.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This year at Devoxx France, I was the only Code-Troopers&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; available but it didn’t matter because I found Michaël&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, former “tourangeau” colleague currently living in Toulouse.
+We are going to talk to you about how fun these 3 days were.&lt;/p&gt;
+
+&lt;p&gt;For the 2016 DevoxxFR edition, something came up that should have come sooner: we are talking about official mobile applications.
+Nothing astonishing here you could say, and I agree because for the previous editions we had some good fellows, working on their free time I guess, which provided some alternatives allowing us to have a digital schedule in our pocket.&lt;br /&gt;
+Instead of “just” publishing an application allowing to see and manage your sessions (that’s &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.devoxx&quot;&gt;My devoxx&lt;/a&gt;), they also published on the stores the &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.devoxx.huntly&quot;&gt;Devoxx Huntly&lt;/a&gt; application, which tag line is “Win tickets for devoxx events”.&lt;/p&gt;
+
+&lt;p&gt;Our first thought was: playing to win devoxx tickets, it deserves more attention.&lt;/p&gt;
+
+&lt;p&gt;In the following we are only going to talk about the Android application, since we don’t have Iphones.&lt;/p&gt;
+
+&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1.png&quot; data-lightbox=&quot;2&quot; title=&quot;Devoxx Huntly screenshot&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1_min.png&quot; alt=&quot;Devoxx Huntly screenshot&quot; /&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2.png&quot; data-lightbox=&quot;2&quot; title=&quot;Devoxx Huntly screenshot - Quests list&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2_min.png&quot; alt=&quot;Devoxx Huntly screenshot - Quests list&quot; /&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3.png&quot; data-lightbox=&quot;2&quot; title=&quot;Devoxx Huntly screenshot - Quest done&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3_min.png&quot; alt=&quot;Devoxx Huntly screenshot - Quest done&quot; /&gt;
+&lt;/a&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works-and-whats-its-purpose&quot;&gt;How it works and what’s its purpose?&lt;/h2&gt;
+
+&lt;p&gt;The goal is pretty simple, you have to get the most points as possible. How it works? By scanning QR codes like the ones below through the application. Child’s play.&lt;/p&gt;
+
+&lt;p&gt;On a good note, the QR codes where on each and every exhibitors’ booth. It’s a fun way to walk through all of them.
+And of course we did it.
+In most cases, the simple action of scanning the QR code was a good way to engage the conversation with the people on the booths.&lt;/p&gt;
+
+&lt;p&gt;Sometimes (Mostly the first day), we had to explain to the exhibitor what was this QR code (sometimes we even had to find it since it was well hidden) and what was it’s purpose. (We thought it was unfortunate that the exhibitors were not more involved in huntly).
+We won’t lie to you, we didn’t spoke to every exhibitor, some seemed less appealing and we kind of dodged them.
+But truth be told, this year is the year I spoke with the most exhibitors, and it was thanks to huntly.&lt;/p&gt;
+
+&lt;p&gt;Since it was the first release, of course there was some minor fixes/tweaks that needed to be made, and scalac team was really reactiv: there was at least 2 updates during the 3 days which fixed a twitter integration and a contact scan bug. (I am of course talking about the Android application, because, well, on IOS… :P)&lt;/p&gt;
+
+&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1.png&quot; data-lightbox=&quot;0&quot; title=&quot;Aldebaran&#39;s booth QRCode&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1_min.png&quot; alt=&quot;Aldebaran&#39;s booth QRCode&quot; /&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2.png&quot; data-lightbox=&quot;0&quot; title=&quot;SII&#39;s booth QR code&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2_min.png&quot; alt=&quot;SII&#39;s booth QR code&quot; /&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3.png&quot; data-lightbox=&quot;0&quot; title=&quot;Stackoverflow&#39;s booth QR code&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3_min.png&quot; alt=&quot;Stackoverflow&#39;s booth QR code&quot; /&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4.png&quot; data-lightbox=&quot;0&quot; title=&quot;Amazon&#39;s booth QR code&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4_min.png&quot; alt=&quot;Amazon&#39;s booth QR code&quot; /&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly.png&quot; data-lightbox=&quot;0&quot; title=&quot;Devoxx Huntly&#39;s booth&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly_min.png&quot; alt=&quot;Devoxx Huntly&#39;s booth&quot; /&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte.png&quot; data-lightbox=&quot;0&quot; title=&quot;QR code on a room&#39;s door&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte_min.png&quot; alt=&quot;QR code on a room&#39;s door&quot; /&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-we-liked&quot;&gt;What we liked&lt;/h2&gt;
+
+&lt;p&gt;When you are at a developers’ conference, you can be sure there will be some people trying to push the application to it’s limits (We could call them cheaters, we prefer hackers or, even better, security auditors).
+We saw really quickly that one person was really ahead of the others (Yes Frédéric Camblor, we are talking about you :))
+He was a real fair player, he turned himself in (You can see Stefan punching him as a reward), and he explained that he used an ssl vulnerability, because the client/server communication was not using tls.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png&quot; alt=&quot;devoxx2016_huntly_stephan_pushing_fcamblor&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-didnt-work&quot;&gt;What didn’t work&lt;/h2&gt;
+
+&lt;p&gt;Some quests were check-ins, all you had to do was go in every room and some beacons where supposed to automatically detect and update the quest.
+Unfortunately, I never got one signal, even with the bluetooth always on.
+If someone had better luck, I’d like to know how it worked (The only beacon detected was the one I had in my bag, he was detected by Michaël after one hour of close pair programming during a workshop).
+Fortunately there was a backup plan, you could always scan the QR codes.&lt;/p&gt;
+
+&lt;h2 id=&quot;evolutions&quot;&gt;Evolutions&lt;/h2&gt;
+
+&lt;p&gt;Even if we went through all the different booths, the one we spent most of our time on was the huntly one. We talked about what could be improved for the next devoxx events, mostly on how to win even more points!&lt;/p&gt;
+
+&lt;p&gt;Here are few improvements we will be happy to see next year:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A better lost points management: when scanning QR code sometimes you had to answer some questions, and it was not clear at all that each wrong answer divided by 2 the points that you could win on this quest. It’s a great idea, but it has to be visually improved, because we understood that only once the huntly developers explained to us.&lt;/li&gt;
+  &lt;li&gt;The first quest when you launch the application is to enter a sponsorship code. The problem is when you are among the firsts to use it, you can’t complete this quest, it’s not rewarding for the early birds.&lt;/li&gt;
+  &lt;li&gt;For every quests you could win a lot more points by tweeting about it. Problem is, with more than 50 quests, it looked a lot like massive spam (the devoxx tweetwall was full of them&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
+  &lt;li&gt;In my opinion the better thing to improve will be to allow to link the application to the different games that were on the booths. Having a global ladder of all the different booths could be really entertaining.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The winners were announced during the &lt;a href=&quot;https://youtu.be/h2hA3TSTdpw?t=4m13s&quot;&gt;cast codeurs episode&lt;/a&gt; and we couldn’t be there this year. Michaël won a free ticket for DevoxxFR 2017. I’ll do better next time!&lt;/p&gt;
+
+&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final.png&quot; data-lightbox=&quot;1&quot; title=&quot;final ladder&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final_min.png&quot; alt=&quot;final ladder&quot; /&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The MyDevoxx source code is on &lt;a href=&quot;https://github.com/devoxx/AndroidMobileApp&quot;&gt;github&lt;/a&gt;, not the huntly one (yet).&lt;/p&gt;
+
+&lt;p&gt;A good news is, since these applications are going to be used in every Devoxx event, we can be sure that they will quickly evolve and we will have to face some new challenges next year for Devoxx France 2017&lt;/p&gt;
+
+&lt;p&gt;See you next year!&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;They are a team of passionate developers &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;That’s me! Refering to myself &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;The tweetwall was really useless, the images werent displayed!!! What a shame. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+            <pubDate>Thu, 19 May 2016 00:00:00 +0000</pubDate>
+            <link>https://agileek.github.io/java/2016/05/19/devoxx_2016_huntly/</link>
+            <guid isPermaLink="true">https://agileek.github.io/java/2016/05/19/devoxx_2016_huntly/</guid>
+            
+            <category>devoxx</category>
+            
+            <category>gamification</category>
+            
+            
+            <category>java</category>
+            
+        </item>
         
         <item>
             <title>Http is dead</title>
@@ -954,190 +1094,6 @@ Ils voulaient embarquer le raspberry pi directement sur le parrot, mais le poids
             <pubDate>Fri, 10 Apr 2015 00:00:00 +0000</pubDate>
             <link>https://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</link>
             <guid isPermaLink="true">https://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</guid>
-            
-            
-            <category>java</category>
-            
-        </item>
-        
-        <item>
-            <title>Devoxx France : jour 2</title>
-            <description>&lt;p&gt;&lt;img src=&quot;/images/posts/devoxx/devoxx_france.png&quot; alt=&quot;Devoxx&quot; class=&quot;float_image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;keynotes&quot;&gt;Keynotes&lt;/h2&gt;
-
-&lt;p&gt;Cette première session de keynotes va nous parler du futur de l’informatique.&lt;/p&gt;
-
-&lt;h3 id=&quot;aldebaran&quot;&gt;Aldebaran&lt;/h3&gt;
-
-&lt;p&gt;Le premier speaker nous parle de ce que sera la robotique dans le futur, au travers de sa société.&lt;/p&gt;
-
-&lt;p&gt;Les premières applications seront probablement l’assistance aux personnes agées, ce qui ne sera pas disponible avant 5 ans, à cause des problématiques de reconnaissance vocale à distance.&lt;/p&gt;
-
-&lt;p&gt;Pour lui, dans 20 ans les robots seront devenus des compagnons présents dans nos logements, nous assistant dans nos taches quotidiennes. Il seront en quelque sorte au coeur de la domotique.&lt;/p&gt;
-
-&lt;p&gt;Petit point bluffant avec ces petits robots : ils sont capables de détecter les émotions (colère, tristesse) au travers des dialogues.&lt;/p&gt;
-
-&lt;h4 id=&quot;quelle-responsabilit-pour-le-dveloppeur&quot;&gt;Quelle responsabilité pour le développeur&lt;/h4&gt;
-
-&lt;p&gt;Le robot est un outil, il peut être bien ou mal utilisé.&lt;/p&gt;
-
-&lt;p&gt;Le robot est une plateforme programmable par n’importe qui, intégrer les  lois de la robotique d’Asimov s’avère compliqué, et au final pas très efficace (Si on lit ses livres, on se rend compte qu’elles ne fonctionnent pas).&lt;/p&gt;
-
-&lt;p&gt;Il existe un problème lié à la responsabilité du robot. Qui est responsable en cas d’accident? Le robot ? La société qui a crée le robot ? Le développeur ?&lt;/p&gt;
-
-&lt;h3 id=&quot;la-problmatique-du-contrle-des-technologies-de-linformation&quot;&gt;La problématique du contrôle des technologies de l’information&lt;/h3&gt;
-
-&lt;p&gt;Excellente proposition : après Devoxx4Kids, faire un Devoxx4HommesPolitiques.&lt;/p&gt;
-
-&lt;p&gt;La problématique actuelle est la démocratisation des outils informatiques. Les premiers acteurs de l’informatique étaient des techos qui avaient un idéal, maintenant ce sont des gens qui ne maitrisent pas la technique et sont intéressés par le pouvoir.&lt;/p&gt;
-
-&lt;p&gt;Cinq phases de contrôle :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Préhistoire&lt;/li&gt;
-  &lt;li&gt;Phase de mutation&lt;/li&gt;
-  &lt;li&gt;Phase de globalisation&lt;/li&gt;
-  &lt;li&gt;Phase légale&lt;/li&gt;
-  &lt;li&gt;Phase d’assimilation culturelle&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Qu’on me donne six lignes écrites de la main du plus honnête homme, j’y trouverai de quoi le faire pendre (Richelieu)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Le problème qui se pose derrière la surveillance globalisée qui se met en place, c’est que le citoyen n’est plus “présumé innocent”, mais “présumé coupable”, ce qui change les fondements de notre société.&lt;/p&gt;
-
-&lt;p&gt;Le scénario de l’espoir :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Le respect de la vie privée redevient une priorité
-    &lt;ul&gt;
-      &lt;li&gt;Inscription dans la constitution&lt;/li&gt;
-      &lt;li&gt;Renforcement du rôle du juge d’instruction&lt;/li&gt;
-      &lt;li&gt;Création d’un comité d’éthique&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Nous redevenos des citoyens&lt;/li&gt;
-  &lt;li&gt;Développement du marché de la confiance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;En conclusion :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;L’espionnage des citoyens par leur propre état trahit la faiblesse et la peur de ces états&lt;/li&gt;
-  &lt;li&gt;Le rôle fondamental des concepteurs et des developpeurs
-    &lt;ul&gt;
-      &lt;li&gt;Ce sont les gardiens de la technologie&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;La liberté sans libre arbitre n’existe pas et le libre arbitre sans le respect de notre vie privée n’existe pas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reading-and-writing-in-20-years&quot;&gt;Reading and writing in 20 years&lt;/h2&gt;
-
-&lt;p&gt;Aujourd’hui, tout ce que nous écrivons a une durée de vie qui nous dépasse (on peut retrouver ses premiers email facilement), c’était quelque chose qui n’était pas possible avant, pas à cette échelle. Que se passera-t-il dans 20 ans ?&lt;/p&gt;
-
-&lt;p&gt;Il nous parle beaucoup de la capacité qu’on a maintenant à écrire, à partager&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; de plus en plus facilement. Mais il nous parle également des freins que l’on peut rencontrer.&lt;/p&gt;
-
-&lt;p&gt;Quelles sont les contraintes actuelles qui nous empêchent de publier ? Il prend pour exemple le PDF, en tant que technologie du passé qui s’accroche encore au support papier et qui nous impose des contraintes (Je possède un kindle, c’est tout simplement impossible de lire un PDF, ce n’est pas du tout adapté)&lt;/p&gt;
-
-&lt;h2 id=&quot;quickies&quot;&gt;Quickies&lt;/h2&gt;
-&lt;p&gt;Haa, les quickies, ou le gros dilemme du : je mange ou j’assiste à une conf ?&lt;/p&gt;
-
-&lt;h3 id=&quot;avro--la-souplesse-du-json-les-performances-du-binaire&quot;&gt;Avro : la souplesse du Json, les performances du binaire&lt;/h3&gt;
-
-&lt;p&gt;Outil de sérialisation, c’est à la base un sous projet d’hadoop.&lt;/p&gt;
-
-&lt;p&gt;Il est utilisé dans hadoop pour stoquer des gros volumes de données dans des fichiers.&lt;/p&gt;
-
-&lt;p&gt;L’idée derrière ce lightning talk c’est de montrer qu’il est possible d’utiliser Avro pour autre chose que du bigData. Tout transfert de données un peu important (Rest, …) peut être amélioré avec Avro. Il permet d’encoder nos données dans un format spécifique. IL permet en plus d’ajouter simplement des compresseurs afin d’optimiser les transferts.&lt;/p&gt;
-
-&lt;p&gt;La killer feature : il est possible de spécifier un schéma d’écriture et un schéma de lecture, ce qui permet de pouvoir extraire que les données que l’on souhaite utiliser et ainsi gagner du temps et de la place. (Il y a une méthode qui permet de vérifier la compatibilité entre le writer et le reader)&lt;/p&gt;
-
-&lt;p&gt;Les &lt;a href=&quot;https://github.com/alexvictoor/AvroDevoxxFr&quot;&gt;sources&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;changing-wheels-of-a-moving-car&quot;&gt;Changing wheels of a moving car&lt;/h2&gt;
-
-&lt;p&gt;Présenté par Nicolas De Loof. Cet homme est fou :)&lt;/p&gt;
-
-&lt;p&gt;Je préfère ne pas vous spoiler cette session, il faut la voir&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Il nous parle de son retour d’expérience sur cloudbees, notamment ses déboires/surprises avec le cloud amazon.&lt;/p&gt;
-
-&lt;h2 id=&quot;modular-java-platform&quot;&gt;Modular Java Platform&lt;/h2&gt;
-
-&lt;h3 id=&quot;constat&quot;&gt;Constat&lt;/h3&gt;
-
-&lt;p&gt;Java connait un certain nombre de problèmes, notamment :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Taille
-    &lt;ul&gt;
-      &lt;li&gt;Java a continuellement grossi avec le temps (55 MB). Ce n’était pas forcément un problème vu le prix du stockage, c’est en train de le devenir avec l’émergence de l’IoT.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Démarrage
-    &lt;ul&gt;
-      &lt;li&gt;Java est lent à démarrer (la compilation dynamique, JIT, …) sans parler du classloader.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sécurité
-    &lt;ul&gt;
-      &lt;li&gt;Le security manager est trop limité, de plus personne ne s’en sert (2 mains levées dans l’assistance)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Utilisation d’api internes
-    &lt;ul&gt;
-      &lt;li&gt;Rien n’empêche d’utiliser ces api.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Jar hell
-    &lt;ul&gt;
-      &lt;li&gt;On connait tous les problème de versions multiples dans le classpath&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;jigsaw&quot;&gt;Jigsaw&lt;/h3&gt;
-
-&lt;p&gt;En rendant Java modulaire, les problèmes cités ci-dessus devraient disparaitre (ou être plus simples à addresser).&lt;/p&gt;
-
-&lt;p&gt;Pour le moment, ils ont identifié une cinquantaine de modules dans le JDK. Il y’a 4 JEP (200, 201, 220…)&lt;/p&gt;
-
-&lt;p&gt;JShell : java va enfin avoir son REPL !&lt;/p&gt;
-
-&lt;h4 id=&quot;jep-201-modular-source-code&quot;&gt;JEP 201: Modular Source Code&lt;/h4&gt;
-
-&lt;p&gt;Toutes les sources ont du être déplacées pour les pre-fixer par leur module.&lt;/p&gt;
-
-&lt;h4 id=&quot;jep-220-modular-run-time-images&quot;&gt;JEP 220: Modular Run-Time images&lt;/h4&gt;
-
-&lt;p&gt;Pour récupérer une SystemResource (ClassLoader.getSystemResource()), java ne retournera plus un path du filesystem mais plutôt un pointeur vers la resource. Ça risque de faire mal à migrer.&lt;/p&gt;
-
-&lt;h4 id=&quot;ce-qui-change-pour-nous&quot;&gt;Ce qui change pour nous&lt;/h4&gt;
-
-&lt;p&gt;Un nouveau format de fichier apparait : jmod.
-Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne peut y être ajouté (c’est faux, Osgi par exemple se sert du MANIFEST.mf, mais ça reste une convention). Le .jmod permet de déclarer les dépendances aux différents modules java, afin d’avoir un arbre de dépendance très fin.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sun.*&lt;/code&gt; et &lt;code&gt;*.internal.*&lt;/code&gt; ne seront plus accessibles (un support temporaire est prévu pour aider aux migrations).&lt;/p&gt;
-
-&lt;p&gt;jdeps : permet de savoir quels sont les apis de base dont notre code dépent (accessible depuis java 8).&lt;/p&gt;
-
-&lt;p&gt;rt.jar et tools.jar ont disparu.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Ce blog en est la preuve &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Dès que le lien est sur Parleys, je linkerai la vidéo ici &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-            <pubDate>Thu, 09 Apr 2015 00:00:00 +0000</pubDate>
-            <link>https://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</link>
-            <guid isPermaLink="true">https://agileek.github.io/java/2015/04/09/devoxx-france-second-day/</guid>
             
             
             <category>java</category>
