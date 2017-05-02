@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "Nous, qui voulions voter"
+date:   2017-05-03
+categories: france
+tags: [france,politique]
+---
+
+# Le parcours du combattant
+
+## Préambule
+Cet article est un billet d'humeur sur l'état pitoyable de nos instances.
+Article en Français car il traite d'un sujet exclusivement Français : la France.
+Plus particulièrement les élections.
+
+## Flashback
+
+### Partie 1 : La demande
+Nous sommes devenus propriétaires de notre résidence principale en septembre 2015. En bons petits citoyens que nous sommes, nous avons tout de suite entamé les démarches pour changer d'addresse. Premier constat, il existe un site pour "simplifier" les démarches administratives. Il est de toutes beautés, on s'aperçoit immédiatement qu'aucun organisme ne demaine les mêmes informations.
+
+Au milieu de toutes les instances auquel il faut annoncer le changement d'addresse, se trouve l'inscription sur les listes éléctorales.
+
+C'est là que la partie sympa a commencé.
+
+Demande effectuée, on utilise comme justificatif de domicile l'acte notarié d'acquisition de la résidence principale ( daté de moins de 3 mois ).
+
+Et là c'est le drame, on reçoit un courrier (2 courriers, un chacun, à une semaine d'intervalle...) nous disant que notre ***justificatif de domicile*** n'est pas valide.
+
+### Partie 2 : L'appel de la mairie
+
+### Partie 3 : Le passage du type que personne ne connait
+
+### Prologue
+
+Le spam de courriers nous informant que la procédure n'était pas complète.
+
+
+## Le vote dans l'ancien bureau de vote
+
+Pas grand chose à dire, nous avons craint à un moment que l'on nous ai radié de notre ancien bureau de vote, mais au final ils ont été capable de nous retrouver, non sans mal vu que nos cartes d'électeurs n'étaient pas à jour (What? Elles ne sont pas à jour, mais où sont celles à jour?).
+
+## La procuration
+
+N'étant pas en France pour le second tour, nous avons entamé les démarches pour donner la procuration à mes parents.
+En bon citoyen n'aimant pas perdre de temps, nous l'avons remplis en ligne.
+
+Premier conseil, les PDF où l'on doit remplir des champs, il faut arrêter PUTAIN. C'est ignoble, c'est pas portable pas transférable, ça fonctionne pas sur mobile.
+
+Bref, on saisit tout, on imprime et on y va.
+
+Arrivés là bas, un monde de malade, pas de file d'attente spéciale pour ceux qui ont rempli en ligne (vous savez, comme à macdo là) on attend comme des quiches au même titre que les jambons qui veulent tout saisir à la main.
+
+Arrive notre tour, une personne lit bien tous les documents, vérifie nos identités tout ça, et là, nous dit : "Ha mais la date du premier tour c'est pas la bonne que vous avez rentré, faut tout refaire". PUTAIN, franchement y'en a beaucoup des éléctions présidentielles en 2017 SA MAMAN.
+
+Donc on se tape de tout re-saisir sur papier (tout ça avec un gamin qui commence tranquilou à en avoir marre), on refait la PUTAIN de queue pour pouvoir donner notre dossier, tout ça. Arrive le moment où on donne tout, une autre personne lit, valide le dossier, et nous découpe un récépissé MAIS ne nous le donne pas. En fait, il faut refaire la queue à côté pour pouvoir re-saisir TOUUUUUUUUTES les PUTAINS d'informations que l'on s'est tapées avant afin d'émarger un PUTAIN de cahier pour récupérer notre récépissé.
+Pendant que ma femme remplit cette merde, un gars débarque, lit en travers notre dossier et dis : "Mais l'addresse des mandatés là, c'est pas dans votre commune, vous pouvez pas leur faire de procuration". FIN
+
+## Remerciements
+
+Nous tenons à remércier la mairie de Toulouse, sans qui nous n'en serions pas là.
+Nous remercions tout particulièrement le commissariat de Jolimont, belle perf, c'était magique, changez rien.
+Et surtout, petit bijou, merci à la personne qui a sonné chez nous pour vérifier notre identité, ce qui n'a servi à RIEN (Comment ça, nos impôts sont gaspillés)
+
+NOTE : Pendant ce temps là, 500_000 personnes ont reçu 2 cartes d'électeur
+
+PS : Prochain post d'humeur, le sujet sera probablement l'URSSAF, qui ne répond pas à mes mails et qui a radié mon entreprise mais arrive quand même à me prélever.
+
+
+[razberry]: http://razberry.z-wave.me/
+[previous_article]: /
