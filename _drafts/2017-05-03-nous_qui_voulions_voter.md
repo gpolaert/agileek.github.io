@@ -16,9 +16,9 @@ Plus particulièrement les élections.
 ## Flashback
 
 ### Partie 1 : La demande
-Nous sommes devenus propriétaires de notre résidence principale en septembre 2015. En bons petits citoyens que nous sommes, nous avons tout de suite entamé les démarches pour changer d'addresse. Premier constat, il existe un site pour "simplifier" les démarches administratives. Il est de toutes beautés, on s'aperçoit immédiatement qu'aucun organisme ne demaine les mêmes informations.
+Nous sommes devenus propriétaires de notre résidence principale en septembre 2015. En bons petits citoyens que nous sommes, nous avons tout de suite entamé les démarches pour changer d'addresse. Premier constat, il existe un site pour "simplifier" les démarches administratives. Il est de toutes beautés, on s'aperçoit immédiatement qu'aucun organisme ne demande les mêmes informations.
 
-Au milieu de toutes les instances auquel il faut annoncer le changement d'addresse, se trouve l'inscription sur les listes éléctorales.
+Au milieu de toutes les instances auxquelles il faut annoncer le changement d'addresse, se trouve l'inscription sur les listes éléctorales.
 
 C'est là que la partie sympa a commencé.
 
@@ -42,18 +42,18 @@ Pas grand chose à dire, nous avons craint à un moment que l'on nous ai radié 
 ## La procuration
 
 N'étant pas en France pour le second tour, nous avons entamé les démarches pour donner la procuration à mes parents.
-En bon citoyen n'aimant pas perdre de temps, nous l'avons remplis en ligne.
+En bon citoyen n'aimant pas perdre de temps, nous avons rempli le formulaire en ligne.
 
-Premier conseil, les PDF où l'on doit remplir des champs, il faut arrêter PUTAIN. C'est ignoble, c'est pas portable pas transférable, ça fonctionne pas sur mobile.
+Premier conseil, les PDF où l'on doit remplir des champs, il faut arrêter PUTAIN. C'est ignoble, c'est pas portable pas transférable, ça fonctionne pas sur mobile...sachant qu'en plus il était précisé que nous ne devions pas l'imprimer pour le remplir manuellement (mais pourquoi??sachant que de toute façon on doit l'imprimer après pour le leur donner)
 
 Bref, on saisit tout, on imprime et on y va.
 
-Arrivés là bas, un monde de malade, pas de file d'attente spéciale pour ceux qui ont rempli en ligne (vous savez, comme à macdo là) on attend comme des quiches au même titre que les jambons qui veulent tout saisir à la main.
+Arrivés là bas, un monde de malade, pas de file d'attente spéciale pour ceux qui ont rempli en ligne (vous savez, comme à macdo là) on attend comme des quiches au même titre que les jambons qui veulent tout saisir sur place.
 
-Arrive notre tour, une personne lit bien tous les documents, vérifie nos identités tout ça, et là, nous dit : "Ha mais la date du premier tour c'est pas la bonne que vous avez rentré, faut tout refaire". PUTAIN, franchement y'en a beaucoup des éléctions présidentielles en 2017 SA MAMAN.
+Arrive notre tour, une personne lit bien tous les documents, vérifie nos identités tout ça, et là, nous dit : "Ha mais la date du premier tour c'est pas la bonne que vous avez rentrée, faut tout refaire". PUTAIN, franchement y'en a beaucoup des éléctions présidentielles en 2017.
 
-Donc on se tape de tout re-saisir sur papier (tout ça avec un gamin qui commence tranquilou à en avoir marre), on refait la PUTAIN de queue pour pouvoir donner notre dossier, tout ça. Arrive le moment où on donne tout, une autre personne lit, valide le dossier, et nous découpe un récépissé MAIS ne nous le donne pas. En fait, il faut refaire la queue à côté pour pouvoir re-saisir TOUUUUUUUUTES les PUTAINS d'informations que l'on s'est tapées avant afin d'émarger un PUTAIN de cahier pour récupérer notre récépissé.
-Pendant que ma femme remplit cette merde, un gars débarque, lit en travers notre dossier et dis : "Mais l'addresse des mandatés là, c'est pas dans votre commune, vous pouvez pas leur faire de procuration". FIN
+Donc on se tape de tout re-saisir sur papier (tout ça avec notre fils qui commence tranquilou à en avoir marre), on refait la PUTAIN de queue pour pouvoir donner notre dossier, tout ça. Arrive le moment où on donne tout, une autre personne lit, valide le dossier, et nous découpe un récépissé MAIS ne nous le donne pas. En fait, il faut refaire la queue à côté pour pouvoir re-saisir TOUUUUUUUUTES les PUTAINS d'informations que l'on s'est tapées avant afin d'émarger un PUTAIN de cahier pour récupérer notre récépissé.
+Pendant que ma femme remplit cette merde, un gars débarque, lit en travers notre dossier et dit : "Mais l'addresse des mandatés là, c'est pas dans votre commune, vous pouvez pas leur faire de procuration". FIN
 
 ## Remerciements
 
