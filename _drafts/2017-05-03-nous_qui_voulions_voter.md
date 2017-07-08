@@ -28,7 +28,21 @@ Et là c'est le drame, on reçoit un courrier (2 courriers, un chacun, à une se
 
 ### Partie 2 : L'appel de la mairie
 
+Suite à ces courrier, on a même droit chacun a un appel de la mairie, nous confirmant que ce type de justificatif n'est pas valable, alors qu'une facture de téléphone portable l'est.
+
+Oui oui on est d'accord, un acte notarié qui coûte plusieurs K€ n'a pas de valeur aux yeux de l'administration, alors qu'une facture de téléphone portable sur laquelle tu peux mettre n'importe quelle adresse, ça passe. Tout va bien, on respire par le nez, et on explique à la personne au téléphone que c'est à eux de faire changer les choses pour que ce type de documents soit accepté.
+
 ### Partie 3 : Le passage du type que personne ne connait
+
+On avait complètement laché l'affaire, on s'était dit qu'on irait voté à notre ancien bureau de vote, situé pas très loin de notre nouveau logement.
+
+Et là, quelle ne fut pas notre surprise, de voir un jour sonner quelqu'un. Cette personne se présente comme faisant partie de l'administration, et demande si ma femme et moi vivons bion ici. Nous leur répondons par l'affirmative, et la personne s'en va.
+
+
+Là, si vous êtes comme nous, vous vous dites : C'est gagné, on va avoir notre nouvelle carte éléctorale avec le bureau de vote proche de chez nous. Non ? Perdu!
+
+Une semaine plus tard, on a reçu un courrier nous indiquant que finalement, notre demande était rejetée. WHAAAAAAAAT
+
 
 ### Prologue
 
