@@ -6,7 +6,6 @@ date:   2017-07-18
 tags: [aws, ecr, docker, systemd]
 ---
 
-
 ## First try without systemd
 
 At EasyMile, we use AWS ECR to manage the docker images.
@@ -48,10 +47,9 @@ ExecStart=/usr/bin/bash -c '$$(/usr/bin/aws ecr get-login --no-include-email)'
 WantedBy=default.target
 {% endhighlight %}
 
-Dont forget to ```systemctl daemon-reload``` and ```systemctl enable docker_ecr_login```
+Dont forget to `systemctl daemon-reload` and `systemctl enable docker_ecr_login`
 
-Now we only use one cron, every 11 hours it launched ```systemctl start docker_ecr_login```
-
+Now we only use one cron, every 11 hours it launches `systemctl start docker_ecr_login`
 
 ### Investigate
 
@@ -71,4 +69,4 @@ The error status 217/USER means that the user 'builder' doesn't exist on this sy
 
 ### ToDo
 
-We are looking into systemd timers with something like ```OnUnitActiveSec=``` we should be able to completely get rid of cron and go full systemd.
+We are looking into systemd timers with something like `OnUnitActiveSec=` we should be able to completely get rid of cron and go full systemd.

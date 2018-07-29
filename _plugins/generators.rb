@@ -2,7 +2,7 @@ module Jekyll
   class ArchivesGenerator < Generator
     def generate(site)
       years = {}
-      site.posts.each do |post|
+      site.posts.docs.each do |post|
         if years.has_key?(post.date.year)
           years[post.date.year] << {"url"=>post.url, "title"=>post.title}
         else
