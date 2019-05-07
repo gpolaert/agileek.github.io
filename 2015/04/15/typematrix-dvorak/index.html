@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -218,10 +220,10 @@
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>certains codent en français, avec les accents dans les noms de méthode et tout, mais voir <strong><em>public void</em></strong> maméthode() ça me pique les yeux. [troll] Les mots clefs sont en anglais, codons en anglais [/troll]. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>certains codent en français, avec les accents dans les noms de méthode et tout, mais voir <strong><em>public void</em></strong> maméthode() ça me pique les yeux. [troll] Les mots clefs sont en anglais, codons en anglais [/troll]. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>argument objectif <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>argument objectif <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -230,12 +232,23 @@
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

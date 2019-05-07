@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -160,35 +162,35 @@
 
 <h4 id="junit">Junit</h4>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertTrue</span><span class="o">(</span><span class="n">myBooleanValue</span><span class="o">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertTrue</span><span class="o">(</span><span class="n">myBooleanValue</span><span class="o">);</span></code></pre></figure>
 
 <h4 id="assertj">AssertJ</h4>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertThat</span><span class="o">(</span><span class="n">myBooleanValue</span><span class="o">).</span><span class="na">isTrue</span><span class="o">();</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertThat</span><span class="o">(</span><span class="n">myBooleanValue</span><span class="o">).</span><span class="na">isTrue</span><span class="o">();</span></code></pre></figure>
 
 <h3 id="list-checks">List checks</h3>
 <p>Supposons cette liste :</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ImmutableList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">elementList</span> <span class="o">=</span> <span class="n">ImmutableList</span><span class="o">.</span><span class="na">of</span><span class="o">(</span>
-						<span class="s">&quot;element1&quot;</span><span class="o">,</span> 
-						<span class="s">&quot;element2&quot;</span><span class="o">,</span> 
-						<span class="s">&quot;element3&quot;</span><span class="o">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ImmutableList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">elementList</span> <span class="o">=</span> <span class="n">ImmutableList</span><span class="o">.</span><span class="na">of</span><span class="o">(</span>
+						<span class="s">"element1"</span><span class="o">,</span> 
+						<span class="s">"element2"</span><span class="o">,</span> 
+						<span class="s">"element3"</span><span class="o">);</span></code></pre></figure>
 
 <p>Si je veux vérifier que les éléments sont bien présents</p>
 
 <h4 id="junit-1">Junit</h4>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertEquals</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">elementList</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
-<span class="n">assertEquals</span><span class="o">(</span><span class="s">&quot;element1&quot;</span><span class="o">,</span> <span class="n">elementList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
-<span class="n">assertEquals</span><span class="o">(</span><span class="s">&quot;element2&quot;</span><span class="o">,</span> <span class="n">elementList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
-<span class="n">assertEquals</span><span class="o">(</span><span class="s">&quot;element3&quot;</span><span class="o">,</span> <span class="n">elementList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">2</span><span class="o">));</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertEquals</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">elementList</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+<span class="n">assertEquals</span><span class="o">(</span><span class="s">"element1"</span><span class="o">,</span> <span class="n">elementList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+<span class="n">assertEquals</span><span class="o">(</span><span class="s">"element2"</span><span class="o">,</span> <span class="n">elementList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+<span class="n">assertEquals</span><span class="o">(</span><span class="s">"element3"</span><span class="o">,</span> <span class="n">elementList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">2</span><span class="o">));</span></code></pre></figure>
 
 <h4 id="assertj-1">AssertJ</h4>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertThat</span><span class="o">(</span><span class="n">elementList</span><span class="o">).</span><span class="na">hasSize</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
-<span class="n">assertThat</span><span class="o">(</span><span class="n">elementList</span><span class="o">).</span><span class="na">containsExactly</span><span class="o">(</span><span class="s">&quot;element1&quot;</span><span class="o">,</span> <span class="s">&quot;element2&quot;</span><span class="o">,</span> <span class="s">&quot;element3&quot;</span><span class="o">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertThat</span><span class="o">(</span><span class="n">elementList</span><span class="o">).</span><span class="na">hasSize</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+<span class="n">assertThat</span><span class="o">(</span><span class="n">elementList</span><span class="o">).</span><span class="na">containsExactly</span><span class="o">(</span><span class="s">"element1"</span><span class="o">,</span> <span class="s">"element2"</span><span class="o">,</span> <span class="s">"element3"</span><span class="o">);</span></code></pre></figure>
 
-<p>Et je ne vous montre que le <code>containsExactly</code>, il en existe plein d’autres (containsOnly, containsSubsequence, …).</p>
+<p>Et je ne vous montre que le <code class="highlighter-rouge">containsExactly</code>, il en existe plein d’autres (containsOnly, containsSubsequence, …).</p>
 
 <h2 id="dry--kiss">DRY &amp; KISS</h2>
 
@@ -196,7 +198,7 @@
 
 <p>Et quand on se retrouve avec des cas tordus<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, il y’a la possibilité de définir vos propres assertions (il y’a même un <a href="http://joel-costigliola.github.io/assertj/assertj-assertions-generator.html">générateur</a> pour ça).</p>
 
-<h2 id="et-java-8-dans-tout-a-">Et Java 8 dans tout ça ?</h2>
+<h2 id="et-java-8-dans-tout-ça-">Et Java 8 dans tout ça ?</h2>
 
 <p>La version 3.0.0 d’AssertJ fonctionne avec Java 8 et apporte son lot de sucre syntaxique.</p>
 
@@ -217,26 +219,26 @@
   <li>on utilise la Rule ExpectedException</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Rule</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Rule</span>
 <span class="kd">public</span> <span class="n">ExpectedException</span> <span class="n">expectedException</span> <span class="o">=</span> <span class="n">ExpectedException</span><span class="o">.</span><span class="na">none</span><span class="o">();</span>
 <span class="o">...</span>
 
 <span class="nd">@Test</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldThrowExceptionWhenNull</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
     <span class="n">expectedException</span><span class="o">.</span><span class="na">expect</span><span class="o">(</span><span class="n">NullPointerException</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-    <span class="n">expectedException</span><span class="o">.</span><span class="na">expectMessage</span><span class="o">(</span><span class="s">&quot;Enum is null&quot;</span><span class="o">);</span>
+    <span class="n">expectedException</span><span class="o">.</span><span class="na">expectMessage</span><span class="o">(</span><span class="s">"Enum is null"</span><span class="o">);</span>
     <span class="n">MyEnum</span><span class="o">.</span><span class="na">fromName</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
-<span class="o">}</span></code></pre></div>
+<span class="o">}</span></code></pre></figure>
 
 <h4 id="assertj-3">AssertJ 3</h4>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Test</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Test</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldThrowExceptionWhenNull</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
     <span class="n">Throwable</span> <span class="n">throwable</span> <span class="o">=</span> <span class="n">catchThrowable</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">MyEnum</span><span class="o">.</span><span class="na">fromName</span><span class="o">(</span><span class="kc">null</span><span class="o">));</span>
 
     <span class="n">assertThat</span><span class="o">(</span><span class="n">throwable</span><span class="o">).</span><span class="na">isInstanceOf</span><span class="o">(</span><span class="n">NullPointerException</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-                         <span class="o">.</span><span class="na">hasMessage</span><span class="o">(</span><span class="s">&quot;Enum is null&quot;</span><span class="o">);</span>
-<span class="o">}</span></code></pre></div>
+                         <span class="o">.</span><span class="na">hasMessage</span><span class="o">(</span><span class="s">"Enum is null"</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
 
 <p>Maintenant, on est capable de séparer le “When” du “Then”, chose qui n’était avant possible qu’en faisant un try-catch.</p>
 
@@ -244,21 +246,21 @@
 
 <h4 id="junit-3">Junit</h4>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Test</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Test</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldAssertOptional</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;optionalTest&quot;</span><span class="o">);</span>
+    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"optionalTest"</span><span class="o">);</span>
     <span class="n">assertTrue</span><span class="o">(</span><span class="n">optional</span><span class="o">.</span><span class="na">isPresent</span><span class="o">());</span>
-    <span class="n">assertEquals</span><span class="o">(</span><span class="s">&quot;optionalTest&quot;</span><span class="o">,</span> <span class="n">optional</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
-<span class="o">}</span></code></pre></div>
+    <span class="n">assertEquals</span><span class="o">(</span><span class="s">"optionalTest"</span><span class="o">,</span> <span class="n">optional</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+<span class="o">}</span></code></pre></figure>
 
 <h4 id="assertj-3-1">AssertJ 3</h4>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Test</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Test</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldAssertOptional</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;optionalTest&quot;</span><span class="o">);</span>
+    <span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"optionalTest"</span><span class="o">);</span>
     <span class="n">assertThat</span><span class="o">(</span><span class="n">optional</span><span class="o">).</span><span class="na">isPresent</span><span class="o">()</span>
-                        <span class="o">.</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">&quot;optionalTest&quot;</span><span class="o">);</span>
-<span class="o">}</span></code></pre></div>
+                        <span class="o">.</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">"optionalTest"</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
 
 <h3 id="approximation-des-primitives">Approximation des primitives</h3>
 
@@ -267,7 +269,7 @@ De l’autre, je me dis que ça peut être super, par exemple quand on fait des 
 
 <p>Bref, ça donne ça :</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertThat</span><span class="o">(</span><span class="mi">30</span><span class="o">).</span><span class="na">isCloseTo</span><span class="o">(</span><span class="mi">40</span><span class="o">,</span> <span class="n">within</span><span class="o">(</span><span class="mi">10</span><span class="o">));</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertThat</span><span class="o">(</span><span class="mi">30</span><span class="o">).</span><span class="na">isCloseTo</span><span class="o">(</span><span class="mi">40</span><span class="o">,</span> <span class="n">within</span><span class="o">(</span><span class="mi">10</span><span class="o">));</span></code></pre></figure>
 
 <h3 id="matches">matches</h3>
 
@@ -275,41 +277,41 @@ De l’autre, je me dis que ça peut être super, par exemple quand on fait des 
 
 <p>Voici l’exemple de la release note:</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">TolkienCharacter</span> <span class="n">frodo</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">TolkienCharacter</span><span class="o">(</span><span class="s">&quot;Frodo&quot;</span><span class="o">,</span> <span class="mi">33</span><span class="o">,</span> <span class="n">HOBBIT</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">TolkienCharacter</span> <span class="n">frodo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TolkienCharacter</span><span class="o">(</span><span class="s">"Frodo"</span><span class="o">,</span> <span class="mi">33</span><span class="o">,</span> <span class="n">HOBBIT</span><span class="o">);</span>
 <span class="c1">// actual refers to frodo </span>
-<span class="n">assertThat</span><span class="o">(</span><span class="n">frodo</span><span class="o">).</span><span class="na">matches</span><span class="o">(</span><span class="n">actual</span> <span class="o">-&gt;</span> <span class="n">actual</span><span class="o">.</span><span class="na">age</span> <span class="o">&gt;</span> <span class="mi">30</span> <span class="o">&amp;&amp;</span> <span class="n">actual</span><span class="o">.</span><span class="na">getRace</span><span class="o">()</span> <span class="o">==</span> <span class="n">HOBBIT</span><span class="o">);</span></code></pre></div>
+<span class="n">assertThat</span><span class="o">(</span><span class="n">frodo</span><span class="o">).</span><span class="na">matches</span><span class="o">(</span><span class="n">actual</span> <span class="o">-&gt;</span> <span class="n">actual</span><span class="o">.</span><span class="na">age</span> <span class="o">&gt;</span> <span class="mi">30</span> <span class="o">&amp;&amp;</span> <span class="n">actual</span><span class="o">.</span><span class="na">getRace</span><span class="o">()</span> <span class="o">==</span> <span class="n">HOBBIT</span><span class="o">);</span></code></pre></figure>
 
 <p>Si on change l’âge de frodo à ‘25’ l’erreur remontée est la suivante :</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">AssertionError</span><span class="o">:</span> 
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">AssertionError</span><span class="o">:</span> 
 <span class="nl">Expecting:</span>
-  <span class="o">&lt;</span><span class="n">eu</span><span class="o">.</span><span class="na">bitard</span><span class="o">.</span><span class="na">AssertJ3Test$TolkienCharacter</span><span class="err">@</span><span class="mi">721</span><span class="n">e0f4f</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">match</span> <span class="n">given</span> <span class="n">predicate</span><span class="o">.</span>
+  <span class="o">&lt;</span><span class="n">eu</span><span class="o">.</span><span class="na">bitard</span><span class="o">.</span><span class="na">AssertJ3Test</span><span class="n">$TolkienCharacter</span><span class="err">@</span><span class="mi">721</span><span class="n">e0f4f</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">match</span> <span class="n">given</span> <span class="n">predicate</span><span class="o">.</span>
 
-<span class="n">You</span> <span class="n">can</span> <span class="n">use</span> <span class="err">&#39;</span><span class="n">matches</span><span class="o">(</span><span class="n">Predicate</span> <span class="n">p</span><span class="o">,</span> <span class="n">String</span> <span class="n">description</span><span class="o">)</span><span class="err">&#39;</span> <span class="n">to</span> <span class="n">have</span> <span class="n">a</span> <span class="n">better</span> <span class="n">error</span> <span class="n">message</span>
+<span class="n">You</span> <span class="n">can</span> <span class="n">use</span> <span class="err">'</span><span class="n">matches</span><span class="o">(</span><span class="n">Predicate</span> <span class="n">p</span><span class="o">,</span> <span class="n">String</span> <span class="n">description</span><span class="o">)</span><span class="err">'</span> <span class="n">to</span> <span class="n">have</span> <span class="n">a</span> <span class="n">better</span> <span class="n">error</span> <span class="n">message</span>
 <span class="n">For</span> <span class="nl">example:</span>
-  <span class="n">assertThat</span><span class="o">(</span><span class="n">player</span><span class="o">).</span><span class="na">matches</span><span class="o">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="n">p</span><span class="o">.</span><span class="na">isRookie</span><span class="o">(),</span> <span class="s">&quot;is rookie&quot;</span><span class="o">);</span>
+  <span class="n">assertThat</span><span class="o">(</span><span class="n">player</span><span class="o">).</span><span class="na">matches</span><span class="o">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="n">p</span><span class="o">.</span><span class="na">isRookie</span><span class="o">(),</span> <span class="s">"is rookie"</span><span class="o">);</span>
 <span class="n">will</span> <span class="n">give</span> <span class="n">an</span> <span class="n">error</span> <span class="n">message</span> <span class="n">looking</span> <span class="nl">like:</span>
 
 <span class="nl">Expecting:</span>
   <span class="o">&lt;</span><span class="n">player</span><span class="o">&gt;</span>
-<span class="n">to</span> <span class="n">match</span> <span class="err">&#39;</span><span class="n">is</span> <span class="n">rookie</span><span class="err">&#39;</span> <span class="n">predicate</span>
+<span class="n">to</span> <span class="n">match</span> <span class="err">'</span><span class="n">is</span> <span class="n">rookie</span><span class="err">'</span> <span class="n">predicate</span>
 	<span class="n">at</span> <span class="n">eu</span><span class="o">.</span><span class="na">bitard</span><span class="o">.</span><span class="na">AssertJ3Test</span><span class="o">.</span><span class="na">shouldAssertMatches</span><span class="o">(</span><span class="n">AssertJ3Test</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">28</span><span class="o">)</span>
-	<span class="o">.....</span></code></pre></div>
+	<span class="o">.....</span></code></pre></figure>
 
 <p>Je sais pas vous, mais moi je préfère ça :</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ava</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">AssertionError</span><span class="o">:</span> 
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ava</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">AssertionError</span><span class="o">:</span> 
 <span class="nl">Expecting:</span>
  <span class="o">&lt;</span><span class="mi">25</span><span class="o">&gt;</span>
 <span class="n">to</span> <span class="n">be</span> <span class="n">greater</span> <span class="nl">than:</span>
  <span class="o">&lt;</span><span class="mi">30</span><span class="o">&gt;</span> 
 	<span class="n">at</span> <span class="n">eu</span><span class="o">.</span><span class="na">bitard</span><span class="o">.</span><span class="na">AssertJ3Test</span><span class="o">.</span><span class="na">shouldAssertMatches</span><span class="o">(</span><span class="n">AssertJ3Test</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">28</span><span class="o">)</span>
-	<span class="o">...</span></code></pre></div>
+	<span class="o">...</span></code></pre></figure>
 
 <p>Ce qui est donné par les asserts suivant :</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertThat</span><span class="o">(</span><span class="n">frodo</span><span class="o">.</span><span class="na">age</span><span class="o">).</span><span class="na">isGreaterThan</span><span class="o">(</span><span class="mi">30</span><span class="o">);</span>
-<span class="n">assertThat</span><span class="o">(</span><span class="n">frodo</span><span class="o">.</span><span class="na">race</span><span class="o">).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">Race</span><span class="o">.</span><span class="na">HOBBIT</span><span class="o">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">assertThat</span><span class="o">(</span><span class="n">frodo</span><span class="o">.</span><span class="na">age</span><span class="o">).</span><span class="na">isGreaterThan</span><span class="o">(</span><span class="mi">30</span><span class="o">);</span>
+<span class="n">assertThat</span><span class="o">(</span><span class="n">frodo</span><span class="o">.</span><span class="na">race</span><span class="o">).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">Race</span><span class="o">.</span><span class="na">HOBBIT</span><span class="o">);</span></code></pre></figure>
 
 <h3 id="bilan">Bilan</h3>
 
@@ -320,7 +322,7 @@ De l’autre, je me dis que ça peut être super, par exemple quand on fait des 
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>C’est peut-être un problème de conception ? <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>C’est peut-être un problème de conception ? <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -329,12 +331,23 @@ De l’autre, je me dis que ça peut être super, par exemple quand on fait des 
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

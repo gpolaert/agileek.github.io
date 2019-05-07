@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -155,11 +157,11 @@
 <h3 id="given">Given</h3>
 <p>My Dockerfile with android sdk</p>
 
-<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">ADD</span> http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz /opt/android-sdk.tgz
-<span class="k">RUN</span> tar xzf /opt/android-sdk.tgz -C /opt/
-<span class="k">RUN</span> rm -f /opt/android-sdk.tgz</code></pre></div>
+<figure class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">ADD</span><span class="s"> http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz /opt/android-sdk.tgz</span>
+<span class="k">RUN </span><span class="nb">tar </span>xzf /opt/android-sdk.tgz <span class="nt">-C</span> /opt/
+<span class="k">RUN </span><span class="nb">rm</span> <span class="nt">-f</span> /opt/android-sdk.tgz</code></pre></figure>
 
-<p>built with <code>docker build -t docker_layers .</code></p>
+<p>built with <code class="highlighter-rouge">docker build -t docker_layers .</code></p>
 
 <h3 id="when">When</h3>
 <p>I want to push it to the registry</p>
@@ -182,16 +184,16 @@
 
 <p>For this example it would be:</p>
 
-<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN</span> <span class="nb">cd</span> /opt <span class="o">&amp;&amp;</span> <span class="err">\</span>
-    wget --output-document<span class="o">=</span>android-sdk.tgz --quiet http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz <span class="o">&amp;&amp;</span> <span class="err">\</span>
-    tar xzf android-sdk.tgz <span class="o">&amp;&amp;</span> <span class="err">\</span>
-    rm -f android-sdk.tgz</code></pre></div>
+<figure class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN </span><span class="nb">cd</span> /opt <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    wget <span class="nt">--output-document</span><span class="o">=</span>android-sdk.tgz <span class="nt">--quiet</span> http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">tar </span>xzf android-sdk.tgz <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">rm</span> <span class="nt">-f</span> android-sdk.tgz</code></pre></figure>
 
 <p>In that way you only have one layer commited, and it contains only the needed android sdk extracted.</p>
 
 <h3 id="caveats">Caveats</h3>
 
-<p>There is one drawback with this particular approach: You lose the capacities of the <code>ADD</code> syntax.</p>
+<p>There is one drawback with this particular approach: You lose the capacities of the <code class="highlighter-rouge">ADD</code> syntax.</p>
 
 <p>If you build the first Dockerfile, you will notice that each time the tgz is downloaded. Docker then verifies that the file hasn’t changed and if not, uses the cached image.</p>
 
@@ -213,17 +215,17 @@
 
 <h3 id="apt">APT</h3>
 
-<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span>  <span class="err">\</span>
-    apt-get install -y whatever <span class="o">&amp;&amp;</span> <span class="err">\</span>
-    apt-get clean <span class="o">&amp;&amp;</span> <span class="err">\</span>
-    apt-get autoclean <span class="o">&amp;&amp;</span> <span class="err">\</span>
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*</code></pre></div>
+<figure class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN </span>apt-get update <span class="o">&amp;&amp;</span>  <span class="se">\
+</span>    apt-get <span class="nb">install</span> <span class="nt">-y</span> whatever <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get clean <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get autoclean <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">rm</span> <span class="nt">-rf</span> /var/lib/apt/lists/<span class="k">*</span> /tmp/<span class="k">*</span> /var/tmp/<span class="k">*</span></code></pre></figure>
 
 <h3 id="yum">Yum</h3>
 
-<div class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN</span> yum -y update <span class="o">&amp;&amp;</span> <span class="err">\</span>
-    yum -y install whatever <span class="o">&amp;&amp;</span> <span class="err">\</span>
-    yum clean all</code></pre></div>
+<figure class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">RUN </span>yum <span class="nt">-y</span> update <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    yum <span class="nt">-y</span> <span class="nb">install </span>whatever <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    yum clean all</code></pre></figure>
 
 <h3 id="an-other-very-important-thing-is-to-keep-your-dockerfile-readable">An other <strong><em>very</em></strong> important thing is to keep your Dockerfile <strong><em>readable</em></strong></h3>
 
@@ -289,12 +291,23 @@ RUN \
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

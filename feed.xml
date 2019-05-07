@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Agile &amp; Java</title>
-        <description>Another blog on agile and java. Maybe i&#39;ll add kittens and food recipe if my partner helps me.</description>
+        <description>Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.</description>
         <link>https://agileek.github.io/</link>
         <atom:link href="https://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Thu, 19 May 2016 18:01:29 +0000</pubDate>
-        <lastBuildDate>Thu, 19 May 2016 18:01:29 +0000</lastBuildDate>
-        <generator>Jekyll v2.5.3</generator>
+        <pubDate>Tue, 07 May 2019 06:40:46 -0500</pubDate>
+        <lastBuildDate>Tue, 07 May 2019 06:40:46 -0500</lastBuildDate>
+        <generator>Jekyll v3.8.5</generator>
         
         <item>
             <title>Devoxx 2016: Huntly or nothing!</title>
             <description>&lt;blockquote&gt;
-  &lt;p&gt;La version originale de ce post en Français peut être trouvée ici : &lt;a href=&quot;https://code-troopers.com/2016/05/2016-05-devoxx-2016-huntly.html&quot;&gt;https://code-troopers.com/2016/05/2016-05-devoxx-2016-huntly.html&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;La version originale de ce post en Français peut être trouvée ici : &lt;a href=&quot;https://code-troopers.com/2016/05/20/devoxx-2016-huntly.html&quot;&gt;https://code-troopers.com/2016/05/20/devoxx-2016-huntly.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;This year at Devoxx France, I was the only Code-Troopers&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; available but it didn’t matter because I found Michaël&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, former “tourangeau” colleague currently living in Toulouse.
@@ -56,23 +56,23 @@ But truth be told, this year is the year I spoke with the most exhibitors, and i
 &lt;p&gt;Since it was the first release, of course there was some minor fixes/tweaks that needed to be made, and scalac team was really reactiv: there was at least 2 updates during the 3 days which fixed a twitter integration and a contact scan bug. (I am of course talking about the Android application, because, well, on IOS… :P)&lt;/p&gt;
 
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1.png&quot; data-lightbox=&quot;0&quot; title=&quot;Aldebaran&#39;s booth QRCode&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1_min.png&quot; alt=&quot;Aldebaran&#39;s booth QRCode&quot; /&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1.png&quot; data-lightbox=&quot;0&quot; title=&quot;Aldebaran's booth QRCode&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1_min.png&quot; alt=&quot;Aldebaran's booth QRCode&quot; /&gt;
 &lt;/a&gt;
-&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2.png&quot; data-lightbox=&quot;0&quot; title=&quot;SII&#39;s booth QR code&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2_min.png&quot; alt=&quot;SII&#39;s booth QR code&quot; /&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2.png&quot; data-lightbox=&quot;0&quot; title=&quot;SII's booth QR code&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2_min.png&quot; alt=&quot;SII's booth QR code&quot; /&gt;
 &lt;/a&gt;
-&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3.png&quot; data-lightbox=&quot;0&quot; title=&quot;Stackoverflow&#39;s booth QR code&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3_min.png&quot; alt=&quot;Stackoverflow&#39;s booth QR code&quot; /&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3.png&quot; data-lightbox=&quot;0&quot; title=&quot;Stackoverflow's booth QR code&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3_min.png&quot; alt=&quot;Stackoverflow's booth QR code&quot; /&gt;
 &lt;/a&gt;
-&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4.png&quot; data-lightbox=&quot;0&quot; title=&quot;Amazon&#39;s booth QR code&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4_min.png&quot; alt=&quot;Amazon&#39;s booth QR code&quot; /&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4.png&quot; data-lightbox=&quot;0&quot; title=&quot;Amazon's booth QR code&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4_min.png&quot; alt=&quot;Amazon's booth QR code&quot; /&gt;
 &lt;/a&gt;
-&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly.png&quot; data-lightbox=&quot;0&quot; title=&quot;Devoxx Huntly&#39;s booth&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly_min.png&quot; alt=&quot;Devoxx Huntly&#39;s booth&quot; /&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly.png&quot; data-lightbox=&quot;0&quot; title=&quot;Devoxx Huntly's booth&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly_min.png&quot; alt=&quot;Devoxx Huntly's booth&quot; /&gt;
 &lt;/a&gt;
-&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte.png&quot; data-lightbox=&quot;0&quot; title=&quot;QR code on a room&#39;s door&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte_min.png&quot; alt=&quot;QR code on a room&#39;s door&quot; /&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte.png&quot; data-lightbox=&quot;0&quot; title=&quot;QR code on a room's door&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte_min.png&quot; alt=&quot;QR code on a room's door&quot; /&gt;
 &lt;/a&gt;
 &lt;/div&gt;
 
@@ -82,7 +82,7 @@ But truth be told, this year is the year I spoke with the most exhibitors, and i
 
 &lt;p&gt;When you are at a developers’ conference, you can be sure there will be some people trying to push the application to it’s limits (We could call them cheaters, we prefer hackers or, even better, security auditors).
 We saw really quickly that one person was really ahead of the others (Yes Frédéric Camblor, we are talking about you :))
-He was a real fair player, he turned himself in (You can see Stefan punching him as a reward), and he explained that he used an ssl vulnerability, because the client/server communication was not using tls.&lt;/p&gt;
+He was a real fair player, he turned himself in (You can see Stephan punching him as a reward), and he explained that he used an ssl vulnerability, because the client/server communication was not using tls.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png&quot; alt=&quot;devoxx2016_huntly_stephan_pushing_fcamblor&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -125,18 +125,18 @@ Fortunately there was a backup plan, you could always scan the QR codes.&lt;/p&g
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;They are a team of passionate developers &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;They are a team of passionate developers &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;That’s me! Refering to myself &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;That’s me! Refering to myself &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;The tweetwall was really useless, the images werent displayed!!! What a shame. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;The tweetwall was really useless, the images werent displayed!!! What a shame. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-            <pubDate>Thu, 19 May 2016 00:00:00 +0000</pubDate>
+            <pubDate>Thu, 19 May 2016 00:00:00 -0500</pubDate>
             <link>https://agileek.github.io/java/2016/05/19/devoxx_2016_huntly/</link>
             <guid isPermaLink="true">https://agileek.github.io/java/2016/05/19/devoxx_2016_huntly/</guid>
             
@@ -161,17 +161,17 @@ Fortunately there was a backup plan, you could always scan the QR codes.&lt;/p&g
 
 &lt;p&gt;What would be an agileek article without a little bit of &lt;strong&gt;Docker&lt;/strong&gt; in it?&lt;/p&gt;
 
-&lt;h1 id=&quot;goal&quot;&gt; Goal&lt;/h1&gt;
+&lt;p&gt;# Goal&lt;/p&gt;
 
 &lt;p&gt;I will show you how to generate and use an ssl certificate with nginx.&lt;/p&gt;
 
 &lt;p&gt;First, you generate the certificate with:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;docker run -it --rm -p 443:443 --name letsencrypt -v /etc/letsencrypt:/etc/letsencrypt -v /var/lib/letsencrypt:/var/lib/letsencrypt quay.io/letsencrypt/letsencrypt:latest --server https://acme-v01.api.letsencrypt.org/directory certonly -a standalone -d hello.lilymic.gotgeeks.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 443:443 &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; letsencrypt &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /etc/letsencrypt:/etc/letsencrypt &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /var/lib/letsencrypt:/var/lib/letsencrypt quay.io/letsencrypt/letsencrypt:latest &lt;span class=&quot;nt&quot;&gt;--server&lt;/span&gt; https://acme-v01.api.letsencrypt.org/directory certonly &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; standalone &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; hello.lilymic.gotgeeks.com&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Then you configure your nginx in order to use this certificates :&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssl_certificate      /etc/letsencrypt/live/lilymic.gotgeeks.com-0001/fullchain.pem&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssl_certificate      /etc/letsencrypt/live/lilymic.gotgeeks.com-0001/fullchain.pem&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 ssl_certificate_key  /etc/letsencrypt/live/lilymic.gotgeeks.com-0001/privkey.pem&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 ssl_session_timeout 1d&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 ssl_session_cache shared:SSL:50m&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -180,7 +180,7 @@ ssl_session_tickets off&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# modern configuration. tweak to your needs.&lt;/span&gt;
 ssl_protocols TLSv1.1 TLSv1.2&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-ssl_ciphers &lt;span class=&quot;s1&quot;&gt;&amp;#39;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ssl_ciphers &lt;span class=&quot;s1&quot;&gt;'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;#    ssl_prefer_server_ciphers on;&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# HSTS (ngx_http_headers_module is required) (15768000 seconds = 6 months)&lt;/span&gt;
@@ -194,14 +194,14 @@ ssl_stapling_verify on&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;c&quot;&gt;## verify chain of trust of OCSP response using Root CA and Intermediate certs&lt;/span&gt;
 
 server &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        listen       &lt;span class=&quot;m&quot;&gt;443&lt;/span&gt; ssl&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        listen       443 ssl&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
         server_name  hello.lilymic.gotgeeks.com&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
         location / &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;            
             add_header Content-Type text/plain&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Take a look at this awesome certificate!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;200 &lt;span class=&quot;s1&quot;&gt;'Take a look at this awesome certificate!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aaaaaaand it’s done.&lt;/p&gt;
 
@@ -210,12 +210,12 @@ server &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;You can donate to them:  &lt;a href=&quot;https://letsencrypt.org/donate&quot;&gt;https://letsencrypt.org/donate&lt;/a&gt; or to EFF: &lt;a href=&quot;https://eff.org/donate-le&quot;&gt;https://eff.org/donate-le&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;You can donate to them:  &lt;a href=&quot;https://letsencrypt.org/donate&quot;&gt;https://letsencrypt.org/donate&lt;/a&gt; or to EFF: &lt;a href=&quot;https://eff.org/donate-le&quot;&gt;https://eff.org/donate-le&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-            <pubDate>Sat, 05 Dec 2015 00:00:00 +0000</pubDate>
+            <pubDate>Sat, 05 Dec 2015 00:00:00 -0600</pubDate>
             <link>https://agileek.github.io/docker/2015/12/05/letsencrypt-https/</link>
             <guid isPermaLink="true">https://agileek.github.io/docker/2015/12/05/letsencrypt-https/</guid>
             
@@ -238,7 +238,7 @@ I recommend to start with something easy.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Now it’s time to take it to the next level!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;choose-wisely&quot;&gt; Choose wisely&lt;/h2&gt;
+&lt;p&gt;## Choose wisely&lt;/p&gt;
 
 &lt;p&gt;There are 2 main wireless protocols to communicate with your devices, 433.92 MHz and Z-wave.&lt;/p&gt;
 
@@ -258,9 +258,9 @@ I recommend to start with something easy.&lt;/p&gt;
 
 &lt;p&gt;After some digging (and advices from &lt;a href=&quot;https://twitter.com/florianchauveau&quot;&gt;Florian Chauveau&lt;/a&gt;), I decided to use &lt;a href=&quot;https://domoticz.com/&quot;&gt;domoticz&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;glue-it-all-together&quot;&gt; Glue it all together&lt;/h2&gt;
+&lt;p&gt;## Glue it all together&lt;/p&gt;
 
-&lt;h3 id=&quot;docker-on-raspberry-pi&quot;&gt; Docker on raspberry pi&lt;/h3&gt;
+&lt;p&gt;### Docker on raspberry pi&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/home_automation/raspberry_pi_logo.svg&quot; alt=&quot;raspberrypi&quot; class=&quot;float_image&quot; /&gt;&lt;/p&gt;
 
@@ -271,14 +271,14 @@ I recommend to start with something easy.&lt;/p&gt;
   &lt;li&gt;Build the rpi-domoticz-docker image on your raspberry (optional if you pull it from the registry)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;recipe&quot;&gt; Recipe&lt;/h3&gt;
-&lt;p&gt;Here is what I did&lt;/p&gt;
+&lt;p&gt;### Recipe
+Here is what I did&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Download a docker ready image for your sdcard at &lt;a href=&quot;http://blog.hypriot.com/downloads/&quot;&gt;http://blog.hypriot.com/downloads/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Copy the image to the sdcard
     &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;sudo dd if=hypriot-rpi-20151103-224349.img of=/dev/mmcblk0 bs=1M&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo dd if=hypriot-rpi-20151103-224349.img of=/dev/mmcblk0 bs=1M&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Start your raspberry&lt;/li&gt;
@@ -286,14 +286,14 @@ I recommend to start with something easy.&lt;/p&gt;
   &lt;li&gt;Connect to it via ssh (root/hypriot)&lt;/li&gt;
   &lt;li&gt;Get the latest rpi-domoticz-docker
     &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;docker pull agileek/rpi-domoticz-docker&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker pull agileek/rpi-domoticz-docker&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Launch it
     &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;docker run --device=/dev/ttyUSB0 -p 8080:8080 -d agileek/rpi-domoticz-docker&lt;/code&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run --device=/dev/ttyUSB0 -p 8080:8080 -d agileek/rpi-domoticz-docker&lt;/code&gt;
         &lt;ul&gt;
-          &lt;li&gt;Backup &lt;code&gt;-v /root/domoticz.db:/root/domoticz/domoticz.db&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;Backup &lt;code class=&quot;highlighter-rouge&quot;&gt;-v /root/domoticz.db:/root/domoticz/domoticz.db&lt;/code&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -304,7 +304,7 @@ I recommend to start with something easy.&lt;/p&gt;
 &lt;p&gt;Don’t forget to add the rfxcom to the hardware list and enjoy!&lt;/p&gt;
 
 </description>
-            <pubDate>Sat, 05 Dec 2015 00:00:00 +0000</pubDate>
+            <pubDate>Sat, 05 Dec 2015 00:00:00 -0600</pubDate>
             <link>https://agileek.github.io/home_automation/2015/12/05/home_automation_domoticz/</link>
             <guid isPermaLink="true">https://agileek.github.io/home_automation/2015/12/05/home_automation_domoticz/</guid>
             
@@ -317,7 +317,7 @@ I recommend to start with something easy.&lt;/p&gt;
         
         <item>
             <title>Forcing https for GitHub Pages and Disqus</title>
-            <description>&lt;h3 id=&quot;observation&quot;&gt; Observation&lt;/h3&gt;
+            <description>&lt;p&gt;### Observation&lt;/p&gt;
 
 &lt;p&gt;This blog uses &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;, which are by default available using both &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; protocols.&lt;/p&gt;
 
@@ -331,7 +331,7 @@ I recommend to start with something easy.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://letsencrypt.org/2015/10/19/lets-encrypt-is-trusted.html&quot;&gt;Let’s Encrypt is trusted!&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;force-https-on-github-pages&quot;&gt; Force &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; on Github Pages&lt;/h3&gt;
+&lt;p&gt;### Force &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; on Github Pages&lt;/p&gt;
 
 &lt;p&gt;I found this gist to force the &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; redirection, simple, efficient.&lt;/p&gt;
 
@@ -346,7 +346,7 @@ if ((host == window.location.host) &amp;amp;&amp;amp; (window.location.protocol 
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/jekyll/disqus_http_https.gif&quot; alt=&quot;Disqus http vs https&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;migrate-disqus-comments&quot;&gt; Migrate Disqus comments&lt;/h3&gt;
+&lt;p&gt;### Migrate Disqus comments&lt;/p&gt;
 
 &lt;p&gt;In fact, Disqus treat &lt;a href=&quot;http://agileek.github.io&quot;&gt;http://agileek.github.io&lt;/a&gt; and &lt;a href=&quot;https://agileek.github.io&quot;&gt;https://agileek.github.io&lt;/a&gt; as 2 differents sites&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, so if someone post a comment on the &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt; “version” it’s not displayed on the &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; side.&lt;/p&gt;
 
@@ -365,18 +365,18 @@ if ((host == window.location.host) &amp;amp;&amp;amp; (window.location.protocol 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Ok, this is not relevant here since I’m using GitHub’s certificates, but Let’s Encrypt is just too huge to not talk about. I will soon write an article about it. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Ok, this is not relevant here since I’m using GitHub’s certificates, but Let’s Encrypt is just too huge to not talk about. I will soon write an article about it. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;The “issue” has been reported several times but never corrected, is this a hidden feature? &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;The “issue” has been reported several times but never corrected, is this a hidden feature? &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;There is a lot of unnecessary links, even my drafts appear here &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;There is a lot of unnecessary links, even my drafts appear here &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-            <pubDate>Fri, 20 Nov 2015 14:00:00 +0000</pubDate>
+            <pubDate>Fri, 20 Nov 2015 08:00:00 -0600</pubDate>
             <link>https://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</link>
             <guid isPermaLink="true">https://agileek.github.io/jekyll/2015/11/20/disqus-https-and-http/</guid>
             
@@ -457,15 +457,15 @@ if ((host == window.location.host) &amp;amp;&amp;amp; (window.location.protocol 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;certains codent en français, avec les accents dans les noms de méthode et tout, mais voir &lt;strong&gt;&lt;em&gt;public void&lt;/em&gt;&lt;/strong&gt; maméthode() ça me pique les yeux. [troll] Les mots clefs sont en anglais, codons en anglais [/troll]. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;certains codent en français, avec les accents dans les noms de méthode et tout, mais voir &lt;strong&gt;&lt;em&gt;public void&lt;/em&gt;&lt;/strong&gt; maméthode() ça me pique les yeux. [troll] Les mots clefs sont en anglais, codons en anglais [/troll]. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;argument objectif &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;argument objectif &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-            <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
+            <pubDate>Wed, 15 Apr 2015 00:00:00 -0500</pubDate>
             <link>https://agileek.github.io/2015/04/15/typematrix-dvorak/</link>
             <guid isPermaLink="true">https://agileek.github.io/2015/04/15/typematrix-dvorak/</guid>
             
@@ -483,47 +483,47 @@ if ((host == window.location.host) &amp;amp;&amp;amp; (window.location.protocol 
   &lt;li&gt;&lt;a href=&quot;http://trentm.com/json/&quot;&gt;json&lt;/a&gt; (très mauvais nom), qui est un utilitaire pour travailler sur du json&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Pour notre exemple on va jouer avec l’API de github, en essayant d’afficher tous les repos docker de l’organisation &lt;code&gt;agileek&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pour notre exemple on va jouer avec l’API de github, en essayant d’afficher tous les repos docker de l’organisation &lt;code class=&quot;highlighter-rouge&quot;&gt;agileek&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
 
-&lt;p&gt;Sous ubuntu/debian : &lt;code&gt;sudo apt-get install httpie &amp;amp;&amp;amp; npm install -g json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Sous ubuntu/debian : &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get install httpie &amp;amp;&amp;amp; npm install -g json&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Commençons par récupérer la liste des repos associée à mon organisation.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;http https://api.github.com/orgs/agileek/repos&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;http https://api.github.com/orgs/agileek/repos&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Nous avons un joli résultat bien formaté …&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;HTTP/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;OK&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;Access-Control-Allow-Credentials:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;Access-Control-Allow-Origin:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;...plein&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;headers...&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;X-XSS-Protection:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;mode=block&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;HTTP/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;OK&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Access-Control-Allow-Credentials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Access-Control-Allow-Origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...plein&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;de&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;headers...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;X-XSS-Protection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;mode=block&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;archive_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/{archive_format}{/ref}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;assignees_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/assignees{/user}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;blobs_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/git/blobs{/sha}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;branches_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/branches{/branch}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;clone_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/agileek/agileek.github.io.git&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;collaborators_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/collaborators{/collaborator}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;comments_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/comments{/number}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;commits_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/commits{/sha}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;compare_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/compare/{base}...{head}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;contents_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/contents/{+path}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;contributors_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/contributors&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;created_at&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;2014-07-23T09:51:52Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;default_branch&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;master&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;description&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;downloads_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/downloads&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;events_url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io/events&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;fork&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.github.com/repos/agileek/agileek.github.io&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;err&quot;&gt;....&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;trop&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;données&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;archive_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/{archive_format}{/ref}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;assignees_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/assignees{/user}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blobs_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/git/blobs{/sha}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;branches_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/branches{/branch}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;clone_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/agileek/agileek.github.io.git&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;collaborators_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/collaborators{/collaborator}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;comments_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/comments{/number}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;commits_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/commits{/sha}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;compare_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/compare/{base}...{head}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;contents_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/contents/{+path}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;contributors_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/contributors&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;created_at&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2014-07-23T09:51:52Z&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;default_branch&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;master&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;downloads_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/downloads&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;events_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io/events&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fork&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/repos/agileek/agileek.github.io&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;....&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;trop&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;de&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;données&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;… mais il y a tout simplement trop d’informations. Si je veux trouver tous les repos qui ont un lien avec docker, comment je fais ?&lt;/p&gt;
 
@@ -534,12 +534,12 @@ Vous savez ces choses dont on est fier quand on a un résultat mais quand on rev
 
 &lt;p&gt;C’est là qu’intervient json. Pour y voir plus clair, n’affichons que les urls.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;http https://api.github.com/orgs/agileek/repos &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; json -a url
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;http https://api.github.com/orgs/agileek/repos | json &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; url
 https://api.github.com/repos/agileek/agileek.github.io
 https://api.github.com/repos/agileek/docker
 https://api.github.com/repos/agileek/docker-ansible
 https://api.github.com/repos/agileek/docker-jenkins
-https://api.github.com/repos/agileek/docker-tips&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+https://api.github.com/repos/agileek/docker-tips&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;le ‘-a’ indique qu’on descend dans un array&lt;/p&gt;
@@ -547,24 +547,24 @@ https://api.github.com/repos/agileek/docker-tips&lt;/code&gt;&lt;/pre&gt;&lt;/di
 
 &lt;p&gt;Voilà, ça pique moins les yeux quand même. Maintenant ne gardons que les urls qui contiennent docker&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;http https://api.github.com/orgs/agileek/repos &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; json -c &lt;span class=&quot;s1&quot;&gt;&amp;#39;this.url.indexOf(&amp;quot;docker&amp;quot;) &amp;gt;= 0&amp;#39;&lt;/span&gt; -a url
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;http https://api.github.com/orgs/agileek/repos | json &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'this.url.indexOf(&quot;docker&quot;) &amp;gt;= 0'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; url
 https://api.github.com/repos/agileek/docker
 https://api.github.com/repos/agileek/docker-ansible
 https://api.github.com/repos/agileek/docker-jenkins
-https://api.github.com/repos/agileek/docker-tips&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+https://api.github.com/repos/agileek/docker-tips&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Voilà, c’est terminé ! le &lt;code&gt;-c&lt;/code&gt; indique que vous allez écrire du javascript pour retourner un boolean, je me sers du indexOf pour filtrer tout ce qui contient “docker”.&lt;/p&gt;
+&lt;p&gt;Voilà, c’est terminé ! le &lt;code class=&quot;highlighter-rouge&quot;&gt;-c&lt;/code&gt; indique que vous allez écrire du javascript pour retourner un boolean, je me sers du indexOf pour filtrer tout ce qui contient “docker”.&lt;/p&gt;
 
 &lt;h3 id=&quot;pour-aller-plus-loin&quot;&gt;Pour aller plus loin&lt;/h3&gt;
 
-&lt;p&gt;Je ne vous ai montré que l’interaction basique entre httpie et json, n’hésitez pas à jouer avec httpie pour faire des &lt;code&gt;POST&lt;/code&gt;, &lt;code&gt;PUT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt;, c’est vraiment très intuitif, je ne peux déjà plus m’en passer.&lt;/p&gt;
+&lt;p&gt;Je ne vous ai montré que l’interaction basique entre httpie et json, n’hésitez pas à jouer avec httpie pour faire des &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PUT&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;DELETE&lt;/code&gt;, c’est vraiment très intuitif, je ne peux déjà plus m’en passer.&lt;/p&gt;
 
 &lt;h3 id=&quot;ps&quot;&gt;PS&lt;/h3&gt;
 
 &lt;p&gt;Merci à &lt;a href=&quot;http://www.bloggure.info/&quot;&gt;Cédric Gatay&lt;/a&gt;, des &lt;a href=&quot;http://code-troopers.com/&quot;&gt;Code Troopers&lt;/a&gt; pour m’avoir fait découvrir HTTPie.&lt;/p&gt;
 
 </description>
-            <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
+            <pubDate>Tue, 14 Apr 2015 00:00:00 -0500</pubDate>
             <link>https://agileek.github.io/terminal/2015/04/14/httpie_and_json/</link>
             <guid isPermaLink="true">https://agileek.github.io/terminal/2015/04/14/httpie_and_json/</guid>
             
@@ -584,7 +584,7 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
 
 &lt;p&gt;Ce post est fait pour vous !&lt;/p&gt;
 
-&lt;h2 id=&quot;ide-originale&quot;&gt;Idée originale&lt;/h2&gt;
+&lt;h2 id=&quot;idée-originale&quot;&gt;Idée originale&lt;/h2&gt;
 
 &lt;p&gt;A mes débuts chez Orange Business Services (en fait, c’était CVF, puis MBS, puis OBS et maintenant OAB…), je suis tombé dans une super équipe avec laquelle j’ai appris énormément de choses. Je travaillais sur une partie écrite en Erlang et j’avais été impressionné car en quelques minutes, j’avais un environnement de travail de base prêt à l’emploi, léger et entièrement customisable.&lt;/p&gt;
 
@@ -609,7 +609,7 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
   &lt;/li&gt;
   &lt;li&gt;Une fois l’image buildée, on la lance avec ansible
     &lt;ul&gt;
-      &lt;li&gt;On monte par défaut tout &lt;code&gt;/home/developer&lt;/code&gt; (c’est l’utilisateur dans le docker), ce qui permet de tout persister sur son poste et de pouvoir réinitialiser docker sans perdre de données&lt;/li&gt;
+      &lt;li&gt;On monte par défaut tout &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/developer&lt;/code&gt; (c’est l’utilisateur dans le docker), ce qui permet de tout persister sur son poste et de pouvoir réinitialiser docker sans perdre de données&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Pour finir, on customise cette instance avec ansible&lt;/li&gt;
@@ -621,26 +621,26 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
   &lt;li&gt;Forker &lt;a href=&quot;https://github.com/agileek/docker-ansible&quot;&gt;github.com/agileek/docker-ansible&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Copier vars_example.yml vers vars.yml
     &lt;ul&gt;
-      &lt;li&gt;Customiser vars.yml (vous pouvez même surcharger les variables dans &lt;code&gt;ansible/default_*.yml&lt;/code&gt; à cet endroit)&lt;/li&gt;
+      &lt;li&gt;Customiser vars.yml (vous pouvez même surcharger les variables dans &lt;code class=&quot;highlighter-rouge&quot;&gt;ansible/default_*.yml&lt;/code&gt; à cet endroit)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;lancer &lt;code&gt;./launch.sh path_to_save_docker_home_folder&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;lancer &lt;code&gt;./enter.sh&lt;/code&gt; pour rentrer dans le docker&lt;/li&gt;
+  &lt;li&gt;lancer &lt;code class=&quot;highlighter-rouge&quot;&gt;./launch.sh path_to_save_docker_home_folder&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;lancer &lt;code class=&quot;highlighter-rouge&quot;&gt;./enter.sh&lt;/code&gt; pour rentrer dans le docker&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Résultat attendu :&lt;/p&gt;
 
 &lt;p&gt;Vous êtes dans le container, dans le home de l’utilisateur developer, qui est sudoer et ne possède pas de mot de passe. Vous avez accès à votre docker parent (donc vous pouvez tuer votre propre docker, attention ;)). Tout ce que vous écrivez dans /home/developer se retrouve dans path_to_save_docker_home_folder avec les mêmes droits que votre utilisateur linux.&lt;/p&gt;
 
-&lt;h3 id=&quot;mise--jour-de-limage-docker&quot;&gt;Mise à jour de l’image docker&lt;/h3&gt;
+&lt;h3 id=&quot;mise-à-jour-de-limage-docker&quot;&gt;Mise à jour de l’image docker&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Modifier &lt;code&gt;ansible/customize_docker_container.yml&lt;/code&gt;
+  &lt;li&gt;Modifier &lt;code class=&quot;highlighter-rouge&quot;&gt;ansible/customize_docker_container.yml&lt;/code&gt;
     &lt;ul&gt;
-      &lt;li&gt;Par exemple, vous pouvez rajouter &lt;code&gt;meld&lt;/code&gt; pour tester qu’une application graphique fonctionne bien&lt;/li&gt;
+      &lt;li&gt;Par exemple, vous pouvez rajouter &lt;code class=&quot;highlighter-rouge&quot;&gt;meld&lt;/code&gt; pour tester qu’une application graphique fonctionne bien&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Relancer &lt;code&gt;./launch.sh path_to_save_docker_home_folder&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Relancer &lt;code class=&quot;highlighter-rouge&quot;&gt;./launch.sh path_to_save_docker_home_folder&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Vérifier que ce que vous avez fait est effectif dans le container docker.&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -650,7 +650,7 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
 
 &lt;h3 id=&quot;tips&quot;&gt;Tips&lt;/h3&gt;
 
-&lt;p&gt;La bonne approche, pour moi, est de ne pas figer le poste de développement à travers des process lourds, ou une sur-automatisation du poste. Par exemple dans le .bashrc il y a une partie qui essaie de sourcer &lt;code&gt;~/.bash_perso&lt;/code&gt; et ce &lt;code&gt;bash_perso&lt;/code&gt; n’est pas managé par ansible, ce qui permet à tout un chacun de personnaliser son poste. C’est quelque chose qu’il faut garder à l’esprit si on ne veut pas se retrouver avec quelque chose de très lourd à maintenir.&lt;/p&gt;
+&lt;p&gt;La bonne approche, pour moi, est de ne pas figer le poste de développement à travers des process lourds, ou une sur-automatisation du poste. Par exemple dans le .bashrc il y a une partie qui essaie de sourcer &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.bash_perso&lt;/code&gt; et ce &lt;code class=&quot;highlighter-rouge&quot;&gt;bash_perso&lt;/code&gt; n’est pas managé par ansible, ce qui permet à tout un chacun de personnaliser son poste. C’est quelque chose qu’il faut garder à l’esprit si on ne veut pas se retrouver avec quelque chose de très lourd à maintenir.&lt;/p&gt;
 
 &lt;p&gt;Chez mon client actuel, au début nous clonions tous les projets git avec ansible, c’était très pratique mais très lourd, maintenant nous avons convenu d’un certain nombre de projets de bases, les autres sont clonés ‘à la mano’. Ça permet de ne pas se retrouver perdu quand on va binomer sur le poste du collègue. Après, testez, refactorez, expérimentez, allez-y, c’est vraiment fait pour ça et je pense que c’est vraiment pour ça que ça plait. Au final on est quand même capable de REFACTORER son poste de dev !&lt;/p&gt;
 
@@ -661,12 +661,12 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;c’est un avis très personnel, que je pourrais argumenter si besoin &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;c’est un avis très personnel, que je pourrais argumenter si besoin &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-            <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+            <pubDate>Mon, 13 Apr 2015 00:00:00 -0500</pubDate>
             <link>https://agileek.github.io/docker/2015/04/13/docker-ansible/</link>
             <guid isPermaLink="true">https://agileek.github.io/docker/2015/04/13/docker-ansible/</guid>
             
@@ -684,8 +684,8 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
 &lt;h3 id=&quot;given&quot;&gt;Given&lt;/h3&gt;
 &lt;p&gt;A simple program which add to a list the current time every second (Very critical program) and write the list to a file when it exits.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parentDirectory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dataFolder&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parentDirectory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parentDirectory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dataFolder&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parentDirectory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InterruptedException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -694,16 +694,16 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readAllLines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 
-    &lt;span class=&quot;n&quot;&gt;Runtime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRuntime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addShutdownHook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Runtime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRuntime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addShutdownHook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Charset&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Charset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Charset&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Charset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newBufferedWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
                 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
                     &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
                     &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
                 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
             &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Couldn&amp;#39;t save lines&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Couldn't save lines&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
@@ -712,23 +712,23 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
         &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;I assume it’s understandable even if you are not familiar with java. If not, let me know and I’ll explain it.&lt;/p&gt;
 
 &lt;h3 id=&quot;when&quot;&gt;When&lt;/h3&gt;
 
-&lt;p&gt;I launch it without docker, (&lt;code&gt;java -jar docker/docker-stop-test-0.1-SNAPSHOT.jar&lt;/code&gt;) wait for a few seconds, then kill it (&lt;code&gt;kill $(ps aux | grep java | grep docker-stop-test-0.1-SNAPSHOT.jar | awk &#39;{print $2}&#39;)&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;I launch it without docker, (&lt;code class=&quot;highlighter-rouge&quot;&gt;java -jar docker/docker-stop-test-0.1-SNAPSHOT.jar&lt;/code&gt;) wait for a few seconds, then kill it (&lt;code class=&quot;highlighter-rouge&quot;&gt;kill $(ps aux | grep java | grep docker-stop-test-0.1-SNAPSHOT.jar | awk '{print $2}')&lt;/code&gt;)&lt;/p&gt;
 
 &lt;h3 id=&quot;then&quot;&gt;Then&lt;/h3&gt;
-&lt;p&gt;I check in &lt;code&gt;dataFolder/data&lt;/code&gt; file and I see&lt;/p&gt;
+&lt;p&gt;I check in &lt;code class=&quot;highlighter-rouge&quot;&gt;dataFolder/data&lt;/code&gt; file and I see&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat dataFolder/data 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;dataFolder/data 
 2015-04-12T08:47:16.873Z
 2015-04-12T08:47:17.927Z
 2015-04-12T08:47:18.928Z
 2015-04-12T09:12:16.469Z
-2015-04-12T09:12:17.521Z&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+2015-04-12T09:12:17.521Z&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;but&quot;&gt;But&lt;/h3&gt;
 
@@ -740,36 +740,36 @@ Vous avez un projet où il faut 3 jours d’installation acharnée en suivant un
 
 &lt;p&gt;A docker image with the jre and my jar installed&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt; docker-stop-test-0.1-SNAPSHOT.jar /
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; docker-stop-test-0.1-SNAPSHOT.jar /&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt; java -jar docker-stop-test-0.1-SNAPSHOT.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; java -jar docker-stop-test-0.1-SNAPSHOT.jar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;when-1&quot;&gt;When&lt;/h3&gt;
 
 &lt;p&gt;I launch a container, wait for a few seconds, then STOP (not KILL) it&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run --name docker-stop-test-bad-container -v &lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;/dataFolder-bad-cmd:/dataFolder -d docker-stop-test-bad
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; docker-stop-test-bad-container &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;/dataFolder-bad-cmd:/dataFolder &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docker-stop-test-bad
 c08dc515319601d467db02339d3b3a84a03ab99fb4b46811cc5860abf5eea7ec
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sleep 5
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sleep &lt;/span&gt;5
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker stop docker-stop-test-bad-container
-docker-stop-test-bad-container&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+docker-stop-test-bad-container&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;then-1&quot;&gt;Then&lt;/h3&gt;
 
-&lt;p&gt;I expect to see data in &lt;code&gt;dataFolder-bad-cmd/data&lt;/code&gt; &lt;strong&gt;&lt;em&gt;right&lt;/em&gt;&lt;/strong&gt;? &lt;strong&gt;&lt;em&gt;Wrong&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I expect to see data in &lt;code class=&quot;highlighter-rouge&quot;&gt;dataFolder-bad-cmd/data&lt;/code&gt; &lt;strong&gt;&lt;em&gt;right&lt;/em&gt;&lt;/strong&gt;? &lt;strong&gt;&lt;em&gt;Wrong&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;There is nothing written in the data file, that means I just lost everything!&lt;/p&gt;
 
 &lt;h2 id=&quot;explanations&quot;&gt;Explanations&lt;/h2&gt;
 
-&lt;p&gt;If you look at the CMD command: &lt;code&gt;CMD java -jar docker-stop-test-0.1-SNAPSHOT.jar&lt;/code&gt; everything looks ok.
+&lt;p&gt;If you look at the CMD command: &lt;code class=&quot;highlighter-rouge&quot;&gt;CMD java -jar docker-stop-test-0.1-SNAPSHOT.jar&lt;/code&gt; everything looks ok.
 But when you run this image and inspect the created container, you will see this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Cmd&amp;quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;/bin/sh&amp;quot;&lt;/span&gt;,
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;-c&amp;quot;&lt;/span&gt;,
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;java -jar docker-stop-test-0.1-SNAPSHOT.jar&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Cmd&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;s2&quot;&gt;&quot;/bin/sh&quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&quot;-c&quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&quot;java -jar docker-stop-test-0.1-SNAPSHOT.jar&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Docker wrapped my command within a shell script. So what, that’s not that big a deal right?&lt;/p&gt;
 
@@ -783,18 +783,18 @@ But when you run this image and inspect the created container, you will see this
 
 &lt;p&gt;Don’t use the most intuitive syntax in the CMD or ENTRYPOINT command, use the exec form. If you replace the CMD command in the dockerfile by this one:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;java&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;-jar&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;docker-stop-test-0.1-SNAPSHOT.jar&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;java&quot;, &quot;-jar&quot;, &quot;docker-stop-test-0.1-SNAPSHOT.jar&quot;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Then everything works like a charm, the SIGTERM is received and the java application save its list into the data file before exiting.&lt;/p&gt;
 
 &lt;h2 id=&quot;diy&quot;&gt;DIY&lt;/h2&gt;
 
-&lt;p&gt;If you want to try it by yourself, everything is on my &lt;a href=&quot;https://github.com/agileek/docker-tips/tree/master/cmd&quot;&gt;github repository&lt;/a&gt;. You have two shell scripts: &lt;code&gt;docker-build-all.sh&lt;/code&gt; and &lt;code&gt;docker-run-all.sh&lt;/code&gt;. The first will build the images with the bad syntax and the good one. The second script will run containers from these images, wait 5 seconds, stop them.&lt;/p&gt;
+&lt;p&gt;If you want to try it by yourself, everything is on my &lt;a href=&quot;https://github.com/agileek/docker-tips/tree/master/cmd&quot;&gt;github repository&lt;/a&gt;. You have two shell scripts: &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-build-all.sh&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-run-all.sh&lt;/code&gt;. The first will build the images with the bad syntax and the good one. The second script will run containers from these images, wait 5 seconds, stop them.&lt;/p&gt;
 
-&lt;p&gt;You can then check in &lt;code&gt;dataFolder-bad-cmd/data&lt;/code&gt; and &lt;code&gt;dataFolder-good-cmd/data&lt;/code&gt; to see the differences.&lt;/p&gt;
+&lt;p&gt;You can then check in &lt;code class=&quot;highlighter-rouge&quot;&gt;dataFolder-bad-cmd/data&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;dataFolder-good-cmd/data&lt;/code&gt; to see the differences.&lt;/p&gt;
 
 </description>
-            <pubDate>Sun, 12 Apr 2015 00:00:00 +0000</pubDate>
+            <pubDate>Sun, 12 Apr 2015 00:00:00 -0500</pubDate>
             <link>https://agileek.github.io/docker/2015/04/12/docker-cmd/</link>
             <guid isPermaLink="true">https://agileek.github.io/docker/2015/04/12/docker-cmd/</guid>
             
@@ -812,11 +812,11 @@ But when you run this image and inspect the created container, you will see this
 &lt;h3 id=&quot;given&quot;&gt;Given&lt;/h3&gt;
 &lt;p&gt;My Dockerfile with android sdk&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt; http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz /opt/android-sdk.tgz
-&lt;span class=&quot;k&quot;&gt;RUN&lt;/span&gt; tar xzf /opt/android-sdk.tgz -C /opt/
-&lt;span class=&quot;k&quot;&gt;RUN&lt;/span&gt; rm -f /opt/android-sdk.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz /opt/android-sdk.tgz&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;xzf /opt/android-sdk.tgz &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; /opt/
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; /opt/android-sdk.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;built with &lt;code&gt;docker build -t docker_layers .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;built with &lt;code class=&quot;highlighter-rouge&quot;&gt;docker build -t docker_layers .&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;when&quot;&gt;When&lt;/h3&gt;
 &lt;p&gt;I want to push it to the registry&lt;/p&gt;
@@ -839,16 +839,16 @@ But when you run this image and inspect the created container, you will see this
 
 &lt;p&gt;For this example it would be:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /opt &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    wget --output-document&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;android-sdk.tgz --quiet http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    tar xzf android-sdk.tgz &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    rm -f android-sdk.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /opt &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    wget &lt;span class=&quot;nt&quot;&gt;--output-document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;android-sdk.tgz &lt;span class=&quot;nt&quot;&gt;--quiet&lt;/span&gt; http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;xzf android-sdk.tgz &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; android-sdk.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;In that way you only have one layer commited, and it contains only the needed android sdk extracted.&lt;/p&gt;
 
 &lt;h3 id=&quot;caveats&quot;&gt;Caveats&lt;/h3&gt;
 
-&lt;p&gt;There is one drawback with this particular approach: You lose the capacities of the &lt;code&gt;ADD&lt;/code&gt; syntax.&lt;/p&gt;
+&lt;p&gt;There is one drawback with this particular approach: You lose the capacities of the &lt;code class=&quot;highlighter-rouge&quot;&gt;ADD&lt;/code&gt; syntax.&lt;/p&gt;
 
 &lt;p&gt;If you build the first Dockerfile, you will notice that each time the tgz is downloaded. Docker then verifies that the file hasn’t changed and if not, uses the cached image.&lt;/p&gt;
 
@@ -870,17 +870,17 @@ But when you run this image and inspect the created container, you will see this
 
 &lt;h3 id=&quot;apt&quot;&gt;APT&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN&lt;/span&gt; apt-get update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    apt-get install -y whatever &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    apt-get clean &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    apt-get autoclean &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;apt-get update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; whatever &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    apt-get clean &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    apt-get autoclean &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; /var/lib/apt/lists/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; /tmp/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; /var/tmp/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;yum&quot;&gt;Yum&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN&lt;/span&gt; yum -y update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    yum -y install whatever &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    yum clean all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;yum &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    yum &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;whatever &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    yum clean all&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;an-other-very-important-thing-is-to-keep-your-dockerfile-readable&quot;&gt;An other &lt;strong&gt;&lt;em&gt;very&lt;/em&gt;&lt;/strong&gt; important thing is to keep your Dockerfile &lt;strong&gt;&lt;em&gt;readable&lt;/em&gt;&lt;/strong&gt;&lt;/h3&gt;
 
@@ -942,7 +942,7 @@ RUN \
   &lt;li&gt;If you know other tips to reduce the number of layers without losing readability, feel free to post a comment, I’ll gladly add them here.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-            <pubDate>Sat, 11 Apr 2015 00:00:00 +0000</pubDate>
+            <pubDate>Sat, 11 Apr 2015 00:00:00 -0500</pubDate>
             <link>https://agileek.github.io/docker/2015/04/11/docker-layers/</link>
             <guid isPermaLink="true">https://agileek.github.io/docker/2015/04/11/docker-layers/</guid>
             
@@ -981,7 +981,7 @@ RUN \
 
 &lt;p&gt;L’infrastructure doit être pour les développeurs comme l’électricité : accessible sans même avoir à y penser, et fiable. J’avoue être plus proche du mouvement DevOps mais sa vision donne à réfléchir.&lt;/p&gt;
 
-&lt;h3 id=&quot;futurejava&quot;&gt;Future&lt;java&gt;&lt;/java&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;future&quot;&gt;Future&lt;Java&gt;&lt;/Java&gt;&lt;/h3&gt;
 
 &lt;p&gt;Brian Goetz nous parle pour cette dernière keynote du futur de Java, en nous parlant de son passé. Ayant suivi sa conférence hier, je n’ai pas appris grand chose à celle-ci.&lt;/p&gt;
 
@@ -989,13 +989,13 @@ RUN \
 
 &lt;p&gt;Ça permettra ce genre de concepts, j’ai déjà hâte.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;integerSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;integerSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parallelStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Avouez que ça fait rêver non ?&lt;/p&gt;
 
-&lt;h2 id=&quot;des-tablettes-dcriture-aux-tablettes-pour-crire&quot;&gt;Des tablettes d’écriture aux tablettes pour écrire&lt;/h2&gt;
+&lt;h2 id=&quot;des-tablettes-décriture-aux-tablettes-pour-écrire&quot;&gt;Des tablettes d’écriture aux tablettes pour écrire&lt;/h2&gt;
 
 &lt;p&gt;Première session non technique. J’avoue que j’ai fait le choix à cause de la speaker : Clarrisse Herrenschmidt. Elle avait fait une keynote d’ouverture à Devoxx 2013 tout simplement fabuleuse. Elle avait parlé de l’histoire des chiffres, du début de l’humanité à aujourd’hui. C’est je pense la seule session à laquelle j’ai assisté et que j’ai re-regardée sur Parleys. Allez &lt;a href=&quot;https://www.parleys.com/tutorial/lhistoire-des-ecritures&quot;&gt;la voir&lt;/a&gt;, vous ne serez pas déçu.&lt;/p&gt;
 
@@ -1086,12 +1086,12 @@ Ils voulaient embarquer le raspberry pi directement sur le parrot, mais le poids
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;ce n’est pas forcément une relation de causalité directe &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;ce n’est pas forcément une relation de causalité directe &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-            <pubDate>Fri, 10 Apr 2015 00:00:00 +0000</pubDate>
+            <pubDate>Fri, 10 Apr 2015 00:00:00 -0500</pubDate>
             <link>https://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</link>
             <guid isPermaLink="true">https://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</guid>
             

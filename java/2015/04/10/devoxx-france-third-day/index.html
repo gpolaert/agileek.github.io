@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -176,7 +178,7 @@
 
 <p>L’infrastructure doit être pour les développeurs comme l’électricité : accessible sans même avoir à y penser, et fiable. J’avoue être plus proche du mouvement DevOps mais sa vision donne à réfléchir.</p>
 
-<h3 id="futurejava">Future<java></java></h3>
+<h3 id="future">Future<Java></Java></h3>
 
 <p>Brian Goetz nous parle pour cette dernière keynote du futur de Java, en nous parlant de son passé. Ayant suivi sa conférence hier, je n’ai pas appris grand chose à celle-ci.</p>
 
@@ -184,13 +186,13 @@
 
 <p>Ça permettra ce genre de concepts, j’ai déjà hâte.</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">integerSum</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">integers</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">integerSum</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">integers</span><span class="o">)</span> <span class="o">{</span>
 	<span class="k">return</span> <span class="n">integers</span><span class="o">.</span><span class="na">parallelStream</span><span class="o">().</span><span class="na">sum</span><span class="o">();</span>
-<span class="o">}</span></code></pre></div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Avouez que ça fait rêver non ?</p>
 
-<h2 id="des-tablettes-dcriture-aux-tablettes-pour-crire">Des tablettes d’écriture aux tablettes pour écrire</h2>
+<h2 id="des-tablettes-décriture-aux-tablettes-pour-écrire">Des tablettes d’écriture aux tablettes pour écrire</h2>
 
 <p>Première session non technique. J’avoue que j’ai fait le choix à cause de la speaker : Clarrisse Herrenschmidt. Elle avait fait une keynote d’ouverture à Devoxx 2013 tout simplement fabuleuse. Elle avait parlé de l’histoire des chiffres, du début de l’humanité à aujourd’hui. C’est je pense la seule session à laquelle j’ai assisté et que j’ai re-regardée sur Parleys. Allez <a href="https://www.parleys.com/tutorial/lhistoire-des-ecritures">la voir</a>, vous ne serez pas déçu.</p>
 
@@ -281,7 +283,7 @@ Ils voulaient embarquer le raspberry pi directement sur le parrot, mais le poids
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>ce n’est pas forcément une relation de causalité directe <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>ce n’est pas forcément une relation de causalité directe <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -290,12 +292,23 @@ Ils voulaient embarquer le raspberry pi directement sur le parrot, mais le poids
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

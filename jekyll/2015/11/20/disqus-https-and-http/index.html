@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -135,11 +137,11 @@
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:site" content="@BitardMichael" />
     <meta property="twitter:title" content="Forcing https for GitHub Pages and Disqus" />
-    <meta property="twitter:description" content=" Observation This blog uses GitHub Pages, which are by default available using both http and https protocols. The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only https. Why..." />
+    <meta property="twitter:description" content="### Observation This blog uses GitHub Pages, which are by default available using both http and https protocols. The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only https. Why..." />
     <meta property="twitter:image" content="" />
 
     <meta itemprop="keywords" content="" />
-    <meta itemprop="description" content=" Observation This blog uses GitHub Pages, which are by default available using both http and https protocols. The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only https. Why..." />
+    <meta itemprop="description" content="### Observation This blog uses GitHub Pages, which are by default available using both http and https protocols. The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only https. Why..." />
 
     <header class="post-header">
         <h1 itemprop="name">Forcing https for GitHub Pages and Disqus</h1>
@@ -148,7 +150,7 @@
     </header>
 
     <div class="post-content" itemprop="articleBody">
-        <h3 id="observation"> Observation</h3>
+        <p>### Observation</p>
 
 <p>This blog uses <a href="https://pages.github.com/">GitHub Pages</a>, which are by default available using both <strong><em>http</em></strong> and <strong><em>https</em></strong> protocols.</p>
 
@@ -162,7 +164,7 @@
   <li><a href="https://letsencrypt.org/2015/10/19/lets-encrypt-is-trusted.html">Let’s Encrypt is trusted!</a><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></li>
 </ul>
 
-<h3 id="force-https-on-github-pages"> Force <strong><em>https</em></strong> on Github Pages</h3>
+<p>### Force <strong><em>https</em></strong> on Github Pages</p>
 
 <p>I found this gist to force the <strong><em>https</em></strong> redirection, simple, efficient.</p>
 
@@ -177,7 +179,7 @@ if ((host == window.location.host) &amp;&amp; (window.location.protocol != &quot
 
 <p><img src="/images/posts/jekyll/disqus_http_https.gif" alt="Disqus http vs https" /></p>
 
-<h3 id="migrate-disqus-comments"> Migrate Disqus comments</h3>
+<p>### Migrate Disqus comments</p>
 
 <p>In fact, Disqus treat <a href="http://agileek.github.io">http://agileek.github.io</a> and <a href="https://agileek.github.io">https://agileek.github.io</a> as 2 differents sites<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>, so if someone post a comment on the <strong><em>http</em></strong> “version” it’s not displayed on the <strong><em>https</em></strong> side.</p>
 
@@ -196,13 +198,13 @@ if ((host == window.location.host) &amp;&amp; (window.location.protocol != &quot
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>Ok, this is not relevant here since I’m using GitHub’s certificates, but Let’s Encrypt is just too huge to not talk about. I will soon write an article about it. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>Ok, this is not relevant here since I’m using GitHub’s certificates, but Let’s Encrypt is just too huge to not talk about. I will soon write an article about it. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>The “issue” has been reported several times but never corrected, is this a hidden feature? <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>The “issue” has been reported several times but never corrected, is this a hidden feature? <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>There is a lot of unnecessary links, even my drafts appear here <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>There is a lot of unnecessary links, even my drafts appear here <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -211,12 +213,23 @@ if ((host == window.location.host) &amp;&amp; (window.location.protocol != &quot
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

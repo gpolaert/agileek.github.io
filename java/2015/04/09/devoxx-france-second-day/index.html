@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -164,7 +166,7 @@
 
 <p>Petit point bluffant avec ces petits robots : ils sont capables de détecter les émotions (colère, tristesse) au travers des dialogues.</p>
 
-<h4 id="quelle-responsabilit-pour-le-dveloppeur">Quelle responsabilité pour le développeur</h4>
+<h4 id="quelle-responsabilité-pour-le-développeur">Quelle responsabilité pour le développeur</h4>
 
 <p>Le robot est un outil, il peut être bien ou mal utilisé.</p>
 
@@ -172,7 +174,7 @@
 
 <p>Il existe un problème lié à la responsabilité du robot. Qui est responsable en cas d’accident? Le robot ? La société qui a crée le robot ? Le développeur ?</p>
 
-<h3 id="la-problmatique-du-contrle-des-technologies-de-linformation">La problématique du contrôle des technologies de l’information</h3>
+<h3 id="la-problématique-du-contrôle-des-technologies-de-linformation">La problématique du contrôle des technologies de l’information</h3>
 
 <p>Excellente proposition : après Devoxx4Kids, faire un Devoxx4HommesPolitiques.</p>
 
@@ -304,7 +306,7 @@
 <p>Un nouveau format de fichier apparait : jmod.
 Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne peut y être ajouté (c’est faux, Osgi par exemple se sert du MANIFEST.mf, mais ça reste une convention). Le .jmod permet de déclarer les dépendances aux différents modules java, afin d’avoir un arbre de dépendance très fin.</p>
 
-<p><code>sun.*</code> et <code>*.internal.*</code> ne seront plus accessibles (un support temporaire est prévu pour aider aux migrations).</p>
+<p><code class="highlighter-rouge">sun.*</code> et <code class="highlighter-rouge">*.internal.*</code> ne seront plus accessibles (un support temporaire est prévu pour aider aux migrations).</p>
 
 <p>jdeps : permet de savoir quels sont les apis de base dont notre code dépent (accessible depuis java 8).</p>
 
@@ -313,10 +315,10 @@ Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>Ce blog en est la preuve <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>Ce blog en est la preuve <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>Dès que le lien est sur Parleys, je linkerai la vidéo ici <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>Dès que le lien est sur Parleys, je linkerai la vidéo ici <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -325,12 +327,23 @@ Le Jar étant juste un zip renommé, il est trop limitant et aucune meta-data ne
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

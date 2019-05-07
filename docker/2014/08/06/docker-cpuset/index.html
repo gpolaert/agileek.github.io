@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -145,7 +147,8 @@
         <h1 itemprop="name">Playing with docker and cpuset</h1>
         <time class="meta" itemprop="datePublished" datetime="2014-08-06">Aug 6, 2014</time>
         
-          <span class="meta">, edited on </span><time class="meta" itemprop="dateModified" datetime="2016-01-06">Jan 6, 2016</time>
+        <span class="meta">, edited on </span>
+        <time class="meta" itemprop="dateModified" datetime="2016-01-06">Jan 6, 2016</time>
         
     </header>
 
@@ -163,7 +166,7 @@ As each instance is multi-threaded, we noticed that they often get in each other
 
 <p>If you run it with</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -ti --cpuset-cpus<span class="o">=</span><span class="m">6</span> agileek/cpuset-test</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run <span class="nt">-ti</span> <span class="nt">--cpuset-cpus</span><span class="o">=</span>6 agileek/cpuset-test</code></pre></figure>
 
 <p>it will take one cpu (the 7th) at 100%.</p>
 
@@ -175,7 +178,7 @@ As each instance is multi-threaded, we noticed that they often get in each other
 
 <p>If you run it with</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -ti --cpuset-cpus<span class="o">=</span>0,4,6 agileek/cpuset-test</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run <span class="nt">-ti</span> <span class="nt">--cpuset-cpus</span><span class="o">=</span>0,4,6 agileek/cpuset-test</code></pre></figure>
 
 <p>it will take all available CPUs (the 1st, 5th and 7th)</p>
 
@@ -187,7 +190,7 @@ As each instance is multi-threaded, we noticed that they often get in each other
 
 <h3 id="edit-2016-01-06">Edit 2016-01-06</h3>
 <ul>
-  <li>Replace <code>cpuset</code> with <code>cpuset-cpus</code></li>
+  <li>Replace <code class="highlighter-rouge">cpuset</code> with <code class="highlighter-rouge">cpuset-cpus</code></li>
   <li><a href="https://github.com/agileek/docker/tree/master/cpuset-test">Smallest docker image</a> possible (1.5MB with 2 layers). The old one was ~10 layers and 180MB</li>
   <li>Use <a href="https://patrickmn.com/projects/cpuburn/">cpuburn</a></li>
 </ul>
@@ -197,12 +200,23 @@ As each instance is multi-threaded, we noticed that they often get in each other
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="docker">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

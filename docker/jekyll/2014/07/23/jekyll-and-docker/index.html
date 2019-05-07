@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -145,7 +147,8 @@
         <h1 itemprop="name">Jekyll quickstart with docker</h1>
         <time class="meta" itemprop="datePublished" datetime="2014-07-23">Jul 23, 2014</time>
         
-          <span class="meta">, edited on </span><time class="meta" itemprop="dateModified" datetime="2015-11-08">Nov 8, 2015</time>
+        <span class="meta">, edited on </span>
+        <time class="meta" itemprop="dateModified" datetime="2015-11-08">Nov 8, 2015</time>
         
     </header>
 
@@ -159,19 +162,19 @@
 <p>After a quick search on blog engines, I decided to give a try to <a href="http://jekyllrb.com">Jekyll</a>, since it is integrated with github pages and is very simple to use.
 I followed their tutorial and Bam!</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo gem install jekyll
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>gem <span class="nb">install </span>jekyll
 Building native extensions.  This could take a <span class="k">while</span>...
 ERROR:  Error installing jekyll:
 	ERROR: Failed to build gem native extension.
 
         /usr/bin/ruby1.9.1 extconf.rb
-/usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in <span class="sb">`</span>require<span class="s1">&#39;: cannot load such file -- mkmf (LoadError)</span>
-<span class="s1">	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require&#39;</span>
-	from extconf.rb:1:in <span class="sb">`</span>&lt;main&gt;<span class="err">&#39;</span>
+/usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in <span class="sb">`</span>require<span class="s1">': cannot load such file -- mkmf (LoadError)
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'</span>
+	from extconf.rb:1:in <span class="sb">`</span>&lt;main&gt;<span class="s1">'
 
 
-Gem files will remain installed in /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2 <span class="k">for</span> inspection.
-Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out</code></pre></div>
+Gem files will remain installed in /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2 for inspection.
+Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out</span></code></pre></figure>
 
 <p>It didn’t work on my computer… and since i’m a lazy person, I get tired really fast when things don’t work like expected.</p>
 
@@ -179,13 +182,13 @@ Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out</
 
 <p>In 3 steps, this blog was on:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Added alias to use &#39;jekyll&#39; command easily</span>
-<span class="nv">$ </span><span class="nb">echo alias </span><span class="nv">jekyll</span><span class="o">=</span><span class="se">\&#39;</span>sudo docker run --rm -v <span class="se">\&quot;\$</span>PWD:/src<span class="se">\&quot;</span> -p 4000:4000 grahamc/jekyll<span class="se">\&#39;</span> &gt;&gt; ~/.bash_aliases
-<span class="c"># Create a blog in &#39;blog&#39; directory</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Added alias to use 'jekyll' command easily</span>
+<span class="nv">$ </span><span class="nb">echo alias </span><span class="nv">jekyll</span><span class="o">=</span><span class="se">\'</span><span class="nb">sudo </span>docker run <span class="nt">--rm</span> <span class="nt">-v</span> <span class="se">\"\$</span>PWD:/src<span class="se">\"</span> <span class="nt">-p</span> 4000:4000 grahamc/jekyll<span class="se">\'</span> <span class="o">&gt;&gt;</span> ~/.bash_aliases
+<span class="c"># Create a blog in 'blog' directory</span>
 <span class="nv">$ </span>jekyll new blog
 <span class="nv">$ </span><span class="nb">cd </span>blog
 <span class="c"># Serve the blog on http://localhost:4000 and automatically reload on file changes</span>
-<span class="nv">$ </span>jekyll serve --watch</code></pre></div>
+<span class="nv">$ </span>jekyll serve <span class="nt">--watch</span></code></pre></figure>
 
 <p>This was painless for me, as someone else already had a jekyll correctly installed and working in a docker environment.</p>
 
@@ -215,8 +218,8 @@ deploy:
 <p>There are 2 commands:</p>
 
 <ul>
-  <li><code>test</code> will serve on port 4000 with drafts enabled</li>
-  <li><code>deploy</code> will build everything, commit it on master for gh-pages, waiting for you to push</li>
+  <li><code class="highlighter-rouge">test</code> will serve on port 4000 with drafts enabled</li>
+  <li><code class="highlighter-rouge">deploy</code> will build everything, commit it on master for gh-pages, waiting for you to push</li>
 </ul>
 
 
@@ -224,12 +227,23 @@ deploy:
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

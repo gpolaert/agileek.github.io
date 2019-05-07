@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -167,49 +169,49 @@
 
 <p>Petit rappel qui pique les yeux : voici comment déclarer <strong><em>UNE</em></strong> dépendance dans son pom :</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>net.code-story<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>http<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>2.83<span class="nt">&lt;/version&gt;</span>
     <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span></code></pre></div>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
 <p>Ça fait quand même <strong><em>6</em></strong> lignes pour <strong><em>1</em></strong> dépendance, soyons réalistes, c’est juste ignoble…</p>
 
 <h3 id="polyglot">Polyglot</h3>
 <p>Annoncé il y’a très longtemps (j’en ai entendu parler en 2012, il y avait quelques articles prometteurs), maven-polyglot avait pour but de rajouter le support de plusieurs langages dans les pom. Ça a été complètement abandonné et toutes les resources ont <a href="http://stackoverflow.com/questions/11170057/what-happened-to-maven-polyglot">disparues du net</a>.</p>
 
-<p>C’est récemment revenu au goût du jour avec Maven 3.3.1 (17 mars 2015) et l’arrivée du “Core Extension Mechanism” amélioré. Maintenant, pour modifier le coeur de maven (ok, je simplifie), il “suffit” de rajouter à la base de son projet maven <code>.mvn/extensions.xml</code></p>
+<p>C’est récemment revenu au goût du jour avec Maven 3.3.1 (17 mars 2015) et l’arrivée du “Core Extension Mechanism” amélioré. Maintenant, pour modifier le coeur de maven (ok, je simplifie), il “suffit” de rajouter à la base de son projet maven <code class="highlighter-rouge">.mvn/extensions.xml</code></p>
 
-<h3 id="concrtement-a-ressemble--quoi-">Concrètement, ça ressemble à quoi ?</h3>
+<h3 id="concrètement-ça-ressemble-à-quoi-">Concrètement, ça ressemble à quoi ?</h3>
 
 <p>À ça :</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;extensions&gt;</span>
   <span class="nt">&lt;extension&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>io.takari.polyglot<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>polyglot-yaml<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>0.1.7<span class="nt">&lt;/version&gt;</span>
   <span class="nt">&lt;/extension&gt;</span>
-<span class="nt">&lt;/extensions&gt;</span></code></pre></div>
+<span class="nt">&lt;/extensions&gt;</span></code></pre></figure>
 
 <blockquote>
   <p>Vous remarquerez que pour le moment on s’est pas trop débarrassé du XML, on en a même rajouté…</p>
 </blockquote>
 
-<h3 id="il-sest-pass-quoi-">Il s’est passé quoi ?</h3>
+<h3 id="il-sest-passé-quoi-">Il s’est passé quoi ?</h3>
 <p>Concrètement, vous venez de rajouter le support de lecture des pom.yml et pom.yaml. <strong><em>C’est pas énorme ça ?</em></strong></p>
 
-<p>Ensuite, Vous pouvez convertir votre <code>pom.xml</code> grâce à un plugin via cette commande :</p>
+<p>Ensuite, Vous pouvez convertir votre <code class="highlighter-rouge">pom.xml</code> grâce à un plugin via cette commande :</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">mvn</span> <span class="n">io</span><span class="o">.</span><span class="na">takari</span><span class="o">.</span><span class="na">polyglot</span><span class="o">:</span><span class="n">polyglot</span><span class="o">-</span><span class="n">translate</span><span class="o">-</span><span class="nl">plugin:</span><span class="n">translate</span> <span class="o">-</span><span class="n">Dinput</span><span class="o">=</span><span class="n">pom</span><span class="o">.</span><span class="na">xml</span> <span class="o">-</span><span class="n">Doutput</span><span class="o">=</span><span class="n">pom</span><span class="o">.</span><span class="na">yml</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"> <span class="n">mvn</span> <span class="n">io</span><span class="o">.</span><span class="na">takari</span><span class="o">.</span><span class="na">polyglot</span><span class="o">:</span><span class="n">polyglot</span><span class="o">-</span><span class="n">translate</span><span class="o">-</span><span class="nl">plugin:</span><span class="n">translate</span> <span class="o">-</span><span class="n">Dinput</span><span class="o">=</span><span class="n">pom</span><span class="o">.</span><span class="na">xml</span> <span class="o">-</span><span class="n">Doutput</span><span class="o">=</span><span class="n">pom</span><span class="o">.</span><span class="na">yml</span></code></pre></figure>
 
-<p>Et voilà, vous pouvez vous débarrasser du pom.xml et lancer <code>mvn clean install</code>. Vérifier que tout fonctionne comme avant quand même, on ne sait jamais.</p>
+<p>Et voilà, vous pouvez vous débarrasser du pom.xml et lancer <code class="highlighter-rouge">mvn clean install</code>. Vérifier que tout fonctionne comme avant quand même, on ne sait jamais.</p>
 
 <p>Pour le plaisir des yeux, voici la même dépendance en yaml</p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="p-Indicator">-</span> <span class="p-Indicator">{</span><span class="nv">groupId</span><span class="p-Indicator">:</span> <span class="nv">net.code-story</span><span class="p-Indicator">,</span> <span class="nv">artifactId</span><span class="p-Indicator">:</span> <span class="nv">http</span><span class="p-Indicator">,</span> <span class="nv">version</span><span class="p-Indicator">:</span> <span class="nv">2.9.1</span><span class="p-Indicator">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">-</span> <span class="pi">{</span><span class="nv">groupId</span><span class="pi">:</span> <span class="nv">net.code-story</span><span class="pi">,</span> <span class="nv">artifactId</span><span class="pi">:</span> <span class="nv">http</span><span class="pi">,</span> <span class="nv">version</span><span class="pi">:</span> <span class="nv">2.9.1</span><span class="pi">}</span></code></pre></figure>
 
 <p>Je trouve ça infiniment plus lisible. (Ok, c’est one-line, mais franchement, c’est lisible, essayez de mettre le xml sur une ligne, pour la blague).</p>
 
@@ -243,7 +245,7 @@
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>C’est mon opinion personnelle à moi, vous avez le droit de préférer le xml <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>C’est mon opinion personnelle à moi, vous avez le droit de préférer le xml <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -252,12 +254,23 @@
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

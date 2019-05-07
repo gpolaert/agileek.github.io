@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -152,9 +154,9 @@
 
 <p><img src="/images/posts/devoxx/devoxx_france.png" alt="Devoxx" class="float_image" /></p>
 
-<h2 id="google-cloud-platformhandsongcp">09:30-12:30 <a href="http://cfp.devoxx.fr/2015/talk/GOB-3561/La_Google_Cloud_Plaform_-_Au_dela_des_simples_demos">Google Cloud Platform</a></h2>
+<h2 id="0930-1230-google-cloud-platform">09:30-12:30 <a href="http://cfp.devoxx.fr/2015/talk/GOB-3561/La_Google_Cloud_Plaform_-_Au_dela_des_simples_demos">Google Cloud Platform</a></h2>
 
-<h3 id="prsentation-de-google-cloud-platform-par-david-gageot-et-ludovic-champenois">Présentation de Google Cloud Platform par David Gageot et Ludovic Champenois.</h3>
+<h3 id="présentation-de-google-cloud-platform-par-david-gageot-et-ludovic-champenois">Présentation de Google Cloud Platform par David Gageot et Ludovic Champenois.</h3>
 
 <p>J’ai hésité avec “Quand Devops rencontre BigData”, mais il est trop tôt pour attaquer violemment avec du spark.</p>
 
@@ -212,13 +214,13 @@
 
 <p>L’idée derrière le google cloud, c’est de pouvoir changer de stratégie (Je gère ma VM, ça monte en charge, je passe sur AppEngine) sans que ça soit coûteux.</p>
 
-<h3 id="cot-dune-vm">Coût d’une VM</h3>
+<h3 id="coût-dune-vm">Coût d’une VM</h3>
 
 <p>Chaque VM est facturée à la minute de CPU (les 10 premières minutes sont indivisibles).</p>
 
 <p>À titre d’exemple, ils ont joué une semaine avec l’application de démo, ils ont fait des benchs (pour pousser le CPU) et ça leur a coûté 28$.</p>
 
-<h3 id="dockerizer-la-dmo">Dockerizer la démo</h3>
+<h3 id="dockerizer-la-démo">Dockerizer la démo</h3>
 
 <p>L’idée c’est que plutôt que de lancer une VM, de la configurer et d’installer son application, on crée une image docker qu’on va déployer sur le cloud.</p>
 
@@ -228,7 +230,7 @@
 
 <p>Il est également possible de faire les mêmes commandes que sur sa machine, mais sur le cloud avec :</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">docker <span class="k">$(</span>docker-machine config mavmgoogle<span class="k">)</span> ps</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">docker <span class="k">$(</span>docker-machine config mavmgoogle<span class="k">)</span> ps</code></pre></figure>
 
 <blockquote>
   <p>le “docker-machine config mavmgoogle” permet de récupérer toutes les options docker pour se connecter au docker de la vm.</p>
@@ -267,7 +269,7 @@
 <p>Il est possible de streamer les logs en live vers BigQuery, ce qui permet une approche plus intéressante de nos logs “plats”.
 Pour la démo, les logs (un log par vote) de l’application sont insérés dans BigQuery et permettent de sortir toutes les informations des votes, donc de pouvoir double checker que les résultats calculés par l’applicatif sont cohérent.</p>
 
-<h3 id="runtime-supports">Runtime supportés</h3>
+<h3 id="runtime-supportés">Runtime supportés</h3>
 
 <p>Avec la contenairization, AppEngine s’ouvre au monde. Google supporte Java, NodeJs, Go, Python, Ruby. Ils sont en train de définir les contraintes pour pouvoir rajouter un runtime custom, la communauté C# travaille déjà à supporter C# dans AppEngine.</p>
 
@@ -288,7 +290,7 @@ Regardez le nobackend.coffee dans la démo. C’est juste bluffant. Firebase peu
 
 <p>La démo est bien évidemment sur <a href="https://github.com/CodeStory/devoxxcarpet">github</a>, elle contient de quoi lancer l’application en java, mais aussi en node js. D’ailleurs, n’hésitez pas à comparer les code produit en nodeJs avec celui en Java, vous serez surpris. Un article sur FluentHttp est prévu, c’est, je pense, le meilleur serveur web java8.</p>
 
-<h2 id="hackergarten">13:30-16:30 Hackergarten</h2>
+<h2 id="1330-1630-hackergarten">13:30-16:30 Hackergarten</h2>
 
 <p>Hop, dès la deuxième session on s’écarte du <a href="http://agileek.github.io/java/2015/04/07/before-devoxx-france/">planning</a>.</p>
 
@@ -327,7 +329,7 @@ En plus ce n’était pas du temps perdu, car ma <a href="https://github.com/Flu
 
 <p><strong><em>Quand est-ce qu’on organise ça sur Toulouse?</em></strong></p>
 
-<h2 id="le-tar-du-terminal">17:10-17:40 Le taré du terminal</h2>
+<h2 id="1710-1740-le-taré-du-terminal">17:10-17:40 Le taré du terminal</h2>
 
 <p>Les sources sont <a href="https://github.com/emmanuelbernard/command-line-nuts">là</a>.</p>
 
@@ -335,7 +337,7 @@ En plus ce n’était pas du temps perdu, car ma <a href="https://github.com/Flu
 
 <p>Premier outil : Tmux, l’incontournable émulateur de terminal.</p>
 
-<h3 id="deuxime-outil--vim">Deuxième outil : Vim</h3>
+<h3 id="deuxième-outil--vim">Deuxième outil : Vim</h3>
 
 <p>Pas besoin de le présenter. Il découpe les commandes avec [action][repetition multiplier]</p>
 
@@ -363,19 +365,19 @@ En plus ce n’était pas du temps perdu, car ma <a href="https://github.com/Flu
   <li>Commandes : faire un script qui lance la commande et qui envoie une notif d’OS à la fin (remote)</li>
 </ul>
 
-<h2 id="maven">18:40-19:10 Maven</h2>
+<h2 id="1840-1910-maven">18:40-19:10 Maven</h2>
 
-<h3 id="jongler-entre-les-diffrentes-versions">Jongler entre les différentes versions</h3>
+<h3 id="jongler-entre-les-différentes-versions">Jongler entre les différentes versions</h3>
 
-<p>Avec la prise en charge de Java par Oracle, les versions sont <code>deprecated</code> beaucoup plus rapidement (en fait, elles ne sont pas dépréciées, elles deviennent juste … payantes).</p>
+<p>Avec la prise en charge de Java par Oracle, les versions sont <code class="highlighter-rouge">deprecated</code> beaucoup plus rapidement (en fait, elles ne sont pas dépréciées, elles deviennent juste … payantes).</p>
 
 <p>Java 6 devient très très payante et Java 7 devient deprecated ce mois-ci. Il faut donc pouvoir switcher de plus en plus rapidement et avec le moins de surprises (Ou prendre le support oracle et payer pour conserver les anciennes versions).</p>
 
 <p>Les différents conseils :</p>
 
 <ul>
-  <li>Utiliser les properties <code>maven.compiler.target</code> et <code>maven.compiler.source</code> pour spécifier la version Java</li>
-  <li>Utiliser le maven-enforcer-plugin <code>enforceBytecodeVersion</code> pour s’assurer que toutes les dépendances sont utilisables par une JRE donnée</li>
+  <li>Utiliser les properties <code class="highlighter-rouge">maven.compiler.target</code> et <code class="highlighter-rouge">maven.compiler.source</code> pour spécifier la version Java</li>
+  <li>Utiliser le maven-enforcer-plugin <code class="highlighter-rouge">enforceBytecodeVersion</code> pour s’assurer que toutes les dépendances sont utilisables par une JRE donnée</li>
   <li>animal-sniffer-maven-plugin permet de contrôler que les bonnes versions d’API sont utilisées (ça peut être une rule CheckSignature dans le maven enforcer plugin pour éviter la multiplication des plugins)</li>
 </ul>
 
@@ -409,7 +411,7 @@ En plus ce n’était pas du temps perdu, car ma <a href="https://github.com/Flu
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>Si vous suivez le compte de David Gageot, vous comprenez mieux pourquoi il demandait qu’on lui envoie des photos de tapis. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>Si vous suivez le compte de David Gageot, vous comprenez mieux pourquoi il demandait qu’on lui envoie des photos de tapis. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -418,12 +420,23 @@ En plus ce n’était pas du temps perdu, car ma <a href="https://github.com/Flu
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

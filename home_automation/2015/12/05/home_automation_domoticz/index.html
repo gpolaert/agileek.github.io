@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -158,7 +160,7 @@ I recommend to start with something easy.</p>
 
 <p><strong><em>Now it’s time to take it to the next level!</em></strong></p>
 
-<h2 id="choose-wisely"> Choose wisely</h2>
+<p>## Choose wisely</p>
 
 <p>There are 2 main wireless protocols to communicate with your devices, 433.92 MHz and Z-wave.</p>
 
@@ -178,9 +180,9 @@ I recommend to start with something easy.</p>
 
 <p>After some digging (and advices from <a href="https://twitter.com/florianchauveau">Florian Chauveau</a>), I decided to use <a href="https://domoticz.com/">domoticz</a>.</p>
 
-<h2 id="glue-it-all-together"> Glue it all together</h2>
+<p>## Glue it all together</p>
 
-<h3 id="docker-on-raspberry-pi"> Docker on raspberry pi</h3>
+<p>### Docker on raspberry pi</p>
 
 <p><img src="/images/posts/home_automation/raspberry_pi_logo.svg" alt="raspberrypi" class="float_image" /></p>
 
@@ -191,14 +193,14 @@ I recommend to start with something easy.</p>
   <li>Build the rpi-domoticz-docker image on your raspberry (optional if you pull it from the registry)</li>
 </ul>
 
-<h3 id="recipe"> Recipe</h3>
-<p>Here is what I did</p>
+<p>### Recipe
+Here is what I did</p>
 
 <ul>
   <li>Download a docker ready image for your sdcard at <a href="http://blog.hypriot.com/downloads/">http://blog.hypriot.com/downloads/</a></li>
   <li>Copy the image to the sdcard
     <ul>
-      <li><code>sudo dd if=hypriot-rpi-20151103-224349.img of=/dev/mmcblk0 bs=1M</code></li>
+      <li><code class="highlighter-rouge">sudo dd if=hypriot-rpi-20151103-224349.img of=/dev/mmcblk0 bs=1M</code></li>
     </ul>
   </li>
   <li>Start your raspberry</li>
@@ -206,14 +208,14 @@ I recommend to start with something easy.</p>
   <li>Connect to it via ssh (root/hypriot)</li>
   <li>Get the latest rpi-domoticz-docker
     <ul>
-      <li><code>docker pull agileek/rpi-domoticz-docker</code></li>
+      <li><code class="highlighter-rouge">docker pull agileek/rpi-domoticz-docker</code></li>
     </ul>
   </li>
   <li>Launch it
     <ul>
-      <li><code>docker run --device=/dev/ttyUSB0 -p 8080:8080 -d agileek/rpi-domoticz-docker</code>
+      <li><code class="highlighter-rouge">docker run --device=/dev/ttyUSB0 -p 8080:8080 -d agileek/rpi-domoticz-docker</code>
         <ul>
-          <li>Backup <code>-v /root/domoticz.db:/root/domoticz/domoticz.db</code></li>
+          <li>Backup <code class="highlighter-rouge">-v /root/domoticz.db:/root/domoticz/domoticz.db</code></li>
         </ul>
       </li>
     </ul>
@@ -228,12 +230,23 @@ I recommend to start with something easy.</p>
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="domoticz,docker,raspberryPi">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;

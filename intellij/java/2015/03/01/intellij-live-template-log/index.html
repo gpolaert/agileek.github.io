@@ -60,8 +60,7 @@
       <div class="trigger">
         
           
-            
-            
+        
           
         
           
@@ -94,6 +93,9 @@
             
           
         
+          
+            
+            
           
         
           
@@ -148,7 +150,7 @@
     </header>
 
     <div class="post-content" itemprop="articleBody">
-        <p>With IntelliJ, one missing feature is the automatic generation of the famous <code>private static Logger LOGGER = ...;</code></p>
+        <p>With IntelliJ, one missing feature is the automatic generation of the famous <code class="highlighter-rouge">private static Logger LOGGER = ...;</code></p>
 
 <p>You can do it easily with the Live Templates, you just have to go to <strong><em>Editor -&gt; Live Templates -&gt; others -&gt; create new</em></strong></p>
 
@@ -160,7 +162,7 @@
   <li>Template text:</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">org</span><span class="o">.</span><span class="na">slf4j</span><span class="o">.</span><span class="na">Logger</span> <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">org</span><span class="o">.</span><span class="na">slf4j</span><span class="o">.</span><span class="na">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">$CLASS_NAME$</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">org</span><span class="o">.</span><span class="na">slf4j</span><span class="o">.</span><span class="na">Logger</span> <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">org</span><span class="o">.</span><span class="na">slf4j</span><span class="o">.</span><span class="na">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">$CLASS_NAME</span><span class="err">$</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
 
 <ul>
   <li>
@@ -173,24 +175,35 @@
 
 <p>Make sure you have slf4j-api in your classpath, with maven:</p>
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
  <span class="nt">&lt;groupId&gt;</span>org.slf4j<span class="nt">&lt;/groupId&gt;</span>
  <span class="nt">&lt;artifactId&gt;</span>slf4j-api<span class="nt">&lt;/artifactId&gt;</span>
  <span class="nt">&lt;version&gt;</span>1.7.7<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span></code></pre></div>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
-<p>That’s it, type <code>log</code> and Ctrl+J and it will generate the logger line, with the slf4j imports.</p>
+<p>That’s it, type <code class="highlighter-rouge">log</code> and Ctrl+J and it will generate the logger line, with the slf4j imports.</p>
 
     </div>
 
     <div id="social_sharing">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
     </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'agileek';
-        (function() {
+        (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;
