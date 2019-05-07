@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.</description>
         <link>https://agileek.github.io/</link>
         <atom:link href="https://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Tue, 07 May 2019 06:49:13 -0500</pubDate>
-        <lastBuildDate>Tue, 07 May 2019 06:49:13 -0500</lastBuildDate>
+        <pubDate>Tue, 07 May 2019 06:57:51 -0500</pubDate>
+        <lastBuildDate>Tue, 07 May 2019 06:57:51 -0500</lastBuildDate>
         <generator>Jekyll v3.8.5</generator>
         
         <item>
@@ -19,7 +19,8 @@
   &lt;p&gt;Amazon EC2 Container Registry (ECR) is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;For someone to be able to store/retrieve docker images, you have to be authenticated. AWS CLI provides a command which takes your credentials and generate a token, authenticating the user for 12 hours.&lt;/p&gt;
+&lt;p&gt;To be able to store/retrieve docker images, you have to be authenticated.
+AWS CLI provides a command which takes your credentials and generate a token, authenticating the user for 12 hours.&lt;/p&gt;
 
 &lt;p&gt;Our continuous integration servers (ie. Jenkins nodes) needed to access to the ECR so we had to provide an automated mechanism.&lt;/p&gt;
 
@@ -30,7 +31,8 @@
   &lt;li&gt;The second every 11 hours.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This was not a good idea, sometimes it did not work and it was difficult to know why. (In fact, the @reboot only works when using root, which we try to avoid)&lt;/p&gt;
+&lt;p&gt;This was not a good idea, sometimes it did not work and it was difficult to know why.
+(In fact, the @reboot only works when using root, which we try to avoid)&lt;/p&gt;
 
 &lt;h2 id=&quot;systemd&quot;&gt;Systemd&lt;/h2&gt;
 
