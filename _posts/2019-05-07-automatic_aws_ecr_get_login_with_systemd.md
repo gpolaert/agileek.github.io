@@ -2,26 +2,26 @@
 layout: post
 title: "Login to AWS ECR using systemd"
 categories: [docker, terminal]
-date:   2017-07-18
+date:   2019-05-07
 tags: [aws, ecr, docker, systemd]
 ---
 
 ## First try without systemd
 
-At EasyMile, we use AWS ECR to manage the docker images.
+During my previous mission, we used AWS ECR to manage the docker images.
 
 > Amazon EC2 Container Registry (ECR) is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images.
 
 For someone to be able to store/retrieve docker images, you have to be authenticated. AWS CLI provides a command which takes your credentials and generate a token, authenticating the user for 12 hours.
 
-Our continous integration servers (ie. Jenkins nodes) need to access to the ECR so we had to provide an automatic mechanism.
+Our continuous integration servers (ie. Jenkins nodes) needed to access to the ECR so we had to provide an automated mechanism.
 
 The first idea was to use 2 crons:
 
 * The first on @reboot, to ensure the machine will be authenticated upon reboot.
 * The second every 11 hours.
 
-This was a not good enough idea, sometimes it didn't work but we didn't know why and it was difficult to investigate. (The @reboot didn't work at all, since it appears to only work as root user and we weren't using root)
+This was not a good idea, sometimes it did not work and it was difficult to know why. (In fact, the @reboot only works when using root, which we try to avoid)
 
 ## Systemd
 
