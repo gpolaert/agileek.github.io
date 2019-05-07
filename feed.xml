@@ -5,9 +5,97 @@
         <description>Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.</description>
         <link>https://agileek.github.io/</link>
         <atom:link href="https://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Tue, 07 May 2019 06:40:46 -0500</pubDate>
-        <lastBuildDate>Tue, 07 May 2019 06:40:46 -0500</lastBuildDate>
+        <pubDate>Tue, 07 May 2019 06:49:13 -0500</pubDate>
+        <lastBuildDate>Tue, 07 May 2019 06:49:13 -0500</lastBuildDate>
         <generator>Jekyll v3.8.5</generator>
+        
+        <item>
+            <title>Login to AWS ECR using systemd</title>
+            <description>&lt;h2 id=&quot;first-try-without-systemd&quot;&gt;First try without systemd&lt;/h2&gt;
+
+&lt;p&gt;During my previous mission, we used AWS ECR to manage the docker images.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Amazon EC2 Container Registry (ECR) is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For someone to be able to store/retrieve docker images, you have to be authenticated. AWS CLI provides a command which takes your credentials and generate a token, authenticating the user for 12 hours.&lt;/p&gt;
+
+&lt;p&gt;Our continuous integration servers (ie. Jenkins nodes) needed to access to the ECR so we had to provide an automated mechanism.&lt;/p&gt;
+
+&lt;p&gt;The first idea was to use 2 crons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The first on @reboot, to ensure the machine will be authenticated upon reboot.&lt;/li&gt;
+  &lt;li&gt;The second every 11 hours.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This was not a good idea, sometimes it did not work and it was difficult to know why. (In fact, the @reboot only works when using root, which we try to avoid)&lt;/p&gt;
+
+&lt;h2 id=&quot;systemd&quot;&gt;Systemd&lt;/h2&gt;
+
+&lt;p&gt;So we used systemd and:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it just worked&lt;/li&gt;
+  &lt;li&gt;we can monitor the executions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is the unit located here: /etc/systemd/system/docker_ecr_login.service&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Unit]
+&lt;span class=&quot;nv&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Docker aws ecr login
+&lt;span class=&quot;nv&quot;&gt;Wants&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;network-online.target
+&lt;span class=&quot;nv&quot;&gt;After&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;network.target network-online.target
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Service]
+&lt;span class=&quot;nv&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneshot
+&lt;span class=&quot;nv&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;builder
+&lt;span class=&quot;nv&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/bin/bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'$$(/usr/bin/aws ecr get-login --no-include-email)'&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Install]
+&lt;span class=&quot;nv&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;default.target&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Dont forget to &lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl daemon-reload&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl enable docker_ecr_login&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we only use one cron, every 11 hours it launches &lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl start docker_ecr_login&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;investigate&quot;&gt;Investigate&lt;/h3&gt;
+
+&lt;p&gt;Now it’s easier to monitor past executions with:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;journalctl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; docker_ecr_login
+&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; Logs begin at Fri 2017-05-19, end at Mon 2017-07-10. &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;
+Starting Docker aws ecr login...
+docker_ecr_login.service: Main process exited, &lt;span class=&quot;nv&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;exited, &lt;span class=&quot;nv&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;217/USER
+Failed to start Docker aws ecr login.
+docker_ecr_login.service: Unit entered failed state.
+docker_ecr_login.service: Failed with result &lt;span class=&quot;s1&quot;&gt;'exit-code'&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The error status 217/USER means that the user ‘builder’ doesn’t exist on this system.&lt;/p&gt;
+
+&lt;h3 id=&quot;todo&quot;&gt;ToDo&lt;/h3&gt;
+
+&lt;p&gt;We are looking into systemd timers with something like &lt;code class=&quot;highlighter-rouge&quot;&gt;OnUnitActiveSec=&lt;/code&gt; we should be able to completely get rid of cron and go full systemd.&lt;/p&gt;
+</description>
+            <pubDate>Tue, 07 May 2019 00:00:00 -0500</pubDate>
+            <link>https://agileek.github.io/docker/terminal/2019/05/07/automatic_aws_ecr_get_login_with_systemd/</link>
+            <guid isPermaLink="true">https://agileek.github.io/docker/terminal/2019/05/07/automatic_aws_ecr_get_login_with_systemd/</guid>
+            
+            <category>aws</category>
+            
+            <category>ecr</category>
+            
+            <category>docker</category>
+            
+            <category>systemd</category>
+            
+            
+            <category>docker</category>
+            
+            <category>terminal</category>
+            
+        </item>
         
         <item>
             <title>Devoxx 2016: Huntly or nothing!</title>
@@ -948,155 +1036,6 @@ RUN \
             
             
             <category>docker</category>
-            
-        </item>
-        
-        <item>
-            <title>Devoxx France : jour 3</title>
-            <description>&lt;p&gt;&lt;img src=&quot;/images/posts/devoxx/devoxx_france.png&quot; alt=&quot;Devoxx&quot; class=&quot;float_image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;keynote&quot;&gt;Keynote&lt;/h2&gt;
-
-&lt;h3 id=&quot;un-robot-peut-il-apprendre-comme-un-enfant-&quot;&gt;Un robot peut-il apprendre comme un enfant ?&lt;/h3&gt;
-
-&lt;p&gt;On recommence avec les robots pour cette première keynote de Pierre-Yves Oudeyer.&lt;/p&gt;
-
-&lt;p&gt;Nous avons tous une vision des robots en tant qu’extension de nos mains (robots aspirateurs, ceux sur Mars, pour tondre la pelouse,…) mais Pierre-Yves essaie de créer des robots qui étendent notre esprit. Pour cela il se base sur l’observation de l’apprentissage des enfants. C’est bluffant de voir à quel point en analysant mathématiquement nos interactions avec le monde extérieur on peut modéliser le comportement d’un nouveau né.&lt;/p&gt;
-
-&lt;h4 id=&quot;comment-les-langues-naissent-elles-&quot;&gt;Comment les langues naissent-elles ?&lt;/h4&gt;
-
-&lt;p&gt;En mettant un groupe de robots “curieux” dans un espace restreint, on peut observer l’apparition d’un langage. Les robots désignent un objet et tentent de le nommer par paire. Au bout d’un moment un consensus apparait et ce mot se diffuse auprès des autres robots.&lt;/p&gt;
-
-&lt;p&gt;Il nous a également présenté &lt;a href=&quot;http://www.poppy-project.com&quot;&gt;Poppy&lt;/a&gt;, un robot imprimé en 3D open source.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-decentralization-singularity&quot;&gt;The decentralization singularity&lt;/h3&gt;
-
-&lt;p&gt;Stéphan Tual nous parle d’Ethereum. Il commence avec le constat de la centralisation d’internet (Facebook, Amazon), qui n’était pas intentionnel, mais a émergé par simplicité.&lt;/p&gt;
-
-&lt;p&gt;Pour ceux qui ne connaissent pas, Ethereum se base sur Bitcoin. L’idée est de mettre du code dans la blockchain pour que tous les éléments du réseau puissent l’exécuter et s’assurer qu’il n y a pas de fraude.&lt;/p&gt;
-
-&lt;h3 id=&quot;clever-cloud&quot;&gt;Clever cloud&lt;/h3&gt;
-
-&lt;p&gt;Le présentateur prend à contre pied le mouvement DevOps en nous exposant un parallèle très intéressant avec l’électricité. En effet au début de l’électricité les entreprises avaient leur propre façon de générer l’électricité, avec tous les écarts que ça implique (alternatif/continue, voltage). Aujourd’hui on ne se pose plus de question sur l’électricité, ça fonctionne, point.&lt;/p&gt;
-
-&lt;p&gt;L’infrastructure doit être pour les développeurs comme l’électricité : accessible sans même avoir à y penser, et fiable. J’avoue être plus proche du mouvement DevOps mais sa vision donne à réfléchir.&lt;/p&gt;
-
-&lt;h3 id=&quot;future&quot;&gt;Future&lt;Java&gt;&lt;/Java&gt;&lt;/h3&gt;
-
-&lt;p&gt;Brian Goetz nous parle pour cette dernière keynote du futur de Java, en nous parlant de son passé. Ayant suivi sa conférence hier, je n’ai pas appris grand chose à celle-ci.&lt;/p&gt;
-
-&lt;p&gt;Une chose très intéressante par contre, c’est l’arrivée (Java 10 ?) des value class, qui sont à la limite entre objets et type primitifs, permettant une abstraction équivalent à l’objet tout en ayant un comportement mémoire primitif.&lt;/p&gt;
-
-&lt;p&gt;Ça permettra ce genre de concepts, j’ai déjà hâte.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;integerSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parallelStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Avouez que ça fait rêver non ?&lt;/p&gt;
-
-&lt;h2 id=&quot;des-tablettes-décriture-aux-tablettes-pour-écrire&quot;&gt;Des tablettes d’écriture aux tablettes pour écrire&lt;/h2&gt;
-
-&lt;p&gt;Première session non technique. J’avoue que j’ai fait le choix à cause de la speaker : Clarrisse Herrenschmidt. Elle avait fait une keynote d’ouverture à Devoxx 2013 tout simplement fabuleuse. Elle avait parlé de l’histoire des chiffres, du début de l’humanité à aujourd’hui. C’est je pense la seule session à laquelle j’ai assisté et que j’ai re-regardée sur Parleys. Allez &lt;a href=&quot;https://www.parleys.com/tutorial/lhistoire-des-ecritures&quot;&gt;la voir&lt;/a&gt;, vous ne serez pas déçu.&lt;/p&gt;
-
-&lt;p&gt;Pour cette session elle nous parle de l’évolution de l’écriture avec l’essort des technologies modernes.&lt;/p&gt;
-
-&lt;p&gt;Les choses bougent un peu partout :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;45 états américains sur 50 ont arrêté l’écriture cursive pour l’écriture script&lt;/li&gt;
-  &lt;li&gt;Allemagne, chaque chef d’établissement décide&lt;/li&gt;
-  &lt;li&gt;En Suisse, ils étaient passés à l’écriture script, ils en sont revenus et maintenant c’est de la responsabilité des cantons.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Depuis l’origine, ce sont les nombres qui ont amenés les modifications dans les langues (l’Homme est-il vénal ?).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Écrire, c’est soumettre la main et le corps à l’activité mentale.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Betty Moreau nous parle ensuite de l’activité du cerveau lié à l’écriture. C’est en fait une activité qui occupe presque tout le cerveau.&lt;/p&gt;
-
-&lt;p&gt;Il y’a des différences fondamentales entre l’écriture cursive et l’écriture liée :&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;L’écriture cursive&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;liée comme la pensée&lt;/li&gt;
-  &lt;li&gt;rapide&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;mais elle demande une finesse motrice importante à la différence de &lt;strong&gt;&lt;em&gt;l’écriture script&lt;/em&gt;&lt;/strong&gt; qui est :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;simple&lt;/li&gt;
-  &lt;li&gt;ressemblant aux écrits sur écran&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;mais son espacement donnant du sens est difficile à acquérir pour les petits et elle est lente.&lt;/p&gt;
-
-&lt;p&gt;Que se passe-t-il quand on se sert d’un clavier ? Le cortex sensori-moteur ne s’active pas. Le cerveau est statisticien, il se conditionne et se lasse, et il aime les récompenses.&lt;/p&gt;
-
-&lt;p&gt;Plusieurs études sont en cours pour évaluer l’impact de l’utilisation d’un clavier plutôt que l’écriture manuelle à l’école&lt;/p&gt;
-
-&lt;p&gt;Pour un test, ils ont pris 76 enfants de 33 à 57 mois, la moitié apprenant au stylo, l’autre au clavier. Il est apparu clairement que les enfants utilisant des stylos avaient une meilleurs reconnaissance des lettres que les autres.&lt;/p&gt;
-
-&lt;p&gt;La deuxième étude a été effectuée sur un échantillon de 1000 élèves de niveau CE1.&lt;/p&gt;
-
-&lt;p&gt;Ils se sont rendu compte que si l’écriture était correcte à 4 ans, le niveau de l’élève était meilleur en math ET en français&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Ne laissons pas de côté un quelconque savoir. Car un savoir ne peut être quelconque.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;iot-java-and-autonomous-drones&quot;&gt;Iot, Java and Autonomous Drones&lt;/h2&gt;
-
-&lt;p&gt;Dernière conférence pour moi, il faut bien rentrer et ce n’est pas la porte à côté.&lt;/p&gt;
-
-&lt;p&gt;James Weaving va nous parler de programmation de drones autonomes. Concrètement il branche des RaspBerry Pi sur des quadcopters.&lt;/p&gt;
-
-&lt;p&gt;Ils ont fait plusieurs choix techniques :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Parrot 2.0&lt;/li&gt;
-  &lt;li&gt;Parrots On Java/Parroteer&lt;/li&gt;
-  &lt;li&gt;Raspberry Pi&lt;/li&gt;
-  &lt;li&gt;PowerBank pour rendre le raspberry pi “autonome”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Le Raspberry Pi possède deux dongles wifi, un pour communiquer avec le parrot, l’autre sert d’access point pour pouvoir s’y connecter depuis son laptop.
-Ils voulaient embarquer le raspberry pi directement sur le parrot, mais le poids supplémentaire le rendait trop instable.&lt;/p&gt;
-
-&lt;p&gt;Ils ont crée une API pour simplifier les commandes (Autonomous4J), et pouvoir envoyer des scénarios prédéterminés au drone.&lt;/p&gt;
-
-&lt;p&gt;Comme leurs tests étaient trop dangereux pour leur famille et leurs objets personnels, ils ont crée un simulateur 3D en JavaFX (Arf).&lt;/p&gt;
-
-&lt;p&gt;Toutes les resources sont sur le bitbucket &lt;a href=&quot;http://autonomous4j.org&quot;&gt;autonomous4j&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Encore une grosse édition Devoxx, bien fatiguante. Cette année est en demi teinte pour moi car je considérais Devoxx comme une conférence pour développeurs passionnés, mais j’ai croisé beaucoup de personnes qui étaient là “quasiment obligé” par leur entreprise parce que “Devoxx c’est cool”.&lt;/p&gt;
-
-&lt;p&gt;En tout cas j’ai hâte que le vidéos soient sur Parleys pour visionner tout ce que je voulais aller voir et que j’ai manqué.&lt;/p&gt;
-
-&lt;h3 id=&quot;ps&quot;&gt;PS&lt;/h3&gt;
-
-&lt;p&gt;Dès que les vidéos sont sur Parleys, je vais repasser sur les 3 posts devoxx pour faire une jolie mise en forme et faire les liens vers les vidéos.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;ce n’est pas forcément une relation de causalité directe &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-            <pubDate>Fri, 10 Apr 2015 00:00:00 -0500</pubDate>
-            <link>https://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</link>
-            <guid isPermaLink="true">https://agileek.github.io/java/2015/04/10/devoxx-france-third-day/</guid>
-            
-            
-            <category>java</category>
             
         </item>
         
