@@ -12,7 +12,8 @@ During my previous mission, we used AWS ECR to manage the docker images.
 
 > Amazon EC2 Container Registry (ECR) is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images.
 
-For someone to be able to store/retrieve docker images, you have to be authenticated. AWS CLI provides a command which takes your credentials and generate a token, authenticating the user for 12 hours.
+To be able to store/retrieve docker images, you have to be authenticated.
+AWS CLI provides a command which takes your credentials and generate a token, authenticating the user for 12 hours.
 
 Our continuous integration servers (ie. Jenkins nodes) needed to access to the ECR so we had to provide an automated mechanism.
 
@@ -21,7 +22,8 @@ The first idea was to use 2 crons:
 * The first on @reboot, to ensure the machine will be authenticated upon reboot.
 * The second every 11 hours.
 
-This was not a good idea, sometimes it did not work and it was difficult to know why. (In fact, the @reboot only works when using root, which we try to avoid)
+This was not a good idea, sometimes it did not work and it was difficult to know why.
+(In fact, the @reboot only works when using root, which we try to avoid)
 
 ## Systemd
 
