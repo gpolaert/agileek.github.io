@@ -18,7 +18,7 @@ That's right, you heard it.
 
 What would be an agileek article without a little bit of **Docker** in it?
 
-# Goal
+# Goal
 
 I will show you how to generate and use an ssl certificate with nginx.
 

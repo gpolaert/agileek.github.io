@@ -40,10 +40,10 @@ In 3 steps, this blog was on:
 {% highlight bash %}
 # Added alias to use 'jekyll' command easily
 $ echo alias jekyll=\'sudo docker run --rm -v \"\$PWD:/src\" -p 4000:4000 grahamc/jekyll\' >> ~/.bash_aliases
-# Create a blog in 'blog' directory
+# Create a blog in 'blog' directory
 $ jekyll new blog
 $ cd blog
-# Serve the blog on http://localhost:4000 and automatically reload on file changes
+# Serve the blog on http://localhost:4000 and automatically reload on file changes
 $ jekyll serve --watch
 {% endhighlight %}
 

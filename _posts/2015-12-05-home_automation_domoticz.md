@@ -18,7 +18,7 @@ I tried a remote controllable wall socket a few years ago, and it really works v
 
 ***Now it's time to take it to the next level!***
 
-## Choose wisely
+## Choose wisely
 
 There are 2 main wireless protocols to communicate with your devices, 433.92 MHz and Z-wave.
 
@@ -36,9 +36,9 @@ With that tool I needed a "home brain", something that could control various stu
 
 After some digging (and advices from [Florian Chauveau][nanak]), I decided to use [domoticz][domoticz].
 
-## Glue it all together
+## Glue it all together
 
-### Docker on raspberry pi
+### Docker on raspberry pi
 
 ![raspberrypi][raspberrypi]{: .float_image }
 
@@ -47,7 +47,7 @@ I recommend to look at [https://github.com/fchauveau/rpi-domoticz-docker][rpi-do
 - Setup an image on your sdcard with docker 32bits installed
 - Build the rpi-domoticz-docker image on your raspberry (optional if you pull it from the registry)
 
-### Recipe
+### Recipe
 Here is what I did
 
 - Download a docker ready image for your sdcard at [http://blog.hypriot.com/downloads/][hypriot]

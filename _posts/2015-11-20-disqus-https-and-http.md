@@ -5,7 +5,7 @@ date:   2015-11-20 14:00:00
 categories: jekyll
 ---
 
-### Observation
+### Observation
 
 This blog uses [GitHub Pages][github_pages], which are by default available using both **_http_** and **_https_** protocols.
 
@@ -17,7 +17,7 @@ Why switching to **_https_** only ?
  - [Https as a ranking signal on google][google_https]
  - [Let's Encrypt is trusted!][letsencrypt][^1]
 
-### Force **_https_** on Github Pages
+### Force **_https_** on Github Pages
 
 I found this gist to force the **_https_** redirection, simple, efficient.
 
@@ -27,7 +27,7 @@ Then I noticed that some of the comments were gone. As you can see on the animat
 
 ![Disqus http vs https][http_https]
 
-### Migrate Disqus comments
+### Migrate Disqus comments
 
 In fact, Disqus treat [http://agileek.github.io][agileek_http] and [https://agileek.github.io][agileek_https] as 2 differents sites[^2], so if someone post a comment on the **_http_** "version" it's not displayed on the **_https_** side.
 

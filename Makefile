@@ -22,3 +22,6 @@ deploy: build
 
 clean:
 	@rm -rf _site
+
+fix_spaces:
+	find . -name "*.md" -exec sed -i 's/\xc2\xa0/ /g' {} \;

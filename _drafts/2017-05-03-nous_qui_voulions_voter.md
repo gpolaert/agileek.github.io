@@ -6,7 +6,7 @@ categories: france
 tags: [france,politique]
 ---
 
-# Le parcours du combattant
+# Le parcours du combattant
 
 ## Préambule
 Cet article est un billet d'humeur sur l'état pitoyable de nos instances.
@@ -44,16 +44,16 @@ Là, si vous êtes comme nous, vous vous dites : C'est gagné, on va avoir notre
 Une semaine plus tard, on a reçu un courrier nous indiquant que finalement, notre demande était rejetée. WHAAAAAAAAT
 
 
-### Prologue
+### Prologue
 
 Le spam de courriers nous informant que la procédure n'était pas complète.
 
 
-## Le vote dans l'ancien bureau de vote
+## Le vote dans l'ancien bureau de vote
 
 Pas grand chose à dire, nous avons craint à un moment que l'on nous ai radié de notre ancien bureau de vote, mais au final ils ont été capable de nous retrouver, non sans mal vu que nos cartes d'électeurs n'étaient pas à jour (What? Elles ne sont pas à jour, mais où sont celles à jour?).
 
-## La procuration
+## La procuration
 
 N'étant pas en France pour le second tour, nous avons entamé les démarches pour donner la procuration à mes parents.
 En bon citoyen n'aimant pas perdre de temps, nous avons rempli le formulaire en ligne.
