@@ -184,10 +184,10 @@ Results logged to /var/lib/gems/1.9.1/gems/fast-stemmer-1.0.2/ext/gem_make.out</
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Added alias to use 'jekyll' command easily</span>
 <span class="nv">$ </span><span class="nb">echo alias </span><span class="nv">jekyll</span><span class="o">=</span><span class="se">\'</span><span class="nb">sudo </span>docker run <span class="nt">--rm</span> <span class="nt">-v</span> <span class="se">\"\$</span>PWD:/src<span class="se">\"</span> <span class="nt">-p</span> 4000:4000 grahamc/jekyll<span class="se">\'</span> <span class="o">&gt;&gt;</span> ~/.bash_aliases
-<span class="c"># Create a blog in 'blog' directory</span>
+<span class="c"># Create a blog in 'blog' directory</span>
 <span class="nv">$ </span>jekyll new blog
 <span class="nv">$ </span><span class="nb">cd </span>blog
-<span class="c"># Serve the blog on http://localhost:4000 and automatically reload on file changes</span>
+<span class="c"># Serve the blog on http://localhost:4000 and automatically reload on file changes</span>
 <span class="nv">$ </span>jekyll serve <span class="nt">--watch</span></code></pre></figure>
 
 <p>This was painless for me, as someone else already had a jekyll correctly installed and working in a docker environment.</p>

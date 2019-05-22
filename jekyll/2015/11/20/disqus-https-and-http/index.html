@@ -137,11 +137,11 @@
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:site" content="@BitardMichael" />
     <meta property="twitter:title" content="Forcing https for GitHub Pages and Disqus" />
-    <meta property="twitter:description" content="### Observation This blog uses GitHub Pages, which are by default available using both http and https protocols. The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only https. Why..." />
+    <meta property="twitter:description" content="Observation This blog uses GitHub Pages, which are by default available using both http and https protocols. The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only https. Why..." />
     <meta property="twitter:image" content="" />
 
     <meta itemprop="keywords" content="" />
-    <meta itemprop="description" content="### Observation This blog uses GitHub Pages, which are by default available using both http and https protocols. The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only https. Why..." />
+    <meta itemprop="description" content="Observation This blog uses GitHub Pages, which are by default available using both http and https protocols. The comments are powered by Disqus, and it works really well. Almost really well, actually, because something strange appeared using only https. Why..." />
 
     <header class="post-header">
         <h1 itemprop="name">Forcing https for GitHub Pages and Disqus</h1>
@@ -150,7 +150,7 @@
     </header>
 
     <div class="post-content" itemprop="articleBody">
-        <p>### Observation</p>
+        <h3 id="observation">Observation</h3>
 
 <p>This blog uses <a href="https://pages.github.com/">GitHub Pages</a>, which are by default available using both <strong><em>http</em></strong> and <strong><em>https</em></strong> protocols.</p>
 
@@ -164,7 +164,7 @@
   <li><a href="https://letsencrypt.org/2015/10/19/lets-encrypt-is-trusted.html">Let’s Encrypt is trusted!</a><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></li>
 </ul>
 
-<p>### Force <strong><em>https</em></strong> on Github Pages</p>
+<h3 id="force-https-on-github-pages">Force <strong><em>https</em></strong> on Github Pages</h3>
 
 <p>I found this gist to force the <strong><em>https</em></strong> redirection, simple, efficient.</p>
 
@@ -179,7 +179,7 @@ if ((host == window.location.host) &amp;&amp; (window.location.protocol != &quot
 
 <p><img src="/images/posts/jekyll/disqus_http_https.gif" alt="Disqus http vs https" /></p>
 
-<p>### Migrate Disqus comments</p>
+<h3 id="migrate-disqus-comments">Migrate Disqus comments</h3>
 
 <p>In fact, Disqus treat <a href="http://agileek.github.io">http://agileek.github.io</a> and <a href="https://agileek.github.io">https://agileek.github.io</a> as 2 differents sites<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>, so if someone post a comment on the <strong><em>http</em></strong> “version” it’s not displayed on the <strong><em>https</em></strong> side.</p>
 

@@ -5,8 +5,8 @@
         <description>Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.</description>
         <link>https://agileek.github.io/</link>
         <atom:link href="https://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Tue, 07 May 2019 06:57:51 -0500</pubDate>
-        <lastBuildDate>Tue, 07 May 2019 06:57:51 -0500</lastBuildDate>
+        <pubDate>Wed, 22 May 2019 02:19:10 -0500</pubDate>
+        <lastBuildDate>Wed, 22 May 2019 02:19:10 -0500</lastBuildDate>
         <generator>Jekyll v3.8.5</generator>
         
         <item>
@@ -251,7 +251,7 @@ Fortunately there was a backup plan, you could always scan the QR codes.&lt;/p&g
 
 &lt;p&gt;What would be an agileek article without a little bit of &lt;strong&gt;Docker&lt;/strong&gt; in it?&lt;/p&gt;
 
-&lt;p&gt;# Goal&lt;/p&gt;
+&lt;h1 id=&quot;goal&quot;&gt;Goal&lt;/h1&gt;
 
 &lt;p&gt;I will show you how to generate and use an ssl certificate with nginx.&lt;/p&gt;
 
@@ -328,7 +328,7 @@ I recommend to start with something easy.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Now it’s time to take it to the next level!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;## Choose wisely&lt;/p&gt;
+&lt;h2 id=&quot;choose-wisely&quot;&gt;Choose wisely&lt;/h2&gt;
 
 &lt;p&gt;There are 2 main wireless protocols to communicate with your devices, 433.92 MHz and Z-wave.&lt;/p&gt;
 
@@ -348,9 +348,9 @@ I recommend to start with something easy.&lt;/p&gt;
 
 &lt;p&gt;After some digging (and advices from &lt;a href=&quot;https://twitter.com/florianchauveau&quot;&gt;Florian Chauveau&lt;/a&gt;), I decided to use &lt;a href=&quot;https://domoticz.com/&quot;&gt;domoticz&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;## Glue it all together&lt;/p&gt;
+&lt;h2 id=&quot;glue-it-all-together&quot;&gt;Glue it all together&lt;/h2&gt;
 
-&lt;p&gt;### Docker on raspberry pi&lt;/p&gt;
+&lt;h3 id=&quot;docker-on-raspberry-pi&quot;&gt;Docker on raspberry pi&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/home_automation/raspberry_pi_logo.svg&quot; alt=&quot;raspberrypi&quot; class=&quot;float_image&quot; /&gt;&lt;/p&gt;
 
@@ -361,8 +361,8 @@ I recommend to start with something easy.&lt;/p&gt;
   &lt;li&gt;Build the rpi-domoticz-docker image on your raspberry (optional if you pull it from the registry)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;### Recipe
-Here is what I did&lt;/p&gt;
+&lt;h3 id=&quot;recipe&quot;&gt;Recipe&lt;/h3&gt;
+&lt;p&gt;Here is what I did&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Download a docker ready image for your sdcard at &lt;a href=&quot;http://blog.hypriot.com/downloads/&quot;&gt;http://blog.hypriot.com/downloads/&lt;/a&gt;&lt;/li&gt;
@@ -407,7 +407,7 @@ Here is what I did&lt;/p&gt;
         
         <item>
             <title>Forcing https for GitHub Pages and Disqus</title>
-            <description>&lt;p&gt;### Observation&lt;/p&gt;
+            <description>&lt;h3 id=&quot;observation&quot;&gt;Observation&lt;/h3&gt;
 
 &lt;p&gt;This blog uses &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;, which are by default available using both &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; protocols.&lt;/p&gt;
 
@@ -421,7 +421,7 @@ Here is what I did&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://letsencrypt.org/2015/10/19/lets-encrypt-is-trusted.html&quot;&gt;Let’s Encrypt is trusted!&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;### Force &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; on Github Pages&lt;/p&gt;
+&lt;h3 id=&quot;force-https-on-github-pages&quot;&gt;Force &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; on Github Pages&lt;/h3&gt;
 
 &lt;p&gt;I found this gist to force the &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; redirection, simple, efficient.&lt;/p&gt;
 
@@ -436,7 +436,7 @@ if ((host == window.location.host) &amp;amp;&amp;amp; (window.location.protocol 
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/jekyll/disqus_http_https.gif&quot; alt=&quot;Disqus http vs https&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;### Migrate Disqus comments&lt;/p&gt;
+&lt;h3 id=&quot;migrate-disqus-comments&quot;&gt;Migrate Disqus comments&lt;/h3&gt;
 
 &lt;p&gt;In fact, Disqus treat &lt;a href=&quot;http://agileek.github.io&quot;&gt;http://agileek.github.io&lt;/a&gt; and &lt;a href=&quot;https://agileek.github.io&quot;&gt;https://agileek.github.io&lt;/a&gt; as 2 differents sites&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, so if someone post a comment on the &lt;strong&gt;&lt;em&gt;http&lt;/em&gt;&lt;/strong&gt; “version” it’s not displayed on the &lt;strong&gt;&lt;em&gt;https&lt;/em&gt;&lt;/strong&gt; side.&lt;/p&gt;
 
