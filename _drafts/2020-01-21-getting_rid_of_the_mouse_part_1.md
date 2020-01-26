@@ -58,6 +58,7 @@ Once installed, instead of grabbing my mouse, I just type `fuck` then enter twic
 
 Here is a complete demo:
 
+<asciinema-player src="/images/posts/mouseless/mouseless_1" cols="120" rows="20"></asciinema-player>
 
 This tool is a really useful one, it saves me on a daily basis with everything, typos, missing sudo,... plus, it's pleasant to curse.
 
