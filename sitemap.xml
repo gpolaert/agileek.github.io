@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://agileek.github.io/terminal/2020/02/24/getting_rid_of_the_mouse_part_1/</loc>
+      
+        <lastmod>2020-02-24</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://agileek.github.io/docker/terminal/2019/05/07/automatic_aws_ecr_get_login_with_systemd/</loc>
       
         <lastmod>2019-05-07</lastmod>
@@ -247,7 +256,7 @@
       <url>
         <loc>https://agileek.github.io/categories/docker/</loc>
         
-          <lastmod>2019-05-22</lastmod>
+          <lastmod>2020-02-24</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -258,7 +267,7 @@
       <url>
         <loc>https://agileek.github.io/categories/jekyll/</loc>
         
-          <lastmod>2019-05-22</lastmod>
+          <lastmod>2020-02-24</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -269,7 +278,7 @@
       <url>
         <loc>https://agileek.github.io/categories/intellij/</loc>
         
-          <lastmod>2019-05-22</lastmod>
+          <lastmod>2020-02-24</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -280,7 +289,7 @@
       <url>
         <loc>https://agileek.github.io/categories/java/</loc>
         
-          <lastmod>2019-05-22</lastmod>
+          <lastmod>2020-02-24</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -291,7 +300,7 @@
       <url>
         <loc>https://agileek.github.io/categories/food/</loc>
         
-          <lastmod>2019-05-22</lastmod>
+          <lastmod>2020-02-24</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -302,7 +311,7 @@
       <url>
         <loc>https://agileek.github.io/categories/terminal/</loc>
         
-          <lastmod>2019-05-22</lastmod>
+          <lastmod>2020-02-24</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -313,7 +322,7 @@
       <url>
         <loc>https://agileek.github.io/categories/home_automation/</loc>
         
-          <lastmod>2019-05-22</lastmod>
+          <lastmod>2020-02-24</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>

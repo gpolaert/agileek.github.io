@@ -5,9 +5,94 @@
         <description>Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me.</description>
         <link>https://agileek.github.io/</link>
         <atom:link href="https://agileek.github.io/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Wed, 22 May 2019 02:19:10 -0500</pubDate>
-        <lastBuildDate>Wed, 22 May 2019 02:19:10 -0500</lastBuildDate>
+        <pubDate>Mon, 24 Feb 2020 07:25:16 -0600</pubDate>
+        <lastBuildDate>Mon, 24 Feb 2020 07:25:16 -0600</lastBuildDate>
         <generator>Jekyll v3.8.5</generator>
+        
+        <item>
+            <title>Going mouseless #1: Git push a new branch</title>
+            <description>&lt;blockquote&gt;
+  &lt;p&gt;TLDR: install thefuck&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;the-right-tool-for-the-right-job&quot;&gt;The Right Tool for the Right Job&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Using the right tool for the right job&lt;/strong&gt; is kind of why I can’t decide myself on using one programming language.&lt;/p&gt;
+
+&lt;p&gt;When it comes to programming, I have the feeling that using the mouse is highly unefficient.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;It really breaks the flow, you are in the process of writing some code, with both your hands on the keyboard, and all of a sudden you grab the mouse to, I don’t know, launch the tests or click on some website you are testing.
+I don’t like that.&lt;/p&gt;
+
+&lt;p&gt;What I try to do on a daily basis is find &lt;strong&gt;where&lt;/strong&gt; and &lt;strong&gt;when&lt;/strong&gt; my mouse is breaking my flow.&lt;/p&gt;
+
+&lt;p&gt;This (I hope so) will be a series of articles where I take one part of my working flow and try to get rid of the mouse.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Protip&lt;/strong&gt;: Put my mouse on its back so every access to the mouse is a conscious one. Try it, and let me know.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-git-flow&quot;&gt;The git ‘flow’&lt;/h2&gt;
+
+&lt;p&gt;Each time I work on a new task, I start by creating a new branch. 
+Let’s say I work on this article.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git co -b going-mouseless-part-1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After that I create the file, write some stuff down, the usual…&lt;/p&gt;
+
+&lt;p&gt;When I’m satisfied with my work, I commit&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add mouseless-article-1.md
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;meaningful commit message&quot;&lt;/span&gt;
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;and &lt;strong&gt;BAM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fatal: The current branch going-mouseless-part-1 has no upstream branch.
+To push the current branch and &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;the remote as upstream, use
+
+    git push &lt;span class=&quot;nt&quot;&gt;--set-upstream&lt;/span&gt; origin going-mouseless-part-1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I grab my mouse, select the last line and copy/paste it. At least that’s what I used to do.&lt;/p&gt;
+
+&lt;p&gt;A perfect solution for this use case is &lt;a href=&quot;https://github.com/nvbn/thefuck&quot;&gt;TheFuck&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Magnificent app which corrects your previous console command.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Once installed, instead of grabbing my mouse, I just type &lt;code class=&quot;highlighter-rouge&quot;&gt;fuck&lt;/code&gt; then enter twice and that’s it!&lt;/p&gt;
+
+&lt;p&gt;Here is a complete demo:&lt;/p&gt;
+
+&lt;asciinema-player src=&quot;/images/posts/mouseless/mouseless_1&quot; cols=&quot;120&quot; rows=&quot;20&quot;&gt;&lt;/asciinema-player&gt;
+
+&lt;p&gt;This tool is a really useful one, it saves me on a daily basis with everything, typos, missing sudo,… plus, it’s pleasant to curse.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;This is only my opinion &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+            <pubDate>Mon, 24 Feb 2020 00:00:00 -0600</pubDate>
+            <link>https://agileek.github.io/terminal/2020/02/24/getting_rid_of_the_mouse_part_1/</link>
+            <guid isPermaLink="true">https://agileek.github.io/terminal/2020/02/24/getting_rid_of_the_mouse_part_1/</guid>
+            
+            <category>keyboard</category>
+            
+            <category>mouse</category>
+            
+            <category>terminal</category>
+            
+            <category>git</category>
+            
+            
+            <category>terminal</category>
+            
+        </item>
         
         <item>
             <title>Login to AWS ECR using systemd</title>
@@ -887,154 +972,6 @@ But when you run this image and inspect the created container, you will see this
             <pubDate>Sun, 12 Apr 2015 00:00:00 -0500</pubDate>
             <link>https://agileek.github.io/docker/2015/04/12/docker-cmd/</link>
             <guid isPermaLink="true">https://agileek.github.io/docker/2015/04/12/docker-cmd/</guid>
-            
-            
-            <category>docker</category>
-            
-        </item>
-        
-        <item>
-            <title>Docker Tips #2: Limit the layers</title>
-            <description>&lt;h2 id=&quot;scenario&quot;&gt;Scenario&lt;/h2&gt;
-
-&lt;p&gt;I want to transfer &lt;strong&gt;&lt;em&gt;efficiently&lt;/em&gt;&lt;/strong&gt; my images to the production machines.&lt;/p&gt;
-
-&lt;h3 id=&quot;given&quot;&gt;Given&lt;/h3&gt;
-&lt;p&gt;My Dockerfile with android sdk&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz /opt/android-sdk.tgz&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;xzf /opt/android-sdk.tgz &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; /opt/
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; /opt/android-sdk.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;built with &lt;code class=&quot;highlighter-rouge&quot;&gt;docker build -t docker_layers .&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;when&quot;&gt;When&lt;/h3&gt;
-&lt;p&gt;I want to push it to the registry&lt;/p&gt;
-
-&lt;h3 id=&quot;then&quot;&gt;Then&lt;/h3&gt;
-
-&lt;p&gt;It will push 3 layers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the first is the android tgz pushed into /opt&lt;/li&gt;
-  &lt;li&gt;the second is the &lt;strong&gt;&lt;em&gt;extracted&lt;/em&gt;&lt;/strong&gt; sdk into the /opt directory&lt;/li&gt;
-  &lt;li&gt;the last one is the deletion of the tgz&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is really not optimal, the first and third layer are useless. Worst, they use space on your filesystems, on your network when you pull/push, …&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-
-&lt;p&gt;It is a good practice to merge common operations into one single docker command.&lt;/p&gt;
-
-&lt;p&gt;For this example it would be:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /opt &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    wget &lt;span class=&quot;nt&quot;&gt;--output-document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;android-sdk.tgz &lt;span class=&quot;nt&quot;&gt;--quiet&lt;/span&gt; http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;xzf android-sdk.tgz &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; android-sdk.tgz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In that way you only have one layer commited, and it contains only the needed android sdk extracted.&lt;/p&gt;
-
-&lt;h3 id=&quot;caveats&quot;&gt;Caveats&lt;/h3&gt;
-
-&lt;p&gt;There is one drawback with this particular approach: You lose the capacities of the &lt;code class=&quot;highlighter-rouge&quot;&gt;ADD&lt;/code&gt; syntax.&lt;/p&gt;
-
-&lt;p&gt;If you build the first Dockerfile, you will notice that each time the tgz is downloaded. Docker then verifies that the file hasn’t changed and if not, uses the cached image.&lt;/p&gt;
-
-&lt;p&gt;That means that if the tgz changes, there will be a new build, whereas with the one-line approach, it will not, because docker will just verify that the command hasn’t changed, not the content downloaded by the wget.&lt;/p&gt;
-
-&lt;h2 id=&quot;templates&quot;&gt;Templates&lt;/h2&gt;
-
-&lt;p&gt;The general approach is :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Prepare what you want to do&lt;/li&gt;
-  &lt;li&gt;Do it&lt;/li&gt;
-  &lt;li&gt;Clean everything that is not necessary&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The example with the android sdk works for all archives that must be extracted.&lt;/p&gt;
-
-&lt;p&gt;Below are templates from our experience that we think doesn’t alter readability while reducing the layers and the size of the docker image.&lt;/p&gt;
-
-&lt;h3 id=&quot;apt&quot;&gt;APT&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;apt-get update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; whatever &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    apt-get clean &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    apt-get autoclean &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; /var/lib/apt/lists/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; /tmp/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; /var/tmp/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;yum&quot;&gt;Yum&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;yum &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    yum &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;whatever &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    yum clean all&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;an-other-very-important-thing-is-to-keep-your-dockerfile-readable&quot;&gt;An other &lt;strong&gt;&lt;em&gt;very&lt;/em&gt;&lt;/strong&gt; important thing is to keep your Dockerfile &lt;strong&gt;&lt;em&gt;readable&lt;/em&gt;&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;This example is, in my opinion, a bad one.&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;ENV PHANTOM_JS_TAG 2.0.0
-
-RUN \
-  echo &amp;quot;deb http://ppa.launchpad.net/git-core/ppa/ubuntu $(lsb_release -cs) main&amp;quot; \
-    | tee /etc/apt/sources.list.d/git.list &amp;amp;&amp;amp; \
-  DEBIAN_FRONTEND=noniteractive \
-    apt-key adv --keyserver hkp://hkps.pool.sks-keyservers.net --recv-keys E1DF1F24 &amp;amp;&amp;amp; \
-  apt-get update &amp;amp;&amp;amp; \
-  DEBIAN_FRONTEND=noninteractive \
-    apt-get -y --no-install-recommends install git &amp;amp;&amp;amp; \
-  DEBIAN_FRONTEND=noninteractive \
-    apt-get -y install \
-      libfontconfig1 \
-      libjpeg8 \
-      libicu52 \
-  &amp;amp;&amp;amp; \
-  DEBIAN_FRONTEND=noninteractive \
-    apt-get -y install \
-      build-essential \
-      g++ flex bison gperf ruby perl python \
-      libsqlite3-dev libfontconfig1-dev libicu-dev \
-      libfreetype6 libssl-dev libpng-dev libjpeg-dev \
-# Note: It is recommend also to install ttf-mscorefonts-installer package.
-# (http://phantomjs.org/build.html)
-#      ttf-mscorefonts-installer \
-  &amp;amp;&amp;amp; \
-  git clone https://github.com/ariya/phantomjs.git /tmp/phantomjs &amp;amp;&amp;amp; \
-  cd /tmp/phantomjs &amp;amp;&amp;amp; \
-  git checkout ${PHANTOM_JS_TAG} &amp;amp;&amp;amp; \
-  ./build.sh --confirm &amp;amp;&amp;amp; \
-  mv bin/phantomjs /usr/local/bin &amp;amp;&amp;amp; \
-  rm -rf /tmp/phantomjs \
-  &amp;amp;&amp;amp; \
-  DEBIAN_FRONTEND=noninteractive \
-    apt-get -y purge \
-      build-essential \
-      g++ flex bison gperf ruby perl python \
-      libsqlite3-dev libfontconfig1-dev libicu-dev \
-      libfreetype6 libssl-dev libpng-dev libjpeg-dev \
-  &amp;amp;&amp;amp; \
-  DEBIAN_FRONTEND=noninteractive \
-    apt-get autoremove --purge -y &amp;amp;&amp;amp; \
-  apt-get clean &amp;amp;&amp;amp; \
-  rm -rf /var/lib/apt/lists/*&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/MichaelBitard/7bd7bc71385326ab3238.js?file=Dockerfile&quot;&gt; &lt;/script&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Yes, it’s only one docker RUN command&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;ps&quot;&gt;PS&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If you know other tips to reduce the number of layers without losing readability, feel free to post a comment, I’ll gladly add them here.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-            <pubDate>Sat, 11 Apr 2015 00:00:00 -0500</pubDate>
-            <link>https://agileek.github.io/docker/2015/04/11/docker-layers/</link>
-            <guid isPermaLink="true">https://agileek.github.io/docker/2015/04/11/docker-layers/</guid>
             
             
             <category>docker</category>
