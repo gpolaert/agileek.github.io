@@ -2,7 +2,7 @@
 layout: post
 title: "Going mouseless #1: Git push a new branch"
 categories: [terminal]
-date:   2020-01-21
+date:   2020-02-24
 tags: [keyboard, mouse, terminal, git]
 ---
 
