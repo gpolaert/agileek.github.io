@@ -14,14 +14,14 @@ tags: [keyboard, mouse, terminal, git]
 
 When it comes to programming, I have the feeling that using the mouse is highly unefficient.[^1]
 
-It really breaks the flow, you are in the process of writing some code, with both your hands on the keyboard, and all of a sudden you grab the mouse to, I don't know, launch the tests or click on some website your are testing.
+It really breaks the flow, you are in the process of writing some code, with both your hands on the keyboard, and all of a sudden you grab the mouse to, I don't know, launch the tests or click on some website you are testing.
 I don't like that.
 
 What I try to do on a daily basis is find **where** and **when** my mouse is breaking my flow.
 
-This (I hope) will be a series of articles where I take one part of my working flow and try to get rid of the mouse.
+This (I hope so) will be a series of articles where I take one part of my working flow and try to get rid of the mouse.
 
-**Protip**: Put my mouse on its back so every access to the mouse is a consious one. Try it, and let me know.
+**Protip**: Put my mouse on its back so every access to the mouse is a conscious one. Try it, and let me know.
 
 ## The git 'flow'
 
