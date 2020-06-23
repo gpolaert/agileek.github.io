@@ -1,7 +1,7 @@
 # Site settings
-title: Agile & Java
-email: bitard.michael@gmail.com
-description: "Another blog on agile and java. Maybe i'll add kittens and food recipe if my partner helps me."
+title: Software
+email: bitard [dot] michael [@] gmail [dot] com
+description: "Yet another blog on software stuff"
 baseurl: ""
 url: "https://agileek.github.io"
 twitter_username: BitardMichael

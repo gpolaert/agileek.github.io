@@ -4,9 +4,9 @@ module Jekyll
       years = {}
       site.posts.docs.each do |post|
         if years.has_key?(post.date.year)
-          years[post.date.year] << {"url"=>post.url, "title"=>post.title}
+          years[post.date.year] << {"url"=>post.url, "title"=>post.data['title']}
         else
-          years[post.date.year] = [{"url"=>post.url, "title"=>post.title}]
+          years[post.date.year] = [{"url"=>post.url, "title"=>post.data['title']}]
         end
       end
 
