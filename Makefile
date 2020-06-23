@@ -1,4 +1,4 @@
-JEKYLL = docker run -ti --rm -v "$(shell pwd):/srv/jekyll" -p 4000:4000 jekyll/jekyll:3.8.5
+JEKYLL = docker run -ti --rm -v "$(shell pwd):/srv/jekyll" -p 4000:4000 jekyll/jekyll:4.1.0
 RUNNER = `whoami`
 COMMIT = `git rev-parse --short HEAD`
 
