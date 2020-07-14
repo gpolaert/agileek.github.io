@@ -2,7 +2,7 @@
 layout: post
 title: "The Twelve-Factor App Checklist"
 categories: [software]
-date:   2020-06-17
+date: 2020-07-14
 tags: [software, toolbelt]
 ---
 
