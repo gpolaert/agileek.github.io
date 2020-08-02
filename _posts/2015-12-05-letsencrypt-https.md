@@ -24,14 +24,14 @@ I will show you how to generate and use an ssl certificate with nginx.
 
 First, you generate the certificate with:
 {% highlight bash %}
-docker run -it --rm -p 443:443 --name letsencrypt -v /etc/letsencrypt:/etc/letsencrypt -v /var/lib/letsencrypt:/var/lib/letsencrypt quay.io/letsencrypt/letsencrypt:latest --server https://acme-v01.api.letsencrypt.org/directory certonly -a standalone -d hello.lilymic.gotgeeks.com
+docker run -it --rm -p 443:443 --name letsencrypt -v /etc/letsencrypt:/etc/letsencrypt -v /var/lib/letsencrypt:/var/lib/letsencrypt quay.io/letsencrypt/letsencrypt:latest --server https://acme-v01.api.letsencrypt.org/directory certonly -a standalone -d hello.bitard.fr
 {% endhighlight %}
 
 Then you configure your nginx in order to use this certificates :
 
 {% highlight bash %}
-ssl_certificate      /etc/letsencrypt/live/lilymic.gotgeeks.com-0001/fullchain.pem;
-ssl_certificate_key  /etc/letsencrypt/live/lilymic.gotgeeks.com-0001/privkey.pem;
+ssl_certificate      /etc/letsencrypt/live/bitard.fr-0001/fullchain.pem;
+ssl_certificate_key  /etc/letsencrypt/live/bitard.fr-0001/privkey.pem;
 ssl_session_timeout 1d;
 ssl_session_cache shared:SSL:50m;
 ssl_session_tickets off;
@@ -54,7 +54,7 @@ ssl_stapling_verify on;
 
 server {
         listen       443 ssl;
-        server_name  hello.lilymic.gotgeeks.com;
+        server_name  hello.bitard.fr;
 
         location / {            
             add_header Content-Type text/plain;
@@ -65,12 +65,12 @@ server {
 
 Aaaaaaand it's done.
 
-You can look at [https://hello.lilymic.gotgeeks.com/][hello_https] and see that everything is ![so green][soGreen]
+You can look at [https://hello.bitard.fr/][hello_https] and see that everything is ![so green][soGreen]
 
 [previous_article]: /jekyll/2015/11/20/disqus-https-and-http/
 [letsencrypt]: https://letsencrypt.org/
 [OprahHttps]: /images/posts/letsencrypt/meme.jpg
-[hello_https]: https://hello.lilymic.gotgeeks.com/
+[hello_https]: https://hello.bitard.fr/
 [soGreen]: /images/posts/letsencrypt/super_green.gif
 [donate]: https://letsencrypt.org/donate
 [donate_eff]: https://eff.org/donate-le
