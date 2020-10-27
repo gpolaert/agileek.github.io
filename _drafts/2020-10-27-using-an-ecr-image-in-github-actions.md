@@ -9,7 +9,7 @@ tags: [software, aws, cloud]
 
 My current client decided to migrate all its docker images to [ECR][ecr]. 
 
-With the recent [announcement][docker_rate_limiting] about rate limiting on Docker Hub, It's possible some people will do the same.
+With the recent [announcement][docker_rate_limiting] about rate limiting on Docker Hub, maybe we will not be the only ones moving away.
 
 For our **CI/CD** pipelines we use both [CircleCI][circleci] and [GitHub Actions][githubactions].
 
@@ -161,6 +161,6 @@ Enjoy!
 [circleci]: https://circleci.com/
 [githubactions]: https://github.com/features/actions
 [githubactionsprivate]: https://github.blog/changelog/2020-09-24-github-actions-private-registry-support-for-job-and-service-containers/
-[githubcommunitythroud]: https://github.community/t/github-actions-new-pulling-from-private-docker-repositories/16089/28
+[githubcommunitythread]: https://github.community/t/github-actions-new-pulling-from-private-docker-repositories/16089/28
 [^1]: ok, maybe not good, but at least it works
 [^2]: you need to encrypt the password, and you need the public key id of the repository when you put the encrypted secret. I often start with bash, if it's simple enough I keep it, if not I switch to python.
