@@ -7,7 +7,10 @@ tags: [software, aws, cloud]
 ---
 ## Moving from Docker Hub to ECR
 
-My current client decided to migrate all its docker images to [ECR][ecr].
+My current client decided to migrate all its docker images to [ECR][ecr]. 
+
+With the recent [announcement][docker_rate_limiting] about rate limiting on Docker Hub, It's possible some people will do the same.
+
 For our **CI/CD** pipelines we use both [CircleCI][circleci] and [GitHub Actions][githubactions].
 
 Using an **ECR** image is a really simple task in **CircleCI**, it consists of adding the `aws_auth` to the image configuration.
@@ -154,6 +157,7 @@ Enjoy!
 
 
 [ecr]: https://aws.amazon.com/ecr/
+[docker_rate_limiting]: https://www.docker.com/pricing/resource-consumption-updates
 [circleci]: https://circleci.com/
 [githubactions]: https://github.com/features/actions
 [githubactionsprivate]: https://github.blog/changelog/2020-09-24-github-actions-private-registry-support-for-job-and-service-containers/
