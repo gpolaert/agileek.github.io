@@ -1,17 +1,16 @@
 ---
 layout: post
-title: "Using an ECR image as a container in github actions"
+title: "Using an AWS ECR image as a Github Action container"
 categories: [software, aws]
 date: 2020-10-27
 tags: [software, aws, cloud]
 ---
+## Moving from Docker Hub to ECR
 
-## Moving from docker hub to ECR
+My current client decided to migrate all its docker images to [ECR][ecr].
+For our **CI/CD** pipelines we use both [CircleCI][circleci] and [GitHub Actions][githubactions].
 
-My current client decided to migrate all its docker images to ECR.
-For our CI/CD pipelines we use both [CircleCI][circleci] and [GitHub Actions][githubactions].
-
-Using an ECR image is a really simple task in CircleCI, it consists of adding the `aws_auth` to the image configuration.
+Using an **ECR** image is a really simple task in **CircleCI**, it consists of adding the `aws_auth` to the image configuration.
 
 ```yaml
   docker:
@@ -21,10 +20,10 @@ Using an ECR image is a really simple task in CircleCI, it consists of adding th
         aws_secret_access_key: $AWS_SECRET_ACCESS_KEY
 ```
 
-On the other hand, using ECR images in GitHub Actions was a bit more tricky.
+On the other hand, using **ECR** images in **GitHub Actions** was a bit more tricky.
 
 The problem is, you could only use images from private registries in job and service containers since [late september][githubactionsprivate], and they only did the "credentials" implementation.
-That means that you it expects something like that:
+It means something like this is expected:
 
 ```yaml
 jobs:
@@ -39,27 +38,27 @@ jobs:
       - run: echo "inside an ecr container"
 ``` 
 
-With aws, you fetch the ecr password with `aws ecr get-login-password`, and it is valid 12 hours.
+With aws, you can get a password with `aws ecr get-login-password`, and it is valid 12 hours.
 
-You can manually set the github secret "ECR_PASSWORD" every 12 hours, but that's not really convenient.
+You can manually set the GitGub secret "ECR_PASSWORD" every 12 hours, but that's not really convenient.
 
-After a little digging, I found an [answer][githubcommunitythread] on a github community thread explaining what seems like a good solution.[^1]
+After a little digging, I found an [answer][githubcommunitythread] on a GitHub community thread explaining what seems like a good solution.[^1]
 
 Basically what we will do is:
 
-1. Retrieve ECR password from aws
-2. Store it as a GitHub secret name `ECR_PASSWORD`
+1. Retrieve **ECR** password from aws
+2. Store it as a **GitHub** secret name `ECR_PASSWORD`
 
-All that inside a github action scheduled to run every 6 hours.
+All that inside a **GitHub** action scheduled to run every 6 hours.
 
 It was not really as simple as I first thought, so here is all I had to do.
 I hope it can help you.
 
 First, I created some aws credentials (ie. a couple `aws_access_key_id` and `aws_secret_access_key` with enough right to pull from ECR)
-I put them as secrets inside the GitHub project, let's call them `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+I put them as secrets inside the **GitHub** project, let's call them `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 Then I generated a personal access token (the "provided by default" `GITHUB_TOKEN` doest not have sufficient rights), let's call it `GH_API_ACCESS_TOKEN`.
 
-My GitHub action looks like this:
+The complete **GitHub** workflow:
 
 ```yaml
 name: ecr-login
@@ -98,7 +97,7 @@ jobs:
       - run: echo "Inside a container pulled from ECR \o/"
 ```
 
-The python code:
+The python file `ecr_password_updater.py`:
 
 ```python
 from base64 import b64encode
@@ -143,14 +142,18 @@ if __name__ == '__main__':
 
 ```
 
-The python code needs some dependencies:
+The dependencies used by the python code:
 ```text
 pynacl==1.4.0
 requests==2.24.0
 ```
 
-I first started with a simple bash script, but it became quite complex[^2], so I switched to python
+I first started with a simple bash script, but it became quite complex[^2], so I switched to python.
 
+Enjoy!
+
+
+[ecr]: https://aws.amazon.com/ecr/
 [circleci]: https://circleci.com/
 [githubactions]: https://github.com/features/actions
 [githubactionsprivate]: https://github.blog/changelog/2020-09-24-github-actions-private-registry-support-for-job-and-service-containers/
