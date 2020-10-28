@@ -2,12 +2,12 @@
 layout: post
 title: "Using an AWS ECR image as a Github Action container"
 categories: [software, aws]
-date: 2020-10-27
+date: 2020-10-28
 tags: [software, aws, cloud]
 ---
 ## Moving from Docker Hub to ECR
 
-My current client decided to migrate all its docker images to [ECR][ecr]. 
+[Pubstack][pubstack], my current client decided to migrate all its docker images to [ECR][ecr]. 
 
 With the recent [announcement][docker_rate_limiting] about rate limiting on Docker Hub, maybe we will not be the only ones moving away.
 
@@ -36,7 +36,7 @@ jobs:
       image: ACCOUNT.dkr.ecr.REGION.amazonaws.com/IMAGE:VERSION
       credentials:
         username: AWS
-        password: ${{ secrets.ECR_PASSWORD }}
+        password: {% raw %}${{ secrets.ECR_PASSWORD }}{% endraw %}
     steps:
       - run: echo "inside an ecr container"
 ``` 
@@ -82,10 +82,10 @@ jobs:
           pip3 install -r .github/requirements.txt
           python3 .github/ecr_password_updater.py
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: {% raw %}${{ secrets.AWS_ACCESS_KEY_ID }}{% endraw %}
+          AWS_SECRET_ACCESS_KEY: {% raw %}${{ secrets.AWS_SECRET_ACCESS_KEY }}{% endraw %}
           AWS_DEFAULT_REGION: AWS_REGION
-          GH_API_ACCESS_TOKEN: ${{ secrets.GH_API_ACCESS_TOKEN }}
+          GH_API_ACCESS_TOKEN: {% raw %}${{ secrets.GH_API_ACCESS_TOKEN }}{% endraw %}
   # This 'test' job is usefull for fast debugging
   test:
     needs: login
@@ -95,7 +95,7 @@ jobs:
       credentials:
         username: AWS
         # Here is the password retrieved as a secret that is set by the `login` job
-        password: ${{ secrets.ECR_PASSWORD }}
+        password: {% raw %}${{ secrets.ECR_PASSWORD }}{% endraw %}
     steps:
       - run: echo "Inside a container pulled from ECR \o/"
 ```
@@ -155,7 +155,7 @@ I first started with a simple bash script, but it became quite complex[^2], so I
 
 Enjoy!
 
-
+[pubstack]: https://pubstack.io/
 [ecr]: https://aws.amazon.com/ecr/
 [docker_rate_limiting]: https://www.docker.com/pricing/resource-consumption-updates
 [circleci]: https://circleci.com/
